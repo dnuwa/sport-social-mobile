@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Sport Social App </title>
+	<link rel="shortcut icon" href="../favicon.ico">
+
+	<!--   CSS  -->
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+	<link rel="stylesheet" href="flags/build/css/demo.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" />
+
+	<!--   JS   -->
+	<script src="./jquery/3.5.1/jquery.min.js"></script>
+	<script src="./popper/popper.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+
+
+	<script src="js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper gray-wrapper">
+    <div class="container full-container index-page">
+        <div class="header">
+            <div id="gn-menu" class="gn-menu-main">
+                <div class="row ss-nav pad-0 mx-0">
+                    <div class="nav-logo text-success p-2 w-100">
+                        <img src="./images/ss-logo.png" />
+                    </div>
+                </div>
+                <div class="signup-progress-bar">
+                    <img src="./images/progress-3.svg" alt="">
+                </div>
+                <div class="w-100 d-flex prog-text">
+                    <div class="w-50">
+                        Complete your profile
+                    </div>
+                    <div class="w-50 d-flex">
+                        <div class="progress w-75">
+                            <div class="progress-bar progress-bar-success bg-success" role="progressbar"
+                                 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+                            </div>
+                        </div>
+                        <div class="w-25 px-3">
+                            100%
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content c-home mt-90">
+            <div class="intro">
+
+                <div class="row nmarg mt-150">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+
+                        <div class="edit-sports-wrapper center-block mt-10">
+                            <form id="sport-activity" action="javascript:void(0);">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                                    <div class="bg-white rounded block-area" id="sportSection">
+                                        <div class="form-group text-center">
+                                            <h4>Select Your Sport Activity</h4>
+                                        </div>
+                                        <div class="panel-body">
+                                            <div class="form-row">
+                                                <div class="form-group w-100 p-1 mb-0">
+                                                    <select class="form-control" name="sports" data-live-search="true" id="my-sports">
+                                                        <option value="">My Sports</option>
+                                                    </select>
+                                                </div>
+                                                <!-- <div class="form-group w-100 p-1 mb-0">
+                                                    <select class="form-control" name="exp" data-live-search="true" id="my-experience">
+                                                        <option value="">My Experience</option>
+
+                                                    </select>
+                                                </div> -->
+                                                <div class="form-group w-100 p-1 mb-0">
+                                                    <select class="form-control" name="skill" data-live-search="true" id="my-skill-level">
+                                                        <option value="">My SKill Level</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group w-100 p-1 mb-0">
+                                                    <select class="form-control" name="actively_playing" data-live-search="true" id="actively-playing">
+                                                        <option value="">Actively playing</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group w-100 p-1 mb-0">
+                                                    <select class="form-control" name="reqexp" id="prefer-player">
+                                                        <option value="">Prefer a player with the same experience
+                                                        </option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group w-100 p-1 mb-0">
+                                                    <select class="form-control" name="reqcoach">
+                                                        <option value="">Recommend a Coach or Trainer</option>
+                                                        <option value="0">Select one</option>
+                                                        <option value="1">Select two</option>
+                                                        <option value="2">Select three</option>
+                                                    </select>
+                                                </div>
+                                                <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                                    <a href="sign-up-step-2.html"
+                                                       class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="sport_activity();">Back</a>
+                                                    <button
+                                                        class="btn btn-danger fs-17 bold-text rounded-btn" onclick="sport_activity();">SAVE</button>
+                                                    <a href="#sportSelectionSection"
+                                                       class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="sport_activity();">Continue</a>
+                                                    <a href="#sportSelectionSection"
+                                                       class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="sport_activity();">Skip</a>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="bg-white rounded block-area" id="sportSelectionSection" style="display: none;">
+                                        <div class="form-group text-center">
+                                            <h5 id="current-sports-time">Select the time you are generally available for this sport.</h5>
+                                            <p>This can be updated if your schediule changes</p>
+                                        </div>
+                                        <form id="time-you-are-generally-available" action="javascript:void(0);">
+                                            <h5 class="text-center font-weight-bold">My Sport Availability</h5>
+                                            <div>
+                                                <div class="d-flex">
+                                                    <div class="short-wd"></div>
+                                                    <div class="d-flex justify-content-between long-wd">
+                                                        <div class="p-2">Mo</div>
+                                                        <div class="p-2">Tu</div>
+                                                        <div class="p-2">We</div>
+                                                        <div class="p-2">Th</div>
+                                                        <div class="p-2">Fr</div>
+                                                        <div class="p-2">Sa</div>
+                                                        <div class="p-2">Su</div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="short-wd">
+                                                        <div>
+															<small>
+																<b>Early Morning</b>
+															</small>
+														</div>
+														<div>
+															<small>(5a-9a)</small>
+														</div>
+                                                    </div>
+                                                    <div class="d-flex bg-grey long-wd">
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="mon[early_morning]" value="5a-9a" id="mon-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="tue[early_morning]" value="5a-9a" id="tue-early-morning"  class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="wed[early_morning]" value="5a-9a" id="wed-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="thr[early_morning]"  value="5a-9a" id="thr-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="fri[early_morning]" value="5a-9a" id="fri-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="sat[early_morning]" value="5a-9a" id="sat-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="sun[early_morning]" value="5a-9a" id="sun-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="short-wd">
+                                                        <div>
+															<small>
+																<b> Morning</b>
+															</small>
+														</div>
+														<div>
+															<small>(9a-12p)</small>
+														</div>
+                                                    </div>
+                                                    <div class="d-flex bg-grey long-wd">
+                                                        <div class="p-2 m-auto m-auto">
+                                                            <input type="checkbox" name="mon[morning]" value="9a-12p" id="mon-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="tue[morning]" value="9a-12p" id="tue-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="wed[morning]"  value="9a-12p" id="wed-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="thr[morning]" value="9a-12p" id="thr-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="fri[morning]" value="9a-12p" id="fri-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="sat[morning]" value="9a-12p" id="sat-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="sun[morning]" value="9a-12p" id="sun-morning" class="checkbox-rounded">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="short-wd">
+                                                        <div>
+															<small>
+																<b>Afternoon</b>
+															</small>
+														</div>
+														<div>
+															<small>(12p-5p)</small>
+														</div>
+                                                    </div>
+                                                    <div class="d-flex bg-grey long-wd">
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="mon[afternoon]" value="12p-5p" id="mon-afternoon" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="tue[afternoon]"  value="12p-5p" id="tue-afternoon" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="wed[afternoon]" value="12p-5p" id="wed-afternoon" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="tue[afternoon]"  value="12p-5p" id="tue-afternoon" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="fri[afternoon]" value="12p-5p" id="fri-afternoon" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="sat[afternoon]" value="12p-5p" id="sat-afternoon" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="sun[afternoon]" value="12p-5p" id="sun-afternoon" class="checkbox-rounded">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex">
+                                                    <div class="short-wd">
+                                                        <div>
+															<small>
+																<b>Evening</b>
+															</small>
+														</div>
+														<div>
+															<small>(5p-10p)</small>
+														</div>
+                                                    </div>
+                                                    <div class="d-flex bg-grey long-wd">
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="mon[evening]" value="5p-10p" id="mon-evening" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="tue[evening]" value="5p-10p" id="tue-evening" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="wed[evening]" value="5p-10p" id="wed-evening" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="thr[evening]" value="5p-10p" id="thr-evening" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="fri[evening]" value="5p-10p" id="fri-evening" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="sat[evening]" value="5p-10p" id="sat-evening" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="p-2 m-auto">
+                                                            <input type="checkbox" name="sun[evening]" value="5p-10p" id="sun-evening" class="checkbox-rounded">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>                                              
+                                            <!-- <div class="panel-body">
+                                                <div class="d-flex">
+												<span class="pr-3">
+													<div class="text-center">
+														<div>
+															<small>
+																<b>Early Morning</b>
+															</small>
+														</div>
+														<div>
+															<small>(5a-9a)</small>
+														</div>
+													</div><br>
+													<div class="text-center">
+														<div>
+															<small>
+																<b> Morning</b>
+															</small>
+														</div>
+														<div>
+															<small>(9a-12p)</small>
+														</div>
+													</div><br>
+													<div class="text-center">
+														<div>
+															<small>
+																<b>Afternoon</b>
+															</small>
+														</div>
+														<div>
+															<small>(12p-5p)</small>
+														</div>
+													</div><br>
+													<div class="text-center">
+														<div>
+															<small>
+																<b>Evening</b>
+															</small>
+														</div>
+														<div>
+															<small>(5p-10p)</small>
+														</div>
+													</div>
+												</span>
+                                                <span class="p-2 bg-grey">
+													<div class="chk">
+														<div><b>Mo</b></div>
+														<input type="checkbox" name="mon[early_morning]" value="5a-9a" id="mon-early-morning" class="checkbox-rounded">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="mon[morning]" value="9a-12p" id="mon-morning" class="checkbox-rounded mt-4">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="mon[afternoon]" value="12p-5p" id="mon-afternoon" class="checkbox-rounded mt-5">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="mon[evening]" value="5p-10p" id="mon-evening" class="checkbox-rounded mt-4">
+													</div>
+												</span>
+                                                    <span class="p-2 bg-grey">
+													<div class="chk">
+														<div><b>Tu</b></div>
+														<input type="checkbox" name="tue[early_morning]" value="5a-9a" id="tue-early-morning"  class="checkbox-rounded">
+													</div>
+													<div class="chk bg-grey">
+														<input type="checkbox" name="tue[morning]" value="9a-12p" id="tue-morning" class="checkbox-rounded mt-4">
+													</div>
+													<div class="chk bg-grey">
+														<input type="checkbox" name="tue[afternoon]"  value="12p-5p" id="tue-afternoon" class="checkbox-rounded mt-5">
+													</div>
+													<div class="chk bg-grey">
+														<input type="checkbox" name="tue[evening]" value="5p-10p" id="tue-evening" class="checkbox-rounded mt-4">
+													</div>
+												</span>
+                                                    <span class="p-2 bg-grey">
+													<div class="chk">
+														<div><b>We</b></div>
+														<input type="checkbox" name="wed[early_morning]" value="5a-9a" id="wed-early-morning" class="checkbox-rounded">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="wed[morning]"  value="9a-12p" id="wed-morning" class="checkbox-rounded mt-4">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="wed[afternoon]" value="12p-5p" id="wed-afternoon" class="checkbox-rounded mt-5">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="wed[evening]" value="5p-10p" id="wed-evening" class="checkbox-rounded mt-4">
+													</div>
+												</span>
+                                                    <span class="p-2 bg-grey">
+													<div class="chk">
+														<div><b>Th</b></div>
+														<input type="checkbox" name="thr[early_morning]"  value="5a-9a" id="thr-early-morning" class="checkbox-rounded">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="thr[morning]" value="9a-12p" id="thr-morning" class="checkbox-rounded mt-4">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="thr[afternoon]" value="12p-5p" id="thr-afternoon" class="checkbox-rounded mt-5">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="thr[evening]" value="5p-10p" id="thr-evening" class="checkbox-rounded mt-4">
+													</div>
+												</span>
+                                                    <span class="p-2 bg-grey">
+													<div class="chk">
+														<div><b>Fr</b></div>
+														<input type="checkbox" name="fri[early_morning]" value="5a-9a" id="fri-early-morning" class="checkbox-rounded">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="fri[morning]" value="9a-12p" id="fri-morning" class="checkbox-rounded mt-4">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="fri[afternoon]" value="12p-5p" id="fri-afternoon" class="checkbox-rounded mt-5">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="fri[evening]" value="5p-10p" id="fri-evening" class="checkbox-rounded mt-4">
+													</div>
+												</span>
+                                                    <span class="p-2 bg-grey">
+													<div class="chk">
+														<div><b>Sa</b></div>
+														<input type="checkbox" name="sat[early_morning]" value="5a-9a" id="sat-early-morning" class="checkbox-rounded">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="sat[morning]" value="9a-12p" id="sat-morning" class="checkbox-rounded mt-4">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="sat[afternoon]" value="12p-5p" id="sat-afternoon" class="checkbox-rounded mt-5">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="sat[evening]" value="5p-10p" id="sat-evening" class="checkbox-rounded mt-4">
+													</div>
+												</span>
+                                                    <span class="p-2 bg-grey">
+													<div class="chk">
+														<div><b>Su</b></div>
+														<input type="checkbox" name="sun[early_morning]" value="5a-9a" id="sun-early-morning" class="checkbox-rounded">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="sun[morning]" value="9a-12p" id="sun-morning" class="checkbox-rounded mt-4">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="sun[afternoon]" value="12p-5p" id="sun-afternoon" class="checkbox-rounded mt-5">
+													</div>
+													<div class="chk">
+														<input type="checkbox" name="sun[evening]" value="5p-10p" id="sun-evening" class="checkbox-rounded mt-4">
+													</div>
+												</span>
+                                                </div> -->
+                                                <div class="d-flex justify-content-around px-5 py-2 mt-4 w-100">
+                                                    <a href="#sportSection"
+                                                       class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="sport_activity_time_back();">Back</a>
+                                                    <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="sport_activity_time();">SAVE</button>
+                                                    <a href="#partnerSection"
+                                                       class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="sport_activity_time();">Continue</a>
+                                                    <a href="#partnerSection"
+                                                       class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="sport_activity_time();">Skip</a>
+
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                    <div class="bg-white rounded block-area" id="partnerSection" style="display: none;">
+                                        <div class="form-group text-center">
+                                            <h4 id="current-sports-match">Specificy Your Sport Partner Match Options for this Sport
+                                            </h4>
+                                        </div>
+                                        <form id="specific-your-sport" action="javascript:void(0);">
+                                            <div class="panel-body">
+                                                <!-- <div class="form-row">
+                                                    <div class="form-group w-100 p-1">
+                                                        <input name="school" class="form-control" id="school" type="text" value="" placeholder="Specific school or busines"> -->
+                                                        <!--													<select class="form-control">-->
+                                                        <!--														<option value="">Specific school or busines</option>-->
+                                                        <!--													</select>-->
+                                                    <!-- </div> -->
+                                                    <!-- <div class="form-group w-100 p-1">
+                                                        <input name="club" class="form-control" id="club" type="text" value="" placeholder="Specific Club, Gym or Resort" > -->
+                                                        <!--													<select class="form-control">-->
+                                                        <!--														<option value="">Specific Club, Gym or Resort</option>-->
+                                                        <!--													</select>-->
+                                                    <!-- </div> -->
+                                                    <!-- <div class="form-group w-100 p-1">
+                                                        <input name="team" class="form-control" id="team" type="text" value="" placeholder="Specific Team or League"> -->
+                                                        <!--													<select class="form-control">-->
+                                                        <!--														<option value="">Specific Team or League</option>-->
+                                                        <!--													</select>-->
+                                                    <!-- </div> -->
+                                                    <div class="form-group d-block w-100 p-1">
+                                                        <div class="w-100 mb-2">Age Range</div>
+                                                        <div class="d-flex mb-3">
+                                                            <div class="pr-2 d-flex">
+                                                                <label for="age-from" class="m-0 pr-3">From age</label>
+                                                                <input name="age-from" class="form-control-sm w-50 p-2" id="age-from" type="text" value="" placeholder="">
+                                                            </div>
+                                                            <div class="d-flex">
+                                                                <label for="age-from" class="m-0 pr-3">To age</label>
+                                                                <input name="age-to" class="form-control-sm w-50 p-2" id="age-to" type="text" value="" placeholder="">
+                                                            </div>
+                                                        </div>
+                                                        <select class="w-l00" multiple  name="age[]" id="age-range">
+                                                            <option value="13-16">13 - 16</option>
+                                                            <option value="18-23">18 - 23</option>
+                                                            <option value="24-30">24 - 30</option>
+                                                            <option value="30-40">30 - 40</option>
+                                                            <option value="40-50">40 - 50</option>
+                                                            <option value="50-60">50 - 60</option>
+                                                            <option value="60+">60+</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group w-100 p-1">
+                                                        <select class="form-control" name="sex" id="sex">
+                                                            <option value="">Gender</option>
+                                                            <option value="0">Only Male</option>
+                                                            <option value="1">Only Female</option>
+                                                            <option value="2">No Preference </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="form-group w-100 p-1">
+                                                        <select class="form-control" name="marriage" id="marriage">
+                                                            <option value="">Marriage Status</option>
+                                                            <option value="0">Married</option>
+                                                            <option value="1">Single</option>
+                                                            <option value="2">No Preference </option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                                        <a href="#sportSelectionSection"
+                                                           class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="sport_activity_partner_back();">Back</a>
+                                                        <button
+                                                            class="btn btn-danger fs-17 bold-text rounded-btn" onclick="sport_activity_partner();">SAVE</button>
+                                                        <a href="my-profile.html"
+                                                           class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="sport_activity_partner();">Continue</a>
+                                                    </div>
+                                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                                        <a href="my-profile.html"
+                                                           class="btn btn-info fs-17 bold-text rounded-btn">View Sport
+                                                            Profile</a>
+                                                        <a href="edit-my-sports.html"
+                                                           class="btn btn-success fs-17 bold-text rounded-btn-nb">Add your
+                                                            next sport</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                </div>
+
+            </div><!-- /intro -->
+        </div><!-- /content -->
+    </div><!-- /container -->
+</div> <!-- /wrapper -->
+
+<!-- Country flags plugin js  --><!-- Country flags plugin js  -->
+	<script src="flags/build/js/intlTelInput.js"></script>
+	<script>
+		var input = document.querySelector("#phone");
+		window.intlTelInput(input, {
+			utilsScript: "flags/build/js/utils.js",
+		});
+	</script>
+	<script>
+
+		// script to expand/collapse album
+		$('.panel-collapse').on('show.bs.collapse', function () {
+			$(this).siblings('.panel-heading').addClass('active');
+		});
+
+		$('.panel-collapse').on('hide.bs.collapse', function () {
+			$(this).siblings('.panel-heading').removeClass('active');
+		});
+	</script>
+	<script src="js/classie.js"></script>
+	<script src="js/gnmenu.js"></script>
+	<script>
+		$('select').selectpicker();
+		new gnMenu(document.getElementById('gn-menu'));
+	</script>
+
+    <script src="js/general-friend-request.js"></script>
+    <script src="js/sports-social/statistics.js"></script>
+    <script src="js/main.js"></script>
+<script>
+    $('document').ready(function (){
+
+        var parameters = '';
+        var url        = app_url+'profilesportsselection?loginuser='+window.localStorage.getItem("loginuser")+'&sportsid=' + window.localStorage.getItem("sportsid");
+        var method     = 'GET';
+
+        var param      = CallMethod(method, url, onSuccessSignUpStep3, parameters);
+        function onSuccessSignUpStep3(param){
+
+            $('#current-sports-time').text('Select the time you are generally available for this sport '+ ( !isEmpty(param.data.sports_selection_detail[0]) && !isEmpty( param.data.sports_selection_detail[0].sportsName)?  param.data.sports_selection_detail[0].sportsName : ' ') +'.');
+            $('#current-sports-match').text('Select your sport partner preferences for this sport. '+ ( !isEmpty(param.data.sports_selection_detail[0]) && !isEmpty( param.data.sports_selection_detail[0].sportsName)?  param.data.sports_selection_detail[0].sportsName : ' ') +'.');
+                var my_sports_option = '<option value="" >My Sports</option>';
+                var my_experience_option = '<option value="">My Experience</option>';
+                var my_skill_level_option = '<option value="">My SKill Level</option>';
+                var actively_playing_option = '<option value="">Actively playing</option>';
+                var prefer_player = '<option value="">Prefer a player with the same experience</option>';
+
+                $.each(param.data.exp, function (key, value) {
+                    my_experience_option += '<option value="' + value.id + '" ';
+                    if (value.id === (!isEmpty(param.data.sports_selection_detail[0]) ? param.data.sports_selection_detail[0].exp : '')) {
+                        my_experience_option += 'selected';
+                    }
+
+                    my_experience_option += '>' + value.name + '</option>';
+
+                });
+
+
+                $.each(param.data.exp, function (key, value) {
+                    my_skill_level_option += '<option value="' + value.id + '" ';
+                    if (value.id === (!isEmpty(param.data.sports_selection_detail[0]) ? param.data.sports_selection_detail[0].skill : '')) {
+                        my_skill_level_option += 'selected';
+                    }
+
+                    my_skill_level_option += '>' + value.name + '</option>';
+
+                });
+
+                $.each(param.data.exp, function (key, value) {
+                    prefer_player += '<option value="' + value.id + '" ';
+                    if (value.id === (!isEmpty(param.data.sports_selection_detail[0]) ? param.data.sports_selection_detail[0].reqexp : '')) {
+                        prefer_player += 'selected';
+                    }
+
+                    prefer_player += '>' + value.name + '</option>';
+
+                });
+
+                $.each(param.data.sport, function (key, value) {
+                    my_sports_option += '<option value="' + value.id + '" ';
+                            // alert(!isEmpty(param.data.sports_selection_detail[0]) ? param.data.sports_selection_detail[0].sports : '');
+                        if ( !isEmpty(param.data.sports_selection_detail[0])  && parseInt(value.id) ==  parseInt(param.data.sports_selection_detail[0].sports)) {
+
+                        my_sports_option += 'selected';
+                    }
+
+                    my_sports_option += '>' + value.name + '</option>';
+
+                });
+                // alert(param.data.sports_selection_detail[0].sports);
+                $.each(param.data.sport, function (key, value) {
+                    actively_playing_option += '<option value="' + value.id + '" ';
+                    if (parseInt(value.id) == !isEmpty(param.data.sports_selection_detail[0]) ? parseInt(param.data.sports_selection_detail[0].sports) : '') {
+
+                        actively_playing_option += 'selected';
+                    }
+                    actively_playing_option += '>' + value.name + '</option>';
+
+                });
+                var age_range_option = '';
+
+                    age_range_option += '<option value="13-16" ';
+
+                   if(!isEmpty(param.data.sports_selection_detail[0])) {
+                       $.each(param.data.sports_selection_detail[0].age, function (key, value) {
+
+
+                           if (value === '13-16') {
+
+                               age_range_option += 'selected';
+
+                           }
+                       });
+                   }
+                    age_range_option += '>13 - 16</option> <option value="18-23"';
+            if(!isEmpty(param.data.sports_selection_detail[0])) {
+                $.each(param.data.sports_selection_detail[0].age, function (key, value) {
+                    if (value === '18-23') {
+                        age_range_option += ' selected';
+
+                    }
+                });
+            }
+
+                    age_range_option += '>18 - 23</option> <option value="24-30"';
+            if(!isEmpty(param.data.sports_selection_detail[0])) {
+                $.each(param.data.sports_selection_detail[0].age, function (key, value) {
+                    if (value === '24-30') {
+                        age_range_option += ' selected';
+
+                    }
+                });
+            }
+                    age_range_option += '>24 - 30</option> <option value="30-40"';
+            if(!isEmpty(param.data.sports_selection_detail[0])) {
+                $.each(param.data.sports_selection_detail[0].age, function (key, value) {
+                    if (value === '30-40') {
+                        age_range_option += ' selected';
+
+                    }
+                });
+            }
+                    age_range_option += '>30 - 40</option> <option value="40-50"';
+            if(!isEmpty(param.data.sports_selection_detail[0])) {
+                $.each(param.data.sports_selection_detail[0].age, function (key, value) {
+                    if (value === '40-50') {
+                        age_range_option += ' selected';
+
+                    }
+                });
+            }
+                    age_range_option += '>40 - 50</option> <option value="50-60"';
+            if(!isEmpty(param.data.sports_selection_detail[0])) {
+                $.each(param.data.sports_selection_detail[0].age, function (key, value) {
+                    if (value === '50-60') {
+                        age_range_option += ' selected';
+
+                    }
+                });
+            }
+                    age_range_option += '>50 - 60</option> <option value="60+"';
+            if(!isEmpty(param.data.sports_selection_detail[0])) {
+                $.each(param.data.sports_selection_detail[0].age, function (key, value) {
+                    if (value === '60+') {
+                        age_range_option += ' selected';
+
+                    }
+                });
+            }
+                    age_range_option += '>60+</option>';
+
+
+
+                var sexOption = '';
+                sexOption += '<option value="">Gender Preference</option> <option value="2">No Preference </option><option value="0" ';
+                if ((!isEmpty(param.data.sports_selection_detail[0]) ? param.data.sports_selection_detail[0].sex : '') === 0) {
+                    sexOption += 'selected';
+                }
+
+                sexOption += '>Only Male</option> <option value="1"';
+                if ((!isEmpty(param.data.sports_selection_detail[0]) ? param.data.sports_selection_detail[0].sex : '') === 1) {
+                    sexOption += 'selected';
+                }
+                sexOption += '>Only Female</option>';
+
+                var merriageOption = '';
+                merriageOption += '<option value="">Relationship Status</option> <option value="2">No Preference </option> <option value="0"';
+                if ((!isEmpty(param.data.sports_selection_detail[0]) ? param.data.sports_selection_detail[0].marriage : '') === 1) {
+                    merriageOption += 'selected';
+                }
+                merriageOption += '>Married</option> <option value="1"';
+                if ((!isEmpty(param.data.sports_selection_detail[0]) ? param.data.sports_selection_detail[0].marriage : '') === 0) {
+                    merriageOption += 'selected';
+                }
+                merriageOption += '>Single</option>';
+
+                 // alert(my_sports_option);
+                $('#marriage').html(merriageOption);
+                $('#sex').html(sexOption);
+                $('#age-range').html(age_range_option);
+                $('#prefer-player').html(prefer_player);
+                $('#actively-playing').html(actively_playing_option);
+                $('#my-sports').html(my_sports_option);
+                $('#my-skill-level').html(my_skill_level_option);
+                // $('#my-experience').html(my_experience_option);
+
+                $('#school').val( !isEmpty(param.data.sports_selection_detail[0] ) && !isEmpty(param.data.sports_selection_detail[0].my_sports_pref.school) ? param.data.sports_selection_detail[0].my_sports_pref.school : '');
+                $('#club').val(!isEmpty(param.data.sports_selection_detail[0] ) && !isEmpty(param.data.sports_selection_detail[0].my_sports_pref.club) ? param.data.sports_selection_detail[0].my_sports_pref.club : '');
+                $('#team').val(!isEmpty(param.data.sports_selection_detail[0] ) && !isEmpty(param.data.sports_selection_detail[0].my_sports_pref.team) ? param.data.sports_selection_detail[0].my_sports_pref.team : '');
+                // $('#team').val(!isEmpty(param.data.pref.team)? param.data.sports_selection_detail[0].my_sports_pref.team : '');
+
+
+                $('select').selectpicker('refresh');
+
+            if(!isEmpty(param.data.sports_selection_detail[0])) {
+                $.each(param.data.sports_selection_detail[0].my_sports_day, function (key, value) {
+
+                    if (value.day === "mon") {
+                        $.each(value.mysporttime, function (key, value) {
+                            if (value.time_str === "early_morning") {
+                                $('#mon-early-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "afternoon") {
+                                $('#mon-afternoon').prop('checked', true);
+                            }
+                            if (value.time_str === "morning") {
+                                $('#mon-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "evening") {
+                                $('#mon-evening').prop('checked', true);
+                            }
+
+
+                        })
+
+                    }
+                    if (value.day === "tue") {
+                        $.each(value.mysporttime, function (key, value) {
+                            if (value.time_str === "early_morning") {
+                                $('#tue-early-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "afternoon") {
+                                $('#tue-afternoon').prop('checked', true);
+                            }
+                            if (value.time_str === "morning") {
+                                $('#tue-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "evening") {
+                                $('#tue-evening').prop('checked', true);
+                            }
+
+
+                        })
+
+                    }
+                    if (value.day === "wed") {
+                        $.each(value.mysporttime, function (key, value) {
+                            if (value.time_str === "early_morning") {
+                                $('#wed-early-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "afternoon") {
+                                $('#wed-afternoon').prop('checked', true);
+                            }
+                            if (value.time_str === "morning") {
+                                $('#wed-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "evening") {
+                                $('#wed-evening').prop('checked', true);
+                            }
+
+
+                        })
+
+                    }
+                    if (value.day === "thr") {
+                        $.each(value.mysporttime, function (key, value) {
+                            if (value.time_str === "early_morning") {
+                                $('#thr-early-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "afternoon") {
+                                $('#thr-afternoon').prop('checked', true);
+                            }
+                            if (value.time_str === "morning") {
+                                $('#thr-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "evening") {
+                                $('#thr-evening').prop('checked', true);
+                            }
+
+
+                        })
+
+                    }
+                    if (value.day === "fri") {
+                        $.each(value.mysporttime, function (key, value) {
+                            if (value.time_str === "early_morning") {
+                                $('#fri-early-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "afternoon") {
+                                $('#fri-afternoon').prop('checked', true);
+                            }
+                            if (value.time_str === "morning") {
+                                $('#fri-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "evening") {
+                                $('#fri-evening').prop('checked', true);
+                            }
+
+
+                        })
+
+                    }
+                    if (value.day === "sat") {
+                        $.each(value.mysporttime, function (key, value) {
+                            if (value.time_str === "early_morning") {
+                                $('#sat-early-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "afternoon") {
+                                $('#sat-afternoon').prop('checked', true);
+                            }
+                            if (value.time_str === "morning") {
+                                $('#sat-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "evening") {
+                                $('#sat-evening').prop('checked', true);
+                            }
+
+
+                        })
+
+                    }
+                    if (value.day === "sun") {
+                        $.each(value.mysporttime, function (key, value) {
+                            if (value.time_str === "early_morning") {
+                                $('#sun-early-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "afternoon") {
+                                $('#sun-afternoon').prop('checked', true);
+                            }
+                            if (value.time_str === "morning") {
+                                $('#sun-morning').prop('checked', true);
+                            }
+                            if (value.time_str === "evening") {
+                                $('#sun-evening').prop('checked', true);
+                            }
+
+
+                        })
+
+                    }
+                    // if(value.time_str  === 'early_morning' ){
+                    //        $('#mon-early-morning').prop('checked', true);
+                    // }
+                });
+            }
+
+            }
+
+
+
+
+
+    });
+
+
+
+    function sport_activity(){
+
+        var parameters = '';
+        var data = $('#sport-activity').serialize();
+        var data_specific_your_sport = $('#specific-your-sport').serialize();
+        var time_you_are_generally_available = $('#time-you-are-generally-available').serialize();
+
+        var url        = app_url+'profilesportsselection?'+data+'&'+data_specific_your_sport+'&'+time_you_are_generally_available+'&loginuser='+ window.localStorage.getItem("loginuser")+'&sports_id=' + window.localStorage.getItem("sportsid");
+        var method     = 'POST';
+        var param      = CallMethod(method, url, onSuccessLogin, parameters);
+        function onSuccessLogin(param){
+            window.localStorage.setItem("sportsid" ,param.data.sportsIDlastInsertId );
+            if(param.data.message_status == false){
+
+                $.each(param.data.errors, function(key, value){
+                    showAlertMessage(type = 'error', String(value));
+                });
+
+            }else if(param.data.message_status == true){
+                $('#sportSection').hide();
+                $('#sportSelectionSection').show();
+                showAlertMessage(type = 'success', "Profile update successfully!");
+            }
+
+        }
+
+
+
+    }
+
+    function sport_activity_time(){
+
+        var parameters = '';
+        var data = $('#sport-activity').serialize();
+        var data_specific_your_sport = $('#specific-your-sport').serialize();
+        var time_you_are_generally_available = $('#time-you-are-generally-available').serialize();
+
+        var url        = app_url+'profilesportsselection?'+data+'&'+data_specific_your_sport+'&'+time_you_are_generally_available+'&loginuser='+ window.localStorage.getItem("loginuser")+'&sports_id=' + window.localStorage.getItem("sportsid");
+        var method     = 'POST';
+        var param      = CallMethod(method, url, onSuccessLogin, parameters);
+        function onSuccessLogin(param){
+            window.localStorage.setItem("sportsid" ,param.data.sportsIDlastInsertId );
+            if(param.data.message_status == false){
+
+                $.each(param.data.errors, function(key, value){
+                    showAlertMessage(type = 'error', String(value));
+                });
+
+            }else if(param.data.message_status == true){
+                $('#partnerSection').show();
+                $('#sportSelectionSection').hide();
+                showAlertMessage(type = 'success', "Profile update successfully!");
+            }
+
+        }
+
+
+
+    }
+    function sport_activity_partner(){
+
+        var parameters = '';
+        var data = $('#sport-activity').serialize();
+        var data_specific_your_sport = $('#specific-your-sport').serialize();
+        var time_you_are_generally_available = $('#time-you-are-generally-available').serialize();
+
+        var url        = app_url+'profilesportsselection?'+data+'&'+data_specific_your_sport+'&'+time_you_are_generally_available+'&loginuser='+ window.localStorage.getItem("loginuser")+'&sports_id=' + window.localStorage.getItem("sportsid");
+        var method     = 'POST';
+        var param      = CallMethod(method, url, onSuccessLogin, parameters);
+        function onSuccessLogin(param){
+            window.localStorage.setItem("sportsid" ,param.data.sportsIDlastInsertId );
+            if(param.data.message_status == false){
+
+                $.each(param.data.errors, function(key, value){
+                    showAlertMessage(type = 'error', String(value));
+                });
+
+            }else if(param.data.message_status == true){
+                showAlertMessage(type = 'success', "Profile update successfully!");
+            }
+
+        }
+
+
+
+    }
+
+    function sport_activity_time_back(){
+        $('#sportSection').show();
+        $('#sportSelectionSection').hide();
+    }
+    function  sport_activity_partner_back(){
+
+        $('#sportSelectionSection').show();
+        $('#partnerSection').hide();
+    }
+
+
+
+</script>
+</body>
+
+</html>

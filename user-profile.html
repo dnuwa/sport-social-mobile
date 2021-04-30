@@ -1,0 +1,1935 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sport Social App </title>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--   CSS  -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="flags/build/css/demo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/jquery.owlcarousel@1.31(owl.carousel.css+owl.theme.css)">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+
+
+    <!--   JS   -->
+    <script src="./jquery/3.5.1/jquery.min.js"></script>
+    <script src="./popper/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./js/modernizr.custom.js"></script>
+    <script src="./js/jquery.owlcarousel.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+
+</head>
+
+<body>
+    <div class="wrapper gray-wrapper"  style=" padding-bottom: 80px;">
+        <div class="container full-container">
+            <div class="header">
+                <div id="gn-menu" class="gn-menu-main">
+                    <div class="row ss-nav pad-0 mx-0">
+                        <!-- <div class="">
+								<li class="com-name login-logo"><span class="com-l com-l-index"><img src="images/logo.png" class="com-logo"></span></li>
+							</div> -->
+                        <div class="nav-logo text-success">
+                            <img src="./images/ss-logo.png" />
+                        </div>
+                        <a href="#" class="nav-search">
+                            <h5><i class="fa fa-search"></i></h5>
+                        </a>
+                        <div class="nav-toggler">
+                            <span data-toggle="toggle" data-target="#demo"
+                                class="gn-trigger sub-header-icon text-center"><a href="javascript:void(0)"
+                                    class="gn-burger"><i class="fa fa-bars fs-30 text-center"></i></a></span>
+                            <div id="side-nav"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content c-home top-60">
+                <div class="intro">
+
+                    <div class="row nmarg">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+
+                            <div class="bg-white timeline-wrap">
+								<span class="p-1">
+									<a href="sport-friends.html" class="text-dark font-weight-bold">Sport<br>
+										Friends</a>
+								</span>
+                                <span class="p-1">
+									<a href="my-posts.html" class="text-dark font-weight-bold">Sport<br> Posts</a>
+								</span>
+                                <span class="p-1">
+									<a href="sport-matches.html" class="text-dark font-weight-bold">Sport<br>
+										Matches</a>
+								</span>
+                                <span class="p-1">
+									<a href="sport-places.html" class="text-dark font-weight-bold">Sport<br> Places</a>
+								</span>
+                                <span class="p-1">
+									<a href="sport-coaches.html" class="text-dark font-weight-bold">Sport<br> Coach</a>
+								</span>
+                            </div>
+                            <div id="timline-photo"></div>
+                            <!--							<div class="timeline-profile-photos bg-white">-->
+                            <!--								<div class="d-flex profile-name-wrap">-->
+                            <!--									<span>-->
+                            <!--										<h3 class="font-weight-bold">{First Name} {Last Name}</h3>-->
+                            <!--									</span>-->
+                            <!--									<span>-->
+                            <!--										<a href="edit-my-profile.html">-->
+                            <!--											<h4 class="bold-text"> <i class=" fs-30 btn"></i> </h4>-->
+                            <!--										</a>-->
+                            <!--									</span>-->
+                            <!--								</div>-->
+
+                            <!--								<div class="row nmarg">-->
+                            <!--									<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad text-center">-->
+                            <!--										<div class="timeline-bg-photo">-->
+                            <!--											<img src="images/gym.jpg" class="bg-img" alt="Photo">-->
+                            <!--										</div>-->
+                            <!--										<div class="timeline-user-photo">-->
+                            <!--											<div class="media">-->
+                            <!--												<a class="pull-left" href="#">-->
+                            <!--													<span><img class="media-object user-img" src="images/img03.jpg"-->
+                            <!--															alt="Photo"></span>-->
+                            <!--												</a>-->
+                            <!--												<div class="media-body">-->
+                            <!--												</div>-->
+                            <!--											</div>-->
+                            <!--										</div>-->
+                            <!--									</div>-->
+                            <!--								</div>-->
+                            <!--							</div>-->
+
+                            <div id="profileinfo">
+
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">
+                                <div class="bg-white rounded block-area group">
+                                    <div class="group-header">
+                                        <div class="d-flex text-center">
+                                            <h5 class="text-center w-100 font-weight-bold" id="view-my-photo" style="cursor: pointer;" >View your public photos <i class="fa fa-caret-down" aria-hidden="true" style="    font-size: 13px; margin-top: 0px;  float: none; padding-right: 8px;"></i> </h5>
+                                        </div>
+                                        <div id="profile-public-photos" style="display: none;"  ></div>
+                                        <!--										<div class="group-statistics">-->
+                                        <!--											<div class="photos-container">-->
+                                        <!--												<div class="p-1">-->
+                                        <!--													<img src="./images/img49.jpg" class="w-100" />-->
+                                        <!--												</div>-->
+                                        <!--												<div class="p-1">-->
+                                        <!--													<img src="./images/img50.jpg" class="w-100" />-->
+                                        <!--												</div>-->
+                                        <!--												<div class="p-1">-->
+                                        <!--													<img src="./images/img51.jpg" class="w-100" />-->
+                                        <!--												</div>-->
+                                        <!--												<div class="p-1">-->
+                                        <!--													<img src="./images/img52.jpg" class="w-100" />-->
+                                        <!--												</div>-->
+                                        <!--												<div class="p-1">-->
+                                        <!--													<img src="./images/img49.jpg" class="w-100" />-->
+                                        <!--												</div>-->
+                                        <!--												<div class="p-1">-->
+                                        <!--													<img src="./images/img50.jpg" class="w-100" />-->
+                                        <!--												</div>-->
+                                        <!--												<div class="p-1">-->
+                                        <!--													<img src="./images/img54.jpg" class="w-100" />-->
+                                        <!--												</div>-->
+                                        <!--												<div class="p-1">-->
+                                        <!--													<img src="./images/img53.jpg" class="w-100" />-->
+                                        <!--												</div>-->
+                                        <!--											</div>-->
+                                        <!--										</div>-->
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded block-area p-3">
+                                <h5 class="text-center w-100 font-weight-bold my-friends-drp "  style="cursor: pointer;"  id="count-profile-myfriends"></h5>
+                                <div id="profile-myfriends-section" style="display: none;">
+                                <div class="d-flex profle-tab">
+                                    <span class="bg-primary w-25 text-center text-white p-2"  >All Friends</span>
+                                    <span class="w-25 p-2 text-center" onclick="getMyFriend('new')">New (0)</span>
+                                    <span class="w-25 p-2 text-center" onclick="getMyFriend('work')">Work</span>
+                                    <span class="w-25 p-2 text-center"  onclick="getMyFriend('college')">College</span>
+                                </div>
+                                <div class="d-flex p-2">
+									<span class="w-75">
+										<select class="form-control" id="my-sport-dta">
+											<option value="">Select Sport</option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</span>
+                                    <span class="w-25">
+										<button class="btn btn-success w-100" onclick="getMyFriend('all');" >Search</button>
+									</span>
+                                </div>
+                                <div class="d-flex p-2">
+                                    <span style="width: 35%;">
+										<select class="form-control" name="country" id="country"  onchange="getStateCity('state', 'country' , 'city');" >
+											<option>Select Country</option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</span>
+                                    <span class="w-40">
+										<select class="form-control" name="city" id="city" >
+											<option value="">Select City</option>
+											<option></option>
+											<option></option>
+											<option></option>
+										</select>
+									</span>
+                                    <span class="w-25">
+										<button class="btn btn-success w-100" onclick="getMyFriend('all');">Search</button>
+									</span>
+                                </div>
+                                <div class="friends-container" id="profile-myfriends">
+                                    <!--                                    <div ></div>-->
+                                    <!--									<div class="p-1">-->
+                                    <!--										<div class="p-1">-->
+                                    <!--											<img src="./images/default-user-image.png" class="w-100 b-r-50" />-->
+                                    <!--										</div>-->
+                                    <!--										<div>-->
+                                    <!--											<div><small><strong>{First name} {Last name}</strong></small></div>-->
+                                    <!--											<div><small>{(xx) mutual friends}</small></div>-->
+                                    <!--										</div>-->
+                                    <!--									</div>-->
+                                    <!--									<div class="p-1">-->
+                                    <!--										<div class="p-1">-->
+                                    <!--											<img src="./images/default-user-image.png" class="w-100 b-r-50" />-->
+                                    <!--										</div>-->
+                                    <!--										<div>-->
+                                    <!--											<div><small><strong>{First name} {Last name}</strong></small></div>-->
+                                    <!--											<div><small>{(xx) mutual friends}</small></div>-->
+                                    <!--										</div>-->
+                                    <!--									</div>-->
+                                    <!--									<div class="p-1">-->
+                                    <!--										<div class="p-1">-->
+                                    <!--											<img src="./images/default-user-image.png" class="w-100 b-r-50" />-->
+                                    <!--										</div>-->
+                                    <!--										<div>-->
+                                    <!--											<div><small><strong>{First name} {Last name}</strong></small></div>-->
+                                    <!--											<div><small>{(xx) mutual friends}</small></div>-->
+                                    <!--										</div>-->
+                                    <!--									</div>-->
+                                    <!--									<div class="p-1">-->
+                                    <!--										<div class="p-1">-->
+                                    <!--											<img src="./images/default-user-image.png" class="w-100 b-r-50" />-->
+                                    <!--										</div>-->
+                                    <!--										<div>-->
+                                    <!--											<div><small><strong>{First name} {Last name}</strong></small></div>-->
+                                    <!--											<div><small>{(xx) mutual friends}</small></div>-->
+                                    <!--										</div>-->
+                                    <!--									</div>-->
+                                </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">
+                                <div class="bg-white rounded block-area group">
+                                    <div class="group-header">
+
+                                        <div class="d-flex">
+                                            <h5 class="text-center w-100 font-weight-bold" style="cursor: pointer;" id="public-video-view">View your public videos <i class="fa fa-caret-down" aria-hidden="true" style="    font-size: 13px; margin-top: 0px;  float: none; padding-right: 8px;"></i></h5>
+                                        </div>
+                                        <div id="profile-public-videos" style="display: none;"></div>
+
+<!--                                        <div class="group-statistics">-->
+<!--                                            <div class="videos-container">-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img55.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img51.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img52.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img49.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img50.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img54.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <button class="btn btn-success w-100">View all my Videos</button>-->
+<!--                                        </div>-->
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">
+                                <div class="bg-white rounded block-area group">
+                                    <div class="group-header">
+
+                                        <div class="group-statistics p-2">
+                                            <div class="row nmarg d-flex">
+												<span class="w-50">
+													<h5 class="bold-text" id="mySports-username" style="cursor: pointer;"> </h5>
+												</span>
+                                                <span class="w-50 text-right">
+													<h4 class="bold-text"> <i
+                                                        class=" fs-30 btn"></i> </h4>
+												</span>
+                                            </div>
+                                        </div>
+                                        <div id="my-sports-section" style="display: none;">
+                                        <div class="group-statistics">
+                                            <div class="row nmarg">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 xs-pad">
+                                                    <table class="table">
+                                                        <thead>
+                                                        <tr>
+                                                            <th scope="col"></th>
+                                                            <th scope="col">Sport</th>
+                                                            <th scope="col">Skill Level</th>
+                                                            <th scope="col">Experience</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody id="profile-mysport">
+
+
+                                                        <!--															<tr>-->
+                                                        <!--																<th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+                                                        <!--																<td>{Sport name}</td>-->
+                                                        <!--																<td>{Expert}</td>-->
+                                                        <!--																<td>{10 years}</td>-->
+                                                        <!--															</tr>-->
+                                                        <!--															<tr>-->
+                                                        <!--																<th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+                                                        <!--																<td>{Sport name}</td>-->
+                                                        <!--																<td>{Expert}</td>-->
+                                                        <!--																<td>{10 years}</td>-->
+                                                        <!--															</tr>-->
+                                                        <!--															<tr>-->
+                                                        <!--																<th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+                                                        <!--																<td>{Sport name}</td>-->
+                                                        <!--																<td>{Expert}</td>-->
+                                                        <!--																<td>{10 years}</td>-->
+                                                        <!--															</tr>-->
+                                                        <!--															<tr>-->
+                                                        <!--																<th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+                                                        <!--																<td>{Sport name}</td>-->
+                                                        <!--																<td>{Expert}</td>-->
+                                                        <!--																<td>{10 years}</td>-->
+                                                        <!--															</tr>-->
+                                                        <!--															<tr>-->
+                                                        <!--																<th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+                                                        <!--																<td>{Sport name}</td>-->
+                                                        <!--																<td>{Expert}</td>-->
+                                                        <!--																<td>{10 years}</td>-->
+                                                        <!--															</tr>-->
+                                                        <!--															<tr>-->
+                                                        <!--																<th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+                                                        <!--																<td>{Sport name}</td>-->
+                                                        <!--																<td>{Expert}</td>-->
+                                                        <!--																<td>{10 years}</td>-->
+                                                        <!--															</tr>-->
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad" id="my-groups">
+                                <div class="bg-white rounded block-area group">
+                                    <div class="group-header">
+
+                                        <div class="group-statistics p-2">
+                                            <div class="row nmarg d-flex">
+												<span class="w-50">
+													<h4 class="bold-text"  id="groups-drp" style="cursor: pointer;"> Groups<i class="fa fa-caret-down" aria-hidden="true" style="    font-size: 13px; margin-top: 0px;  float: none; padding-right: 8px;"></i></h4>
+												</span>
+                                                <span class="w-50 text-right">
+													<h4 class="bold-text"> <i
+                                                        class=" fs-30 btn"></i> </h4>
+												</span>
+                                            </div>
+                                        </div>
+                                        <div id="profile-group" style="display: none"></div>
+                                        <!--										<div class="group-statistics px-2 py-3">-->
+                                        <!--											<div class="row nmarg d-flex">-->
+                                        <!--												<span class="mr-3">-->
+                                        <!--													<div class="text-right">-->
+                                        <!--														<a href="#">-->
+                                        <!--															<img src="./images/default-user-image.png"-->
+                                        <!--																class="group-profile-image" />-->
+                                        <!--														</a>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--												<span class="">-->
+                                        <!--													<div class="text-left">-->
+                                        <!--														<div class=""><strong>{Group name}</strong></div>-->
+                                        <!--														<div>{XXX} members</div>-->
+                                        <!--														<div>{Group description}</div>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--											</div>-->
+                                        <!--										</div>-->
+                                        <!--										<div class="group-statistics px-2 py-3">-->
+                                        <!--											<div class="row nmarg d-flex">-->
+                                        <!--												<span class="mr-3">-->
+                                        <!--													<div class="text-right">-->
+                                        <!--														<a href="#">-->
+                                        <!--															<img src="./images/default-user-image.png"-->
+                                        <!--																class="group-profile-image" />-->
+                                        <!--														</a>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--												<span class="">-->
+                                        <!--													<div class="text-left">-->
+                                        <!--														<div class=""><strong>{Group name}</strong></div>-->
+                                        <!--														<div>{XXX} members</div>-->
+                                        <!--														<div>{Group description}</div>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--											</div>-->
+                                        <!--										</div>-->
+                                        <!--										<div class="group-statistics px-2 py-3">-->
+                                        <!--											<div class="row nmarg d-flex">-->
+                                        <!--												<span class="mr-3">-->
+                                        <!--													<div class="text-right">-->
+                                        <!--														<a href="#">-->
+                                        <!--															<img src="./images/default-user-image.png"-->
+                                        <!--																class="group-profile-image" />-->
+                                        <!--														</a>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--												<span class="">-->
+                                        <!--													<div class="text-left">-->
+                                        <!--														<div class=""><strong>{Group name}</strong></div>-->
+                                        <!--														<div>{XXX} members</div>-->
+                                        <!--														<div>{Group description}</div>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--											</div>-->
+                                        <!--										</div>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">
+                                <div class="bg-white rounded block-area group">
+                                    <div class="group-header">
+
+                                        <div class="group-statistics p-2">
+                                            <div class="row nmarg d-flex">
+												<span class="w-50">
+													<h4 class="bold-text"  id="places-lived-drp" style="cursor: pointer" > Places lived <i class="fa fa-caret-down" aria-hidden="true" style="    font-size: 13px; margin-top: 0px;  float: none; padding-right: 8px;"></i></h4>
+												</span>
+                                                <span class="w-50 text-right">
+													<h4 class="bold-text"> <i
+                                                        class=" fs-30 btn"></i> </h4>
+												</span>
+                                            </div>
+                                        </div>
+                                        <div id="profile-places-lived"  style="display: none"></div>
+                                        <!--                                        <div class="group-statistics px-2 py-1">-->
+                                        <!--                                            <div class="row nmarg d-flex">-->
+                                        <!--												<span class="mr-3">-->
+                                        <!--													<div class="text-right">-->
+                                        <!--														<a href="#">-->
+                                        <!--															<img src="./images/place.png" class="group-profile-image" />-->
+                                        <!--														</a>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--                                                <span class="">-->
+                                        <!--													<div class="text-left">-->
+                                        <!--														<div class=""><strong>{City Name}</strong></div>-->
+                                        <!--														<div>Current city</div>-->
+                                        <!--														<div class="text-secondary"><i class="fa fa-user-secret"></i>-->
+                                        <!--															Private</div>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
+                                        <!--                                        <hr>-->
+                                        <!--                                        <div class="group-statistics px-2 py-1">-->
+                                        <!--                                            <div class="row nmarg d-flex">-->
+                                        <!--												<span class="mr-3">-->
+                                        <!--													<div class="text-right">-->
+                                        <!--														<a href="#">-->
+                                        <!--															<img src="./images/place.png" class="group-profile-image" />-->
+                                        <!--														</a>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--                                                <span class="">-->
+                                        <!--													<div class="text-left">-->
+                                        <!--														<div class=""><strong>{City Name}</strong></div>-->
+                                        <!--														<div>Moved in {XXXX}</div>-->
+                                        <!--														<div class="text-secondary"><i class="fa fa-globe"></i> Public-->
+                                        <!--														</div>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
+                                        <!--                                        <hr>-->
+                                        <!--                                        <div class="group-statistics px-2 py-1">-->
+                                        <!--                                            <div class="row nmarg d-flex">-->
+                                        <!--												<span class="mr-3">-->
+                                        <!--													<div class="text-right">-->
+                                        <!--														<a href="#">-->
+                                        <!--															<img src="./images/place.png" class="group-profile-image" />-->
+                                        <!--														</a>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--                                                <span class="">-->
+                                        <!--													<div class="text-left">-->
+                                        <!--														<div class=""><strong>{City Name}</strong></div>-->
+                                        <!--														<div>HomeTown</div>-->
+                                        <!--														<div class="text-secondary"><i class="fa fa-globe"></i> Public-->
+                                        <!--														</div>-->
+                                        <!--													</div>-->
+                                        <!--												</span>-->
+                                        <!--                                            </div>-->
+                                        <!--                                        </div>-->
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">
+                                <div class="bg-white rounded block-area group">
+                                    <div class="group-header">
+
+                                        <div class="group-statistics p-2">
+                                            <div class="row nmarg d-flex">
+												<span class="w-50">
+													<h4 class="bold-text" style="cursor: pointer"  id="event-drp"> Events <i class="fa fa-caret-down" aria-hidden="true" style="    font-size: 13px; margin-top: 0px;  float: none; padding-right: 8px;"></i></h4>
+												</span>
+                                                <span class="w-50 text-right">
+													<h4 class="bold-text"> <i
+                                                        class=" fs-30 btn"></i> </h4>
+												</span>
+                                            </div>
+                                        </div>
+                                        <div id="profiel-events"  style="display: none;" ></div>
+                                        <!--										<div class="group-statistics">-->
+                                        <!--											<div class="row nmarg">-->
+
+                                        <!--												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 xs-pad">-->
+                                        <!--													<img class="event-profile-image" src="./images/ss6.PNG">-->
+                                        <!--												</div>-->
+                                        <!--											</div>-->
+                                        <!--										</div>-->
+                                        <!--										<div class="group-statistics">-->
+                                        <!--											<div class="row nmarg">-->
+                                        <!--												<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 xs-pad">-->
+                                        <!--													<div class="w-100">-->
+                                        <!--														<div class=""><strong>{Event name name}</strong></span></p>-->
+                                        <!--															<div>{Date}</div>-->
+                                        <!--															<div>{Group description}</div>-->
+                                        <!--														</div>-->
+                                        <!--														<div class="w-100">-->
+                                        <!--															<button class="btn btn-secondary w-100">-->
+                                        <!--																Interested<i class="fa fa-paper-plane-o ml-4"></i>-->
+                                        <!--															</button>-->
+                                        <!--														</div>-->
+                                        <!--													</div>-->
+                                        <!--												</div>-->
+                                        <!--											</div>-->
+                                        <!--										</div>-->
+                                    </div>
+                                </div>
+
+<!--                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad mb-5">-->
+<!--                                    <div class="bg-white rounded block-area group">-->
+<!--                                        <div class="group-header">-->
+
+<!--                                            <div class="group-statistics p-2">-->
+<!--                                                <div class="row nmarg d-block">-->
+<!--													<span class="w-100 text-center">-->
+<!--														<h4 class="font-weight-bold"> Sports Instructors(xx)</h4>-->
+<!--													</span>-->
+<!--                                                    <span class="w-100">-->
+<!--														<form>-->
+<!--															<div class="input-group">-->
+<!--																<select class="form-control">-->
+<!--																	<option>Select sport</option>-->
+<!--																	<option>Sport 1</option>-->
+<!--																	<option>Sport 2</option>-->
+<!--																	<option>Sport 3</option>-->
+<!--																	<option>Sport 4</option>-->
+<!--																</select>-->
+<!--																<div class="input-group-btn">-->
+<!--																	<button class="btn btn-default" type="">-->
+<!--																		<i class="fa fa-search"></i>-->
+<!--																	</button>-->
+<!--																</div>-->
+<!--															</div>-->
+<!--														</form>-->
+<!--													</span>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="instructors-container">-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                             class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                             class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                             class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                             class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                             class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                             class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                             class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                             class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <button class="btn btn-success w-100">View all my Sports-->
+<!--                                                instructors</button>-->
+<!--                                        </div>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+                            </div>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    </div>
+
+
+<!--                    <div class="row nmarg">-->
+<!--                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>-->
+<!--                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">-->
+
+<!--                            <div class="bg-white timeline-wrap">-->
+<!--                                <span class="p-1">-->
+<!--                                    <a href="sport-friends.html" class="text-dark font-weight-bold">Sport<br>-->
+<!--                                        Friends</a>-->
+<!--                                </span>-->
+<!--                                <span class="p-1">-->
+<!--                                    <a href="my-posts.html" class="text-dark font-weight-bold">Sport<br> Posts</a>-->
+<!--                                </span>-->
+<!--                                <span class="p-1">-->
+<!--                                    <a href="sport-matches.html" class="text-dark font-weight-bold">Sport<br>-->
+<!--                                        Matches</a>-->
+<!--                                </span>-->
+<!--                                <span class="p-1">-->
+<!--                                    <a href="sport-places.html" class="text-dark font-weight-bold">Sport<br> Places</a>-->
+<!--                                </span>-->
+<!--                                <span class="p-1">-->
+<!--                                    <a href="sport-coaches.html" class="text-dark font-weight-bold">Sport<br> Coach</a>-->
+<!--                                </span>-->
+<!--                            </div>-->
+
+<!--                            <div class="timeline-profile-photos bg-white">-->
+<!--                                <div class="d-flex profile-name-wrap">-->
+<!--                                    <span>-->
+<!--                                        <h3 class="font-weight-bold">{First Name} {Last Name}</h3>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+
+<!--                                <div class="row nmarg">-->
+<!--                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad text-center">-->
+<!--                                        <div class="timeline-bg-photo">-->
+<!--                                            <img src="images/gym.jpg" class="bg-img" alt="Photo">-->
+<!--                                        </div>-->
+<!--                                        <div class="timeline-user-photo">-->
+<!--                                            <div class="media">-->
+<!--                                                <a class="pull-left" href="#">-->
+<!--                                                    <span><img class="media-object user-img" src="images/img03.jpg"-->
+<!--                                                            alt="Photo"></span>-->
+<!--                                                </a>-->
+<!--                                                <div class="media-body">-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="bg-white rounded block-area p-3">-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-clock-o"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        Member since <span class="text-success">{XXXX}</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-futbol-o"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        Sports : <span class="text-success">{Sking}, {Bike riding}, {Football-->
+<!--                                            Tennis}</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-graduation-cap"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        Studied at <span class="text-success">{University of Michigan}</span>-->
+<!--                                        <div>-->
+<!--                                            <small class="text-secondary font-italic">Graduated {1998}</small>-->
+<!--                                        </div>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-briefcase"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        CEO and founder at MPG-->
+<!--                                        <div>-->
+<!--                                            <small class="text-secondary font-italic">{Feb 2020} - todate</small>-->
+<!--                                        </div>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-map-marker"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        Location : <span class="text-success">{Kampala , Uganda}</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-address-card-o"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        From: <span class="text-success">{Michigan}</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-language"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        Language: <span class="text-success">{English}</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-phone"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        Telephone: <span class="text-success">{XXX XXX XXXX}</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-venus-mars"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        Sex: <span class="text-success">{Male}</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-birthday-cake"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        Birthday: <span class="text-success">{XX feb ,XXXX}</span>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <h5 class="mt-5">About {first name} {last name}</h5>-->
+<!--                                <hr>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-address-card"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor-->
+<!--                                        incididunt ut labore et dolore magna aliqua.-->
+<!--                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+<!--                                        aliquip ex ea commodo consequat.-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="mr-2">-->
+<!--                                        <i class="fa fa-comment"></i>-->
+<!--                                    </span>-->
+<!--                                    <span>-->
+<!--                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor-->
+<!--                                        incididunt ut labore et dolore magna aliqua.-->
+<!--                                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+<!--                                        aliquip ex ea commodo consequat.-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">-->
+<!--                                <div class="bg-white rounded block-area group">-->
+<!--                                    <div class="group-header">-->
+<!--                                        <div class="d-flex text-center">-->
+<!--                                            <h5 class="text-center w-100 font-weight-bold">View your public photos</h5>-->
+<!--                                        </div>-->
+<!--                                        <div class="group-statistics">-->
+<!--                                            <div class="photos-container">-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <img src="./images/img49.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <img src="./images/img50.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <img src="./images/img51.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <img src="./images/img52.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <img src="./images/img49.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <img src="./images/img50.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <img src="./images/img54.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <img src="./images/img53.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="bg-white rounded block-area p-3">-->
+<!--                                <h5 class="text-center w-100 font-weight-bold">Sports Friends(XXXX)</h5>-->
+<!--                                <div class="d-flex">-->
+<!--                                    <span class="bg-primary w-25 text-center text-white p-2">All Friends</span>-->
+<!--                                    <span class="w-25 p-2 text-center">New (XX)</span>-->
+<!--                                    <span class="w-25 p-2 text-center">Work</span>-->
+<!--                                    <span class="w-25 p-2 text-center">College</span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex p-2">-->
+<!--                                    <span class="w-75">-->
+<!--                                        <select class="form-control">-->
+<!--                                            <option>Select Sport</option>-->
+<!--                                            <option></option>-->
+<!--                                            <option></option>-->
+<!--                                            <option></option>-->
+<!--                                        </select>-->
+<!--                                    </span>-->
+<!--                                    <span class="w-25">-->
+<!--                                        <button class="btn btn-success w-100">Search</button>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="d-flex p-2">-->
+<!--                                    <span class="w-75">-->
+<!--                                        <select class="form-control">-->
+<!--                                            <option>Select City</option>-->
+<!--                                            <option></option>-->
+<!--                                            <option></option>-->
+<!--                                            <option></option>-->
+<!--                                        </select>-->
+<!--                                    </span>-->
+<!--                                    <span class="w-25">-->
+<!--                                        <button class="btn btn-success w-100">Search</button>-->
+<!--                                    </span>-->
+<!--                                </div>-->
+<!--                                <div class="friends-container">-->
+<!--                                    <div class="p-1">-->
+<!--                                        <div class="p-1">-->
+<!--                                            <img src="./images/default-user-image.png" class="w-100 b-r-50" />-->
+<!--                                        </div>-->
+<!--                                        <div>-->
+<!--                                            <div><small><strong>{First name} {Last name}</strong></small></div>-->
+<!--                                            <div><small>{(xx) mutual friends}</small></div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="p-1">-->
+<!--                                        <div class="p-1">-->
+<!--                                            <img src="./images/default-user-image.png" class="w-100 b-r-50" />-->
+<!--                                        </div>-->
+<!--                                        <div>-->
+<!--                                            <div><small><strong>{First name} {Last name}</strong></small></div>-->
+<!--                                            <div><small>{(xx) mutual friends}</small></div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="p-1">-->
+<!--                                        <div class="p-1">-->
+<!--                                            <img src="./images/default-user-image.png" class="w-100 b-r-50" />-->
+<!--                                        </div>-->
+<!--                                        <div>-->
+<!--                                            <div><small><strong>{First name} {Last name}</strong></small></div>-->
+<!--                                            <div><small>{(xx) mutual friends}</small></div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="p-1">-->
+<!--                                        <div class="p-1">-->
+<!--                                            <img src="./images/default-user-image.png" class="w-100 b-r-50" />-->
+<!--                                        </div>-->
+<!--                                        <div>-->
+<!--                                            <div><small><strong>{First name} {Last name}</strong></small></div>-->
+<!--                                            <div><small>{(xx) mutual friends}</small></div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">-->
+<!--                                <div class="bg-white rounded block-area group">-->
+<!--                                    <div class="group-header">-->
+
+<!--                                        <div class="d-flex">-->
+<!--                                            <h5 class="text-center w-100 font-weight-bold">View your public videos</h5>-->
+<!--                                        </div>-->
+
+<!--                                        <div class="group-statistics">-->
+<!--                                            <div class="videos-container">-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img55.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img51.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img52.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img49.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img50.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <h6>{Title}</h6>-->
+<!--                                                    {XX/XX/XXXX}-->
+<!--                                                    <img src="./images/img54.jpg" class="w-100" />-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <button class="btn btn-success w-100">View all my Videos</button>-->
+<!--                                        </div>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+
+<!--                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">-->
+<!--                                <div class="bg-white rounded block-area group">-->
+<!--                                    <div class="group-header">-->
+
+<!--                                        <div class="group-statistics p-2">-->
+<!--                                            <div class="row nmarg d-flex">-->
+<!--                                                <span class="w-50">-->
+<!--                                                    <h5 class="bold-text"> {users 1st name}'s Sports</h5>-->
+<!--                                                </span>-->
+<!--                                                <span class="w-50 text-right">-->
+<!--                                                    <h4 class="bold-text"> <i-->
+<!--                                                            class=" fs-30 btn"></i> </h4>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="group-statistics">-->
+<!--                                            <div class="row nmarg">-->
+<!--                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 xs-pad">-->
+<!--                                                    <table class="table">-->
+<!--                                                        <thead>-->
+<!--                                                            <tr>-->
+<!--                                                                <th scope="col"></th>-->
+<!--                                                                <th scope="col">Sport</th>-->
+<!--                                                                <th scope="col">Skill Level</th>-->
+<!--                                                                <th scope="col">Experience</th>-->
+<!--                                                            </tr>-->
+<!--                                                        </thead>-->
+<!--                                                        <tbody>-->
+<!--                                                            <tr>-->
+<!--                                                                <th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+<!--                                                                <td>{Sport name}</td>-->
+<!--                                                                <td>{Expert}</td>-->
+<!--                                                                <td>{10 years}</td>-->
+<!--                                                            </tr>-->
+<!--                                                            <tr>-->
+<!--                                                                <th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+<!--                                                                <td>{Sport name}</td>-->
+<!--                                                                <td>{Expert}</td>-->
+<!--                                                                <td>{10 years}</td>-->
+<!--                                                            </tr>-->
+<!--                                                            <tr>-->
+<!--                                                                <th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+<!--                                                                <td>{Sport name}</td>-->
+<!--                                                                <td>{Expert}</td>-->
+<!--                                                                <td>{10 years}</td>-->
+<!--                                                            </tr>-->
+<!--                                                            <tr>-->
+<!--                                                                <th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+<!--                                                                <td>{Sport name}</td>-->
+<!--                                                                <td>{Expert}</td>-->
+<!--                                                                <td>{10 years}</td>-->
+<!--                                                            </tr>-->
+<!--                                                            <tr>-->
+<!--                                                                <th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+<!--                                                                <td>{Sport name}</td>-->
+<!--                                                                <td>{Expert}</td>-->
+<!--                                                                <td>{10 years}</td>-->
+<!--                                                            </tr>-->
+<!--                                                            <tr>-->
+<!--                                                                <th scope="row"><i class="fa fa-bicycle fs-20"></i></th>-->
+<!--                                                                <td>{Sport name}</td>-->
+<!--                                                                <td>{Expert}</td>-->
+<!--                                                                <td>{10 years}</td>-->
+<!--                                                            </tr>-->
+<!--                                                        </tbody>-->
+<!--                                                    </table>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad" id="my-groups">-->
+<!--                                <div class="bg-white rounded block-area group">-->
+<!--                                    <div class="group-header">-->
+
+<!--                                        <div class="group-statistics p-2">-->
+<!--                                            <div class="row nmarg d-flex">-->
+<!--                                                <span class="w-50">-->
+<!--                                                    <h4 class="bold-text"> Groups</h4>-->
+<!--                                                </span>-->
+<!--                                                <span class="w-50 text-right">-->
+<!--                                                    <h4 class="bold-text"> <i-->
+<!--                                                            class=" fs-30 btn"></i> </h4>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="group-statistics px-2 py-3">-->
+<!--                                            <div class="row nmarg d-flex">-->
+<!--                                                <span class="mr-3">-->
+<!--                                                    <div class="text-right">-->
+<!--                                                        <a href="#">-->
+<!--                                                            <img src="./images/default-user-image.png"-->
+<!--                                                                class="group-profile-image" />-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                                <span class="">-->
+<!--                                                    <div class="text-left">-->
+<!--                                                        <div class=""><strong>{Group name}</strong></div>-->
+<!--                                                        <div>{XXX} members</div>-->
+<!--                                                        <div>{Group description}</div>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="group-statistics px-2 py-3">-->
+<!--                                            <div class="row nmarg d-flex">-->
+<!--                                                <span class="mr-3">-->
+<!--                                                    <div class="text-right">-->
+<!--                                                        <a href="#">-->
+<!--                                                            <img src="./images/default-user-image.png"-->
+<!--                                                                class="group-profile-image" />-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                                <span class="">-->
+<!--                                                    <div class="text-left">-->
+<!--                                                        <div class=""><strong>{Group name}</strong></div>-->
+<!--                                                        <div>{XXX} members</div>-->
+<!--                                                        <div>{Group description}</div>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="group-statistics px-2 py-3">-->
+<!--                                            <div class="row nmarg d-flex">-->
+<!--                                                <span class="mr-3">-->
+<!--                                                    <div class="text-right">-->
+<!--                                                        <a href="#">-->
+<!--                                                            <img src="./images/default-user-image.png"-->
+<!--                                                                class="group-profile-image" />-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                                <span class="">-->
+<!--                                                    <div class="text-left">-->
+<!--                                                        <div class=""><strong>{Group name}</strong></div>-->
+<!--                                                        <div>{XXX} members</div>-->
+<!--                                                        <div>{Group description}</div>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">-->
+<!--                                <div class="bg-white rounded block-area group">-->
+<!--                                    <div class="group-header">-->
+
+<!--                                        <div class="group-statistics p-2">-->
+<!--                                            <div class="row nmarg d-flex">-->
+<!--                                                <span class="w-50">-->
+<!--                                                    <h4 class="bold-text"> Places lived</h4>-->
+<!--                                                </span>-->
+<!--                                                <span class="w-50 text-right">-->
+<!--                                                    <h4 class="bold-text"> <i-->
+<!--                                                            class=" fs-30 btn"></i> </h4>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="group-statistics px-2 py-1">-->
+<!--                                            <div class="row nmarg d-flex">-->
+<!--                                                <span class="mr-3">-->
+<!--                                                    <div class="text-right">-->
+<!--                                                        <a href="#">-->
+<!--                                                            <img src="./images/place.png" class="group-profile-image" />-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                                <span class="">-->
+<!--                                                    <div class="text-left">-->
+<!--                                                        <div class=""><strong>{City Name}</strong></div>-->
+<!--                                                        <div>Current city</div>-->
+<!--                                                        <div class="text-secondary"><i class="fa fa-user-secret"></i>-->
+<!--                                                            Private</div>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <hr>-->
+<!--                                        <div class="group-statistics px-2 py-1">-->
+<!--                                            <div class="row nmarg d-flex">-->
+<!--                                                <span class="mr-3">-->
+<!--                                                    <div class="text-right">-->
+<!--                                                        <a href="#">-->
+<!--                                                            <img src="./images/place.png" class="group-profile-image" />-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                                <span class="">-->
+<!--                                                    <div class="text-left">-->
+<!--                                                        <div class=""><strong>{City Name}</strong></div>-->
+<!--                                                        <div>Moved in {XXXX}</div>-->
+<!--                                                        <div class="text-secondary"><i class="fa fa-globe"></i> Public-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <hr>-->
+<!--                                        <div class="group-statistics px-2 py-1">-->
+<!--                                            <div class="row nmarg d-flex">-->
+<!--                                                <span class="mr-3">-->
+<!--                                                    <div class="text-right">-->
+<!--                                                        <a href="#">-->
+<!--                                                            <img src="./images/place.png" class="group-profile-image" />-->
+<!--                                                        </a>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                                <span class="">-->
+<!--                                                    <div class="text-left">-->
+<!--                                                        <div class=""><strong>{City Name}</strong></div>-->
+<!--                                                        <div>HomeTown</div>-->
+<!--                                                        <div class="text-secondary"><i class="fa fa-globe"></i> Public-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+
+<!--                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">-->
+<!--                                <div class="bg-white rounded block-area group">-->
+<!--                                    <div class="group-header">-->
+
+<!--                                        <div class="group-statistics p-2">-->
+<!--                                            <div class="row nmarg d-flex">-->
+<!--                                                <span class="w-50">-->
+<!--                                                    <h4 class="bold-text"> Events</h4>-->
+<!--                                                </span>-->
+<!--                                                <span class="w-50 text-right">-->
+<!--                                                    <h4 class="bold-text"> <i-->
+<!--                                                            class=" fs-30 btn"></i> </h4>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="group-statistics">-->
+<!--                                            <div class="row nmarg">-->
+
+<!--                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 xs-pad">-->
+<!--                                                    <img class="event-profile-image" src="./images/ss6.PNG">-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="group-statistics">-->
+<!--                                            <div class="row nmarg">-->
+<!--                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 xs-pad">-->
+<!--                                                    <div class="w-100">-->
+<!--                                                        <div class=""><strong>{Event name name}</strong></span></p>-->
+<!--                                                            <div>{Date}</div>-->
+<!--                                                            <div>{Group description}</div>-->
+<!--                                                        </div>-->
+<!--                                                        <div class="w-100">-->
+<!--                                                            <button class="btn btn-secondary w-100">-->
+<!--                                                                Interested<i class="fa fa-paper-plane-o ml-4"></i>-->
+<!--                                                            </button>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad mb-5">-->
+<!--                                    <div class="bg-white rounded block-area group">-->
+<!--                                        <div class="group-header">-->
+
+<!--                                            <div class="group-statistics p-2">-->
+<!--                                                <div class="row nmarg d-block">-->
+<!--                                                    <span class="w-100 text-center">-->
+<!--                                                        <h4 class="font-weight-bold"> Sports Instructors(xx)</h4>-->
+<!--                                                    </span>-->
+<!--                                                    <span class="w-100">-->
+<!--                                                        <form>-->
+<!--                                                            <div class="input-group">-->
+<!--                                                                <select class="form-control">-->
+<!--                                                                    <option>Select sport</option>-->
+<!--                                                                    <option>Sport 1</option>-->
+<!--                                                                    <option>Sport 2</option>-->
+<!--                                                                    <option>Sport 3</option>-->
+<!--                                                                    <option>Sport 4</option>-->
+<!--                                                                </select>-->
+<!--                                                                <div class="input-group-btn">-->
+<!--                                                                    <button class="btn btn-default" type="">-->
+<!--                                                                        <i class="fa fa-search"></i>-->
+<!--                                                                    </button>-->
+<!--                                                                </div>-->
+<!--                                                            </div>-->
+<!--                                                        </form>-->
+<!--                                                    </span>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <div class="instructors-container">-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                            class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                            class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                            class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                            class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                            class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                            class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                            class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                                <div class="p-1">-->
+<!--                                                    <div class="p-1">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                            class="w-100 b-r-50" />-->
+<!--                                                    </div>-->
+<!--                                                    <div>-->
+<!--                                                        <div><small><strong>{First name} {Last name}</strong></small>-->
+<!--                                                        </div>-->
+<!--                                                        <div><small>{Sport}</small></div>-->
+<!--                                                        <div><small>{City}</small></div>-->
+<!--                                                        <div><small>{(xx) Sport friends}</small></div>-->
+<!--                                                        <div class="d-flex">-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star text-warning"></i>-->
+<!--                                                            <i class="fa fa-star-half-empty text-warning"></i>-->
+<!--                                                        </div>-->
+<!--                                                        <div>-->
+<!--                                                            <a href="#"><small>Sport Social Page</small></a>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </div>-->
+<!--                                            </div>-->
+<!--                                            <button class="btn btn-success w-100">View all my Sports-->
+<!--                                                instructors</button>-->
+<!--                                        </div>-->
+
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>-->
+<!--                    </div>-->
+                </div>
+            </div><!-- /intro -->
+        </div><!-- /content -->
+    </div><!-- /container -->
+    </div> <!-- /wrapper -->
+
+    <div id="bottom-nav"></div>
+
+<!--    <div class="sub-header bottom-0">-->
+<!--        <div class="row nmarg ss-bottom-nav">-->
+
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="my-posts.html">-->
+<!--                        <img src="./images/ss-icon-002.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="my-profile.html">-->
+<!--                        <img src="./images/sports soical app icons-02.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-matches.html">-->
+<!--                        <img src="./images/ss-icon-001.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="all-groups.html">-->
+<!--                        <img src="./images/sports soical app icons-04.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-places.html">-->
+<!--                        <img src="./images/sports soical app icons-05.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-messages.html">-->
+<!--                        <img src="./images/sports soical app icons-06.svg" />-->
+<!--                    </a>-->
+<!--                    <span class="counter">15</span>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="calendar.html">-->
+<!--                        <img src="./images/sports soical app icons-07.svg" />-->
+<!--                    </a>-->
+<!--                    <span class="counter">15</span>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <script src="js/classie.js"></script>
+    <script src="js/gnmenu.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        })
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+    <script>
+        // js for secondary navigation
+        $("[data-toggle='toggle']").click(function () {
+            var selector = $(this).data("target");
+            $(selector).toggleClass('in');
+        });
+        function showSearchField() {
+            $(".ss-profile-name").fadeOut(0);
+            setTimeout($(".ss-search-input input").fadeIn(1000), 1000)
+        }
+
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+    <script src="js/general-friend-request.js"></script>
+    <script src="js/sports-social/statistics.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/country-management.js"></script>
+    <script>
+        $('document').ready(function (){
+
+
+            var parameters = '';
+            var url        = app_url+'user?&loginuser='+window.localStorage.getItem("user_id")+'&username=about';
+            var method     = 'GET';
+            var param      = CallMethod(method, url, onSuccessLogin, parameters);
+            function onSuccessLogin(param) {
+                if (param.data.login_error_status === '1') {
+                    showExpireAlert('session-expire');
+                    session(param.data);
+                } else {
+                var profile_genInfo = '';
+                var profile_photo_timline = '';
+                var profile_aboutmeInfo = '';
+                var profile_languageInfo = '';
+                var profile_public_photo = '';
+                var profile_places_lived = '';
+                var profiel_group = '';
+                var profile_events = '';
+                var profile_myFriends = '';
+                var profile_mysports = '';
+                var profile_public_video = '';
+
+                var optionSports = '<option value="">Select Sport</option>';
+                profile_genInfo += '<div class="bg-white rounded block-area p-3"> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-clock-o"></i> </span> <span> Member since <span class="text-success">' + (!isEmpty(param.data.data.user) && !isEmpty(param.data.data.user.member_since) ? param.data.data.user.member_since : '') + '</span> </span> </div> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-futbol-o"></i> </span> <span> Sports : <span class="text-success">';
+                if (!isEmpty(param.data.data.user.mysports)) {
+                    $.each(param.data.data.user.mysports, function (key, value) {
+                        profile_genInfo += '' + value.name + '';
+                    });
+                }
+
+                profile_genInfo += '</span> </span> </div> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-graduation-cap"></i> </span> <span> Studied at <span class="text-success">' + (!isEmpty(param.data.data.user.setting) && !isEmpty(param.data.data.user.setting.university) ? param.data.data.user.setting.university : '') + '</span> <div> </div> </span> </div> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-briefcase"></i> </span> <span>' + (!isEmpty(param.data.data.user.setting) && !isEmpty(param.data.data.user.setting.work) ? param.data.data.user.setting.work : '') + ' <div>  </div> </span> </div> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-map-marker"></i> </span> <span> Location : <span class="text-success">' + (!isEmpty(param.data.data.user.location.current_location) && !isEmpty(param.data.data.user.location.current_location.city.name) ? param.data.data.user.location.current_location.city.name : '') + ',' + (!isEmpty(param.data.data.user.location.current_location) && !isEmpty(param.data.data.user.location.current_location.state.name) ? param.data.data.user.location.current_location.state.name : '') + ',' + (!isEmpty(param.data.data.user.location.current_location) && !isEmpty(param.data.data.user.location.current_location.country.name) ? param.data.data.user.location.current_location.country.name : '') + '</span> </span> </div> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-address-card-o"></i> </span> <span> From: <span class="text-success"> ' + (!isEmpty(param.data.data.user.location.from_location) && !isEmpty(param.data.data.user.location.from_location.city.name) ? param.data.data.user.location.from_location.city.name : '') + ',' + (!isEmpty(param.data.data.user.location.from_location) && !isEmpty(param.data.data.user.location.from_location.state.name) ? param.data.data.user.location.from_location.state.name : '') + ',' + (!isEmpty(param.data.data.user.location.from_location) && !isEmpty(param.data.data.user.location.from_location.country.name) ? param.data.data.user.location.from_location.country.name : '') + '</span> </span> </div> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-language"></i> </span> <span> Language: <span class="text-success">' + ( !isEmpty(param.data.data.user) && !isEmpty(param.data.data.user.setting) && !isEmpty(param.data.data.user.setting.plang) ? param.data.data.user.setting.plang : '') + '</span> </span> </div> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-phone"></i> </span> <span> Telephone: <span class="text-success">' + (!isEmpty(param.data.data.user.phone) && !isEmpty(param.data.data.user.phone) ? param.data.data.user.phone : '') + '</span> </span> </div> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-venus-mars"></i> </span> <span> Sex: <span class="text-success">' + (!isEmpty(param.data.data.user.setting) && !isEmpty(param.data.data.user.setting.sex) ? param.data.data.user.setting.sex : '') + '</span> </span> </div> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-birthday-cake"></i> </span> <span> Birthday: <span class="text-success">' + (!isEmpty(param.data.data.user.setting) && !isEmpty(param.data.data.user.setting.dob) ? param.data.data.user.setting.dob : '') + '</span> </span> </div> <h5 class="mt-5">About me</h5> <hr> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-address-card"></i> </span> <span> ' + (!isEmpty(param.data.data.user.setting) && !isEmpty(param.data.data.user.setting.about) ? param.data.data.user.setting.about : '') + ' </span> </div> <div class="d-flex"> <span class="mr-2"> <i class="fa fa-comment"></i> </span> <span> ' + (!isEmpty(param.data.data.user.setting) && !isEmpty(param.data.data.user.setting.moto) ? param.data.data.user.setting.moto : '') + ' </span> </div> </div>';
+                $('#profileinfo').html(profile_genInfo);
+
+
+                // profile_genInfo       = '<div class="profile-genInfo"> <div class="media"> <div class="media-left media-middle"> <i class="fas fa-user nav-icon"></i> </div> <div class="media-body"> '+ ( !isEmpty(param.data.data.user.firstname)? param.data.data.user.firstname : '' )  +''+ (  !isEmpty(param.data.data.user.lastname)? param.data.data.user.lastname : '' )  +' </div> </div> <div class="media"> <div class="media-left media-middle"> <i class="fas fa-birthday-cake nav-icon"></i> </div> <div class="media-body">'+ (  !isEmpty( param.data.data.user.created_at)?  param.data.data.user.created_at : ''  )  +' </div> </div> <div class="media"> <div class="media-left media-middle"> <i class="fas fa-phone nav-icon"></i> </div> <div class="media-body">'+ (!isEmpty(param.data.data.user.phone)? param.data.data.user.phone : ''  ) +'  </div> </div> <div class="media"> <div class="media-left media-middle"> <i class="fas fa-male nav-icon"></i> </div> <div class="media-body">'+ ( !isEmpty(param.data.data.setin.sex)? param.data.data.setin.sex  == 1 ? 'Male' : 'Female' : '' )  +'</div> </div> </div>';
+                // profile_aboutmeInfo   = '<div class="profile-aboutmeInfo"> <div class="media"> <div class="media-left media-middle"> <i class="fas fa-address-card nav-icon"></i> </div> <div class="media-body"> '+  (  !isEmpty(param.data.data.user.about)? param.data.data.user.about : '' ) +' </div> </div> <div class="media"> <div class="media-left media-middle"> <i class="fas fa-comment nav-icon"></i> </div> <div class="media-body"> '+ ( !isEmpty( param.data.data.user.moto)?  param.data.data.user.moto: '' )+' </div> </div> <div class="media"> <div class="media-left media-middle"> <i class="fas fa-home nav-icon"></i> </div> <div class="media-body"> From: '+  (!isEmpty(param.data.data.locs.address)? param.data.data.locs.address : '') +''+  (  !isEmpty(param.data.data.locs.city)? param.data.data.locs.city : '') +''+  ( !isEmpty(param.data.data.locs.state)? param.data.data.locs.state: '' ) +' '+  (  !isEmpty(param.data.data.locs.country)? param.data.data.locs.country: '' ) +' </div> </div> <div class="media"> <div class="media-left media-middle"> <i class="fas fa-map-marker nav-icon"></i> </div> <div class="media-body"> Lives in: '+  (!isEmpty(param.data.data.locs.address)? param.data.data.locs.address : '') +''+  ( !isEmpty(param.data.data.locs.city)? param.data.data.locs.city: '' ) +''+  (!isEmpty(param.data.data.locs.state)? param.data.data.locs.state: '') +''+ ( !isEmpty(param.data.data.locs.country)? param.data.data.locs.country: '' ) +' </div> </div> </div>';
+                // profile_languageInfo  =  '<div class="profile-languageInfo"> <div class="media"> <div class="media-left media-middle"> <i class="fas fa-language nav-icon"></i> </div> <div class="media-body"> Languages: '+ ( !isEmpty(param.data.data.slang.lang)? param.data.data.slang.lang : '' ) +' </div> </div> </div>';
+                profile_public_photo = '<div class="group-statistics"> <div class="photos-container"> ';
+                if(!isEmpty(param.data.data.user.userFeatureFiles.images)){
+                    $.each(param.data.data.user.userFeatureFiles.images, function (key, value) {
+                        var image = image_url + '/files/' + value.photo.hash + '/' + value.photo.name;
+                        profile_public_photo += '<div class="p-1"> <img src="' + image + '"  class="w-100"/> </div> ';
+
+                    });
+                }else{
+                    profile_public_photo += '<div class="p-1"> <span class="bold-text">(0 Record Found!)</span> </div> ';
+
+                }
+
+                profile_public_photo += '</div></div>';
+                $('#profile-public-photos').html(profile_public_photo);
+
+
+                profile_places_lived = '<div class="group-statistics px-2 py-1"> <div class="row nmarg d-flex"> <span class="mr-3"> <div class="text-right"> <a href="#"> <img src="./images/place.png" class="group-profile-image" /> </a> </div> </span> <span class=""> <div class="text-left"> <div class=""><strong>' + (!isEmpty(param.data.data.user.location.current_location) && !isEmpty(param.data.data.user.location.current_location.city.name) ? param.data.data.user.location.current_location.city.name : '') + '</strong></div> <div>Current city</div> <div class="text-secondary" style = "text-transform:capitalize;">' + (!isEmpty(param.data.data.user.location.current_location) && !isEmpty(param.data.data.user.location.current_location.privacy) ? '<i class="fa fa-user-secret"></i> ' + param.data.data.user.location.current_location.privacy : '') + '</div> </div> </span> </div> </div> <hr> <div class="group-statistics px-2 py-1"> <div class="row nmarg d-flex"> <span class="mr-3"> <div class="text-right"> <a href="#"> <img src="./images/place.png" class="group-profile-image" /> </a> </div> </span> <span class=""> <div class="text-left"> <div class=""><strong>' + (!isEmpty(param.data.data.user.location.from_location) && !isEmpty(param.data.data.user.location.from_location.city.name) ? param.data.data.user.location.from_location.city.name : '') + '</strong></div> <div>HomeTown</div> <div class="text-secondary">' + (!isEmpty(param.data.data.user.location.from_location) && !isEmpty(param.data.data.user.location.from_location.privacy) ? '<i class="fa fa-user-secret"></i> ' + param.data.data.user.location.from_location.privacy : '') + ' </div> </div> </span> </div> </div>';
+                $('#profile-places-lived').html(profile_places_lived);
+                // console.log(param.data.data.user.groups);
+                    if(!isEmpty(param.data.data.user.groups)){
+                        $.each(param.data.data.user.groups, function (key, value) {
+                            var image = image_url + '/files/' + value.profile_pic.hash + '/' + value.profile_pic.name;
+                            profiel_group += '<div class="group-statistics px-2 py-3"> <div class="row nmarg d-flex"> <span class="mr-3"> <div class="text-right"> <a href="#"> <img src="' + image + '" class="group-profile-image" /> </a> </div> </span> <span class=""> <div class="text-left"> <div class=""><strong>' + value.name + '</strong></div> <div>' + value.count_group_members + ' members</div> <div>' + value.description + '</div> </div> </span> </div> </div>';
+
+                        });
+                    }else{
+                        profiel_group += '<div class="group-statistics px-2 py-3"> <div class="row nmarg d-flex"> <span class="bold-text">(0 Record Found!)</span> </div> </div>';
+
+                    }
+
+
+
+                $('#profile-group').html(profiel_group);
+                    if(!isEmpty(param.data.data.user.events)){
+                        $.each(param.data.data.user.events, function (key, value) {
+                            var image = image_url + '/files/' + value.profile_pic.hash + '/' + value.profile_pic.name;
+
+                            profile_events += '<div class="group-statistics"> <div class="row nmarg"> <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 xs-pad"> <img class="event-profile-image" src="' + image + '"> </div> </div> </div> <div class="group-statistics"> <div class="row nmarg"> <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 xs-pad"> <div class="w-100"> <div class=""><strong>' + value.name + '</strong></span></p> <div>' + value.start_date + '</div> <div>' + value.description + '</div> </div> <div class="w-100"> <button class="btn btn-secondary w-100"> Interested<i class="fa fa-paper-plane-o ml-4"></i> </button> </div> </div> </div> </div> </div>';
+                        });
+                    }else{
+                        profile_events += '<div class="group-statistics"> <div class="row nmarg"> <span class="bold-text">(0 Record Found!)</span> </div> </div>';
+
+                    }
+
+
+                $('#profiel-events').html(profile_events);
+
+                profile_photo_timline += '<div class="timeline-profile-photos bg-white"> <div class="d-flex profile-name-wrap"> <span> <h3 class="font-weight-bold"> ' + (!isEmpty(param.data.data.user) && !isEmpty(param.data.data.user.firstname) ? param.data.data.user.firstname : '') + '    ' + (!isEmpty(param.data.data.user) && !isEmpty(param.data.data.user.lastname) ? param.data.data.user.lastname : '') + '   </h3> </span> <span> <a href="edit-my-profile.html"> <h4 class="bold-text"> <i class=" fs-30 btn"></i> </h4> </a> </span> </div> <div class="row nmarg"> <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad text-center"> <div class="timeline-bg-photo"> <img src="' + param.data.data.user.TimelineImage  + '" class="bg-img" alt="Photo"> </div> <div class="timeline-user-photo"> <div class="media"> <a class="pull-left" href="#"> <span><img class="media-object user-img" src="' + param.data.data.user.profileImage + '" alt="Photo"></span> </a> <div class="media-body"> </div> </div> </div> </div> </div> </div>';
+                $('#timline-photo').html(profile_photo_timline);
+                // console.log(param.data.data.user.mySports);
+                $.each(param.data.data.user.mySports, function (key, value) {
+
+                    profile_mysports += '<tr> <th scope="row"><i class="fa fa-bicycle fs-20"></i></th> <td>' + (!isEmpty(value.name) ? value.name : '') + '</td> <td>' + (!isEmpty(value.skill) ? value.skill : '') + '</td> <td> ' + (!isEmpty(value.exp) ? value.exp : '') + '</td> </tr>';
+
+                });
+
+                profile_public_video = '<div class="group-statistics"> <div class="videos-container">';
+                if(!isEmpty(param.data.data.user.userFeatureFiles.videos)){
+                    $.each(param.data.data.user.userFeatureFiles.videos, function (key, value) {
+                        var image = image_url + '/files/' + value.video.hash + '/' + value.video.name;
+                        profile_public_video += '<div class="p-1"><video class="w-100" controls> <source src="' + image + '" type="video/mp4"> Your browser does not support the video tag. </video></div>';
+
+                    });
+                }else{
+                    profile_public_video += '<div class="p-1"><span class="bold-text">(0 Record Found!)</span></div>';
+
+                }
+
+                profile_public_video += '</div> <button class="btn btn-success w-100">View all my Videos</button> </div>';
+                $('#profile-public-videos').html(profile_public_video);
+
+
+                $('#mySports-username').html((!isEmpty(param.data.data.user.firstname) ? param.data.data.user.firstname : '') + '' + (!isEmpty(param.data.data.user.lastname) ? param.data.data.user.lastname : '') + 's Sports <i class="fa fa-caret-down" aria-hidden="true" style="    font-size: 13px; margin-top: 0px;  float: none; padding-right: 8px;"></i>');
+                // alert(profile_mysports);
+                $('#profile-mysport').html(profile_mysports);
+                $.each(param.data.data.sports, function (key, value) {
+                    optionSports += '<option value="' + value.id + '">' + value.name + '</option>';
+                });
+                $('#my-sport-dta').html(optionSports);
+
+
+                $('#aboutMe').html(profile_aboutmeInfo);
+                $('#lang').html(profile_languageInfo);
+            }
+            }
+
+
+
+            getCountry();
+            getMyFriend(page = 'allFriends');
+        });
+
+        function  getMyFriend(page){
+
+            var sports  = $('#my-sport-dta').val();
+            var city   = $('#city').val();
+            var page = page;
+            var parameters = '';
+            var url        = app_url+'myfriends?loginuser='+ window.localStorage.getItem("loginuser") +'&page='+page+'&sports='+sports+'&city='+city;
+            var method     = 'GET';
+            var param      = CallMethod(method, url, onSuccessMyFriend, parameters);
+            function onSuccessMyFriend(param) {
+                if (param.data.login_error_status === '1') {
+                    showExpireAlert('session-expire');
+                    session(param.data);
+                } else {
+                var my_friends_html = '';
+
+                $.each(param.data.myFriends['0'].myfriends, function (key, value) {
+
+                    my_friends_html += '<div class="p-1"> <div class="p-1"> <img src="' + value.profileImage + '" class="w-100 b-r-50" /> </div> <div> <div><small><strong>' + (!isEmpty(value.firstname) ? value.firstname : '') + '  ' + (!isEmpty(value.lastname) ? value.lastname : '') + '</strong></small></div> <div><small>(' + (!isEmpty(value.count_mutual_friends) ? value.count_mutual_friends : '') + ') mutual friends</small></div> </div> </div>';
+
+                });
+                $.each(param.data.myFriends['0'].isFriendsWith, function (key, value) {
+
+                    my_friends_html += '<div class="p-1"> <div class="p-1"> <img src="' + value.profileImage + '" class="w-100 b-r-50" /> </div> <div> <div><small><strong>' + (!isEmpty(value.firstname) ? value.firstname : '') + '  ' + (!isEmpty(value.lastname) ? value.lastname : '') + '</strong></small></div> <div><small>(' + (!isEmpty(value.count_mutual_friends) ? value.count_mutual_friends : '') + ') mutual friends</small></div> </div> </div>';
+
+                });
+                // alert(my_friends_html);
+                $('#count-profile-myfriends').html('Sports Friends(' + param.data.myFriends['0'].countmyFriends + ') <i class="fa fa-caret-down" aria-hidden="true" style="    font-size: 13px; margin-top: 0px;  float: none; padding-right: 8px;"></i>');
+                $('#profile-myfriends').html(my_friends_html);
+
+
+            }
+            }
+        }
+
+        $('.profle-tab span').on('click', function(){
+            $('span.bg-primary').removeClass('bg-primary');
+            $('span.text-white').removeClass('text-white');
+            $(this).addClass('bg-primary');
+            $(this).addClass('text-white');
+        });
+
+        $("#view-my-photo").click(function(){
+            $("#profile-public-photos").toggle();
+        });
+        $(".my-friends-drp").click(function(){
+            $("#profile-myfriends-section").toggle();
+        });
+        $("#public-video-view").click(function(){
+            $("#profile-public-videos").toggle();
+        });
+        $("#mySports-username").click(function(){
+            $("#my-sports-section").toggle();
+        })
+        $("#groups-drp").click(function(){
+            $("#profile-group").toggle();
+        });
+        $("#places-lived-drp").click(function(){
+            $("#profile-places-lived").toggle();
+        });
+        $("#event-drp").click(function(){
+            $("#profiel-events").toggle();
+        });
+
+        // function sports(){
+        //
+        //
+        //     var parameters = '';
+        //     var url        = app_url+'sports?';
+        //     var method     = 'GET';
+        //     var param      = CallMethod(method, url, onSuccessLogin, parameters);
+        //     function onSuccessLogin(param){
+        //         var cityOption  = '<option value="">Select an option</option>';
+        //         $.each(param.data.cities, function (key, value){
+        //             cityOption += '<option value="'+ value.id +'">'+ value.name +'</option>';
+        //         });
+        //
+        //         $('#'+cityID).html(cityOption);
+        //
+        //
+        //
+        //
+        //     }
+        // }
+    </script>
+
+</body>
+
+</html>

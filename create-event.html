@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sport Social App </title>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--   CSS  -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="flags/build/css/demo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/jquery.owlcarousel@1.31(owl.carousel.css+owl.theme.css)">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+
+
+    <!--   JS   -->
+    <script src="./jquery/3.5.1/jquery.min.js"></script>
+    <script src="./popper/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./js/modernizr.custom.js"></script>
+    <script src="./js/jquery.owlcarousel.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper gray-wrapper" style=" padding-bottom: 80px;">
+        <div class="container full-container">
+            <div class="header">
+                <div id="gn-menu" class="gn-menu-main">
+                    <div class="row ss-nav pad-0 mx-0">
+                        <!-- <div class="">
+                                <li class="com-name login-logo"><span class="com-l com-l-index"><img src="images/logo.png" class="com-logo"></span></li>
+                            </div> -->
+                        <div class="nav-logo text-success">
+                            <img src="./images/ss-logo.png" />
+                        </div>
+                        <a href="#" class="nav-search">
+                            <h5><i class="fa fa-search"></i></h5>
+                        </a>
+                        <div class="nav-toggler">
+							<span data-toggle="toggle" data-target="#demo"
+                                  class="gn-trigger sub-header-icon text-center"><a href="javascript:void(0)"
+                                                                                    class="gn-burger"><i class="fa fa-bars fs-30 text-center"></i></a></span>
+                            <div id="side-nav"></div>
+
+                            <!--							<div id="demo" class="sidenav top-60">-->
+                            <!--								<div class="gn-scroller">-->
+                            <!--									<ul class="gn-menu">-->
+                            <!--										<div class="link-group link-group-no-heading">-->
+                            <!--											<li>-->
+                            <!--												<a href="my-profile.html">-->
+                            <!--													<i class="fa fa-user nav-icon"></i>-->
+                            <!--													My Profile-->
+                            <!--												</a>-->
+                            <!--											</li>-->
+                            <!--											<li>-->
+                            <!--												<a href="sport-friends.html">-->
+                            <!--													<i class="fa fa-thumbs-up nav-icon"></i>-->
+                            <!--													Sport Friends-->
+                            <!--												</a>-->
+                            <!--											</li>-->
+                            <!--											<li>-->
+                            <!--												<a href="my-posts.html">-->
+                            <!--													<i class="fa fa-list-alt nav-icon"></i>-->
+                            <!--													Sport Posts-->
+                            <!--												</a>-->
+                            <!--											</li>-->
+                            <!--											<li>-->
+                            <!--												<a href="sport-matches.html">-->
+                            <!--													<i class="fa fa-meetup nav-icon"></i>-->
+                            <!--													Sport Matches-->
+                            <!--												</a>-->
+                            <!--											</li>-->
+                            <!--											<li>-->
+                            <!--												<a href="sport-places.html">-->
+                            <!--													<i class="fa fa-map-marker nav-icon"></i>-->
+                            <!--													Sport Places-->
+                            <!--												</a>-->
+                            <!--											</li>-->
+                            <!--											<li>-->
+                            <!--												<a href="sport-coaches.html">-->
+                            <!--													<i class="fa fa-crosshairs nav-icon"></i>-->
+                            <!--													Sport Coach-->
+                            <!--												</a>-->
+                            <!--											</li>-->
+                            <!--											<li>-->
+                            <!--												<a href="sport-friend-requests.html">-->
+                            <!--													<i class="fa fa-users nav-icon"></i>-->
+                            <!--													Invite Requests(XX)-->
+                            <!--												</a>-->
+                            <!--											</li>-->
+                            <!--											<li>-->
+                            <!--												<a href="calendar.html">-->
+                            <!--													<i class="fa fa-calendar nav-icon"></i>-->
+                            <!--													Sport Calendar-->
+                            <!--												</a>-->
+                            <!--											</li>-->
+                            <!--											<li>-->
+                            <!--												<a href="sport-events.html">-->
+                            <!--													<i class="fa fa-calendar nav-icon"></i>-->
+                            <!--													My Sport Events-->
+                            <!--												</a>-->
+                            <!--											</li>-->
+                            <!--											<div class="link-group link-group-with-heading text-primary">-->
+                            <!--												<span class="link-heading toggle-pages"><i-->
+                            <!--														class="fa fa-flag nav-icon"></i> MY PAGES </span>-->
+                            <!--												<div class="no-show pages-list">-->
+                            <!--													<li><a href="all-pages.html" class="pl-5">Page 1</a></li>-->
+                            <!--													<li><a href="all-pages.html" class="pl-5">Page 2</a></li>-->
+                            <!--													<li><a href="all-pages.html" class="pl-5">Page 3</a></li>-->
+                            <!--												</div>-->
+                            <!--											</div>-->
+                            <!--											<div class="link-group link-group-with-heading text-primary">-->
+                            <!--												<span class="link-heading toggle-groups"><i-->
+                            <!--														class="fa fa-users nav-icon"></i> MY GROUPS </span>-->
+                            <!--												<div class="no-show groups-list">-->
+                            <!--													<li><a href="all-groups.html" class="pl-5">Group 1</a></li>-->
+                            <!--													<li><a href="all-groups.html" class="pl-5">Group 2</a></li>-->
+                            <!--													<li><a href="all-groups.html" class="pl-5">Group 3</a></li>-->
+                            <!--												</div>-->
+                            <!--											</div>-->
+                            <!--											<div class="link-group link-group-with-heading">-->
+                            <!--												<span class="link-heading pl-4"> CREATE </span>-->
+                            <!--												<li><a href="create-page.html"><i-->
+                            <!--															class="fa fa-flag nav-icon"></i>Page</a></li>-->
+                            <!--												<li><a href="create-group.html"><i-->
+                            <!--															class="fa fa-users nav-icon"></i>Group</a></li>-->
+                            <!--												<li><a href="#"><i class="fa fa-calendar nav-icon"></i>Event</a></li>-->
+                            <!--												<li><a href="#"><i class="fa fa-tag nav-icon"></i>Pricing</a></li>-->
+                            <!--											</div>-->
+                            <!--											<div class="link-group link-group-with-heading px-0">-->
+                            <!--												<span class="link-heading pl-4"> ACCOUNT SETTINGS </span>-->
+                            <!--												<li>-->
+                            <!--													<a href="profile-setting.html">-->
+                            <!--														<i class="fa fa-cogs nav-icon"></i>-->
+                            <!--														Settings-->
+                            <!--													</a>-->
+                            <!--												</li>-->
+                            <!--												<li>-->
+                            <!--													<a href="index-3.html">-->
+                            <!--														<i class="fa fa-unlock-alt nav-icon"></i>-->
+                            <!--														Login & Password-->
+                            <!--													</a>-->
+                            <!--												</li>-->
+                            <!--												<li>-->
+                            <!--													<a href="index.html">-->
+                            <!--														<i class="fa fa-sign-out nav-icon"></i>-->
+                            <!--														Sign Out-->
+                            <!--													</a>-->
+                            <!--												</li>-->
+                            <!--											</div>-->
+                            <!--										</div>-->
+                            <!--										<br><br><br><br><br>-->
+                            <!--									</ul>-->
+                            <!--								</div>&lt;!&ndash; /gn-scroller &ndash;&gt;-->
+                            <!--							</div>-->
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="content c-home top-60">
+                <div class="intro">
+                    <div class="row nmarg">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+                            <div class="page-heading">
+                                <h3 class="text-success x-bold-text"> Create an Event </h3>
+                            </div>
+
+                            <div class="edit-sports-wrapper center-block">
+                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                    <div class="bg-white rounded block-area" style="    padding: 25px 50px 75px 100px;">
+                                        <div class="panel">
+                                            <div class="panel-body">
+                                                <form id="event-form">
+                                                    <label class="normal-text">Event Name</label>
+                                                    <input type="text" name="name" placeholder="" class="form-control">
+                                                    <br>
+                                                    <label class="normal-text">Description</label>
+                                                    <textarea name="description" rows="2" placeholder="Tell people what the event is about" class="form-control h-auto"></textarea>
+                                                    <br>
+                                                    <label class="normal-text">Select Date/Time</label>
+                                                    <input type="date" name="start_date" placeholder="" class="form-control">
+                                                    <br>
+                                                    <label class="normal-text">Invite people</label>
+                                                    <select name="user_id[]"  class="form-control" id="user-option-list" multiple="multiple"  required>
+                                                    </select>
+                                                    <br>
+                                                    <select class="form-control" name="type">
+                                                        <option value=""> Select Type </option>
+                                                        <option value="public" > Public Event </option>
+                                                        <option value="private"> Private Event </option>
+                                                    </select><br>
+                                                    <br>
+                                                    <div class="form-group px-2">
+                                                        <label class="normal-text">Profile Photo </label>
+                                                        <input type="file" name="profile_img"  id="profile-img" class="form-control" >
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group px-2">
+                                                        <label for="usr" class="justify-content-between d-flex">
+                                                            <span>Cover Photo</span>
+                                                            <span><small><i>Optional</i></small></span>
+                                                        </label>
+                                                        <div class="d-flex">
+										<span class="w-25">
+											<img src="./images/img03.jpg" class="w-100" alt="">
+										</span>
+                                                            <span class="w-75">
+											<input class="btn btn-default" name="cover_img"  id="cover-img" type="file"></input>
+										</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group px-2">
+                                                        <label class="normal-text">Logo </label>
+                                                        <input type="file" name="logo"  id="logo-img" class="form-control" >
+                                                    </div>
+
+                                                    <a href="javascript:void(0);" class="btn btn-success fs-17 bold-text rounded-btn pull-right" onclick="storeEvent();">Create Event</a>
+                                                </form>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    </div>
+
+
+
+                </div><!-- /intro -->
+            </div><!-- /content -->
+        </div><!-- /container -->
+    </div> <!-- /wrapper -->
+    <div id="bottom-nav"></div>
+	<!-- Country flags plugin js  -->
+	<script src="flags/build/js/intlTelInput.js"></script>
+	<script>
+		var input = document.querySelector("#phone");
+		window.intlTelInput(input, {
+			// allowDropdown: false,
+			// autoHideDialCode: false,
+			// autoPlaceholder: "off",
+			// dropdownContainer: document.body,
+			// excludeCountries: ["us"],
+			// formatOnDisplay: false,
+			// geoIpLookup: function(callback) {
+			//   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+			//     var countryCode = (resp && resp.country) ? resp.country : "";
+			//     callback(countryCode);
+			//   });
+			// },
+			// hiddenInput: "full_number",
+			// initialCountry: "auto",
+			// localizedCountries: { 'de': 'Deutschland' },
+			// nationalMode: false,
+			// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+			// placeholderNumberType: "MOBILE",
+			// preferredCountries: ['cn', 'jp'],
+			// separateDialCode: true,
+			utilsScript: "flags/build/js/utils.js",
+		});
+	</script>
+	<script>
+
+		// script to expand/collapse album
+		$('.panel-collapse').on('show.bs.collapse', function () {
+			$(this).siblings('.panel-heading').addClass('active');
+		});
+
+		$('.panel-collapse').on('hide.bs.collapse', function () {
+			$(this).siblings('.panel-heading').removeClass('active');
+		});
+	</script>
+	 <script src="js/classie.js"></script>
+	<script src="js/gnmenu.js"></script>
+    <script src="js/general-friend-request.js"></script>
+    <script src="js/sports-social/statistics.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        })
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+    <script>
+        // js for secondary navigation
+        $("[data-toggle='toggle']").click(function () {
+            var selector = $(this).data("target");
+            $(selector).toggleClass('in');
+        });
+        function showSearchField() {
+            $(".ss-profile-name").fadeOut(0);
+            setTimeout($(".ss-search-input input").fadeIn(1000), 1000)
+        }
+
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+	<script>
+		new gnMenu(document.getElementById('gn-menu'));
+	</script>
+    <script>
+        $('document').ready(function (){
+            var parameters = '';
+
+
+            var url        = app_url+'event-create?loginuser='+window.localStorage.getItem("loginuser");
+            var method     = 'POST';
+            var param      = CallMethod(method, url, onSuccessCreateEvent, parameters);
+            function onSuccessCreateEvent(param){
+
+                var user_option_list = '<option value="" selected>Select an option</option>';
+
+                $.each(param.data.friends, function (key, value){
+
+                    user_option_list += '<option value="'+( !isEmpty(value.user) && !isEmpty(value.user.id)  ?  value.user.id  : '' )+'">'+( !isEmpty(value.user)  && !isEmpty(value.user.firstname)? value.user.firstname : '' ) +' '+( !isEmpty(value.user) && !isEmpty(value.user.lastname)? value.user.lastname : '' ) +'</option>';
+                });
+
+
+                $('#user-option-list').html(user_option_list);
+
+
+
+
+            }
+        });
+
+        function storeEvent(){
+
+            var parameters = '';
+            var data       = $('#event-form').serialize();
+            var formData = new FormData();
+            formData.append('profile_image', $('#profile-img')[0].files[0]);
+            formData.append('cover_image', $('#cover-img')[0].files[0]);
+            formData.append('logo_image', $('#logo-img')[0].files[0]);
+
+            parameters = formData;
+
+            var url        = app_url+'event-store?'+data+'&loginuser='+window.localStorage.getItem('loginuser');
+            var method     = 'POST';
+            var param      = CallMethod(method, url, onSuccessStoreEvent, parameters);
+            function onSuccessStoreEvent (param){
+
+
+
+                if (param.data.login_error_status === '1') {
+                    showExpireAlert('session-expire');
+                    session(param.data);
+                } else if(param.data.message_status == false){
+
+                    $.each(param.data.errors, function(key, value){
+                        showAlertMessage(type = 'error', String(value));
+                    });
+
+                }else {
+
+                    if (param.data.status == true) {
+                        showAlert(message = 'Event created successfully', header = 'Message');
+                    }
+                }
+
+            }
+
+
+
+        }
+
+    </script>
+</body>
+
+</html>

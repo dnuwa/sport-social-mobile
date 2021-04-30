@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sport Social App</title>
+    <link rel="shortcut icon" href="../favicon.ico" />
+
+    <!--   CSS  -->
+
+    <link
+        rel="stylesheet"
+        href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous"
+    />
+
+    <link
+        rel="stylesheet"
+        href="./font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="flags/build/css/intlTelInput.css" />
+    <link rel="stylesheet" href="flags/build/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/css.css" />
+    <style type="text/css">
+        .position-relative {
+            position: relative !important;
+        }
+        .zindex-10 {
+            z-index: 10;
+        }
+        .right-0 {
+            right: 0;
+        }
+        .rounded-circle {
+            border-radius: 50% !important;
+        }
+        .mw-100 {
+            max-width: 100% !important;
+        }
+
+        .mh-100 {
+            max-height: 100% !important;
+        }
+
+        .m-0 {
+            margin: 0 !important;
+        }
+
+        .mt-0,
+        .my-0 {
+            margin-top: 0 !important;
+        }
+
+        .mr-0,
+        .mx-0 {
+            margin-right: 0 !important;
+        }
+
+        .mb-0,
+        .my-0 {
+            margin-bottom: 0 !important;
+        }
+
+        .ml-0,
+        .mx-0 {
+            margin-left: 0 !important;
+        }
+
+        .m-1 {
+            margin: 0.25rem !important;
+        }
+
+        .mt-1,
+        .my-1 {
+            margin-top: 0.25rem !important;
+        }
+
+        .mr-1,
+        .mx-1 {
+            margin-right: 0.25rem !important;
+        }
+
+        .mb-1,
+        .my-1 {
+            margin-bottom: 0.25rem !important;
+        }
+
+        .ml-1,
+        .mx-1 {
+            margin-left: 0.25rem !important;
+        }
+
+        .m-2 {
+            margin: 0.5rem !important;
+        }
+
+        .mt-2,
+        .my-2 {
+            margin-top: 0.5rem !important;
+        }
+
+        .mr-2,
+        .mx-2 {
+            margin-right: 0.5rem !important;
+        }
+
+        .mb-2,
+        .my-2 {
+            margin-bottom: 0.5rem !important;
+        }
+
+        .ml-2,
+        .mx-2 {
+            margin-left: 0.5rem !important;
+        }
+
+        .m-3 {
+            margin: 1rem !important;
+        }
+        .custom-rounded{
+            border-radius: 10px;
+        }
+
+        .mt-3,
+        .my-3 {
+            margin-top: 1rem !important;
+        }
+
+        .mr-3,
+        .mx-3 {
+            margin-right: 1rem !important;
+        }
+
+        .mb-3,
+        .my-3 {
+            margin-bottom: 1rem !important;
+        }
+
+        .ml-3,
+        .mx-3 {
+            margin-left: 1rem !important;
+        }
+
+        .m-4 {
+            margin: 1.5rem !important;
+        }
+
+        .mt-4,
+        .my-4 {
+            margin-top: 1.5rem !important;
+        }
+
+        .mr-4,
+        .mx-4 {
+            margin-right: 1.5rem !important;
+        }
+
+        .mb-4,
+        .my-4 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .ml-4,
+        .mx-4 {
+            margin-left: 1.5rem !important;
+        }
+
+        .m-5 {
+            margin: 3rem !important;
+        }
+
+        .mt-5,
+        .my-5 {
+            margin-top: 3rem !important;
+        }
+
+        .mr-5,
+        .mx-5 {
+            margin-right: 3rem !important;
+        }
+
+        .mb-5,
+        .my-5 {
+            margin-bottom: 3rem !important;
+        }
+
+        .ml-5,
+        .mx-5 {
+            margin-left: 3rem !important;
+        }
+
+        .p-0 {
+            padding: 0 !important;
+        }
+
+        .pt-0,
+        .py-0 {
+            padding-top: 0 !important;
+        }
+
+        .pr-0,
+        .px-0 {
+            padding-right: 0 !important;
+        }
+
+        .pb-0,
+        .py-0 {
+            padding-bottom: 0 !important;
+        }
+
+        .pl-0,
+        .px-0 {
+            padding-left: 0 !important;
+        }
+
+        .p-1 {
+            padding: 0.25rem !important;
+        }
+
+        .pt-1,
+        .py-1 {
+            padding-top: 0.25rem !important;
+        }
+
+        .pr-1,
+        .px-1 {
+            padding-right: 0.25rem !important;
+        }
+
+        .pb-1,
+        .py-1 {
+            padding-bottom: 0.25rem !important;
+        }
+
+        .pl-1,
+        .px-1 {
+            padding-left: 0.25rem !important;
+        }
+
+        .p-2 {
+            padding: 0.5rem !important;
+        }
+
+        .pt-2,
+        .py-2 {
+            padding-top: 0.5rem !important;
+        }
+
+        .pr-2,
+        .px-2 {
+            padding-right: 0.5rem !important;
+        }
+
+        .pb-2,
+        .py-2 {
+            padding-bottom: 0.5rem !important;
+        }
+
+        .pl-2,
+        .px-2 {
+            padding-left: 0.5rem !important;
+        }
+
+        .p-3 {
+            padding: 1rem !important;
+        }
+
+        .pt-3,
+        .py-3 {
+            padding-top: 1rem !important;
+        }
+
+        .pr-3,
+        .px-3 {
+            padding-right: 1rem !important;
+        }
+
+        .pb-3,
+        .py-3 {
+            padding-bottom: 1rem !important;
+        }
+
+        .pl-3,
+        .px-3 {
+            padding-left: 1rem !important;
+        }
+
+        .p-4 {
+            padding: 1.5rem !important;
+        }
+
+        .pt-4,
+        .py-4 {
+            padding-top: 1.5rem !important;
+        }
+
+        .pr-4,
+        .px-4 {
+            padding-right: 1.5rem !important;
+        }
+
+        .pb-4,
+        .py-4 {
+            padding-bottom: 1.5rem !important;
+        }
+
+        .pl-4,
+        .px-4 {
+            padding-left: 1.5rem !important;
+        }
+
+        .p-5 {
+            padding: 3rem !important;
+        }
+
+        .pt-5,
+        .py-5 {
+            padding-top: 3rem !important;
+        }
+
+        .pr-5,
+        .px-5 {
+            padding-right: 3rem !important;
+        }
+
+        .pb-5,
+        .py-5 {
+            padding-bottom: 3rem !important;
+        }
+
+        .pl-5,
+        .px-5 {
+            padding-left: 3rem !important;
+        }
+        .profileImgBgSmall {
+            background-image: url("./images/img04.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            min-height: 100px;
+            display: flex;
+            position: relative;
+        }
+        .profileImgBgSmall div {
+            position: absolute;
+            top: 60px;
+            display: flex;
+        }
+        .profileImgBgSmall div img {
+            border: 2px solid #fff;
+        }
+        .justify-content-between {
+            justify-content: space-between !important;
+        }
+        .d-flex {
+            display: flex !important;
+        }
+        .w-33 {
+            width: 33.333%;
+        }
+        .order-lg-2 {
+            order: 2;
+        }
+        .font-14{
+            font-size: 14px;
+        }
+        /* contentColumns styles */
+
+        .contentColumns {
+            padding-top: 24px;
+            padding-bottom: 0;
+        }
+
+        /* content styles */
+
+        .content {
+            width: 100%;
+        }
+    </style>
+
+    <!--    &lt;!&ndash;   JS   &ndash;&gt;-->
+    <!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"-->
+    <!--        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"-->
+    <!--        crossorigin="anonymous"></script>-->
+    <!--   -->
+    <!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"-->
+    <!--        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"-->
+    <!--        crossorigin="anonymous"></script>-->
+
+    <!--   JS   -->
+    <script src="./jquery/3.5.1/jquery.min.js"></script>
+
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+    ></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper gray-wrapper">
+    <div class="container full-container">
+        <div class="header">
+            <div id="gn-menu" class="gn-menu-main">
+                <div class="row ss-nav pad-0 mx-0">
+                    <!-- <div class="">
+                        <li class="com-name login-logo"><span class="com-l com-l-index"><img src="images/logo.png" class="com-logo"></span></li>
+                    </div> -->
+                    <div class="nav-logo text-success">
+                        <img src="./images/ss-logo.png" />
+                    </div>
+                    <a href="#" class="nav-search">
+                        <h5><i class="fa fa-search"></i></h5>
+                    </a>
+                    <div class="nav-toggler">
+								<span
+                                    data-toggle="toggle"
+                                    data-target="#demo"
+                                    class="gn-trigger sub-header-icon text-center"
+                                ><a href="javascript:void(0)" class="gn-burger"
+                                ><i class="fa fa-bars fs-30 text-center"></i></a
+                                ></span>
+                        <div id="side-nav"></div>
+                        <!--                             <div id="demo" class="sidenav top-60">-->
+                        <!--                                <div class="gn-scroller">-->
+                        <!--                                    <ul class="gn-menu">-->
+                        <!--                                        <div class="link-group link-group-no-heading">-->
+                        <!--                                            <li>-->
+                        <!--                                                <a href="my-profile.html">-->
+                        <!--                                                    <i class="fa fa-user nav-icon"></i>-->
+                        <!--                                                    My Profile-->
+                        <!--                                                </a>-->
+                        <!--                                            </li>-->
+                        <!--                                            <li>-->
+                        <!--                                                <a href="sport-friends.html">-->
+                        <!--                                                    <i class="fa fa-thumbs-up nav-icon"></i>-->
+                        <!--                                                    Sport Friends-->
+                        <!--                                                </a>-->
+                        <!--                                            </li>-->
+                        <!--                                            <li>-->
+                        <!--                                                <a href="my-posts.html">-->
+                        <!--                                                    <i class="fa fa-list-alt nav-icon"></i>-->
+                        <!--                                                    Sport Posts-->
+                        <!--                                                </a>-->
+                        <!--                                            </li>-->
+                        <!--                                            <li>-->
+                        <!--                                                <a href="sport-matches.html">-->
+                        <!--                                                    <i class="fa fa-meetup nav-icon"></i>-->
+                        <!--                                                    Sport Matches-->
+                        <!--                                                </a>-->
+                        <!--                                            </li>-->
+                        <!--                                            <li>-->
+                        <!--                                                <a href="sport-places.html">-->
+                        <!--                                                    <i class="fa fa-map-marker nav-icon"></i>-->
+                        <!--                                                    Sport Places-->
+                        <!--                                                </a>-->
+                        <!--                                            </li>-->
+                        <!--                                            <li>-->
+                        <!--                                                <a href="sport-coaches.html">-->
+                        <!--                                                    <i class="fa fa-crosshairs nav-icon"></i>-->
+                        <!--                                                    Sport Coach-->
+                        <!--                                                </a>-->
+                        <!--                                            </li>-->
+                        <!--                                            <li>-->
+                        <!--                                                <a href="sport-friend-requests.html">-->
+                        <!--                                                    <i class="fa fa-users nav-icon"></i>-->
+                        <!--                                                    Invite Requests(XX)-->
+                        <!--                                                </a>-->
+                        <!--                                            </li>-->
+                        <!--                                            <li>-->
+                        <!--                                                <a href="calendar.html">-->
+                        <!--                                                    <i class="fa fa-calendar nav-icon"></i>-->
+                        <!--                                                    Sport Calendar-->
+                        <!--                                                </a>-->
+                        <!--                                            </li>-->
+                        <!--                                            <li>-->
+                        <!--                                                <a href="sport-events.html">-->
+                        <!--                                                    <i class="fa fa-calendar nav-icon"></i>-->
+                        <!--                                                    My Sport Events-->
+                        <!--                                                </a>-->
+                        <!--                                            </li>-->
+                        <!--                                            <div class="link-group link-group-with-heading text-primary">-->
+                        <!--                                                <span class="link-heading toggle-pages"><i-->
+                        <!--                                                        class="fa fa-flag nav-icon"></i> MY PAGES </span>-->
+                        <!--                                                <div class="no-show pages-list">-->
+                        <!--                                                    <li><a href="all-pages.html" class="pl-5">Page 1</a></li>-->
+                        <!--                                                    <li><a href="all-pages.html" class="pl-5">Page 2</a></li>-->
+                        <!--                                                    <li><a href="all-pages.html" class="pl-5">Page 3</a></li>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                            <div class="link-group link-group-with-heading text-primary">-->
+                        <!--                                                <span class="link-heading toggle-groups"><i-->
+                        <!--                                                        class="fa fa-users nav-icon"></i> MY GROUPS </span>-->
+                        <!--                                                <div class="no-show groups-list">-->
+                        <!--                                                    <li><a href="all-groups.html" class="pl-5">Group 1</a></li>-->
+                        <!--                                                    <li><a href="all-groups.html" class="pl-5">Group 2</a></li>-->
+                        <!--                                                    <li><a href="all-groups.html" class="pl-5">Group 3</a></li>-->
+                        <!--                                                </div>-->
+                        <!--                                            </div>-->
+                        <!--                                            <div class="link-group link-group-with-heading">-->
+                        <!--                                                <span class="link-heading pl-4"> CREATE </span>-->
+                        <!--                                                <li><a href="create-page.html"><i-->
+                        <!--                                                            class="fa fa-flag nav-icon"></i>Page</a></li>-->
+                        <!--                                                <li><a href="create-group.html"><i-->
+                        <!--                                                            class="fa fa-users nav-icon"></i>Group</a></li>-->
+                        <!--                                                <li><a href="#"><i class="fa fa-calendar nav-icon"></i>Event</a></li>-->
+                        <!--                                                <li><a href="#"><i class="fa fa-tag nav-icon"></i>Pricing</a></li>-->
+                        <!--                                            </div>-->
+                        <!--                                            <div class="link-group link-group-with-heading px-0">-->
+                        <!--                                                <span class="link-heading pl-4"> ACCOUNT SETTINGS </span>-->
+                        <!--                                                <li>-->
+                        <!--                                                    <a href="profile-setting.html">-->
+                        <!--                                                        <i class="fa fa-cogs nav-icon"></i>-->
+                        <!--                                                        Settings-->
+                        <!--                                                    </a>-->
+                        <!--                                                </li>-->
+                        <!--                                                <li>-->
+                        <!--                                                    <a href="index-3.html">-->
+                        <!--                                                        <i class="fa fa-unlock-alt nav-icon"></i>-->
+                        <!--                                                        Login & Password-->
+                        <!--                                                    </a>-->
+                        <!--                                                </li>-->
+                        <!--                                                <li>-->
+                        <!--                                                    <a href="index.html">-->
+                        <!--                                                        <i class="fa fa-sign-out nav-icon"></i>-->
+                        <!--                                                        Sign Out-->
+                        <!--                                                    </a>-->
+                        <!--                                                </li>-->
+                        <!--                                            </div>-->
+                        <!--                                        </div>-->
+                        <!--                                        <br><br><br><br><br>-->
+                        <!--                                    </ul>-->
+                        <!--                                </div>&lt;!&ndash; /gn-scroller &ndash;&gt;-->
+                        <!--                            </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content c-home top-60">
+            <div class="intro">
+                <div class="row nmarg">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+                        <div class="bg-white timeline-wrap">
+									<span class="p-1">
+										<a
+                                            href="sport-friends.html"
+                                            class="text-success font-weight-bold"
+                                        >Sport<br />
+											Friends</a
+                                        >
+									</span>
+                            <span class="p-1">
+										<a href="my-posts.html" class="text-dark font-weight-bold"
+                                        >Sport<br />
+											Posts</a
+                                        >
+									</span>
+                            <span class="p-1">
+										<a
+                                            href="sport-matches.html"
+                                            class="text-dark font-weight-bold"
+                                        >Sport<br />
+											Matches</a
+                                        >
+									</span>
+                            <span class="p-1">
+										<a
+                                            href="sport-places.html"
+                                            class="text-dark font-weight-bold"
+                                        >Sport<br />
+											Places</a
+                                        >
+									</span>
+                            <span class="p-1">
+										<a
+                                            href="sport-coaches.html"
+                                            class="text-dark font-weight-bold"
+                                        >Sport<br />
+											Coach</a
+                                        >
+									</span>
+                        </div>
+                        <div class="w-100 mt-1">
+                            <div
+                                class="btn-success w-100 mr-1 text-center p-2"
+                                id="count-people-you-know"
+                            >
+                                <h5>Sport People You Know</h5>
+                            </div>
+                        </div>
+                        <div class="bg-white justify-content-space-betweeen p-2 d-flex">
+                            <a
+                                class="btn btn-primary br-10 bg-dark b-0"
+                                href="sport-friends.html"
+                            >
+                                <i class="fa fa-chevron-left"></i> Back
+                            </a>
+                            <span class="ml-3 mt-2">
+										<h6>Invite People You Know</h6>
+									</span>
+                        </div>
+
+                        <div class="rounded p-1 mb-60">
+                            <div id="people-may-you-know" class="d-flex flex-wrap p-0"></div>
+
+                            <!--                                <hr>-->
+                            <!--                                <div class="p-1">-->
+                            <!--                                    <div class="media media-friend-tab p-1">-->
+                            <!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+                            <!--                                            alt="Generic placeholder image">-->
+                            <!--                                        <div class="media-body">-->
+                            <!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+                            <!--                                            <div class="d-block">-->
+                            <!--                                                <span class="w-100">-->
+                            <!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+                            <!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+                            <!--                                                </span>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="d-flex">-->
+                            <!--                                        <button class="btn btn-success w-33 mr-1">Invite</button>-->
+                            <!--                                        <button class="btn btn-danger w-33 mr-1">Remove</button>-->
+                            <!--                                        <button class="btn btn-primary w-33">Message</button>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                                <hr>-->
+                            <!--                                <div class="p-1">-->
+                            <!--                                    <div class="media media-friend-tab p-1">-->
+                            <!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+                            <!--                                            alt="Generic placeholder image">-->
+                            <!--                                        <div class="media-body">-->
+                            <!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+                            <!--                                            <div class="d-block">-->
+                            <!--                                                <span class="w-100">-->
+                            <!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+                            <!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+                            <!--                                                </span>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="d-flex">-->
+                            <!--                                        <button class="btn btn-success w-33 mr-1">Invite</button>-->
+                            <!--                                        <button class="btn btn-danger w-33 mr-1">Remove</button>-->
+                            <!--                                        <button class="btn btn-primary w-33">Message</button>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                                <hr>-->
+                            <!--                                <div class="p-1">-->
+                            <!--                                    <div class="media media-friend-tab p-1">-->
+                            <!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+                            <!--                                            alt="Generic placeholder image">-->
+                            <!--                                        <div class="media-body">-->
+                            <!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+                            <!--                                            <div class="d-block">-->
+                            <!--                                                <span class="w-100">-->
+                            <!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+                            <!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+                            <!--                                                </span>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="d-flex">-->
+                            <!--                                        <button class="btn btn-success w-33 mr-1">Invite</button>-->
+                            <!--                                        <button class="btn btn-danger w-33 mr-1">Remove</button>-->
+                            <!--                                        <button class="btn btn-primary w-33">Message</button>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                                <hr>-->
+                            <!--                                <div class="p-1">-->
+                            <!--                                    <div class="media media-friend-tab p-1">-->
+                            <!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+                            <!--                                            alt="Generic placeholder image">-->
+                            <!--                                        <div class="media-body">-->
+                            <!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+                            <!--                                            <div class="d-block">-->
+                            <!--                                                <span class="w-100">-->
+                            <!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+                            <!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+                            <!--                                                </span>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="d-flex">-->
+                            <!--                                        <button class="btn btn-success w-33 mr-1">Invite</button>-->
+                            <!--                                        <button class="btn btn-danger w-33 mr-1">Remove</button>-->
+                            <!--                                        <button class="btn btn-primary w-33">Message</button>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                                <hr>-->
+                            <!--                                <div class="p-1">-->
+                            <!--                                    <div class="media media-friend-tab p-1">-->
+                            <!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+                            <!--                                            alt="Generic placeholder image">-->
+                            <!--                                        <div class="media-body">-->
+                            <!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+                            <!--                                            <div class="d-block">-->
+                            <!--                                                <span class="w-100">-->
+                            <!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+                            <!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+                            <!--                                                </span>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="d-flex">-->
+                            <!--                                        <button class="btn btn-success w-33 mr-1">Invite</button>-->
+                            <!--                                        <button class="btn btn-danger w-33 mr-1">Remove</button>-->
+                            <!--                                        <button class="btn btn-primary w-33">Message</button>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                                <hr>-->
+                            <!--                                <div class="p-1">-->
+                            <!--                                    <div class="media media-friend-tab p-1">-->
+                            <!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+                            <!--                                            alt="Generic placeholder image">-->
+                            <!--                                        <div class="media-body">-->
+                            <!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+                            <!--                                            <div class="d-block">-->
+                            <!--                                                <span class="w-100">-->
+                            <!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+                            <!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+                            <!--                                                </span>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="d-flex">-->
+                            <!--                                        <button class="btn btn-success w-33 mr-1">Invite</button>-->
+                            <!--                                        <button class="btn btn-danger w-33 mr-1">Remove</button>-->
+                            <!--                                        <button class="btn btn-primary w-33">Message</button>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                                <hr>-->
+                            <!--                                <div class="p-1">-->
+                            <!--                                    <div class="media media-friend-tab p-1">-->
+                            <!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+                            <!--                                            alt="Generic placeholder image">-->
+                            <!--                                        <div class="media-body">-->
+                            <!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+                            <!--                                            <div class="d-block">-->
+                            <!--                                                <span class="w-100">-->
+                            <!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+                            <!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+                            <!--                                                </span>-->
+                            <!--                                            </div>-->
+                            <!--                                        </div>-->
+                            <!--                                    </div>-->
+                            <!--                                    <div class="d-flex">-->
+                            <!--                                        <button class="btn btn-success w-33 mr-1">Invite</button>-->
+                            <!--                                        <button class="btn btn-danger w-33 mr-1">Remove</button>-->
+                            <!--                                        <button class="btn btn-primary w-33">Message</button>-->
+                            <!--                                    </div>-->
+                            <!--                                </div>-->
+                            <!--                                <hr>-->
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    <!--   chatbox   -->
+                    <div class="chat-popup" id="chatBox" style="display: none">
+                        <form action="javascript:void(0);" class="form-container">
+                            <div id="message-header"></div>
+                            <div
+                                class="messages-container"
+                                style="height: 396px; overflow: scroll"
+                            >
+                                <div class="messages-container-2" id="message-container">
+                                    <!--									<div class="container msg-box-1">-->
+                                    <!--									  <div class="msg-box-container"><span class="message-text">Hello. How are you today? </span> <span class="time-right">11:00</span></div>-->
+                                    <!--									</div>-->
+
+                                    <!--									<div class="container darker msg-box-2">-->
+                                    <!--									  <div class="msg-box-container"><span class="message-text">Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking!</span> <span class="time-left">11:01</span></div>-->
+                                    <!--									</div>-->
+
+                                    <!--									<div class="container msg-box-1">-->
+                                    <!--									 <div class="msg-box-container"><span class="message-text">Sweet! </span> <span class="time-right">11:02</span></div>-->
+                                    <!--									</div>-->
+
+                                    <!--									<div class="container darker msg-box-2">-->
+                                    <!--									  <div class="msg-box-container"><span class="message-text">Nah, I dunno. </span> <span class="time-left">11:05</span></div>-->
+                                    <!--									</div>-->
+                                    <!--									<div class="container msg-box-1">-->
+                                    <!--									  <div class="msg-box-container"><span class="message-text">Hello. How are you today? </span> <span class="time-right">11:00</span></div>-->
+                                    <!--									</div>-->
+
+                                    <!--									<div class="container darker msg-box-2">-->
+                                    <!--									  <div class="msg-box-container"><span class="message-text">Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking!</span> <span class="time-left">11:01</span></div>-->
+                                    <!--									</div>-->
+
+                                    <!--									<div class="container msg-box-1">-->
+                                    <!--									 <div class="msg-box-container"><span class="message-text">Sweet! </span> <span class="time-right">11:02</span></div>-->
+                                    <!--									</div>-->
+
+                                    <!--									<div class="container darker msg-box-2">-->
+                                    <!--									  <div class="msg-box-container"><span class="message-text">Nah, I dunno. </span> <span class="time-left">11:05</span></div>-->
+                                    <!--									</div>-->
+                                    <!--									<div class="container msg-box-1">-->
+                                    <!--									  <div class="msg-box-container"><span class="message-text">Hello. How are you today? </span> <span class="time-right">11:00</span></div>-->
+                                    <!--									</div>-->
+
+                                    <!--									<div class="container darker msg-box-2">-->
+                                    <!--									  <div class="msg-box-container"><span class="message-text">Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking!</span> <span class="time-left">11:01</span></div>-->
+                                    <!--									</div>-->
+
+                                    <!--									<div class="container msg-box-1">-->
+                                    <!--									 <div class="msg-box-container"><span class="message-text">Sweet! </span> <span class="time-right">11:02</span></div>-->
+                                    <!--									</div>-->
+
+                                    <!--									<div class="container darker msg-box-2">-->
+                                    <!--									  <div class="msg-box-container"><span class="message-text">Nah, I dunno. </span> <span class="time-left">11:05</span></div>-->
+                                    <!--									</div>-->
+                                </div>
+                            </div>
+                            <br />
+                            <div class="footer">
+                                <form action="javascript:void(0);">
+                                    <div class="input-group">
+                                        <input
+                                            type="text"
+                                            class="form-control"
+                                            placeholder="Type message..."
+                                            name="search"
+                                            id="message-content"
+                                        />
+                                        <div class="input-group-btn">
+                                            <button
+                                                class="btn btn-default send-btn"
+                                                type="submit"
+                                                onclick="sendMessage();"
+                                            >
+                                                <i class="fa fa-paper-plane"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- /intro -->
+        </div>
+        <!-- /content -->
+    </div>
+    <!-- /container -->
+</div>
+<!-- /wrapper -->
+<div id="bottom-nav"></div>
+<!--    <div class="sub-header bottom-0">-->
+<!--        <div class="row nmarg ss-bottom-nav">-->
+
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="my-posts.html">-->
+<!--                        <img src="./images/ss-icon-002.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="my-profile.html">-->
+<!--                        <img src="./images/sports soical app icons-02.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-matches.html">-->
+<!--                        <img src="./images/ss-icon-001.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="all-groups.html">-->
+<!--                        <img src="./images/sports soical app icons-04.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-places.html">-->
+<!--                        <img src="./images/sports soical app icons-05.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-messages.html">-->
+<!--                        <img src="./images/sports soical app icons-06.svg" />-->
+<!--                    </a>-->
+<!--                    <span class="counter">15</span>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="calendar.html">-->
+<!--                        <img src="./images/sports soical app icons-07.svg" />-->
+<!--                    </a>-->
+<!--                    <span class="counter" >15</span>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+<script src="js/classie.js"></script>
+<script src="js/gnmenu.js"></script>
+<script src="js/app.js"></script>
+<script src="js/sports-social/statistics.js"></script>
+<script src="js/main.js"></script>
+<script src="js/general-friend-request.js"></script>
+<script src="js/message.js"></script>
+<script>
+    $(".popover-dismiss").popover({
+        trigger: "focus",
+    });
+    $(function () {
+        $('[data-toggle="popover"]').popover();
+    });
+</script>
+<script>
+    // js for secondary navigation
+    $("[data-toggle='toggle']").click(function () {
+        var selector = $(this).data("target");
+        $(selector).toggleClass("in");
+    });
+    function showSearchField() {
+        $(".ss-profile-name").fadeOut(0);
+        setTimeout($(".ss-search-input input").fadeIn(1000), 1000);
+    }
+
+    new gnMenu(document.getElementById("gn-menu"));
+</script>
+
+<script>
+    $("document").ready(function () {
+        search_people_you_may_know();
+    });
+
+    function search_people_you_may_know() {
+        var parameters = "";
+
+        var url =
+            app_url +
+            "people-may-you-know-findfriends?loginuser=" +
+            window.localStorage.getItem("loginuser");
+
+        var method = "GET";
+        var param = CallMethod(method, url, onSuccessSearchFriends, parameters);
+        function onSuccessSearchFriends(param) {
+            if (param.data.login_error_status === "1") {
+                showExpireAlert("session-expire");
+                session(param.data);
+            } else {
+                // <button type="button" className="btn btn-info rounded-circle px-1 py-1 mr-2 mt-2"
+                // data-toggle="dropdown"> X </button>
+                var newFriendsHTML = "";
+                var countPeopleMayYouKnow = "";
+                $.each(param.data.res, function (key, value) {
+                    countPeopleMayYouKnow++;
+
+                    var profileImage = !isEmpty(value.profileImage)
+                        ? image_url_PATH + "" + value.profileImage
+                        : "images/default-user-image.PNG";
+                    newFriendsHTML +=
+                        '<div id="req-' +
+                        key +
+                        '" class="w-50 p-1"> <span class=""> <div class="border  custom-rounded position-relative bg-white"> <div class="btn-group position-absolute zindex-10 right-0">  </div> <div class="d-flex mb-1 profileImgBgSmall custom-rounded"> <div class="d-flex w-100"> <img src="' +
+                        profileImage +
+                        '" width="75" height="75" class="mx-auto rounded-circle" alt="" /> </div> </div> <div class="mt-5 d-block text-center font-14"> <a href="javascript:void(0);" onclick="otherProfile(\'' +
+                        value.firstname +
+                        "','" +
+                        value.id +
+                        "');\">" +
+                        (!isEmpty(value.firstname) ? value.firstname : "") +
+                        " " +
+                        (!isEmpty(value.lastname) ? value.lastname : "") +
+                        "</a> <p>(" +
+                        (!isEmpty(value.count_mysports) ? value.count_mysports : 0) +
+                        ') Sports</p> </div> <div class="text-center d-block text-center mb-1"> <p class="my-0">' +
+                        (!isEmpty(value.city) ? value.city : "") +
+                        '</p> <p class="my-0"> ' +
+                        (!isEmpty(value.address) ? value.address : "") +
+                        '</p> </div> <div class="d-flex w-100 px-2 font-14"> <span class="d-flex w-50"> <img src="./images/logo.png" class="mr-1" width="20" height="20" alt="" /> (' +
+                        value.total_frnd +
+                        ') </span> <span class="d-flex w-50"> <i class="fa fa-users mr-1"></i> (' +
+                        value.count_mutual_friends +
+                        ') </span> </div> <div class="d-flex py-1 justify-content-between p-2"> <button class="btn btn-success font-14 py-0 custom-rounded" onclick="sendReq(\'' +
+                        value.id +
+                        "','" +
+                        key +
+                        "');\">Invite</button>  </div> </div> </span> </div>";
+                    // newFriendsHTML += ' <div class="count-p p-1" id="req-' + key + '"> <div class="media media-friend-tab p-1"> <img class="mr-3" src="' + profileImage + '" alt="Generic placeholder image"> <div class="media-body"> <h6 class="mt-0"><a href="javascript:void(0);" onclick="otherProfile(\'' + value.firstname + '\',\'' + value.id + '\');">' + (!isEmpty(value.firstname) ? value.firstname : '') + ' ' + (!isEmpty(value.lastname) ? value.lastname : '') + '</a></h6> <div class="d-block"> <span class="w-100"> <p class="mb-1">(' + value.count_mutual_friends + ') Sport Friends</p> <p class="mb-1">(' + value.total_frnd + ') Mutual Sport Friends</p> </span> </div> </div> </div> <div class="d-flex"> <button class="btn btn-success w-33 mr-1" onclick="sendReq(\'' + value.id + '\',\'' + key + '\');" >Invite</button>  </div> </div> <hr>';
+                });
+                // alert(newFriendsHTML);
+                $("#count-people-you-know").html(
+                    "<h5>Sport People You Know (" + countPeopleMayYouKnow + ")</h5>"
+                );
+                $("#people-may-you-know").html(newFriendsHTML);
+            }
+        }
+    }
+</script>
+</body>
+</html>

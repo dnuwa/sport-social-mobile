@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html class=" js no-touch" style="" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<title> Favelist App </title>
+		<link rel="shortcut icon" href="file:///D:/Getpoints%20favelist%20app/favicon.ico">
+		
+		<!--   CSS  -->
+		<link rel="stylesheet" href="Favelist%20App_files/bootstrap.css">
+	    <link rel="stylesheet" href="Favelist%20App_files/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+		<link href="Favelist%20App_files/font-awesome.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" type="text/css" href="Favelist%20App_files/css.css">		
+
+		<!--   JS   -->
+		<script src="Favelist%20App_files/ajax-libs-jquery-3.js"></script>
+		<script src="Favelist%20App_files/bootstrap-3.js"></script>
+	
+		<script src="Favelist%20App_files/modernizr.js"></script>
+	</head>
+	<body>
+		<div class="container full-container find-friends-page">
+		   <div class="header">
+			<ul id="gn-menu" class="gn-menu-main">
+				<li class="gn-trigger">
+					<span class="gn-burger"><a class="gn-icon gn-icon-menu burger"></a></span>
+					<nav class="gn-menu-wrapper">
+						<div class="gn-scroller">
+							<ul class="gn-menu">								
+								<li><a href="#" class="active">
+									</a><div class="nav-non-loggedin text-right"><a href="#" class="active">
+										</a><div class="row Nmarg"><a href="#" class="active">
+											<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 Npad">	</div>
+											</a><div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 Npad"><a href="#" class="active">
+												</a><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/welcome.html" class="btn btn-success bold-text"> Join </a>
+												<a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/login.html" class="btn btn-primary bold-text"> Login </a>
+											</div>
+										</div>
+									</div>
+								</li>
+								<div class="link-group">
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/write-review.html"><i class="far fa-edit nav-icon"></i>Add a Review or a Photo</a></li>
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/new-user-loggedout.html"><i class="fas fa-map-marker-alt nav-icon"></i>Nearby Places &amp; Services</a></li>
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/find-friends.html"><i class="fas fa-user-plus nav-icon"></i>Find Friends</a></li>								
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled.html"><i class="fas fa-search nav-icon"></i>Search</a></li>
+								</div>
+								<div class="link-group">
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/business-categories.html"><i class="fas fa-clipboard-list nav-icon"></i>View Business Categories</a></li>	
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/recently-viewed.html"><i class="fas fa-eye nav-icon"></i>Recently Viewed</a></li>
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/fave-lists.html"><i class="fas fa-list nav-icon"></i>My Fave List</a></li>	
+								</div>
+								<div class="link-group">
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/deals-and-offers.html"><i class="fas fa-tags nav-icon"></i>Deals and Offers</a></li>
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/check-in.html"><i class="glyphicon glyphicon-check nav-icon"></i>Check-in</a></li>		
+								</div>
+								<div class="link-group">
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/user-profile.html"><i class="fas fa-user nav-icon"></i> My Profile</a></li>
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/preferences.html"><i class="fas fa-thumbs-up nav-icon"></i>My Preferences</a></li>
+								<div class="link-group">
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/settings.html"><i class="fas fa-cogs nav-icon"></i> Settings</a></li>
+								<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/support.html"><i class="fas fa-handshake nav-icon"></i> Support</a></li>
+								</div>
+								<br>	  
+							</div></ul>
+						</div><!-- /gn-scroller -->
+					</nav>
+				</li>
+				<div class="bz-logo">
+				<a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/home.html" class="logo-l"><img class="logo" src="Favelist%20App_files/favelist-logo.png"></a>
+				<a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/search-favelist-map.html" class="header-map-marker"> <i class="fas fa-map-marker-alt"></i> </a>
+				<a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/home.html" class="search"> <i class="fa fa-search"></i> </a>
+				</div>
+			</ul>
+			</div>
+			
+			<div class="content c-home biz-page-content bg-white">			  
+			  
+			  <div class="row Nmarg">
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+					<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 Npad"> 
+						<div class="find-friends">
+						   <form>
+								<div class="find-friends-subheading select-fields-group text-center">
+								<div class="row Nmarg">
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 Npad">
+										<div class="form-group">
+											  <select class="form-control">
+												<option value="" selected="selected"> Country  </option>
+												<option value=""> Country 1 </option>
+												<option value=""> Country 2 </option>
+											  </select>
+										</div>
+									</div>
+									<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 Npad">
+										<div class="form-group">
+											  <select class="form-control">
+												<option value="" selected="selected"> City  </option>
+												<option value=""> City 1 </option>
+												<option value=""> City 2 </option>
+											  </select>
+										</div>
+									</div>
+									<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 Npad">
+										<div class="form-group">
+											  <select class="form-control">
+												<option value="" selected="selected"> Neighbourhood  </option>
+												<option value=""> Neighbourhood 1 </option>
+												<option value=""> Neighbourhood 2 </option>
+											  </select>
+										</div>
+									</div>
+								  </div>
+								  
+								  <div class="row Nmarg filters text-center">
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 Npad">
+										
+											<div class="btn-group">
+											  <button type="button" class="btn btn-default text-btn" data-toggle="dropdown">Category</button>
+											  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+												<span class="caret"></span>
+											  </button>
+											  <ul class="dropdown-menu" role="menu">
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Restaurants </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-restaurants.html"><span><i class="fas fa-utensils"></i></span><span> Restaurants </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-restaurants.html"><span><i class="fas fa-utensil-spoon"></i></span><span> Fast food </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-restaurants.html"><span><i class="fas fa-user"></i></span><span> Casual </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-restaurants.html"><span><i class="fas fa-user-tie"></i></span><span> Formal </span></a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Bars </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-wine-glass-alt"></i></span><span> Bars </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-music"></i></span><span> Night clubs </span></a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Automotive Services </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-wrench"></i></span><span> Auto Repair </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-info-circle"></i></span><span> Detailing </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-shopping-cart"></i></span> <span> Shops </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-fill-drip"></i></span><span> Car Wash </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-money-bill"></i></span><span> Car Dealers </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-oil-can"></i></span><span> Oil Change </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-parking"></i></span> <span> Parking </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-truck-monster"></i></span><span> Towing </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-check-double"></i></span><span> Auto Insurance </span> </a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Home Services </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-briefcase"></i></span><span> Contractors </span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-bolt"></i></span><span> Electricians </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-mountain"></i></span><span> Land Scaping </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-broom"></i></span><span> Home Cleaners </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-wind"></i></span><span> HVAC </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-user-lock"></i></span><span> Locksmiths </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-people-carry"></i></span><span> Movers </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-water"></i></span><span> Plumbers </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-solar-panel"></i></span><span> Solar </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-hotel"></i></span><span> Real State Agency </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-paint-roller"></i></span><span> Painter </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-socks"></i></span><span> Laundry </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-box-open"></i></span><span> Storage </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-check-double"></i></span><span> Home Insurance </span> </a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Beauty, Hair &amp; Spas </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-kiss-wink-heart"></i></span><span> Beauty Salon </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-spa"></i></span><span> Hair </span> </a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Health Services </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-teeth-open"></i></span><span> Dentist </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-prescription-bottle-alt"></i></span><span> Pharmacy </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-stethoscope"></i></span><span> Medical Doctors </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-hospital-alt"></i></span><span> Hospitals </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-user-md"></i></span><span> Woman Clinics </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-hospital-alt"></i></span><span> Dematologist </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-brain"></i></span><span> Psychologist </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-hospital-alt"></i></span><span> Pychiatrist </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-hospital-alt"></i></span><span> OBGYN </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-user-md"></i></span><span> Gynechologist </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-walking"></i></span><span> Physiotherapist </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-check-double"></i></span><span> Health Insurance </span> </a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Gyms &amp; Fitness Studios </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-dumbbell"></i></span><span> Gym </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-futbol"></i></span><span> Sports Club </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-cubes"></i></span><span> Fitness Studio </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-running"></i></span><span> Aerobics </span> </a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Professional Services </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-file-invoice-dollar"></i></span><span> Accountants </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-gavel"></i></span> <span> Lawyers </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-car-crash"></i></span><span> Insurance Agency </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-money-bill-wave"></i></span><span> Mortgage </span> </a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Pet Services </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-paw"></i></span><span> Pet Store </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-syringe"></i></span><span> Vetenerian </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-dog"></i></span><span> Dog Walkers </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-igloo"></i></span><span> Kennels </span> </a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#">  Schools Colleges </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-chalkboard-teacher"></i></span><span> Kindergaten </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-certificate"></i></span><span> Elementary Schools </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-school"></i></span><span> High Schools </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-user-graduate"></i></span><span> Colleges </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-graduation-cap"></i></span><span> Universities </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-cog"></i></span><span> Vocational Schools </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-cookie-bite"></i></span><span> Cooking Schools </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-chalkboard-teacher"></i></span><span> Culinary Schools </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-award"></i></span><span> Acting Schools </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-chalkboard"></i></span><span> Online Schools(Private/Public) </span> </a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Entertainment </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-film"></i></span><span> Movie Theatres </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-money-check-alt"></i></span><span>  Casino </span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-theater-masks"></i></span><span> Theatres</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-bus"></i></span><span> Tours &amp; Sight Seeing</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-stamp"></i></span><span> Local Attractions</span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-globe-asia"></i></span><span> Museums</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-snowflake"></i></span><span> Concerts and Shows</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-hat-wizard"></i></span><span> Amusement Park</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-fish"></i></span><span> Aquariam</span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-paint-brush"></i></span><span> Art Gallery</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-bowling-ball"></i></span><span> Bowling Alley</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-paw"></i></span><span> Zoo</span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-hippo"></i></span><span> Park</span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-futbol"></i></span><span> Stadium</span></a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-hippo"></i></span><span> Tour Agency</span></a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Shopping </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-glass-martini-alt"></i></span><span> Liquor</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-wine-glass"></i></span><span> Wine stores</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-tshirt"></i></span><span> Children's clothes</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-plug"></i></span><span> Electronics</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-blender-phone"></i></span><span> Appliances</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-gift"></i></span><span> Gift Stores</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-camera-retro"></i></span><span> Photography</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-book-open"></i></span><span> Book Store</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-microchip"></i></span><span> Hardware Store</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-palette"></i></span><span> Art Store</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-dog"></i></span><span> Pet Store</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-shoe-prints"></i></span><span> Shoe Store</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-laptop"></i></span><span> Computer Store</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-bicycle"></i></span><span> Bicycle Store</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-gem"></i></span><span> Jewlery Store</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-seedling"></i></span><span> Florist</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html">  <span><i class="fas fa-chair"></i></span><span> Furniture</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-store"></i></span><span> Department Store</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-shopping-cart"></i></span><span> Shopping Mall</span> </a></li>
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"> <span><i class="fas fa-bread-slice"></i></span><span> Bakery</span> </a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="test" tabindex="-1" href="#"> Hotels &amp; Resorts </a>
+													<ul class="dropdown-menu cat-btn">
+													  <li><a tabindex="-1" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><span><i class="fas fa-bed"></i></span><span> Lodging</span></a></li>
+													</ul>
+												</li>
+												<li class="dropdown-submenu">
+													<a class="" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/business-categories.html"> More Categories </a>
+												</li>
+											  </ul>
+											</div>
+										
+									</div>	
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 Npad">
+										
+											<div class="btn-group filter-btn">
+											  <button type="button" class="btn btn-default text-btn" data-toggle="modal" data-target="#filtersModal">Filters</button>
+											  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="modal" data-target="#filtersModal">
+												<span class="caret"></span>
+											  </button>
+											</div>
+											
+																				<!-- Filters Modal -->
+														  <div class="modal fade page-modal quote-popup" id="filtersModal" role="dialog">
+															<div class="modal-dialog">
+															  <div class="modal-content disconnect-modal">
+																<div class="modal-header quote-popup-header">
+																 <span class="page-font bold-text"> Filters </span>
+																</div>
+																<div class="modal-body">
+																	<div class="list-group popup-filters-group">
+																		<div class="list-group-item text-left">
+																			<div class="row Nmarg">
+																				<h5 class="bold-text"> Offering </h5>
+																				<input type="checkbox" name="" value=""> Quotations <br>
+																				<input type="checkbox" name="" value=""> Deals and Offers <br>
+																				<input type="checkbox" name="" value=""> Order Delivery <br>
+																				<input type="checkbox" name="" value=""> Order Takeout <br>
+																				<input type="checkbox" name="" value=""> Reservations <br>
+																				<input type="checkbox" name="" value=""> Waitlist <br>	  
+																			</div>
+																		</div>
+																		<div class="list-group-item text-left">
+																			<div class="row Nmarg">
+																				<h5 class="bold-text"> Prices </h5>
+																				<input type="checkbox" name="" value=""> $ <br>
+																				<input type="checkbox" name="" value=""> $$ <br>
+																				<input type="checkbox" name="" value=""> $$$ <br>	  
+																			</div>
+																		</div>
+																		<div class="list-group-item text-left">
+																			<div class="row Nmarg">
+																				<h5 class="bold-text"> Popular </h5>
+																				<input type="checkbox" name="" value=""> Hot and New <br>
+																				<input type="checkbox" name="" value=""> Open Now <br>	  
+																			</div>
+																		</div>
+																		<div class="list-group-item text-left">
+																			<div class="row Nmarg">
+																				<h5 class="bold-text"> Distance </h5>
+																				<input type="checkbox" name="" value=""> 0.5km <br>
+																				<input type="checkbox" name="" value=""> 1km <br>
+																				<input type="checkbox" name="" value=""> 2km <br>
+																				<input type="checkbox" name="" value=""> 3km <br>
+																				<input type="checkbox" name="" value=""> 4km <br>
+																				<input type="checkbox" name="" value=""> 5km <br>	  
+																			</div>
+																		</div>
+																	</div>
+																	<div class="text-center">
+																	  <a href="#" class="btn btn-danger pull-left bold-text" data-dismiss="modal">Cancel</a>
+																	  <a href="#" class="btn btn-primary pull-right bold-text">Search</a>
+																  </div><br>
+																</div>
+																																
+															  </div>
+															  
+															</div>
+														  </div>
+										
+									</div>		
+									<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 Npad">
+										
+											<div class="btn-group">
+											  <button type="button" class="btn btn-default text-btn" data-toggle="dropdown">Reviews</button>
+											  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+												<span class="caret"></span>
+											  </button>
+											  <ul class="dropdown-menu" role="menu">
+												<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><i class="fas fa-sort-amount-up"></i> Highest</a></li>
+												<li><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled-2.html"><i class="fas fa-eye"></i> Most Reviewed</a></li>
+											  </ul>
+											</div>
+										
+									</div>
+
+								</div>
+						  
+									
+									<div class="row Nmarg">
+										<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10 Npad">											  										  
+										  <div class="form-group">
+											<div class="input-group">
+											  <div class="input-group-addon"><span class="glyphicon glyphicon-search"></span></div>
+											  <input type="text" class="form-control" placeholder="Bars">
+											  <!-- <a href="#" class="input-group-addon"><i class="fas fa-map-marker-alt"></i></a>  -->
+											</div>
+										  </div>										
+										</div>
+										<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 Npad text-right">
+										   <button class="btn btn-success filter-search-btn"> <span class="glyphicon glyphicon-search"></span> </button>
+										</div>
+									</div>
+									
+									
+								</div>
+							
+							</form>
+							
+							<div class="row Nmarg search-filter-btns">
+								<div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 XPad"><h5 class="bold-text"> Featured Searches <a href="#" class="btn btn-primary featured-searches-btn" data-toggle="modal" data-target="#sponsoredsearhesModal"></a></h5></div>
+								<div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 XPad text-right">
+									<div class="btn-group">
+									  <a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/nav-search-page-non-enabled.html" type="button" class="btn btn-default active">List</a>
+									  <a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/search-favelist-map.html" type="button" class="btn btn-default">Map</a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="filters-search-bar">
+									
+									<div class="section-wrapper fave-lists-view-cat">
+									
+									 <div class="row Nmarg">
+										<div class="reviews-list view-category"><hr>						
+										  <div class="list">
+											<div class="media">
+											   <a class="pull-left" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/business-profile-autoservices.html">
+												  <img class="media-object" src="Favelist%20App_files/ls1.jpg" alt="Photo">
+											   </a>
+											   
+											   <div class="media-body">
+												  <p class="fave-name"><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/business-profile-autoservices.html" class="bold-text">1. Plater &amp; Plater Auto Services</a></p>
+												  <div class="row">
+													  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 										  
+														  <p class="other-info text-primary">
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star"></span>
+															<span class="text-muted">34 Reviews</span>
+														  </p>
+														  <p class="other-info text-primary">Car Washes (Category)</p>
+														  <p class="other-info text-muted"> 1322 Grant Ave, San Francisco, CA </p>
+													  </div>
+												  </div>
+											   </div>								
+											</div>
+											<div class="search-business-btns offer-btn text-center">
+												<div class="row Nmarg">
+												  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 Npad"> 	
+													<a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/deals-and-offers-3.html"><button class="btn btn-warning">Limited Time and Quantity Offer</button></a>
+												  </div>
+												</div> 												   
+											</div>
+											<div class="search-business-btns text-center">
+												<div class="row Nmarg">
+												  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 Npad"> 	
+													<a href="#"><button class="btn btn default">Follow</button></a>
+												  </div>
+												  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 Npad"> 	
+													<button class="btn btn-default" data-toggle="modal" data-target="#saveTolist">Save to Fave List</button>
+												  </div>
+												</div> 												   
+											</div>
+										  </div><hr>
+										  
+										  
+										  <div class="row Nmarg search-filter-btns">
+											<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 XPad"><h5 class="bold-text"> Search Results </h5></div>
+										  </div><hr>
+									 
+									 
+										  <div class="list">
+											<div class="media">
+											   <a class="pull-left" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/business-profile-autoservices.html">
+												  <img class="media-object" src="Favelist%20App_files/ls1.jpg" alt="Photo">
+											   </a>
+											   
+											   <div class="media-body">
+												  <p class="fave-name"><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/business-profile-autoservices.html" class="bold-text">2. Plater &amp; Plater Auto Services</a></p>
+												  <div class="row">
+													  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 										  
+														  <p class="other-info text-primary">
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star"></span>
+															<span class="text-muted">34 Reviews</span>
+														  </p>
+														  <p class="other-info text-primary">Car Washes (Category)</p>
+														  <p class="other-info text-muted"> 1322 Grant Ave, San Francisco, CA </p>
+													  </div>
+												  </div>
+											   </div>								
+											</div><hr>
+											<div class="biz-profile-write-review biz-offer">	
+												  <div class="row Nmarg review all-photos amenities announcement buy-offer">
+													<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"> 
+														<span class="bold-text text-success"> <i class="fa fa-tag icon"></i> $5 for $10 Deal </span>
+													</div>
+													<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-right"> 
+														<span class="text-right"><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/deals-and-offers-1.html"> <i class="fa fa-angle-right icon-2"></i> </a></span>
+													</div>
+												  </div>	
+											 </div><hr>
+											 <div class="biz-profile-write-review biz-offer">	
+												  <div class="row Nmarg review all-photos amenities announcement buy-offer">
+													<div class="col-lg-10 col-md-10 col-sm-10 col-xs-10"> 
+														<span class="bold-text text-primary"> <i class="glyphicon glyphicon-certificate icon"></i> 
+														10% off Your first order 
+														<p class="normal-text text-muted"> Check in here to unlock this offer </p>
+														</span>
+													</div>
+													<div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 text-right"> 
+														<span class="text-right"><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/deals-and-offers-2.html"> <i class="fa fa-angle-right icon-2"></i> </a></span>
+													</div>
+												  </div>	
+											 </div><hr>
+											<div class="search-business-btns text-center">
+												<div class="row Nmarg">
+												  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 Npad"> 	
+													<a href="#"><button class="btn btn default">Follow</button></a>
+												  </div>
+												  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 Npad"> 	
+													<button class="btn btn-default" data-toggle="modal" data-target="#saveTolist">Save to Fave List</button>
+												  </div>
+												</div> 												   
+											</div>
+										  </div><hr>
+										  
+											<div class="list">
+											<div class="media">
+											   <a class="pull-left" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/business-profile-services.html">
+												  <img class="media-object" src="Favelist%20App_files/ls2.jpg" alt="Photo">
+											   </a>
+											   
+											   <div class="media-body">
+												  <p class="fave-name"><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/business-profile-services.html" class="bold-text">3. Plater &amp; Plater Automotive Service</a></p>
+												  <div class="row">
+													  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 											  
+														  <p class="other-info text-primary">
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star"></span>
+															<span class="text-muted">34 Reviews</span>
+														  </p>
+														  <p class="other-info text-primary">Car Washes (Category)</p>
+														  <p class="other-info text-muted"> 1322 Grant Ave, San Francisco, CA </p>
+													  </div>
+												  </div>
+											   </div>								
+											</div><hr>
+											<div class="search-business-btns text-center">
+												<div class="row Nmarg">
+												  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 Npad"> 	
+													<a href="#"><button class="btn btn default">Follow</button></a>
+												  </div>
+												  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 Npad"> 	
+													<button class="btn btn-default" data-toggle="modal" data-target="#saveTolist">Save to Fave List</button>
+												  </div>
+												</div> 												   
+											</div>
+										  </div><hr>
+										  
+										  <div class="list">
+											<div class="media">
+											   <a class="pull-left" href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/business-profile-services.html">
+												  <img class="media-object" src="Favelist%20App_files/ls3.jpg" alt="Photo">
+											   </a>
+											   
+											   <div class="media-body">
+												  <p class="fave-name"><a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/business-profile-services.html" class="bold-text">4. Plater &amp; Plater Other Services</a></p>
+												  <div class="row">
+													  <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> 											  
+														  <p class="other-info text-primary">
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star checked"></span>
+															<span class="fa fa-star"></span>
+															<span class="text-muted">34 Reviews</span>
+														  </p>
+														  <p class="other-info text-primary">Car Washes (Category)</p>
+														  <p class="other-info text-muted"> 1322 Grant Ave, San Francisco, CA </p>
+													  </div>
+												  </div>
+											   </div>								
+											</div><hr>
+											<div class="search-business-btns text-center">
+												<div class="row Nmarg">
+												  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 Npad"> 	
+													<a href="#"><button class="btn btn default">Follow</button></a>
+												  </div>
+												  <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 Npad"> 	
+													<button class="btn btn-default" data-toggle="modal" data-target="#saveTolist">Save to Fave List</button>
+												  </div>
+												</div> 												   
+											</div>
+										  </div><hr>
+										  
+										 </div>
+									</div>		 
+								
+							  </div><br>
+					  
+							
+						</div>												
+					</div>
+					<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+			  </div>
+			  
+			  
+						
+				
+			</div>		
+			 
+		</div><!-- /container -->
+		
+		
+		
+		<!-- Add to list Modal -->
+					  <div class="modal fade page-modal quote-popup" id="saveTolist" role="dialog">
+						<div class="modal-dialog">
+						  <div class="modal-content disconnect-modal">
+							<div class="modal-body">
+								<div class="row">
+									<form>
+									<div class="list-group">
+										<div class="list-group-item text-left">
+												 <a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/create-fave-lists.html" class="bold-text"><input type="radio" name="list" value="create-fave-lists.html"> Create a favelist </a>	
+										</div>
+										<div class="list-group-item text-left">
+												 <a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/create-fave-lists-add.html" class="bold-text"><input type="radio" name="list" value="create-fave-lists-add.html"> Add to a favelist </a>	 
+										</div>
+										<div class="list-group-item text-left">
+												<a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/create-album.html" class="bold-text"><input type="radio" name="list" value="create-album.html"> Create an album </a>	 
+										</div>
+										<div class="list-group-item text-left">
+											   <a href="file:///D:/Getpoints%20favelist%20app/Favelist%20App/create-album-add.html" class="bold-text"><input type="radio" name="list" value="create-album-add.html"> Add to an album </a>	 
+										</div>
+									<div class="modal-footer form-btns text-center">
+											 <a href="#" class="btn btn-default pull-left" data-dismiss="modal">Cancel</a>
+											 <a href="#" id="takeTolink" class="btn btn-primary pull-right">Add</a>
+									</div>
+								</div>
+								</form>
+							</div>
+						  </div>
+						  
+						</div>
+					  </div>
+					</div>  
+		
+		
+		<!-- Sponsored searches info modal -->
+					  <div class="modal fade page-modal quote-popup" id="sponsoredsearhesModal" role="dialog">
+						<div class="modal-dialog">
+						  <div class="modal-content disconnect-modal">
+							<div class="modal-body">
+								<div class="row">
+									<div class="modal-form">
+									 <p class="text-center"> Business Owners Paid <br> For This Ads </p>
+									 
+										  <div class="modal-footer text-center">
+											  <a href="#" class="btn btn-primary full-span" data-dismiss="modal">Ok</a>
+										  </div> 
+
+									</div>
+								</div>
+							</div>
+						  </div>
+						  
+						</div>
+					  </div>
+					  
+		
+		
+<script>  
+/* Loop through all dropdown buttons to toggle between hiding and showing its dropdown content - This allows the user to have multiple dropdowns without any conflict */
+var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+  this.classList.toggle("active");
+  var dropdownContent = this.nextElementSibling;
+  if (dropdownContent.style.display === "block") {
+  dropdownContent.style.display = "none";
+  } else {
+  dropdownContent.style.display = "block";
+  }
+  });
+}
+
+
+//redirecting favelist option
+$(document).ready(function(){
+    $('#takeTolink').click(function() {
+        var selValue = $('input[name=list]:checked').val(); 
+        if(selValue != "undefined"){
+        window.location.href = ""+ selValue +"";
+		}
+    });
+});
+
+//redirection more options link
+function moreCat(){
+
+        window.location.href = "business-categories.html";
+		
+	}
+	
+	
+// for filters dropdown
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+
+$(document).ready(function(){
+  $('.dropdown-submenu a.test').on("click", function(e){
+    $(this).parent().parent().find('.dropdown-menu').hide();
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+
+
+<!--  Checkboxes script -->
+function toggleRadioCheckbox(sender) {
+	// RadioCheckbox: 0..1 enabled in a group 
+	if (!sender.checked) return;
+	var fields = document.getElementsByName(sender.name);
+	for(var idx=0; idx<fields.length; idx++) {
+		var field = fields[idx];
+		if (field.checked && field!=sender)
+			field.checked=false;
+	}
+}
+
+</script>
+<!--  /Checkboxes script -->
+	
+	
+		<script src="Favelist%20App_files/classie.js"></script>
+		<script src="Favelist%20App_files/gnmenu.js"></script>
+		<script>
+			new gnMenu( document.getElementById( 'gn-menu' ) );
+		</script>
+	
+</div></body></html>

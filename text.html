@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sport Social App </title>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--   CSS  -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/font-awesome-4.7.0-css-font-awesome.min.css">
+    <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="flags/build/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <!--   JS   -->
+    <script src="./jquery/3.5.1/jquery.min.js"></script>
+    <script src="./popper/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./js/modernizr.custom.js"></script>
+    <script src="./js/jquery.owlcarousel.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper gray-wrapper" style=" padding-bottom: 80px;">
+    <div class="container full-container index-page">
+        <div class="header">
+            <div id="gn-menu" class="gn-menu-main">
+                <div class="row nmarg">
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <li class="com-name login-logo"><span class="com-l com-l-index"><img src="images/logo.png"
+                                                                                             class="com-logo"></span></li>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right ">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content c-home">
+            <div class="intro">
+
+                <div class="row nmarg">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+                        <div class="page-heading">
+                            <h3 class="text-success x-bold-text"> Create an Event </h3>
+                        </div>
+
+                        <div class="edit-sports-wrapper center-block">
+                            <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                                <div class="bg-white rounded block-area">
+                                    <div class="panel">
+                                            <div class="panel-body">
+                                                <form id="event-form">
+                                                    <label class="normal-text">Event Name</label>
+                                                    <input type="text" name="name" placeholder="" class="form-control">
+                                                    <br>
+                                                    <label class="normal-text">Description</label>
+                                                    <textarea name="description" rows="2" placeholder="Tell people what the event is about" class="form-control h-auto"></textarea>
+                                                    <br>
+                                                    <label class="normal-text">Select Date/Time</label>
+                                                    <input type="date" name="start_date" placeholder="" class="form-control">
+                                                    <br>
+                                                    <label class="normal-text">Invite people</label>
+                                                    <select name="user_id[]"  class="form-control" id="user-option-list" multiple="multiple"  required>
+                                                    </select>
+                                                    <br>
+                                                    <select class="form-control" name="type">
+                                                        <option value=""> Select Type </option>
+                                                        <option value="public" > Public Event </option>
+                                                        <option value="private"> Private Event </option>
+                                                    </select><br>
+                                                    <br>
+                                                    <div class="form-group px-2">
+                                                        <label class="normal-text">Profile Photo </label>
+                                                        <input type="file" name="profile_img"  id="profile-img" class="form-control" >
+                                                    </div>
+                                                    <br>
+                                                    <div class="form-group px-2">
+                                                        <label for="usr" class="justify-content-between d-flex">
+                                                            <span>Cover Photo</span>
+                                                            <span><small><i>Optional</i></small></span>
+                                                        </label>
+                                                        <div class="d-flex">
+										<span class="w-25">
+											<img src="./images/img03.jpg" class="w-100" alt="">
+										</span>
+                                                            <span class="w-75">
+											<input class="btn btn-default" name="cover_img"  id="cover-img" type="file"></input>
+										</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group px-2">
+                                                        <label class="normal-text">Logo </label>
+                                                        <input type="file" name="logo"  id="logo-img" class="form-control" >
+                                                    </div>
+
+                                                    <a href="javascript:void(0);" class="btn btn-success fs-17 bold-text rounded-btn pull-right" onclick="storeEvent();">Create Event</a>
+                                                </form>
+                                            </div>
+
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                </div>
+
+            </div><!-- /intro -->
+        </div><!-- /content -->
+    </div><!-- /container -->
+</div> <!-- /wrapper -->
+
+<!-- Country flags plugin js  -->
+<script src="flags/build/js/intlTelInput.js"></script>
+<script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+        // allowDropdown: false,
+        // autoHideDialCode: false,
+        // autoPlaceholder: "off",
+        // dropdownContainer: document.body,
+        // excludeCountries: ["us"],
+        // formatOnDisplay: false,
+        // geoIpLookup: function(callback) {
+        //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+        //     var countryCode = (resp && resp.country) ? resp.country : "";
+        //     callback(countryCode);
+        //   });
+        // },
+        // hiddenInput: "full_number",
+        // initialCountry: "auto",
+        // localizedCountries: { 'de': 'Deutschland' },
+        // nationalMode: false,
+        // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+        // placeholderNumberType: "MOBILE",
+        // preferredCountries: ['cn', 'jp'],
+        // separateDialCode: true,
+        utilsScript: "flags/build/js/utils.js",
+    });
+</script>
+<script>
+
+    // script to expand/collapse album
+    $('.panel-collapse').on('show.bs.collapse', function () {
+        $(this).siblings('.panel-heading').addClass('active');
+    });
+
+    $('.panel-collapse').on('hide.bs.collapse', function () {
+        $(this).siblings('.panel-heading').removeClass('active');
+    });
+</script>
+<script src="js/classie.js"></script>
+<script src="js/gnmenu.js"></script>
+<script src="js/general-friend-request.js"></script>
+<script src="js/sports-social/statistics.js"></script>
+<script src="js/main.js"></script>
+<script>
+    new gnMenu(document.getElementById('gn-menu'));
+</script>
+<script>
+    $('document').ready(function (){
+        var parameters = '';
+
+
+        var url        = app_url+'event-create?loginuser='+window.localStorage.getItem("loginuser");
+        var method     = 'POST';
+        var param      = CallMethod(method, url, onSuccessCreateEvent, parameters);
+        function onSuccessCreateEvent(param){
+
+            var user_option_list = '<option value="" selected>Select an option</option>';
+
+            $.each(param.data.friends, function (key, value){
+
+                user_option_list += '<option value="'+( !isEmpty(value.user) && !isEmpty(value.user.id)  ?  value.user.id  : '' )+'">'+( !isEmpty(value.user)  && !isEmpty(value.user.firstname)? value.user.firstname : '' ) +' '+( !isEmpty(value.user) && !isEmpty(value.user.lastname)? value.user.lastname : '' ) +'</option>';
+            });
+
+
+            $('#user-option-list').html(user_option_list);
+
+
+
+
+        }
+    });
+
+    function storeEvent(){
+
+        var parameters = '';
+        var data       = $('#event-form').serialize();
+        var formData = new FormData();
+        formData.append('profile_image', $('#profile-img')[0].files[0]);
+        formData.append('cover_image', $('#cover-img')[0].files[0]);
+        formData.append('logo', $('#logo-img')[0].files[0]);
+
+        parameters = formData;
+        var url        = app_url+'event-store?'+data+'&loginuser='+window.localStorage.getItem('loginuser');
+        var method     = 'POST';
+        var param      = CallMethod(method, url, onSuccessStoreEvent, parameters);
+        function onSuccessStoreEvent (param){
+
+
+
+            if (param.data.login_error_status === '1') {
+                showExpireAlert('session-expire');
+                session(param.data);
+            } else if(param.data.message_status == false){
+
+                $.each(param.data.errors, function(key, value){
+                    showAlertMessage(type = 'error', String(value));
+                });
+
+            }else {
+
+                if (param.data.status == true) {
+                    showAlert(message = 'Event created successfully', header = 'Message');
+                }
+            }
+
+        }
+
+
+
+    }
+
+</script>
+</body>
+
+</html>

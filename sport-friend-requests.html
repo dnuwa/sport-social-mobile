@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sport Social App </title>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--   CSS  -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="flags/build/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+
+<!--    &lt;!&ndash;   JS   &ndash;&gt;-->
+<!--    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"-->
+<!--        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"-->
+<!--        crossorigin="anonymous"></script>-->
+<!--   -->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"-->
+<!--        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"-->
+<!--        crossorigin="anonymous"></script>-->
+
+    <!--   JS   -->
+    <script src="./jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper gray-wrapper">
+        <div class="container full-container">
+            <div class="header">
+                <div id="gn-menu" class="gn-menu-main">
+                    <div class="row ss-nav pad-0 mx-0">
+                        <!-- <div class="">
+								<li class="com-name login-logo"><span class="com-l com-l-index"><img src="images/logo.png" class="com-logo"></span></li>
+							</div> -->
+                        <div class="nav-logo text-success">
+                            <img src="./images/ss-logo.png" />
+                        </div>
+                        <a href="#" class="nav-search">
+                            <h5><i class="fa fa-search"></i></h5>
+                        </a>
+                        <div class="nav-toggler">
+                            <span data-toggle="toggle" data-target="#demo"
+                                class="gn-trigger sub-header-icon text-center"><a href="javascript:void(0)"
+                                    class="gn-burger"><i class="fa fa-bars fs-30 text-center"></i></a></span>
+                             <div id="side-nav"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="content c-home top-60">
+                <div class="intro">
+
+
+                    <div class="row nmarg">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+
+                            <div class="bg-white timeline-wrap">
+                                <span class="p-1">
+                                    <a href="sport-friends.html" class="text-success font-weight-bold">Sport<br>
+                                        Friends</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="my-posts.html" class="text-dark font-weight-bold">Sport<br> Posts</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="sport-matches.html" class="text-dark font-weight-bold">Sport<br>
+                                        Matches</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="sport-places.html" class="text-dark font-weight-bold">Sport<br> Places</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="sport-coaches.html" class="text-dark font-weight-bold">Sport<br> Coach</a>
+                                </span>
+                            </div>
+
+                            <div class="bg-white rounded block-area mb-60">
+                                <div class="w-100">
+                                    <div class="btn-success w-100 mr-1 text-center p-2">
+                                        <h5>Sport Social Invite Requests</h5>
+                                    </div>
+                                </div>
+                                <div class="justify-content-space-betweeen p-2 d-flex">
+                                    <a class="btn btn-primary br-10 bg-dark b-0" href="sport-friends.html">
+                                        <i class="fa fa-chevron-left"></i> Back
+                                    </a>
+                                    <span class="ml-5">
+                                        <h5 id="invite-req"> </h5>
+                                    </span>
+                                </div>
+                                <div id="sports-friends-request" ></div>
+<!--                                <div class="p-1">-->
+<!--                                    <div class="media media-friend-tab p-1">-->
+<!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+<!--                                            alt="Generic placeholder image">-->
+<!--                                        <div class="media-body">-->
+<!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+<!--                                            <div class="d-block">-->
+<!--                                                <span class="w-100">-->
+<!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+<!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <button class="btn btn-success w-33 mr-1">Accept</button>-->
+<!--                                        <button class="btn btn-danger w-33 mr-1">Decline</button>-->
+<!--                                        <button class="btn btn-primary w-33">Message</button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <hr>-->
+<!--                                <div class="p-1">-->
+<!--                                    <div class="media media-friend-tab p-1">-->
+<!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+<!--                                            alt="Generic placeholder image">-->
+<!--                                        <div class="media-body">-->
+<!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+<!--                                            <div class="d-block">-->
+<!--                                                <span class="w-100">-->
+<!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+<!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <button class="btn btn-success w-33 mr-1">Accept</button>-->
+<!--                                        <button class="btn btn-danger w-33 mr-1">Decline</button>-->
+<!--                                        <button class="btn btn-primary w-33">Message</button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <hr>-->
+<!--                                <div class="p-1">-->
+<!--                                    <div class="media media-friend-tab p-1">-->
+<!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+<!--                                            alt="Generic placeholder image">-->
+<!--                                        <div class="media-body">-->
+<!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+<!--                                            <div class="d-block">-->
+<!--                                                <span class="w-100">-->
+<!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+<!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <button class="btn btn-success w-33 mr-1">Accept</button>-->
+<!--                                        <button class="btn btn-danger w-33 mr-1">Decline</button>-->
+<!--                                        <button class="btn btn-primary w-33">Message</button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <hr>-->
+<!--                                <div class="p-1">-->
+<!--                                    <div class="media media-friend-tab p-1">-->
+<!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+<!--                                            alt="Generic placeholder image">-->
+<!--                                        <div class="media-body">-->
+<!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+<!--                                            <div class="d-block">-->
+<!--                                                <span class="w-100">-->
+<!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+<!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <button class="btn btn-success w-33 mr-1">Accept</button>-->
+<!--                                        <button class="btn btn-danger w-33 mr-1">Decline</button>-->
+<!--                                        <button class="btn btn-primary w-33">Message</button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <hr>-->
+<!--                                <div class="p-1">-->
+<!--                                    <div class="media media-friend-tab p-1">-->
+<!--                                        <img class="mr-3" src="./images/default-user-image.png"-->
+<!--                                            alt="Generic placeholder image">-->
+<!--                                        <div class="media-body">-->
+<!--                                            <h6 class="mt-0"><a href="#">{First name} {Last name}</a></h6>-->
+<!--                                            <div class="d-block">-->
+<!--                                                <span class="w-100">-->
+<!--                                                    <p class="mb-1">(XX) Sport Friends</p>-->
+<!--                                                    <p class="mb-1">(XX)Mutual Sport Friends</p>-->
+<!--                                                </span>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="d-flex">-->
+<!--                                        <button class="btn btn-success w-33 mr-1">Accept</button>-->
+<!--                                        <button class="btn btn-danger w-33 mr-1">Decline</button>-->
+<!--                                        <button class="btn btn-primary w-33">Message</button>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <hr>-->
+
+                            </div>
+<!--                            <div class="bg-white rounded block-area friend-requests">-->
+<!--                                <div  class="block-header">-->
+<!--                                    <h4> Search for sport friends </h4>-->
+<!--                                </div>-->
+<!--                                <div  class="block-body">-->
+
+<!--                                    <form id="search-friends">-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="light-label">Name</label>-->
+<!--                                            <input type="text" name="name" class="form-control">-->
+<!--                                        </div>-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="light-label">Hometown</label>-->
+<!--                                            <input type="text" name="city" class="form-control">-->
+<!--                                        </div>-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="light-label">Current location</label>-->
+<!--                                            <input type="text" name="address" class="form-control">-->
+<!--                                        </div>-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="light-label">College or university</label>-->
+<!--                                            <input type="text" name="school" class="form-control">-->
+<!--                                        </div>-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="light-label">Mutual friend</label>-->
+<!--                                            <input type="text" name="mutual_friend" class="form-control">-->
+<!--                                        </div>-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="light-label">High school</label>-->
+<!--                                            <input type="text" name="high_school" class="form-control">-->
+<!--                                        </div>-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="light-label">Sport</label>-->
+<!--                                            <input type="text" name="sport_name" class="form-control">-->
+<!--                                        </div>-->
+<!--                                        &lt;!&ndash;								  <div class="form-group">&ndash;&gt;-->
+<!--                                        &lt;!&ndash;									<label class="light-label">Sport place</label>&ndash;&gt;-->
+<!--                                        &lt;!&ndash;									<input type="text" class="form-control">&ndash;&gt;-->
+<!--                                        &lt;!&ndash;								  </div>&ndash;&gt;-->
+<!--                                        <div class="text-center"><a href="javascript:void(0);" type="submit" class="btn btn-lg btn-success rounded-btn bold-text" onclick="searchFriends();">Search</a></div>-->
+<!--                                    </form>-->
+
+
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                            <div class="bg-white rounded block-area friend-requests">-->
+<!--                                <div  class="block-header">-->
+<!--                                    <h4></h4>-->
+<!--                                </div>-->
+<!--                                <div  class="block-body"  id="search-friend-requests-dta">-->
+
+
+<!--                                    &lt;!&ndash;								<div class="request">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;								  <div class="media">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;									   <a class="requester-img pull-left" href="#">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;										  <img src="images/default-user-image.PNG" class="img" alt="Photo">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;									   </a>&ndash;&gt;-->
+
+<!--                                    &lt;!&ndash;									   <div class="media-body">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;										  <div class="user-details">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;											<p class="user-name"><a href="other-user-profile.html"> Denis Ford </a></p>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;											<p class="mutual-friends gray-text fs-14">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;												<span> 8 mutual friends</span>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;												<span class="pull-right">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;													<button class="btn btn-success add-btn"><i class="fas fa-check"></i></button>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;													<button class="btn btn-default remove-btn"><i class="fas fa-times"></i></button>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;												</span>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;											</p>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;										</div>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;									   </div>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;									</div>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;								</div>&ndash;&gt;-->
+
+<!--                                    &lt;!&ndash;								<div class="request">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;								  <div class="media">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;									   <a class="requester-img pull-left" href="#">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;										  <img src="images/default-user-image.PNG" class="img" alt="Photo">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;									   </a>&ndash;&gt;-->
+
+<!--                                    &lt;!&ndash;									   <div class="media-body">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;										  <div class="user-details">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;											<p class="user-name"><a href="other-user-profile.html"> Denis Ford </a></p>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;											<p class="mutual-friends gray-text fs-14">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;												<span> 8 mutual friends</span>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;												<span class="pull-right">&ndash;&gt;-->
+<!--                                    &lt;!&ndash;													<button class="btn btn-success add-btn"><i class="fas fa-check"></i></button>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;													<button class="btn btn-default remove-btn"><i class="fas fa-times"></i></button>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;												</span>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;											</p>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;										</div>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;									   </div>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;									</div>&ndash;&gt;-->
+<!--                                    &lt;!&ndash;								</div>&ndash;&gt;-->
+
+
+<!--                                </div>-->
+
+
+<!--                            </div>-->
+
+
+                        </div>
+                        <!--   chatbox   -->
+                        <div class="chat-popup" id="chatBox" style="display:none;">
+                            <form action="javascript:void(0);" class="form-container">
+                                <div id="message-header" ></div>
+                                <div class="messages-container" style="height: 396px; overflow: scroll;">
+                                    <div class="messages-container-2" id="message-container">
+                                        <!--									<div class="container msg-box-1">-->
+                                        <!--									  <div class="msg-box-container"><span class="message-text">Hello. How are you today? </span> <span class="time-right">11:00</span></div>-->
+                                        <!--									</div>-->
+
+                                        <!--									<div class="container darker msg-box-2">-->
+                                        <!--									  <div class="msg-box-container"><span class="message-text">Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking!</span> <span class="time-left">11:01</span></div>-->
+                                        <!--									</div>-->
+
+                                        <!--									<div class="container msg-box-1">-->
+                                        <!--									 <div class="msg-box-container"><span class="message-text">Sweet! </span> <span class="time-right">11:02</span></div>-->
+                                        <!--									</div>-->
+
+                                        <!--									<div class="container darker msg-box-2">-->
+                                        <!--									  <div class="msg-box-container"><span class="message-text">Nah, I dunno. </span> <span class="time-left">11:05</span></div>-->
+                                        <!--									</div>-->
+                                        <!--									<div class="container msg-box-1">-->
+                                        <!--									  <div class="msg-box-container"><span class="message-text">Hello. How are you today? </span> <span class="time-right">11:00</span></div>-->
+                                        <!--									</div>-->
+
+                                        <!--									<div class="container darker msg-box-2">-->
+                                        <!--									  <div class="msg-box-container"><span class="message-text">Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking!</span> <span class="time-left">11:01</span></div>-->
+                                        <!--									</div>-->
+
+                                        <!--									<div class="container msg-box-1">-->
+                                        <!--									 <div class="msg-box-container"><span class="message-text">Sweet! </span> <span class="time-right">11:02</span></div>-->
+                                        <!--									</div>-->
+
+                                        <!--									<div class="container darker msg-box-2">-->
+                                        <!--									  <div class="msg-box-container"><span class="message-text">Nah, I dunno. </span> <span class="time-left">11:05</span></div>-->
+                                        <!--									</div>-->
+                                        <!--									<div class="container msg-box-1">-->
+                                        <!--									  <div class="msg-box-container"><span class="message-text">Hello. How are you today? </span> <span class="time-right">11:00</span></div>-->
+                                        <!--									</div>-->
+
+                                        <!--									<div class="container darker msg-box-2">-->
+                                        <!--									  <div class="msg-box-container"><span class="message-text">Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking! Hey! I'm fine. Thanks for asking!</span> <span class="time-left">11:01</span></div>-->
+                                        <!--									</div>-->
+
+                                        <!--									<div class="container msg-box-1">-->
+                                        <!--									 <div class="msg-box-container"><span class="message-text">Sweet! </span> <span class="time-right">11:02</span></div>-->
+                                        <!--									</div>-->
+
+                                        <!--									<div class="container darker msg-box-2">-->
+                                        <!--									  <div class="msg-box-container"><span class="message-text">Nah, I dunno. </span> <span class="time-left">11:05</span></div>-->
+                                        <!--									</div>-->
+                                    </div>
+                                </div><br>
+                                <div class="footer">
+                                    <form action="javascript:void(0);">
+                                        <div class="input-group">
+                                            <input type="text" class="form-control" placeholder="Type message..." name="search" id="message-content">
+                                            <div class="input-group-btn">
+                                                <button class="btn btn-default send-btn" type="submit" onclick="sendMessage();"><i class="fa fa-paper-plane"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    </div>
+
+
+                </div><!-- /intro -->
+            </div><!-- /content -->
+        </div><!-- /container -->
+    </div> <!-- /wrapper -->
+
+    <div id="bottom-nav"></div>
+
+<!--    <div class="sub-header bottom-0">-->
+<!--        <div class="row nmarg ss-bottom-nav">-->
+
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="my-posts.html">-->
+<!--                        <img src="./images/ss-icon-002.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="my-profile.html">-->
+<!--                        <img src="./images/sports soical app icons-02.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-matches.html">-->
+<!--                        <img src="./images/ss-icon-001.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="all-groups.html">-->
+<!--                        <img src="./images/sports soical app icons-04.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-places.html">-->
+<!--                        <img src="./images/sports soical app icons-05.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-messages.html">-->
+<!--                        <img src="./images/sports soical app icons-06.svg" />-->
+<!--                    </a>-->
+<!--                    <span class="counter">15</span>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="calendar.html">-->
+<!--                        <img src="./images/sports soical app icons-07.svg" />-->
+<!--                    </a>-->
+<!--                    <span class="counter">15</span>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <script src="js/classie.js"></script>
+    <script src="js/gnmenu.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        })
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+    <script>
+        // js for secondary navigation
+        $("[data-toggle='toggle']").click(function () {
+            var selector = $(this).data("target");
+            $(selector).toggleClass('in');
+        });
+        function showSearchField() {
+            $(".ss-profile-name").fadeOut(0);
+            setTimeout($(".ss-search-input input").fadeIn(1000), 1000)
+        }
+
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+
+
+    <script src="js/sports-social/statistics.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/general-friend-request.js"></script>
+    <script src="js/message.js"></script>
+
+    <script>
+
+        $('document').ready(function (){
+
+            var parameters = '';
+            var url        = app_url+'findfriends?loginuser='+ window.localStorage.getItem("loginuser");
+            var method     = 'GET';
+            var param      = CallMethod(method, url, onSuccessNewFriends, parameters);
+            function onSuccessNewFriends(param) {
+                if (param.data.login_error_status === '1') {
+                    showExpireAlert('session-expire');
+                    session(param.data);
+                } else {
+
+                var countNewFriendReqHTMl = '';
+                countNewFriendReqHTMl = 'Friend Requests (' + param.data.countNewFriendReq + ')';
+
+
+                $('#count-new-friend-req').text(countNewFriendReqHTMl);
+
+
+                var newFriendsHTML = '';
+                var count_friend = '(' + param.data.countNewFriendReq + ') Invite Requests';
+                $.each(param.data.nf, function (key, value) {
+                        console.log(value);
+                    // <button className="btn btn-primary w-33" onClick="openChatbox(' + value.id + ');">Message</button>
+                    // newFriendsHTML +=  '<div class="request" > <div class="media"> <a class="requester-img pull-left" href="#"> <img src="'+ ( !isEmpty( value.userimg)? value.userimg : '' ) +'" class="img" alt="Photo"> </a> <div class="media-body"> <div class="user-details"> <p class="user-name"><a href="javascript:void(0)" onclick="otherProfile(\'' + value.firstname + '\',\'' + value.id + '\');">'+( !isEmpty(value.firstname)? value.firstname : '' )+' '+ ( !isEmpty(value.lastname)? value.lastname : '' )+' </a></p> <p class="mutual-friends gray-text fs-14"> <span> 0 mutual friends</span> <span class="pull-right"> <button class="btn btn-success add-btn" onclick="acceptReq(\'' + value.user_id + '\',\'' + value.list_id + '\',\'' + key + '\')"><i class="fas fa-check"></i></button> <button class="btn btn-default remove-btn"  onclick="canceleReq(\'' + value.user_id + '\',\'' + value.list_id + '\',\'' + key + '\')"><i class="fas fa-times"></i></button> </span> </p> </div> </div> </div> </div>';
+                    newFriendsHTML += '<div class="p-1" id="req-' + key + '"> <div class="media media-friend-tab p-1"> <img class="mr-3" src="' + (!isEmpty(value.userimg) ? value.userimg : '') + '" alt="Generic placeholder image"> <div class="media-body"> <h6 class="mt-0"><a href="javascript:void(0);" onclick="otherProfile(\'' + value.firstname + '\',\'' + value.id + '\');">' + (!isEmpty(value.firstname) ? value.firstname : '') + ' ' + (!isEmpty(value.lastname) ? value.lastname : '') + '</a></h6> <div class="d-block"> <span class="w-100"> <p class="mb-1">(' + (!isEmpty(value.countfriendList) ? value.countfriendList : 0) + ') Sport Friends</p> <p class="mb-1">(' + value.count_mutual_friends + ')Mutual Sport Friends</p> </span> </div> </div> </div> <div class="d-flex"> <button class="btn btn-success w-33 mr-1"  onclick="acceptReq(\'' + value.user_id + '\',\'' + value.list_id + '\',\'' + key + '\')">Accept</button> <button class="btn btn-danger w-33 mr-1" onclick="canceleReq(\'' + value.user_id + '\',\'' + value.list_id + '\',\'' + key + '\')">Decline</button>  </div> </div> <hr>';
+
+                });
+                $('#sports-friends-request').html(newFriendsHTML);
+                $('#invite-req').html(count_friend);
+            }
+
+            }
+
+            // searchFriends();
+
+        });
+/**
+        function searchFriends(){
+
+            var parameters = '';
+            var data = $('#search-friends').serialize();
+            var url        = app_url+'findfriends?loginuser='+ window.localStorage.getItem("loginuser")+'&'+ data;
+
+            var method     = 'POST';
+            var param      = CallMethod(method, url, onSuccessSearchFriends, parameters);
+            function onSuccessSearchFriends(param) {
+                if (param.data.login_error_status === '1') {
+                    showExpireAlert('session-expire');
+                    session(param.data);
+                } else {
+                var newFriendsHTML = '';
+                $.each(param.data.res, function (key, value) {
+                    newFriendsHTML += '<div class="request" id="req-' + key + '"> <div class="media"> <a class="requester-img pull-left" href="#"> <img src="' + (!isEmpty(value.profileImage) ? image_url_PATH + '' + value.profileImage : 'images/default-user-image.png') + '" class="img" alt="Photo"> </a> <div class="media-body"> <div class="user-details"> <p class="user-name"><a href="javascript:void(0);" onclick="otherProfile(\'' + value.firstname + '\',\'' + value.id + '\')">' + (!isEmpty(value.firstname) ? value.firstname : '') + ' ' + (!isEmpty(value.lastname) ? value.lastname : '') + ' </a></p> <p class="mutual-friends gray-text fs-14"> <span> 0 mutual friends</span> <span class="pull-right">';
+
+                    if (value.checkFriendRequestType === 'accept') {
+                        newFriendsHTML += ' <button class="btn btn-success add-btn"><i class="fa fa-check"></i></button>';
+
+                    } else if (value.checkFriendRequestType === 'pending') {
+                        newFriendsHTML += '<button class="btn btn-info add-btn"  >Pending</button>';
+
+                    } else {
+                        newFriendsHTML += '<button class="btn btn-success add-btn"  onclick="sendReq(\'' + value.id + '\',\'' + key + '\');"><i class="fa fa-plus"></i></button>';
+
+
+                    }
+                    newFriendsHTML += '  </span> </p> </div> </div> </div> </div>';
+
+                });
+
+
+                $('#search-friend-requests-dta').html(newFriendsHTML);
+            }
+
+            }
+        }
+ **/
+
+        function otherProfile(username, user_id){
+
+            window.localStorage.setItem('user_id', user_id);
+            window.localStorage.setItem('username', username);
+            window.location.href = 'user-profile.html';
+
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>

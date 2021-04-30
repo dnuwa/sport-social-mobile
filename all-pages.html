@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Sport Social App </title>
+	<link rel="shortcut icon" href="../favicon.ico">
+
+	<!--   CSS  -->
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+
+	<link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+	<link rel="stylesheet" href="flags/build/css/demo.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/g/jquery.owlcarousel@1.31(owl.carousel.css+owl.theme.css)">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+
+
+	<!--   JS   -->
+	<script src="./jquery/3.5.1/jquery.min.js"></script>
+	<script src="./popper/popper.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="./js/modernizr.custom.js"></script>
+	<script src="./js/jquery.owlcarousel.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+
+</head>
+
+<body>
+	<div class="wrapper gray-wrapper">
+		<div class="container full-container">
+			<div class="header">
+				<div id="gn-menu" class="gn-menu-main">
+					<div class="row ss-nav pad-0 mx-0">
+						<!-- <div class="">
+								<li class="com-name login-logo"><span class="com-l com-l-index"><img src="images/logo.png" class="com-logo"></span></li>
+							</div> -->
+						<div class="nav-logo text-success">
+							<img src="./images/ss-logo.png" />
+						</div>
+						<a href="#" class="nav-search">
+							<h5><i class="fa fa-search"></i></h5>
+						</a>
+						<div class="nav-toggler">
+							<span data-toggle="toggle" data-target="#demo"
+								class="gn-trigger sub-header-icon text-center"><a href="javascript:void(0)"
+									class="gn-burger"><i class="fa fa-bars fs-30 text-center"></i></a></span>
+							<div id="side-nav"></div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div class="content c-home top-60">
+				<div class="intro">
+
+
+					<div class="row nmarg">
+						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+						<div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+
+							<div class="bg-white timeline-wrap">
+								<span class="p-1"></span>
+								<span class="p-1">
+									<a href="all-pages.html" class="text-success font-weight-bold">Find<br> Pages</a>
+								</span>
+								<span class="p-1">
+									<a href="sport-pages.html" class="text-dark font-weight-bold">Your<br>
+										Pages</a>
+								</span>
+								<span class="p-1">
+									<a href="create-page.html" class="text-dark font-weight-bold">Create<br>Pages</a>
+								</span>
+								<span class="p-1"></span>
+							</div>
+							<!-- <div class="justify-content-between px-2 py-3 d-flex bg-white">
+                                <button class="btn btn-primary br-10 bg-dark p-1"><i class="fa fa-chevron-left"></i> Back</button>
+                                <span class="ml-5 px-2"><h6>Your Pages </h6></span>
+                                <a href="create-page.html" class="px-2">Create Page</a>
+                            </div> -->
+
+							<div class="bg-white rounded block-area mb-60">
+								<div class="d-flex mt-3">
+									<h5 class="w-100">Suggested for you</h5>
+								</div>
+                                <div id="suggested-page"></div>
+
+								<div class="w-100">
+									<button class="btn btn-secondary w-100">See All</button>
+								</div>
+								<div class="d-flex mt-3">
+									<h5 class="w-100">Friends' Pages</h5>
+								</div>
+                                <div id="myfriends-pages"></div>
+<!--								<hr class="m-0">-->
+<!--								<div class="p-1">-->
+<!--									<div class="media media-friend-tab p-1">-->
+<!--										<img class="mr-3" src="./images/img03.jpg" alt="Generic placeholder image">-->
+<!--										<div class="media-body">-->
+<!--											<h6 class="mt-0 "><a href="#">{Page name}</a></h6>-->
+<!--											<div class="d-block text-black-50">-->
+<!--												<div>Updated yesterday</div>-->
+<!--											</div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+								<div class="w-100">
+									<button class="btn btn-secondary w-100">See All</button>
+								</div>
+								<div class="d-flex mt-3">
+									<h5 class="w-100">Popular Near You</h5>
+								</div>
+                                <div id="popular-page"></div>
+<!--								<hr class="m-0">-->
+<!--								<div class="p-1">-->
+<!--									<div class="media media-friend-tab p-1">-->
+<!--										<img class="mr-3" src="./images/img03.jpg" alt="Generic placeholder image">-->
+<!--										<div class="media-body">-->
+<!--											<h6 class="mt-0 "><a href="#">{Page name}</a></h6>-->
+<!--											<div class="d-block text-black-50">-->
+<!--												<div>Updated yesterday</div>-->
+<!--											</div>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+								<div class="w-100">
+									<button class="btn btn-secondary w-100">See All</button>
+								</div>
+							</div>
+
+						</div>
+						<div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+					</div>
+
+
+				</div><!-- /intro -->
+			</div><!-- /content -->
+		</div><!-- /container -->
+	</div> <!-- /wrapper -->
+
+	<div id="bottom-nav"></div>
+
+	 <script src="js/classie.js"></script>
+	<script src="js/gnmenu.js"></script><script src="js/general-friend-request.js"></script>
+    <script src="js/general-friend-request.js"></script>
+    <script src="js/sports-social/statistics.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        $('document').ready(function (){
+           allPages();
+        });
+
+        function allPages(){
+
+            var parameters = '';
+            var url        = app_url+'all-pages?loginuser='+window.localStorage.getItem("loginuser");
+            var method     = 'GET';
+            var param      = CallMethod(method, url, onSuccessAllPages, parameters);
+            function onSuccessAllPages(param){
+
+                if (param.data.login_error_status === '1') {
+                    showExpireAlert('session-expire');
+                    session(param.data);
+                } else {
+
+                    console.log(param);
+                    var suggested_page_html = '';
+
+
+                    $.each(param.data.sugestedPages, function (key, value) {
+                        if (!isEmpty(value.pages)) {
+                            $.each(value.pages, function (key, value) {
+                                suggested_page_html += '<hr class="m-0"> <div class="p-1"> <div class="media media-friend-tab p-1"> <img class="mr-3" src="' + value.cover_pic_url + '" alt="Generic placeholder image"> <div class="media-body"> <h6 class="mt-0 "><a href="javascript:void(0);" onclick="mypage('+ value.id +');" >' + (!isEmpty(value.name) ? value.name : " ") + '</a></h6> <div class="d-block text-black-50"> <div>Updated yesterday</div> </div> </div> </div> </div>';
+
+                            });
+                        }
+
+                    });
+                    $('#suggested-page').html(suggested_page_html);
+
+                    var myFriends_page_html = '';
+                    $.each(param.data.myFriendsPages['0'].isFriendsWith, function (key, value) {
+                        if (!isEmpty(value.pages)) {
+
+                            $.each(value.pages, function (key, value) {
+                                myFriends_page_html += '<hr class="m-0"> <div class="p-1"> <div class="media media-friend-tab p-1"> <img class="mr-3" src="' + value.cover_pic_url + '" alt="Generic placeholder image"> <div class="media-body"> <h6 class="mt-0 "><a href="javascript:void(0);" onclick="mypage('+ value.id +');" >' + (!isEmpty(value.name) ? value.name : " ") + '</a></h6> <div class="d-block text-black-50"> <div>Updated yesterday</div> </div> </div> </div> </div>';
+                            });
+
+                        }
+                    });
+                    $.each(param.data.myFriendsPages['0'].myfriends, function (key, value) {
+                        if (!isEmpty(value.pages)) {
+
+                            $.each(value.pages, function (key, value) {
+                                myFriends_page_html += '<hr class="m-0"> <div class="p-1"> <div class="media media-friend-tab p-1"> <img class="mr-3" src="' + value.cover_pic_url + '" alt="Generic placeholder image"> <div class="media-body"> <h6 class="mt-0 "><a href="javascript:void(0);" onclick="mypage('+ value.id +');">' + (!isEmpty(value.name) ? value.name : " ") + '</a></h6> <div class="d-block text-black-50"> <div>Updated yesterday</div> </div> </div> </div> </div>';
+                            });
+
+                        }
+                    });
+
+
+                    $('#myfriends-pages').html(myFriends_page_html);
+
+                    var suggested_page_html = '';
+
+
+                    $.each(param.data.sugestedPages, function (key, value) {
+                        if (!isEmpty(value.pages)) {
+                            $.each(value.pages, function (key, value) {
+                                suggested_page_html += '<hr class="m-0"> <div class="p-1"> <div class="media media-friend-tab p-1"> <img class="mr-3" src="' + value.cover_pic_url + '" alt="Generic placeholder image"> <div class="media-body"> <h6 class="mt-0 "><a href="javascript:void(0);" onclick="mypage('+ value.id +');">' + (!isEmpty(value.name) ? value.name : " ") + '</a></h6> <div class="d-block text-black-50"> <div>Updated yesterday</div> </div> </div> </div> </div>';
+
+                            });
+                        }
+
+                    });
+                    $('#popular-page').html(suggested_page_html);
+
+                    // console.log(myFriends_page_html);
+                }
+            }
+
+
+
+        }
+
+    </script>
+
+
+
+	<script src="js/app.js"></script>
+	<script>
+		$('.popover-dismiss').popover({
+			trigger: 'focus'
+		})
+		$(function () {
+			$('[data-toggle="popover"]').popover()
+		})
+	</script>
+	<script>
+		// js for secondary navigation
+		$("[data-toggle='toggle']").click(function () {
+			var selector = $(this).data("target");
+			$(selector).toggleClass('in');
+		});
+		function showSearchField() {
+			$(".ss-profile-name").fadeOut(0);
+			setTimeout($(".ss-search-input input").fadeIn(1000), 1000)
+		}
+
+		new gnMenu(document.getElementById('gn-menu'));
+	</script>
+</body>
+
+</html>

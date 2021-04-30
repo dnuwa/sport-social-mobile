@@ -1,0 +1,1067 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sport Social App </title>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--   CSS  -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="flags/build/css/demo.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/g/jquery.owlcarousel@1.31(owl.carousel.css+owl.theme.css)">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+
+
+    <!--   JS   -->
+    <script src="./jquery/3.5.1/jquery.min.js"></script>
+    <script src="./popper/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="./js/modernizr.custom.js"></script>
+    <script src="./js/jquery.owlcarousel.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+    <style>
+        .modal-backdrop {
+            position: relative;
+        }
+    </style>
+
+</head>
+
+<body>
+<div class="wrapper gray-wrapper">
+    <div class="container full-container">
+        <div class="header">
+            <div id="gn-menu" class="gn-menu-main">
+                <div class="row ss-nav pad-0 mx-0">
+                    <!-- <div class="">
+                            <li class="com-name login-logo"><span class="com-l com-l-index"><img src="images/logo.png" class="com-logo"></span></li>
+                        </div> -->
+                    <div class="nav-logo text-success">
+                        <img src="./images/ss-logo.png" />
+                    </div>
+                    <a href="#" class="nav-search">
+                        <h5><i class="fa fa-search"></i></h5>
+                    </a>
+                    <div class="nav-toggler">
+							<span data-toggle="toggle" data-target="#demo"
+                                  class="gn-trigger sub-header-icon text-center"><a href="javascript:void(0)"
+                                                                                    class="gn-burger"><i class="fa fa-bars fs-30 text-center"></i></a></span>
+
+                        <div id="side-nav"></div>
+<!--                        <div id="demo" class="sidenav top-60">-->
+<!--                            <div class="gn-scroller">-->
+<!--                                <ul class="gn-menu">-->
+<!--                                    <div class="link-group link-group-no-heading">-->
+<!--                                        <li>-->
+<!--                                            <a href="my-profile.html">-->
+<!--                                                <i class="fa fa-user nav-icon"></i>-->
+<!--                                                My Profile-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="sport-friends.html">-->
+<!--                                                <i class="fa fa-thumbs-up nav-icon"></i>-->
+<!--                                                Sport Friends-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="my-posts.html">-->
+<!--                                                <i class="fa fa-list-alt nav-icon"></i>-->
+<!--                                                Sport Posts-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="sport-matches.html">-->
+<!--                                                <i class="fa fa-meetup nav-icon"></i>-->
+<!--                                                Sport Matches-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="sport-places.html">-->
+<!--                                                <i class="fa fa-map-marker nav-icon"></i>-->
+<!--                                                Sport Places-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="sport-coaches.html">-->
+<!--                                                <i class="fa fa-crosshairs nav-icon"></i>-->
+<!--                                                Sport Coach-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="sport-friend-requests.html">-->
+<!--                                                <i class="fa fa-users nav-icon"></i>-->
+<!--                                                Invite Requests(XX)-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="calendar.html">-->
+<!--                                                <i class="fa fa-calendar nav-icon"></i>-->
+<!--                                                Sport Calendar-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <li>-->
+<!--                                            <a href="sport-events.html">-->
+<!--                                                <i class="fa fa-calendar nav-icon"></i>-->
+<!--                                                My Sport Events-->
+<!--                                            </a>-->
+<!--                                        </li>-->
+<!--                                        <div class="link-group link-group-with-heading text-primary">-->
+<!--												<span class="link-heading toggle-pages"><i-->
+<!--                                                    class="fa fa-flag nav-icon"></i> MY PAGES </span>-->
+<!--                                            <div class="no-show pages-list">-->
+<!--                                                <li><a href="all-pages.html" class="pl-5">Page 1</a></li>-->
+<!--                                                <li><a href="all-pages.html" class="pl-5">Page 2</a></li>-->
+<!--                                                <li><a href="all-pages.html" class="pl-5">Page 3</a></li>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="link-group link-group-with-heading text-primary">-->
+<!--												<span class="link-heading toggle-groups"><i-->
+<!--                                                    class="fa fa-users nav-icon"></i> MY GROUPS </span>-->
+<!--                                            <div class="no-show groups-list">-->
+<!--                                                <li><a href="all-groups.html" class="pl-5">Group 1</a></li>-->
+<!--                                                <li><a href="all-groups.html" class="pl-5">Group 2</a></li>-->
+<!--                                                <li><a href="all-groups.html" class="pl-5">Group 3</a></li>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                        <div class="link-group link-group-with-heading">-->
+<!--                                            <span class="link-heading pl-4"> CREATE </span>-->
+<!--                                            <li><a href="create-page.html"><i-->
+<!--                                                class="fa fa-flag nav-icon"></i>Page</a></li>-->
+<!--                                            <li><a href="create-group.html"><i-->
+<!--                                                class="fa fa-users nav-icon"></i>Group</a></li>-->
+<!--                                            <li><a href="#"><i class="fa fa-calendar nav-icon"></i>Event</a></li>-->
+<!--                                            <li><a href="#"><i class="fa fa-tag nav-icon"></i>Pricing</a></li>-->
+<!--                                        </div>-->
+<!--                                        <div class="link-group link-group-with-heading px-0">-->
+<!--                                            <span class="link-heading pl-4"> ACCOUNT SETTINGS </span>-->
+<!--                                            <li>-->
+<!--                                                <a href="profile-setting.html">-->
+<!--                                                    <i class="fa fa-cogs nav-icon"></i>-->
+<!--                                                    Settings-->
+<!--                                                </a>-->
+<!--                                            </li>-->
+<!--                                            <li>-->
+<!--                                                <a href="index-3.html">-->
+<!--                                                    <i class="fa fa-unlock-alt nav-icon"></i>-->
+<!--                                                    Login & Password-->
+<!--                                                </a>-->
+<!--                                            </li>-->
+<!--                                            <li>-->
+<!--                                                <a href="index.html">-->
+<!--                                                    <i class="fa fa-sign-out nav-icon"></i>-->
+<!--                                                    Sign Out-->
+<!--                                                </a>-->
+<!--                                            </li>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <br><br><br><br><br>-->
+<!--                                </ul>-->
+<!--                            </div>&lt;!&ndash; /gn-scroller &ndash;&gt;-->
+<!--                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content c-home top-60">
+            <div class="intro">
+
+
+                <div class="row nmarg">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+                        <div class="bg-white timeline-wrap">
+								<span class="p-1">
+									<a href="sport-friends.html" class="text-dark font-weight-bold">Sport<br>
+										Friends</a>
+								</span>
+                            <span class="p-1">
+									<a href="my-posts.html" class="text-success font-weight-bold">Sport<br> Posts</a>
+								</span>
+                            <span class="p-1">
+									<a href="sport-matches.html" class="text-dark font-weight-bold">Sport<br>
+										Matches</a>
+								</span>
+                            <span class="p-1">
+									<a href="sport-places.html" class="text-dark font-weight-bold">Sport<br> Places</a>
+								</span>
+                            <span class="p-1">
+									<a href="sport-coaches.html" class="text-dark font-weight-bold">Sport<br> Coach</a>
+								</span>
+                        </div>
+
+                        <div class="bg-white category-icons w-100 d-block">
+                            <div class="owl-carousel">
+                                <div class="item">
+                                    <img src="./images/categories/Aerobics-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/ATV-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Auto Racing-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Baseball-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Basketball family-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Bicycle-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Climbing-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Competitive swimming-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Cricket-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Cycling-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Diving-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Equestrian-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Fishing-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Football-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Frisbee-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Golf-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Gymnastics-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Hockey-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Hunting-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Hurling and shinty-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Ice Skating-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Kayaking-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Kite Boarding-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Lacrosse-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Martial Arts-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/MotorBoat-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Motorcycle Racing-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Polo-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Racketball-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Rafting-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Rowing-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Rugby-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Sailing-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Skating-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Skiing-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Sledding-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Snow Boarding-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Volleyball-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Walking-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Weight lifting-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Windsurfing-01.svg" alt="Tuner Image">
+                                </div>
+                                <div class="item">
+                                    <img src="./images/categories/Wresting-01.svg" alt="Tuner Image">
+                                </div>
+                            </div>
+                        </div>
+                        <div id="group-timeline-profile-photos"></div>
+                        <div class="bg-white rounded block-area write-post">
+
+                            <div class="">
+
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">
+                                    <!-- Tab panes -->
+                                    <div class="tab-content">
+                                        <div class="tab-pane" id="home-v">Home Tab.</div>
+                                        <div class="tab-pane active" id="profile-v">
+                                            <div class="pad-10" style="    margin-bottom: 100px;">
+                                                <h4 class="text-muted">Post </h4>
+                                                <form enctype="multipart/form-data" id="post-form"  action="javascript:void(0);">
+                                                    <input type="hidden" name="group_id" id="group-id">
+                                                    <input type="hidden" name="content-type" id="post-content-type"
+                                                           value="description">
+
+
+<!--                                                    <div class="d-flex">-->
+<!--                                                        <span class="p-2"><strong>B</strong></span>-->
+<!--                                                        <span class="p-2"><strong>I</strong></span>-->
+<!--                                                        <span class="p-2"><strong>U</strong></span>-->
+<!--                                                        <span class="p-2"><strong><i-->
+<!--                                                            class="fa fa-align-left"></i></strong></span>-->
+<!--                                                        <span class="p-2"><strong><i-->
+<!--                                                            class="fa fa-align-center"></i></strong></span>-->
+<!--                                                        <span class="p-2"><strong><i-->
+<!--                                                            class="fa fa-align-right"></i></strong></span>-->
+<!--                                                    </div>-->
+                                                    <textarea class="form-control" rows="3" name="post_description"
+                                                              placeholder="Post your Sport Social activity" id="post_description"></textarea>
+                                                    <span class="bold-text fs-13">146 symbols of 1000</span>
+                                                    <div class="row nmarg">
+                                                        <div
+                                                            class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad post-file-upload-icon post-upload-buttons-wrap">
+                                                            <div class="post-file-upload fileUpload blue-btn btn">
+                                                                <span><i class="fa fa-camera"></i></span> / <span><i class="fa fa-video-camera"></i></span>
+                                                                <input type="file" class="uploadlogo" accept="audio/*,video/*,image/*"  name="post_image"  id="post-image" />
+                                                            </div>
+
+
+                                                            <!--																<div class="post-file-upload fileUpload blue-btn btn">-->
+                                                            <!--																	<span><i class="fa fa-video-camera"></i></span>-->
+                                                            <!--																	<input type="file" class="uploadlogo" />-->
+                                                            <!--																</div>-->
+                                                            <!--																<div class="post-file-upload fileUpload  blue-btn btn">-->
+                                                            <!--																	Tag-->
+                                                            <!--																</div>-->
+
+
+                                                            <a href="#"
+                                                               class="btn btn-primary post-file-upload-checkin"><i
+                                                                class="fa fa-map-marker"></i></a>
+                                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad">
+                                                                <button
+                                                                    class="btn btn-success pull-right" onclick="create_a_post();">Publish</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <!--                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad">-->
+<!--                                    &lt;!&ndash; Tab panes &ndash;&gt;-->
+<!--                                    <div class="tab-content">-->
+<!--                                        <div class="tab-pane" id="home-v">Home Tab.</div>-->
+<!--                                        <div class="tab-pane active" id="profile-v">-->
+<!--                                            <div class="p-1">-->
+<!--                                                <form enctype="multipart/form-data">-->
+<!--                                                    <div class="d-flex">-->
+<!--                                                        <img src="./images/default-user-image.png"-->
+<!--                                                             class="user-post-img" alt="">-->
+<!--                                                        <span class="form-control" data-target="#postModal"-->
+<!--                                                              data-toggle="modal">-->
+<!--																Post Your Sport Activity-->
+<!--															</span>-->
+<!--                                                    </div>-->
+
+<!--                                                    <div class="row nmarg">-->
+
+<!--                                                        <div class="w-100 d-flex justify-content-around py-1">-->
+<!--																<span class="btn btn-primary btn-post"-->
+<!--                                                                      data-target="#postModal" data-toggle="modal">-->
+<!--																	<i class="fa fa-camera"></i>-->
+<!--																</span>-->
+<!--                                                            <span class="btn btn-primary btn-post"-->
+<!--                                                                  data-target="#postModal" data-toggle="modal">-->
+<!--																	<i class="fa fa-video-camera"></i>-->
+<!--																</span>-->
+<!--                                                            <span class="btn btn-primary btn-post"-->
+<!--                                                                  data-target="#postModal" data-toggle="modal">-->
+<!--																	<small>Tag</small>-->
+<!--																</span>-->
+<!--                                                            <span class="btn btn-primary btn-post"-->
+<!--                                                                  data-target="#postModal" data-toggle="modal">-->
+<!--																	<i class="fa fa-map-marker"></i>-->
+<!--																</span>-->
+<!--                                                            <span class="btn btn-primary btn-post"-->
+<!--                                                                  data-target="#postModal" data-toggle="modal">-->
+<!--																	<small>Friends</small>-->
+<!--																</span>-->
+<!--                                                            <span class="btn btn-success c py-0"-->
+<!--                                                                  data-target="#postModal" data-toggle="modal">-->
+<!--																	<small>Publish</small>-->
+<!--																</span>-->
+<!--                                                        </div>-->
+<!--                                                    </div>-->
+<!--                                                </form>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+                                <div class="clearfix"></div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="feeds" id="home-post-feed">
+
+                            <!--								<div class="bg-white rounded block-area">-->
+                            <!--									<div class="feed-header">-->
+                            <!--										<div class="media">-->
+                            <!--											<a class="user-feeds-profile-img pull-left mr-2"-->
+                            <!--												href="other-user-profile.html">-->
+                            <!--												<img src="images/ss2.PNG" class="img" alt="Photo">-->
+                            <!--											</a>-->
+
+                            <!--											<div class="media-body">-->
+                            <!--												<div class="user-details">-->
+                            <!--													<p class="user-name"><a href="other-user-profile.html"> Denis Ford-->
+                            <!--														</a></p>-->
+                            <!--													<p class="feed-date gray-text fs-14"> 20 July 2018 </p>-->
+                            <!--												</div>-->
+                            <!--											</div>-->
+                            <!--										</div>-->
+                            <!--									</div>-->
+
+                            <!--									<div class="feed-photo">-->
+                            <!--										<img src="images/ss6.PNG" class="img" alt="Photo">-->
+                            <!--									</div>-->
+
+                            <!--									<div class="feed-footer">-->
+                            <!--										<div class="impressions text-center">-->
+                            <!--											<div class="row nmarg">-->
+                            <!--												<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 xs-pad">-->
+                            <!--													<div class="impression">-->
+                            <!--														<i class="fa fa-thumbs-up"></i> Like-->
+                            <!--													</div>-->
+                            <!--												</div>-->
+                            <!--												<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 xs-pad">-->
+                            <!--													<div class="impression">-->
+                            <!--														<i class="fa fa-comment-o"></i> Comment-->
+                            <!--													</div>-->
+                            <!--												</div>-->
+                            <!--												<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 xs-pad">-->
+                            <!--													<div class="impression">-->
+                            <!--														<i class="fa fa-share"></i> Share-->
+                            <!--													</div>-->
+                            <!--												</div>-->
+                            <!--											</div>-->
+                            <!--										</div>-->
+                            <!--										<div class="impressions-summary">-->
+                            <!--											<p class="bold-text"> Lorem Ipsum, John Doe and 80 others</p>-->
+                            <!--										</div>-->
+                            <!--										<div class="write-comment">-->
+                            <!--											<div class="media d-flex">-->
+                            <!--												<a class="user-feeds-profile-img pull-left mr-2"-->
+                            <!--													href="other-user-profile.html">-->
+                            <!--													<img src="images/ss2.PNG" class="user-img" alt="Photo">-->
+                            <!--												</a>-->
+                            <!--												<div class="media-body mr-2">-->
+                            <!--													<div class="comment-field">-->
+                            <!--														<input name="" class="form-control"-->
+                            <!--															placeholder="Write a comment">-->
+                            <!--													</div>-->
+                            <!--												</div>-->
+                            <!--												<span class="mx-1">-->
+                            <!--													<button class="btn btn-success">-->
+                            <!--														Post-->
+                            <!--													</button>-->
+                            <!--												</span>-->
+                            <!--											</div>-->
+                            <!--										</div>-->
+                            <!--									</div>-->
+
+                            <!--								</div>-->
+
+                            <!--								<div class="bg-white rounded block-area">-->
+                            <!--									<div class="feed-header">-->
+                            <!--										<div class="media">-->
+                            <!--											<a class="user-feeds-profile-img pull-left mr-2"-->
+                            <!--												href="other-user-profile.html">-->
+                            <!--												<img src="images/ss2.PNG" class="img" alt="Photo">-->
+                            <!--											</a>-->
+
+                            <!--											<div class="media-body">-->
+                            <!--												<div class="user-details">-->
+                            <!--													<p class="user-name"><a href="other-user-profile.html"> Denis Ford-->
+                            <!--														</a></p>-->
+                            <!--													<p class="feed-date gray-text fs-14"> 20 July 2018 </p>-->
+                            <!--												</div>-->
+                            <!--											</div>-->
+                            <!--										</div>-->
+                            <!--									</div>-->
+
+                            <!--									<div class="feed-photo">-->
+                            <!--										<img src="images/ss7.PNG" class="img" alt="Photo">-->
+                            <!--									</div>-->
+
+                            <!--									<div class="feed-footer">-->
+                            <!--										<div class="impressions text-center">-->
+                            <!--											<div class="row nmarg">-->
+                            <!--												<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 xs-pad">-->
+                            <!--													<div class="impression">-->
+                            <!--														<i class="fa fa-thumbs-up"></i> Like-->
+                            <!--													</div>-->
+                            <!--												</div>-->
+                            <!--												<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 xs-pad">-->
+                            <!--													<div class="impression">-->
+                            <!--														<i class="fa fa-comment-o"></i> Comment-->
+                            <!--													</div>-->
+                            <!--												</div>-->
+                            <!--												<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 xs-pad">-->
+                            <!--													<div class="impression">-->
+                            <!--														<i class="fa fa-share"></i> Share-->
+                            <!--													</div>-->
+                            <!--												</div>-->
+                            <!--											</div>-->
+                            <!--										</div>-->
+                            <!--										<div class="impressions-summary">-->
+                            <!--											<p class="bold-text"> Lorem Ipsum, John Doe and 80 others</p>-->
+                            <!--										</div>-->
+                            <!--										<div class="write-comment">-->
+                            <!--											<div class="media d-flex">-->
+                            <!--												<a class="user-feeds-profile-img pull-left mr-2"-->
+                            <!--													href="other-user-profile.html">-->
+                            <!--													<img src="images/ss2.PNG" class="user-img" alt="Photo">-->
+                            <!--												</a>-->
+                            <!--												<div class="media-body mr-2">-->
+                            <!--													<div class="comment-field">-->
+                            <!--														<input name="" class="form-control"-->
+                            <!--															placeholder="Write a comment">-->
+                            <!--													</div>-->
+                            <!--												</div>-->
+                            <!--												<span class="mx-1">-->
+                            <!--													<button class="btn btn-success">-->
+                            <!--														Post-->
+                            <!--													</button>-->
+                            <!--												</span>-->
+                            <!--											</div>-->
+                            <!--										</div>-->
+                            <!--									</div>-->
+
+                            <!--								</div>-->
+
+                            <!--								<div class="mb-5 d-flex pb-5 load-more-feed m-3">-->
+                            <!--									<button class="btn btn-success">Load more stories</button>-->
+                            <!--								</div>-->
+
+                        </div>
+
+
+
+                    </div>
+
+
+                </div>
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+            </div>
+
+        </div>
+        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+    </div>
+
+    <!--                        Modal-->
+    <div   class="modal fade" id="post-user-list"  role="dialog" data-backdrop="false"  style="padding-bottom: 150px;">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document"  style="max-width: 480px;">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-light">
+                    <h5 class="modal-title text-uppercase text-bold-600"><span id="post-user-list-heading"> Liked list </span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="post-compose">
+                        <div class="post-compose-inputs">
+                            <div class="feed-footer user-list">
+                                <p class="text-center">No Record Found</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-top-light">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button style="display: none" id="post-user-list-btn" data-toggle="modal" data-target="#post-user-list"></button>
+
+    <div class="modal fade" id="post-share-by" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document" style="    max-width: 480px;">
+            <div class="modal-content" style="    width: 127%; height: 230px;">
+                <div class="modal-header border-bottom-light">
+                    <h5 class="modal-title text-uppercase text-bold-600"><span id="post-user-list-heading"> Post Sharing </span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body post-share_container">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <button style="display: none" id="post-share-by-btn" data-toggle="modal" data-target="#post-share-by"></button>
+    <div class="modal fade" id="post-comments-subcomments" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" data-backdrop="false" style="padding-bottom: 150px;">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document" style="    max-width: 480px;">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-light">
+                    <h5 class="modal-title text-uppercase text-bold-600"><span id="post-user-list-heading"> View Replies </span></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="post-compose">
+                        <div class="post-compose-inputs">
+                            <div id="replies-list-div" class="feed-footer mb-4">
+
+                            </div>
+                            <div class="write-comment reply-your-comment">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button style="display: none" id="post-comments-subcomments-btn" data-toggle="modal" data-target="#post-comments-subcomments"></button>
+
+    <div class="modal fade" id="post-comment" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" data-backdrop="false">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header border-bottom-light">
+                    <h5 class="modal-title text-uppercase text-bold-600">Edit Comment</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="post-compose">
+                        <div class="post-compose-inputs">
+                            <div class="error"></div>
+                            <form id="edit-comment-form">
+                                <label for="edit_comment_description">Your Comment</label>
+                                <textarea name="post_description" id="edit_comment_description" rows="5" class="app-textarea w-100" placeholder="Write Something ..."></textarea>
+                                <input type="hidden" name="post_id" id="post_id_hidden_for_comment">
+                                <input type="hidden" name="comment_id" id="comment_id_hidden">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer npad">
+                    <div class="ui-grid-a full-span">
+                        <a href="javascript:void(0)" onclick="updateComment()" class="btn btn-primary submit-btn"> <i class="fa fa-user-tie"></i> Update </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button style="display: none" id="post-comment-btn" data-toggle="modal" data-target="#post-comment"></button>
+
+    <div class="modal fade deletePostModel"  tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document" >
+            <div class="modal-content">
+                <div class="modal-header border-bottom-light">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div role="main" class="ui-content">
+                        <div class="message-connect-request"></div>
+                        <div class="signup-form text-center pad-10">
+                            <h4> Are You Sure you want to delete this Post?</h4>
+                            <form id="connect-form">
+                                <input type="hidden" name="id" class="delete-post-id">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="padding: 10px;">
+                    <div class="ui-grid-a full-span" >
+                        <button data-toggle="modal" data-dismiss="modal" class="btn btn-secondary" style="float: right;">No</button>
+                        <a href="javascript:void(0);" class="btn btn-primary" style="background-color:#b40d17 !important; float: right; margin-right: 5px;" onclick="ConfirmDeletePost()">Yes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="update-a-post-model" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="col-12">
+                        <h5 class="modal-title float-left">Update Post</h5>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form action="javascript:void(0)" id="edit-post-form" enctype="multipart/form-data">
+                        <div class="">
+                            <div class="m-auto">
+                                <div class="col-12 imgUp">
+                                    <div >
+                                        <img src="./images/image-placeholder.jpg" id="file-upload-image" class="w-100"
+                                             alt="">
+                                    </div>
+                                    <label class="btn btn-primary btn-primary-imgUp">
+                                        Choose File
+                                        <input name="post_image" type="file"  onchange="editpostfilereadURL(this);"  class="uploadFile img" accept="image/*" value="Upload image" id="edit-post-image" style="width: 0px;height: 0px;overflow: hidden;" >
+                                        <input type="hidden" name="post_id" id="post_hidden_id">
+                                        <input type="hidden" name="content-type" id="post-content-type" value="description">
+                                    </label>
+                                    <button type="button" class="btn btn-primary editor-edit-btn editor-edit-btn-upload-container" style="display: none" onclick="imageEditorEdit()" data-toggle="modal" data-target="#image-editor-modal"><i class="fa fa-edit"></i></button>
+                                </div><!-- col-2 -->
+                                <div class="col-12">
+                                    <label>Caption  <strong>*</strong></label>
+                                    <textarea class="form-control col-form-label-sm" name="post_description" id="edit_post_description" cols="" rows="5" required></textarea>
+                                </div>
+                            </div><!-- row -->
+                        </div><!-- container -->
+                        <button class="btn btn-outline-primary w-25 m-1 "  onclick="updatePost()">Update</button>
+                        <button class="btn btn-outline-danger float-right w-25 m-1 closebtn" onclick="cancelPost()" data-dismiss="modal" aria-label="Close">Cancel</button>
+                    </form>
+                    <input type="hidden" name="hidden_file" id="hidden_file_image" class="upload-editor-hidden-file">
+                </div>
+            </div>
+        </div>
+    </div>
+    <button style="display: none" id="update-post-model" data-toggle="modal" data-target="#update-a-post-model"></button>
+
+
+
+
+</div><!-- /intro -->
+</div><!-- /content -->
+</div><!-- /container -->
+</div> <!-- /wrapper -->
+
+<div id="bottom-nav"></div>
+
+<!--<div class="sub-header bottom-0">-->
+<!--    <div class="row nmarg ss-bottom-nav">-->
+
+<!--        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--				<span class="sub-header-icon">-->
+<!--					<a href="my-posts.html">-->
+<!--						<img src="./images/ss-icon-002.svg" />-->
+<!--					</a>-->
+<!--				</span>-->
+<!--        </div>-->
+<!--        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--				<span class="sub-header-icon">-->
+<!--					<a href="my-profile.html">-->
+<!--						<img src="./images/sports soical app icons-02.svg" />-->
+<!--					</a>-->
+<!--				</span>-->
+<!--        </div>-->
+<!--        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--				<span class="sub-header-icon">-->
+<!--					<a href="sport-matches.html">-->
+<!--						<img src="./images/ss-icon-001.svg" />-->
+<!--					</a>-->
+<!--				</span>-->
+<!--        </div>-->
+<!--        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--				<span class="sub-header-icon">-->
+<!--					<a href="all-groups.html">-->
+<!--						<img src="./images/sports soical app icons-04.svg" />-->
+<!--					</a>-->
+<!--				</span>-->
+<!--        </div>-->
+<!--        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--				<span class="sub-header-icon">-->
+<!--					<a href="sport-places.html">-->
+<!--						<img src="./images/sports soical app icons-05.svg" />-->
+<!--					</a>-->
+<!--				</span>-->
+<!--        </div>-->
+<!--        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--				<span class="sub-header-icon">-->
+<!--					<a href="sport-messages.html">-->
+<!--						<img src="./images/sports soical app icons-06.svg" />-->
+<!--					</a>-->
+<!--					<span class="counter">15</span>-->
+<!--				</span>-->
+<!--        </div>-->
+<!--        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--				<span class="sub-header-icon">-->
+<!--					<a href="calendar.html">-->
+<!--						<img src="./images/sports soical app icons-07.svg" />-->
+<!--					</a>-->
+<!--					<span class="counter">15</span>-->
+<!--				</span>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--</div>-->
+
+<!-- Post  Modal -->
+<div id="postModal" class="modal fade p-1 post-modal" role="dialog">
+    <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header d-flex  bg-grey">
+                <h4 class="" data-dismiss="modal">
+                    <i class="fa fa-chevron-left"></i>
+                </h4>
+                <h5 class="modal-title">Create Post</h5>
+                <button class="btn btn-success br-25">Post</button>
+            </div>
+            <div class="modal-body">
+                <div class="d-block">
+                    <div class="d-flex">
+                        <img src="./images/default-user-image.png" class="user-post-img" alt="">
+                        <div>
+                            <h5 class="w-100">{First Name} {Last Name}</h5>
+                            <div class="d-flex">
+                                <div class="btn-group mr-1">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-light dropdown-toggle"
+                                                data-toggle="dropdown">
+												<span>
+													<i class="fa fa-users"></i>
+												</span>
+                                            <span>Friends</span>
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Friend 1</a></li>
+                                            <li><a href="#">Friend 2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="btn-group">
+                                    <div class="btn-group">
+                                        <button type="button" class="btn btn-light dropdown-toggle"
+                                                data-toggle="dropdown">
+												<span>
+													<i class="fa fa-plus"></i>
+												</span>
+                                            <span>Albums</span>
+                                            <span class="caret"></span>
+                                        </button>
+                                        <ul class="dropdown-menu" role="menu">
+                                            <li><a href="#">Album 1</a></li>
+                                            <li><a href="#">Album 2</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <textarea cols="30" rows="5" class="form-control b-0 my-2"
+                              placeholder="What is on your mind"></textarea>
+                </div>
+                <div class="d-flex w-100 justify-content-around">
+						<span>
+							<input type="file" id="uploadVideo" accept="video/*" hidden />
+							<label for="uploadVideo">
+								<i class="fa fa-video-camera fs-30 text-info"></i>
+							</label>
+						</span>
+                    <span>
+							<input type="file" id="uploadImage" accept="image/*" hidden />
+							<label for="uploadImage">
+								<i class="fa fa-picture-o fs-30 text-success"></i>
+							</label>
+						</span>
+                    <span>
+							<i class="fa fa-user-plus fs-30 text-primary"></i>
+						</span>
+                    <span>
+							<i class="fa fa-smile-o fs-30 text-warning"></i>
+						</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="js/classie.js"></script>
+<script src="js/gnmenu.js"></script>
+<script src="js/app.js"></script>
+<script>
+    $('.popover-dismiss').popover({
+        trigger: 'focus'
+    })
+    $(function () {
+        $('[data-toggle="popover"]').popover()
+    })
+</script>
+<script>
+    // js for secondary navigation
+    $("[data-toggle='toggle']").click(function () {
+        var selector = $(this).data("target");
+        $(selector).toggleClass('in');
+    });
+    function showSearchField() {
+        $(".ss-profile-name").fadeOut(0);
+        setTimeout($(".ss-search-input input").fadeIn(1000), 1000)
+    }
+    $(document).ready(function () {
+        $('.owl-carousel').owlCarousel({
+            items: 10,
+            itemsDesktop: [1199, 3],
+            itemsDesktopSmall: [979, 3],
+            navigation: true,
+            navigationText: [
+                "<i class='fa fa-chevron-left'></i>",
+                "<i class='fa fa-chevron-right'></i>"
+            ]
+        });
+        $('.dropdown-submenu a.test').on("click", function (e) {
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+            e.preventDefault();
+        });
+    });
+
+    new gnMenu(document.getElementById('gn-menu'));
+
+</script>
+<script src="js/general-friend-request.js"></script>
+<script src="js/sports-social/statistics.js"></script>
+<script src="js/main.js"></script>
+<script src="js/posts.js"></script>
+<script>
+    let scroll_row = 0;
+    let scroll_all = 20;
+    let postPerPage = 5;
+    let type = 'group';
+    $('document').ready(function (){
+        loadFeeds(type= 'group', userId = window.localStorage.getItem("loginuser"));
+    });
+    function loadFeeds(type = '', userId) {
+        var currentUserId  = window.localStorage.getItem("loginuser");
+        var group_id   =    window.localStorage.getItem("group_id");
+        var loginuser  = window.localStorage.getItem("loginuser");
+        var parameters = '';
+        var url        = app_url+'group-detail?loginuser='+ loginuser +'&group_id='+group_id
+            + '&type=' + type
+            + '&postPerPage=' + postPerPage
+            + '&total_post=' + scroll_all
+            + '&current_post=' + scroll_row;
+
+        var method     = 'GET';
+        var param      = CallMethod(method, url, onSuccessGroup, parameters);
+        function onSuccessGroup(param) {
+
+            if (param.data.login_error_status === '1') {
+                showExpireAlert('session-expire');
+                session(param.data);
+            } else {
+                $('#group-id').val(param.data.group['0'].id);
+                var group_profile_html = '';
+
+                var profile_pic = !isEmpty(param.data.group['0'].profile_pic) && !isEmpty(param.data.group['0'].profile_pic.hash) ? image_url + '/files/' + (!isEmpty(param.data.group['0'].profile_pic) && !isEmpty(param.data.group['0'].profile_pic.hash) ? param.data.group['0'].profile_pic.hash : '') + '/' + (!isEmpty(param.data.group['0'].profile_pic) && !isEmpty(param.data.group['0'].profile_pic.name) ? param.data.group['0'].profile_pic.name : '') : 'images/default-user-image.png';
+                var cover_pic = !isEmpty(param.data.group['0'].cover_pic) && !isEmpty(param.data.group['0'].cover_pic.hash) ? image_url + '/files/' + (!isEmpty(param.data.group['0'].cover_pic) && !isEmpty(param.data.group['0'].cover_pic.hash) ? param.data.group['0'].cover_pic.hash : '') + '/' + (!isEmpty(param.data.group['0'].cover_pic) && !isEmpty(param.data.group['0'].cover_pic.name) ? param.data.group['0'].cover_pic.name : '') : 'images/default-cover.gif';
+                group_profile_html ='<div class="timeline-profile-photos bg-white"> <div class="row nmarg"> <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad text-center"> <div class="timeline-bg-photo"> <img src="'+ cover_pic +'" class="bg-img" alt="Photo"> </div> <div class="timeline-user-photo"> <div class="media"> <a class="pull-left" href="#"> <span><img class="media-object user-img" src="'+ profile_pic +'" alt="Photo"></span> </a> <div class="media-body"> </div> </div> </div> </div> </div> <div class="d-flex profile-name-wrap"> <span> <h4 class="font-weight-bold">' + param.data.group['0'].name + '</h4> </span> <span> ' ;
+                if(parseInt(window.localStorage.getItem("loginuser")) !== parseInt(param.data.group['0'].owner) ){
+                    group_profile_html +=  '<a href="javascript:void(0);" onclick="joinGroup(`'+ param.data.group['0'].id + '`,`' + param.data.group['0'].owner  +'`);"><h6 className="bold-text p-2" style="background-color:#e4e6eb"> Join</h6> </a>';
+
+                }
+                group_profile_html +=   ' </span> </div> </div>';
+                // group_profile_html = '<div class="timeline-profile-photos bg-white"> <div class="row nmarg"> <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 npad text-center"> <div class="timeline-bg-photo"> <img src="' + cover_pic + '" class="bg-img" alt="Photo"> </div> <div class="timeline-user-photo"> <div class="media"> <a class="pull-left" href="#"> <span><img class="media-object user-img" src="' + profile_pic + '" alt="Photo"></span> </a> <div class="media-body"> <p class="user-profile-name text-left"><a href="#" class="bold-text white-text"> ' + param.data.page['0'].name + ' </a></p> </div> </div> </div> </div> </div> </div>';
+
+                $('#group-timeline-profile-photos').html(group_profile_html);
+                postPerPage = param.data.posts.original.postPerPage;
+                scroll_all = param.data.posts.original.totalPost;
+
+                $('.postFeeds-load-more-posts').remove();
+                $('.postFeedsEventSlider-load-more-posts').remove();
+
+                $('#home-post-feed').append(showPosts(param.data.posts.original.data) + ((scroll_row + postPerPage) < scroll_all ? getLoadMoreButton(type, 'postFeedsEventSlider-load-more-posts', currentUserId) : ''));
+                showLoadMoreButtons();
+                if(scroll_row == 0)
+                    scroll_row = 5;
+            }
+        }
+    }
+
+
+
+    function joinGroup(groupId, ownerId){
+
+
+
+        var parameters = '';
+        var data       =  "group_id="+ groupId + "&owner_id=" + ownerId + "&loginuser="+window.localStorage.getItem("loginuser") + "&user_id="+window.localStorage.getItem("loginuser");
+        var url        = app_url+'join-group?'+data;
+
+        var method     = 'POST';
+        var param      = CallMethod(method, url, onSuccessJoinGroup, parameters);
+        function onSuccessJoinGroup(param){
+
+
+            if(param.data.message_status == true){
+
+                $.each(param.data.messages, function(key, value){
+                    showAlertMessage(type = 'success', String(value));
+                });
+
+            }
+        }
+    }
+
+
+
+</script>
+</body>
+
+</html>
+
+

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title> Sport Social App </title>
+	<link rel="shortcut icon" href="../favicon.ico">
+
+	<!--   CSS  -->
+	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+	<link rel="stylesheet" href="flags/build/css/demo.css">
+	<link rel="stylesheet" type="text/css" href="css/css.css">
+
+	<!--   JS   -->
+	<script src="./jquery/3.5.1/jquery.min.js"></script>
+	<script src="./popper/popper.min.js"></script>
+	<script src="./bootstrap/js/bootstrap.min.js"></script>
+
+	<script src="js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+</head>
+
+<body>
+<div class="wrapper gray-wrapper">
+    <div class="container full-container index-page">
+        <div class="header">
+            <div id="gn-menu" class="gn-menu-main">
+                <div class="row ss-nav pad-0 mx-0">
+                    <div class="nav-logo text-success p-2 w-100">
+                        <img src="./images/ss-logo.png" />
+                    </div>
+                </div>
+
+                <div class="signup-progress-bar">
+                    <img src="./images/progress-1.svg" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="content c-home">
+            <div class="intro">
+
+                <div class="row nmarg">
+
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+                        <div class="form-area ss-form-area">
+
+                            <form action="javascript:void(0);" id="sign-up-step1-form" method="" class="bg-white rounded">
+
+                                <div class="form-header rounded-top">
+                                    <strong class="form-title">Create a new account</strong>
+                                </div>
+                                <div class="form-main-content">
+                                    <div id="message"> </div>
+                                    <div class="form-group">
+                                        <input type="text" name="firstname" value="" class="form-control"
+                                               placeholder="First name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" value="" name="lastname"  class="form-control" placeholder="Last name">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" value="" class="form-control" name="email"
+                                               placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" value="" name="password" class="form-control" placeholder="Password">
+                                        <p class="m-0 helper-text">Use 8 characters or more for your password</p>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="password" value="" name="password_confirmation" class="form-control"
+                                               placeholder="Repeat Password">
+                                    </div>
+                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                        <a href="javascript:void(0);"
+                                           class="btn btn-success fs-17 bold-text rounded-btn" onclick="signUpStep1();" >Continue</a>
+                                        <a href="login.html"
+                                           class="btn btn-default fs-17 bold-text rounded-btn-nb">Already Have
+                                            Account</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                </div>
+
+            </div><!-- /intro -->
+        </div><!-- /content -->
+    </div><!-- /container -->
+</div> <!-- /wrapper -->
+    <script src="js/classie.js"></script>
+	<script src="js/gnmenu.js"></script>
+	<script>
+		new gnMenu(document.getElementById('gn-menu'));
+	</script>
+    <script src="js/general-friend-request.js"></script>
+    <script src="js/sports-social/statistics.js"></script>
+    <script src="js/main.js"></script>
+    <script>
+            function signUpStep1(){
+
+                var parameters = '';
+                var data       = $('#sign-up-step1-form').serialize();
+                var url        = app_url+'signup?'+data;
+                var method     = 'POST';
+                var param      = CallMethod(method, url, onSuccessLogin, parameters);
+                function onSuccessLogin(param){
+
+                    if(param.data.message_status == false){
+
+                        var errorHTML = '<div class="alert alert-danger alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><ul>';
+
+                        $.each(param.data.errors, function(key, value){
+
+                            errorHTML += '<li>'+ value +'</li>';
+
+                        });
+                        errorHTML +=   '</ul></div>';
+
+
+                        $('#message').html(errorHTML);
+
+                    }else if(param.data.message_status == true){
+
+                        var name  = 'Signup';
+                        var data  = param.data;
+                        handleData(name, data);
+                    }
+                }
+
+
+
+            }
+        </script>
+</body>
+
+</html>

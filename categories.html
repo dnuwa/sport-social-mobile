@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sport Social App </title>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--   CSS  -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="flags/build/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <!--   JS   -->
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper gray-wrapper">
+        <div class="container full-container">
+            <div class="header">
+                <div id="gn-menu" class="gn-menu-main">
+                    <div class="row ss-nav pad-0 mx-0">
+                        <!-- <div class="">
+								<li class="com-name login-logo"><span class="com-l com-l-index"><img src="images/logo.png" class="com-logo"></span></li>
+							</div> -->
+                        <div class="nav-logo text-success">
+                            <img src="./images/ss-logo.png" />
+                        </div>
+                        <a href="#" class="nav-search">
+                            <h5><i class="fa fa-search"></i></h5>
+                        </a>
+                        <div class="nav-toggler">
+                            <span data-toggle="toggle" data-target="#demo"
+                                class="gn-trigger sub-header-icon text-center"><a href="javascript:void(0)"
+                                    class="gn-burger"><i class="fa fa-bars fs-30 text-center"></i></a></span>
+                             <div id="side-nav"></div>       </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="content c-home top-60">
+                <div class="intro">
+                    <div class="row nmarg">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+                            <div class="bg-white timeline-wrap">
+                                <span class="p-1">
+                                    <a href="sport-friends.html" class="text-dark font-weight-bold">Sport<br>
+                                        Friends</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="my-posts.html" class="text-dark font-weight-bold">Sport<br> Posts</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="sport-matches.html" class="text-dark font-weight-bold">Sport<br>
+                                        Matches</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="sport-places.html" class="text-dark font-weight-bold">Sport<br> Places</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="sport-coaches.html" class="text-dark font-weight-bold">Sport<br> Coach</a>
+                                </span>
+                            </div>
+                            <div class="bg-white timeline-wrap">
+                                <span class="p-1"></span>
+                                <span class="p-1">
+                                    <a href="all-groups.html" class="text-success font-weight-bold">Find<br> Groups</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="sport-groups.html" class="text-dark font-weight-bold">Your<br>
+                                        Groups</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="create-group.html" class="text-dark font-weight-bold">Create<br>Groups</a>
+                                </span>
+                                <span class="p-1"></span>
+                            </div>
+
+                            <div class="bg-white rounded block-area mb-60">
+                                <div class="d-flex mt-3">
+                                    <h5 class="w-100">People Near You</h5>
+                                </div>
+                                <hr class="m-0">
+                                <div class="p-1">
+                                    <div class="media media-friend-tab p-1">
+                                        <img class="mr-3" src="./images/img03.jpg" alt="Generic placeholder image">
+                                        <div class="media-body">
+                                            <div class="justify-content-between d-flex">
+                                                <span>
+                                                    <h6 class="mt-0 "><a href="#">{Group name}</a></h6>
+                                                </span>
+                                                <span><button class="btn btn-secondary">Join</button></span>
+                                            </div>
+                                            <div class="d-block text-black-50">
+                                                <div>
+                                                    <span>2.1k Members</span>
+                                                    <span class="fs-45">.</span>
+                                                    <span>8 posts a week</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="w-100">
+                                    <button class="btn btn-secondary w-100">See All</button>
+                                </div>
+                                <div class="d-flex mt-3  justify-content-between">
+                                    <span>
+                                        <h6 class="w-100">Categories</h6>
+                                    </span>
+                                    <span>
+                                        <a href="#">See All</a>
+                                    </span>
+                                </div>
+                                <div class="d-flex flex-wrap-wrap">
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Aerobics-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/ATV-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Auto Racing-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Baseball-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Basketball family-01.svg"
+                                            class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Climbing-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Competitive swimming-01.svg"
+                                            class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Cricket-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Cycling-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Diving-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Equestrian-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Fishing-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Football-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Frisbee-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Golf-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Gymnastics-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Hockey-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Hunting-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Hurling and shinty-01.svg"
+                                            class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Ice Skating-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Kayaking-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Kite Boarding-01.svg"
+                                            class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Lacrosse-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Martial Arts-01.svg"
+                                            class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/MotorBoat-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Motorcycle Racing-01.svg"
+                                            class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Polo-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Racketball-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Rafting-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Rowing-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Rugby-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Sailing-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Skating-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Skiing-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Sledding-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Snow Boarding-01.svg"
+                                            class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Volleyball-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Walking-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Weight lifting-01.svg"
+                                            class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Windsurfing-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                    <span class="w-50 p-1">
+                                        <img src="./images/categories/Wresting-01.svg" class="w-100 m-1 border-grey">
+                                    </span>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    </div>
+
+
+                </div><!-- /intro -->
+            </div><!-- /content -->
+        </div><!-- /container -->
+    </div> <!-- /wrapper -->
+    <div id="bottom-nav"></div>
+<!--    <div class="sub-header bottom-0">-->
+<!--        <div class="row nmarg ss-bottom-nav">-->
+
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="my-posts.html">-->
+<!--                        <img src="./images/ss-icon-002.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="my-profile.html">-->
+<!--                        <img src="./images/sports soical app icons-02.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-matches.html">-->
+<!--                        <img src="./images/ss-icon-001.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="all-groups.html">-->
+<!--                        <img src="./images/sports soical app icons-04.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-places.html">-->
+<!--                        <img src="./images/sports soical app icons-05.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-messages.html">-->
+<!--                        <img src="./images/sports soical app icons-06.svg" />-->
+<!--                    </a>-->
+<!--                    <span class="counter">15</span>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="calendar.html">-->
+<!--                        <img src="./images/sports soical app icons-07.svg" />-->
+<!--                    </a>-->
+<!--                    <span class="counter">15</span>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <script src="js/classie.js"></script>
+    <script src="js/gnmenu.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        })
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+    <script>
+        // js for secondary navigation
+        $("[data-toggle='toggle']").click(function () {
+            var selector = $(this).data("target");
+            $(selector).toggleClass('in');
+        });
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+</body>
+
+</html>

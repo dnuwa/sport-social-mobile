@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sport Social App </title>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--   CSS  -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="flags/build/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+
+    <!--   JS   -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+    <script src="js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper gray-wrapper">
+        <div class="container full-container">
+            <div class="header">
+                <div id="gn-menu" class="gn-menu-main">
+                    <div class="row ss-nav pad-0 mx-0">
+                        <!-- <div class="">
+								<li class="com-name login-logo"><span class="com-l com-l-index"><img src="images/logo.png" class="com-logo"></span></li>
+							</div> -->
+                        <div class="nav-logo text-success">
+                            <img src="./images/ss-logo.png" />
+                        </div>
+                        <a href="#" class="nav-search">
+                            <h5><i class="fa fa-search"></i></h5>
+                        </a>
+                        <div class="nav-toggler">
+                            <span data-toggle="toggle" data-target="#demo"
+                                class="gn-trigger sub-header-icon text-center"><a href="javascript:void(0)"
+                                    class="gn-burger"><i class="fa fa-bars fs-30 text-center"></i></a></span>
+                             <div id="side-nav"></div>       </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content c-home top-60">
+                <div class="intro">
+
+
+                    <div class="row nmarg">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+
+                            <div class="bg-white timeline-wrap">
+                                <span class="p-1">
+                                    <a href="sport-friends.html" class="text-dark font-weight-bold">Sport<br>
+                                        Friends</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="my-posts.html" class="text-dark font-weight-bold">Sport<br> Posts</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="sport-matches.html" class="text-dark font-weight-bold">Sport<br>
+                                        Matches</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="sport-places.html" class="text-dark font-weight-bold">Sport<br>
+                                        Places</a>
+                                </span>
+                                <span class="p-1">
+                                    <a href="sport-coaches.html" class="text-success font-weight-bold">Sport<br>
+                                        Coach</a>
+                                </span>
+                            </div>
+
+
+                            <div class="bg-white rounded block-area mb-60">
+                                <div class="d-flex bg-success btn p-0 mb-1">
+                                    <a href="sport-coaches.html" class="text-white mx-2 my-1">
+                                        <i class="fa fa-chevron-left"></i>
+                                    </a>
+                                    <span class="w-100 text-center text-white">
+                                        <h5 class="my-1">Sport Instructors</h5>
+                                    </span>
+                                </div>
+
+                                <div class="d-flex">
+                                    <span class="w-50">
+                                        <div>
+                                            <h6>{Instructor Name}</h6>
+                                        </div>
+                                        <div class="d-flex">
+                                            <i class="fa fa-star text-warning mb-0"></i>
+                                            <i class="fa fa-star text-warning mb-0"></i>
+                                            <i class="fa fa-star text-warning mb-0"></i>
+                                            <i class="fa fa-star text-warning mb-0"></i>
+                                            <i class="fa fa-star-o mb-0"></i>
+                                            <small class="ml-2">(XX)</small>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-map-marker"></i>
+                                            <small>{Business Street}</small>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-bank"></i>
+                                            <small>{City}, {Neighborhood}</small>
+                                        </div>
+                                    </span>
+                                    <span class="w-50">
+                                        <div>
+                                            <small>
+                                                {Category}
+                                            </small>
+                                        </div>
+                                        <div>
+                                            <small>
+                                                {Sub-Category}
+                                            </small>
+                                        </div>
+                                        <div>
+                                            <small>
+                                                Open: 7.30am - 10:00pm
+                                            </small>
+                                        </div>
+                                        <div>
+                                            <i class="fa fa-phone-square"></i>
+                                            <small>{0700 000 000}</small>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div class="d-flex">
+                                    <span class="w-50">
+                                        <div class="w-100">
+                                            <div class="business-slideshow-container">
+                                                <div class="mySlides fadey" style="display: none;">
+                                                    <img src="./images/img11.jpg" style="width:100%">
+                                                </div>
+                                                <div class="mySlides fadey" style="display: none;">
+                                                    <img src="./images/img12.jpg" style="width:100%">
+                                                </div>
+                                                <div class="mySlides fadey" style="display: none;">
+                                                    <img src="./images/img13.jpg" style="width:100%">
+                                                </div>
+
+                                                <a class="prevImg" onclick="plusSlides(-1)">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                        viewBox="0 0 48 48" class="icon_svg">
+                                                        <path fill="#00d8c3"
+                                                            d="M30.412,42.01c-0.794-0.003-1.541-0.375-2.021-1.008L16.567,25.675c-0.755-0.988-0.755-2.36,0-3.35	L28.39,7c0.893-1.157,2.52-1.344,3.635-0.42c1.114,0.926,1.297,2.614,0.404,3.771L21.899,24l10.53,13.65 c0.893,1.157,0.711,2.845-0.404,3.77c-0.452,0.38-1.023,0.588-1.613,0.588V42.01z">
+                                                        </path>
+                                                    </svg>
+                                                </a>
+                                                <a class="nextImg" onclick="plusSlides(1)">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"
+                                                        viewBox="0 0 48 48" class="icon_svg">
+                                                        <path fill="#00d8c3"
+                                                            d="M18.586,42.008c-0.59,0-1.161-0.208-1.613-0.588c-1.115-0.925-1.297-2.612-0.404-3.77L27.098,24	L16.568,10.35c-0.893-1.156-0.71-2.845,0.404-3.771c1.115-0.924,2.742-0.737,3.635,0.42L32.43,22.325	c0.755,0.989,0.755,2.361,0,3.35L20.606,41.002c-0.479,0.633-1.227,1.005-2.021,1.008V42.008z">
+                                                        </path>
+
+                                                    </svg>
+                                                </a>
+
+                                                <a href="business-profile-restaurants-gallery-v2.html"
+                                                    class="gallery-link">All Photos (123) </a>
+
+                                            </div>
+                                        </div>
+                                        <div class="w-100 text-center font-weight-bold">
+                                            Recommended by friends
+                                        </div>
+                                        <div class="d-flex">
+                                            <img src="./images/default-user-image.png" class="w-20 br-10 p-1 h-100"
+                                                alt="">
+                                            <img src="./images/default-user-image.png" class="w-20 br-10 p-1 h-100"
+                                                alt="">
+                                            <img src="./images/default-user-image.png" class="w-20 br-10 p-1 h-100"
+                                                alt="">
+                                            <img src="./images/default-user-image.png" class="w-20 br-10 p-1 h-100"
+                                                alt="">
+                                            <img src="./images/default-user-image.png" class="w-20 br-10 p-1 h-100"
+                                                alt="">
+                                        </div>
+                                        <div class="w-100 text-center">
+                                            <small><i>{Caleb} and 20+ others</i></small>
+                                        </div>
+                                        <div class="w-100 px-2 py-1">
+                                            <button class="btn-light w-100 br-5">
+                                                <small>
+                                                    <i class="fa fa-internet-explorer"></i>
+                                                    Website
+                                                </small>
+                                            </button>
+                                        </div>
+                                        <div class="w-100 px-2 py-1">
+                                            <button class="btn-light w-100 br-5">
+                                                <small>
+                                                    <i class="fa fa-map-marker"></i>
+                                                    Map
+                                                </small>
+                                            </button>
+                                        </div>
+
+                                    </span>
+                                    <span class="w-50">
+                                        <div class="w-100 px-2 py-1">
+                                            <button class="btn-primary w-100 br-5">
+                                                <small>Book A Personal Trainer</small>
+                                            </button>
+                                        </div>
+                                        <div class="w-100 px-2 py-1">
+                                            <button class="btn-primary w-100 br-5">
+                                                <small>View & Book A Class</small>
+                                            </button>
+                                        </div>
+                                        <div class="w-100 px-2 py-1">
+                                            <button class="btn-primary w-100 br-5">
+                                                <small>Read Reviews</small>
+                                            </button>
+                                        </div>
+                                        <div class="w-100 px-2 py-1">
+                                            <button class="btn-light w-100 br-5">
+                                                <small>
+                                                    <i class="fa fa-envelope"></i>
+                                                    Message
+                                                </small>
+                                            </button>
+                                        </div>
+                                        <div class="w-100 text-center font-weight-bold">
+                                            Add your rating
+                                        </div>
+                                        <div class="d-flex px-5">
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </div>
+                                        <div class="w-100 px-2 py-1">
+                                            <button class="btn-success w-100 br-5"><small>Follow</small></button>
+                                        </div>
+                                        <div class="w-100 px-2 py-1">
+                                            <button class="btn-success w-100 br-5"><small>Recommend</small></button>
+                                        </div>
+                                        <div class="d-flex px-5">
+                                            <span class="w-33 text-center">
+                                                <i class="fa fa-save"></i>
+                                            </span>
+                                            <span class="w-33 text-center">
+                                                <i class="fa fa-share"></i>
+                                            </span>
+                                            <span class="w-33 text-center">
+                                                <i class="fa fa-bookmark"></i>
+                                            </span>
+                                        </div>
+                                    </span>
+                                </div>
+                                <div>
+                                    <div>
+                                        <h5>Details</h5>
+                                    </div>
+                                    <div>
+                                        Ut aliquam purus sit amet luctus venenatis lectus. Nisi est sit amet facilisis
+                                        magna etiam
+                                        tempor. Ut tellus elementum sagittis vitae et leo. Velit egestas dui id ornare.
+                                        Vel orci porta non pulvinar neque laoreet suspendisse. Lacus viverra vitae
+                                        congue eu
+                                        consequat. Faucibus pulvinar elementum integer enim neque. Morbi leo urna
+                                        molestie at
+                                        elementum eu. Pretium aenean pharetra magna ac placerat vestibulum lectus mauris
+                                        ultrices.
+                                        Ultrices neque ornare aenean euismod elementum nisi quis eleifend quam.
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mt-3 bg-grey p-2">Locations</div>
+                                    <div>
+                                        <div>See {Business Name Locations}</div>
+                                        <div>
+                                            <ul>
+                                                <li>location 1</li>
+                                                <li>location 2</li>
+                                                <li>location 3</li>
+                                                <li>location 4</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="mt-3 bg-grey p-2">Working Hours</div>
+                                    <div class="d-flex p-1">
+                                        <span class="w-50">Mon</span>
+                                        <span class="w-50">8:00am - 9:00pm</span>
+                                    </div>
+                                    <div class="d-flex p-1">
+                                        <span class="w-50">Tue</span>
+                                        <span class="w-50">8:00am - 9:00pm</span>
+                                    </div>
+                                    <div class="d-flex p-1">
+                                        <span class="w-50">Wed</span>
+                                        <span class="w-50">8:00am - 9:00pm</span>
+                                    </div>
+                                    <div class="d-flex p-1">
+                                        <span class="w-50">Thur</span>
+                                        <span class="w-50">8:00am - 9:00pm</span>
+                                    </div>
+                                    <div class="d-flex p-1">
+                                        <span class="w-50">Fri</span>
+                                        <span class="w-50">8:00am - 9:00pm</span>
+                                    </div>
+                                    <div class="d-flex p-1">
+                                        <span class="w-50">Sat</span>
+                                        <span class="w-50">8:00am - 9:00pm</span>
+                                    </div>
+                                    <div class="d-flex p-1">
+                                        <span class="w-50">Sun</span>
+                                        <span class="w-50">8:00am - 9:00pm</span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <div class="w-100 text-center mt-3">
+                                        <h5>Location</h5>
+                                        <a href="#"><small>Get Directions</small></a>
+                                    </div>
+                                    <div class="map-wrap">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d63836.10068192936!2d32.5992448!3d0.31948799999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sug!4v1555331880132!5m2!1sen!2sug"
+                                            frameborder="0" style="border:0" allowfullscreen=""></iframe>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3>Reviews</h3>
+                                </div>
+                                <div class="bg-grey p-1 my-2">
+                                    Your trust is our top concern, so businesses can't pay to alter Learn more
+                                </div>
+                                <div class="w-100 d-flex my-1">
+                                    <span>
+                                        <form action="" class="full-span search-review">
+
+                                            <input type="text" placeholder="Search Reviews" name="search"
+                                                class="form-control">
+                                            <button type="submit" class="btn btn-success"><i
+                                                    class="fa fa-search"></i></button>
+                                        </form>
+                                    </span>
+                                    <span>
+                                        <select class="form-control">
+                                            <option>Newest</option>
+                                            <option>Oldest</option>
+                                            <option>Highest Rated</option>
+                                            <option>Lowest Rated</option>
+                                        </select>
+                                    </span>
+                                </div>
+                                <div class="w-100 d-flex my-1">
+                                    <span class="w-50"></span>
+                                    <span class="w-50">
+                                        <button class="btn btn-success">Write a Review</button>
+                                    </span>
+                                </div>
+                                <div class="bg-grey p-1">
+                                    <div class="d-flex">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                    </div>
+                                    <div class="text-primary">Be the first to rate this business</div>
+                                </div>
+
+                                <div class="my-3">
+                                    <div class="d-flex">
+                                        <span><img src="./images/img03.jpg" class="max-100 br-5 mr-2" alt=""></span>
+                                        <span>
+                                            <div>{Revier name}</div>
+                                            <div><small>{Reviewer City}</small></div>
+                                            <div><small>Member since {xx/xx/xxx}</small></div>
+                                            <div class="d-flex justify-content-around">
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-star"></i>
+                                                    <small>{326}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-users"></i>
+                                                    <small>{1228}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-camera"></i>
+                                                    <small>{28}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-external-link"></i>
+                                                    <small>{18}</small>
+                                                </span>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="d-flex">
+                                            <div class="d-flex py-1 mr-3">
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                            </div>
+                                            <div>
+                                                <b> Date posted : {xx/xx/xxx}</b>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.
+                                            Vulputate odio ut enim blandit volutpat maecenas. Aenean pharetra magna ac
+                                            placerat. Pulvinar pellentesque habitant morbi tristique senectus et netus.
+                                            Sed id semper risus in. Nisl pretium fusce id velit ut. Placerat orci nulla
+                                            pellentesque dignissim enim.
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="my-3">
+                                    <div class="d-flex">
+                                        <span><img src="./images/img03.jpg" class="max-100 br-5 mr-2" alt=""></span>
+                                        <span>
+                                            <div>{Revier name}</div>
+                                            <div><small>{Reviewer City}</small></div>
+                                            <div><small>Member since {xx/xx/xxx}</small></div>
+                                            <div class="d-flex justify-content-around">
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-star"></i>
+                                                    <small>{326}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-users"></i>
+                                                    <small>{1228}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-camera"></i>
+                                                    <small>{28}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-external-link"></i>
+                                                    <small>{18}</small>
+                                                </span>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="d-flex">
+                                            <div class="d-flex py-1 mr-3">
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                            </div>
+                                            <div>
+                                                <b> Date posted : {xx/xx/xxx}</b>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.
+                                            Vulputate odio ut enim blandit volutpat maecenas. Aenean pharetra magna ac
+                                            placerat. Pulvinar pellentesque habitant morbi tristique senectus et netus.
+                                            Sed id semper risus in. Nisl pretium fusce id velit ut. Placerat orci nulla
+                                            pellentesque dignissim enim.
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="my-3">
+                                    <div class="d-flex">
+                                        <span><img src="./images/img03.jpg" class="max-100 br-5 mr-2" alt=""></span>
+                                        <span>
+                                            <div>{Revier name}</div>
+                                            <div><small>{Reviewer City}</small></div>
+                                            <div><small>Member since {xx/xx/xxx}</small></div>
+                                            <div class="d-flex justify-content-around">
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-star"></i>
+                                                    <small>{326}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-users"></i>
+                                                    <small>{1228}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-camera"></i>
+                                                    <small>{28}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-external-link"></i>
+                                                    <small>{18}</small>
+                                                </span>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="d-flex">
+                                            <div class="d-flex py-1 mr-3">
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                            </div>
+                                            <div>
+                                                <b> Date posted : {xx/xx/xxx}</b>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.
+                                            Vulputate odio ut enim blandit volutpat maecenas. Aenean pharetra magna ac
+                                            placerat. Pulvinar pellentesque habitant morbi tristique senectus et netus.
+                                            Sed id semper risus in. Nisl pretium fusce id velit ut. Placerat orci nulla
+                                            pellentesque dignissim enim.
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="my-3">
+                                    <div class="d-flex">
+                                        <span><img src="./images/img03.jpg" class="max-100 br-5 mr-2" alt=""></span>
+                                        <span>
+                                            <div>{Revier name}</div>
+                                            <div><small>{Reviewer City}</small></div>
+                                            <div><small>Member since {xx/xx/xxx}</small></div>
+                                            <div class="d-flex justify-content-around">
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-star"></i>
+                                                    <small>{326}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-users"></i>
+                                                    <small>{1228}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-camera"></i>
+                                                    <small>{28}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-external-link"></i>
+                                                    <small>{18}</small>
+                                                </span>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="d-flex">
+                                            <div class="d-flex py-1 mr-3">
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                            </div>
+                                            <div>
+                                                <b> Date posted : {xx/xx/xxx}</b>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.
+                                            Vulputate odio ut enim blandit volutpat maecenas. Aenean pharetra magna ac
+                                            placerat. Pulvinar pellentesque habitant morbi tristique senectus et netus.
+                                            Sed id semper risus in. Nisl pretium fusce id velit ut. Placerat orci nulla
+                                            pellentesque dignissim enim.
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="my-3">
+                                    <div class="d-flex">
+                                        <span><img src="./images/img03.jpg" class="max-100 br-5 mr-2" alt=""></span>
+                                        <span>
+                                            <div>{Revier name}</div>
+                                            <div><small>{Reviewer City}</small></div>
+                                            <div><small>Member since {xx/xx/xxx}</small></div>
+                                            <div class="d-flex justify-content-around">
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-star"></i>
+                                                    <small>{326}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-users"></i>
+                                                    <small>{1228}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-camera"></i>
+                                                    <small>{28}</small>
+                                                </span>
+                                                <span class="d-flex mr-3">
+                                                    <i class="fa fa-external-link"></i>
+                                                    <small>{18}</small>
+                                                </span>
+                                            </div>
+                                        </span>
+                                    </div>
+                                    <div class="mt-3">
+                                        <div class="d-flex">
+                                            <div class="d-flex py-1 mr-3">
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                                <i class="fa fa-star text-warning"></i>
+                                            </div>
+                                            <div>
+                                                <b> Date posted : {xx/xx/xxx}</b>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            Porttitor rhoncus dolor purus non enim praesent elementum facilisis leo.
+                                            Vulputate odio ut enim blandit volutpat maecenas. Aenean pharetra magna ac
+                                            placerat. Pulvinar pellentesque habitant morbi tristique senectus et netus.
+                                            Sed id semper risus in. Nisl pretium fusce id velit ut. Placerat orci nulla
+                                            pellentesque dignissim enim.
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                    </div>
+
+
+                </div><!-- /intro -->
+            </div><!-- /content -->
+        </div><!-- /container -->
+    </div> <!-- /wrapper -->
+    <div id="bottom-nav"></div>
+<!--    <div class="sub-header bottom-0">-->
+<!--        <div class="row nmarg ss-bottom-nav">-->
+
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="my-posts.html">-->
+<!--                        <img src="./images/ss-icon-002.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="my-profile.html">-->
+<!--                        <img src="./images/sports soical app icons-02.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-matches.html">-->
+<!--                        <img src="./images/ss-icon-001.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="all-groups.html">-->
+<!--                        <img src="./images/sports soical app icons-04.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-places.html">-->
+<!--                        <img src="./images/sports soical app icons-05.svg" />-->
+<!--                    </a>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="sport-messages.html">-->
+<!--                        <img src="./images/sports soical app icons-06.svg" />-->
+<!--                    </a>-->
+<!--                    <span class="counter">15</span>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 npad text-center">-->
+<!--                <span class="sub-header-icon">-->
+<!--                    <a href="calendar.html">-->
+<!--                        <img src="./images/sports soical app icons-07.svg" />-->
+<!--                    </a>-->
+<!--                    <span class="counter">15</span>-->
+<!--                </span>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <script src="js/classie.js"></script>
+    <script src="js/gnmenu.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        $('.popover-dismiss').popover({
+            trigger: 'focus'
+        })
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
+    <script>
+        // js for secondary navigation
+        $("[data-toggle='toggle']").click(function () {
+            var selector = $(this).data("target");
+            $(selector).toggleClass('in');
+        });
+        function showSearchField() {
+            $(".ss-profile-name").fadeOut(0);
+            setTimeout($(".ss-search-input input").fadeIn(1000), 1000)
+        }
+        // slider scroll
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+</body>
+
+</html>
