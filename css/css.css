@@ -1290,7 +1290,7 @@ legend {
 }
 .block-area {
     padding: 5px;
-    margin: 7px;
+    margin: 5px;
 }
 .collapse.show {
     display: block;
@@ -2752,7 +2752,7 @@ legend {
 }
 
 #map{
-    height: 400px;
+    height: 300px;
     width: 100%;
 }
 
@@ -2761,10 +2761,119 @@ legend {
     width: 100%;
 }
 
-.socail-media-icon .fa{
-    margin: auto 0;
-    padding: 0 20px;
-    font-size: 80px;
+.socail-media-icon img{
+    width: 80px;
+}
+
+.age-modal{
+    width: 100% !important;
+    padding: 15px !important;
+}
+
+.close-modal{
+    display: none !important;
+}
+
+.hugemt{
+    margin-top: 7rem!important;         
+}
+
+.tiny-font{
+    font-size: 12px;
+}
+
+.warning-txt .fa{
+    padding: 2px;
+}
+
+.timelineImg{
+    text-align: center;
+    margin: auto;
+}
+
+.timelineImg img{
+    width: 100%;
+    height: 100px;
+    border-radius: 5px;
+}
+
+.width-70{
+    width: 65%;
+    border-radius: 5px;
+}
+
+.width-12{
+    width: 12%;
+}
+
+.profileImg img{
+    width: 40%;
+    margin-top: -30%;
+    border-radius: 50%;
+    border: solid 4px #ffffff;
+    /* padding: 4px; */
+}
+
+.profileImg{
+    text-align: center;
+}
+
+.loc .fa{
+    font-size: 40px;
+    padding: 0 8px;
+}
+
+.plus-icon .fa{
+    padding: 4px;
+    border: solid 1px #e9ecef;
+    background-color: transparent !important;
+}
+
+.width-0{
+    width: auto !important;
+}
+
+.padding-4{
+    padding-left: 15px !important;
+}
+
+.nextbtn{
+    width: 100%;
+    border-radius: 17px;
+    background: #e9ecef;
+    color: white;
+    margin-top: 8px;
+    border: 1px solid #e9ecef;
+    margin-left: auto;
+}
+
+.terms-body{
+    padding: 24px;
+    border: solid 1px #e9ecef;
+    margin-top: 0;
+    border-radius: 18%;
+    margin-bottom: 20px;
+
+}
+
+.closebtn{
+    padding: 8px;
+    background-color: #888888;
+    border-radius: 50%;
+    color: white;
+}
+
+.top-margin{
+    margin-top: 40px;
+}
+
+.aga-r{
+    color: #999;
+    background-color: #f8f9fa; 
+}
+
+.width-100{
+    width: 100%;
 }
 
 /*  Media Queries  */

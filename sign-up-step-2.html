@@ -14,11 +14,16 @@
     <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
     <link rel="stylesheet" href="flags/build/css/demo.css">
     <link rel="stylesheet" type="text/css" href="css/css.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" /> -->
 
     <!--   JS   -->
     <script src="./jquery/3.5.1/jquery.min.js"></script>
     <script src="./popper/popper.min.js"></script>
     <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <!-- //changer -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />    
 
     <script src="js/modernizr.custom.js"></script>
     <link rel="stylesheet" href="css/alertify.min.css" />
@@ -32,7 +37,7 @@
             <div id="gn-menu" class="gn-menu-main">
                 <div class="row ss-nav pad-0 mx-0">
                     <div class="nav-logo text-success p-2 w-100">
-                        <img src="./images/ss-logo.png" />
+                        <img src="./images/ss-logo.svg" />
                     </div>
                 </div>
                 <div class="signup-progress-bar">
@@ -66,43 +71,61 @@
                             <h3 class="text-success x-bold-text"> Sign up </h3>
                         </div>
                         <div class="bg-white rounded block-area mt-60" id="generalSection">
-                            <div>
-                                <h4>General Information</h4>
+                            <div class="text-center">
+                                <h4>
+                                    <strong>What’s your number? </strong>
+                                </h4>
+                                <p>
+                                    We protect our community by making sure everyone on Sport Social is real.
+                                </p>
                             </div>
                             <form id="general_information" action="javascript:void(0);">
                                 <div class="panel-body">
                                     <div class="form-row w-100 p-1">
-                                        <div class="d-flex w-100">
-                                            <div class="form-group w-50">
-                                                <input type="text" class="form-control" id="firstname" placeholder="First Name"
-                                                       name="firstname">
+                                        <!-- remove this div/ display is none because it would pass the validation -->
+                                        <div style="display: none">
+                                            <div class="d-flex w-100">
+                                                <div class="form-group w-50">
+                                                    <input type="text" class="form-control" id="firstname" placeholder="First Name"
+                                                           name="firstname">
+                                                </div>
+                                                <div class="form-group w-50">
+                                                    <input type="text" name="lastname" id="lastname" class="form-control"
+                                                           placeholder="Last Name">
+                                                </div>
                                             </div>
-                                            <div class="form-group w-50">
-                                                <input type="text" name="lastname" id="lastname" class="form-control"
-                                                       placeholder="Last Name">
+                                            <div class="form-group w-100">
+                                                <input type="email" name="email" id="email" class="form-control"
+                                                       placeholder="Enter Email Address" value="">
+                                            </div>
+                                            <div class="form-group text-center w-100 m-0">
+                                                <a href="#"
+                                                   class="btn btn-default fs-17 bold-text rounded-btn-nb">Verify</a>
                                             </div>
                                         </div>
-                                        <div class="form-group w-100">
-                                            <input type="email" name="email" id="email" class="form-control"
-                                                   placeholder="Enter Email Address" value="">
-                                        </div>
-                                        <div class="form-group text-center w-100 m-0">
-                                            <a href="#"
-                                               class="btn btn-default fs-17 bold-text rounded-btn-nb">Verify</a>
-                                        </div>
+                                        
                                         <p class="m-0 pl-1">Add Phone Number</p>
                                         <div class="form-group w-100 p-1 m-0">
                                             <input class="form-control" id="phone" name="phone"
-                                                   placeholder="Cell number" type="tel" value="">
+                                                   placeholder="" type="tel" value="">
+                                        </div>
+
+                                        <div class="d-flex text-center mt-3">
+                                            <div class="d-fex p-2 bg-warning rounded warning-txt">
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                            <p class="tiny-font mt-auto mb-auto pl-2">
+                                               We never share this number with anyone 
+                                            </p> 
                                         </div>
 
                                         <div class="d-flex justify-content-around px-5 py-2 w-100">
                                             <a href="sign-up-step-1.html"
                                                class="btn btn-default fs-17 bold-text rounded-btn-nb"  onclick="signUpStep2GeneralInformationBack();">Back</a>
                                             <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="signUpStep2GeneralInformation();" >SAVE</button>
-                                            <a href="#general-info"
+                                            <a href="#number-verification"
                                                class="btn btn-success fs-17 bold-text rounded-btn-nb general-information-continue" onclick=signUpStep2GeneralInformation(); >Continue</a>
-                                            <a href="#general-info"
+                                            <a href="#number-verification"
                                                class="btn btn-default fs-17 bold-text rounded-btn-nb"  onclick="signUpStep2GeneralInformation();">Skip</a>
 
                                         </div>
@@ -111,44 +134,231 @@
                             </form>
                         </div>
 
-                        <div class="bg-white rounded block-area mt-60" id="backgroundSection" style="display: none" >
-                            <div>
-                                <h4>About Me</h4>
+                        <div class="bg-white rounded block-area mt-60" id="verificationSection" style="display: none">
+                            <div class="d-flex">
+                                <strong class="m-auto pt-4">Verify your number </strong>
                             </div>
+                            <div class="d-flex">
+                                <p class="text-center">Enter code we've sent you by text to (phone number) <span><a href="#">Change</a></span></p>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-sm">
+                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
+                                </div>
+                                <div class="col-sm">
+                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
+                                </div>
+                                <div class="col-sm">
+                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
+                                </div>
+                                <div class="col-sm">
+                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
+                                </div>
+                            </div>
+                            <div class="d-flex p-4 mt-5">
+                                <a href="#">
+                                    Didn't get text?
+                                </a>
+                            </div>  
+                            <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                <a href="#phone-number"
+                                   class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="BackVerification();">Back</a>
+                                <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="VerifiedNumber();">Save</button>
+                                <a href="#profile01"
+                                   class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="VerifiedNumber();">Continue</a>
+                                <a href="#profile01"
+                                   class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="VerifiedNumber();">Skip</a>
+                            </div>                      
+                        </div>
+
+
+                        <div class="bg-white rounded block-area mt-60" id="profilePhotoSection" style="display: none;">
+                            <div class="panel">
+                                <form id="sign-up-step2-language" action="javascript:void(0);">
+                                    <div class="compose-checkin w-100">
+                                        <div class="d-flex flex-column text-center mt-2">
+                                            <h4 class="m-auto font-weight-bold">Add your profile photo
+                                            </h4>
+                                            <p class="tiny-font mt-3 mb-3 ml-auto mr-auto">Choose a profile photo of just you where you can clearly see your face. Choose a background cover photo that captures your interest or personality. The background cover photo is optional </p>
+                                        </div>
+                                        <div class="row Nmarg flex-wrap-wrap m-0">
+                                            <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <div class="d-flex text-center">
+                                                        <p class="m-auto font-weight-bold tiny-font">Add your profile photo
+                                                        </p>
+                                                    </div>
+                                                    <div class="p-1 upload-image">
+                                                        <div class="bg-grey">
+                                                            <div class="file-upload d-flex">
+                                                                <div class="w-50">
+                                                                    <img src="./images/default-user-image.png" id="file-upload-image" class="w-100"
+                                                                         alt="">
+                                                                </div>
+                                                                <div class="image-upload-wrap w-50 d-flex">
+                                                                    <input class="file-upload-input" name="file" type='file'
+                                                                           onchange="filereadURL(this);"  id="file"  accept="image/*" />
+                                                                    <div class="drag-text">
+                                                                        <i class="fa fa-plus plus-icon"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="px-2">
+                                                                <b><small id="file-image-title" style=" word-wrap: break-word;">Add profile photo</small></b>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex text-center">
+                                                        <a href="#" class="m-auto tiny-font">Choose a different photo</a>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex flex-column">
+                                                    <div class="d-flex text-center">
+                                                        <p class="m-auto font-weight-bold tiny-font">Add a cover photo</p>
+                                                    </div>
+                                                    <div class="p-1 upload-image">
+                                                        <div class="bg-grey">
+                                                            <div class="file-upload d-flex">
+                                                                <div class="w-50">
+                                                                    <img src="./images/image-placeholder.jpg" id="file2-upload-image" class="w-100"
+                                                                         alt="">
+                                                                </div>
+                                                                <div class="image-upload-wrap w-50 d-flex">
+                                                                    <input class="file-upload-input" name="file2" id="file2" type='file'
+                                                                           onchange="file2readURL(this);" accept="image/*" />
+                                                                    <div class="drag-text">
+                                                                        <i class="fa fa-plus plus-icon"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="px-2">
+                                                                <b><small id="file2-image-title" style=" word-wrap: break-word;">Add a cover photo</small></b>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex text-center">
+                                                        <a href="#" class="m-auto tiny-font">Choose a different photo</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="w-100 text-center mt-3">                                               
+                                                <h5 class="font-weight-bold tiny-font">Great! How are these photos? </h5>
+                                            </div>                                            
+                                            <div class="d-flex flex-column border m-auto width-70">
+                                                <div class="timelineImg">
+                                                    <img src="./images/image-placeholder.jpg" alt="timeline-Img">
+                                                </div>
+                                                <div class="profileImg p-4">
+                                                    <img src="./images/default-user-image.png" alt="user-avata">
+                                                </div>                                                
+                                            </div>
+                                        </div>
+                                    </div><br>
+                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                        <a href="#profile01"
+                                           class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="profilePhotoSectionBack();">Back</a>
+                                        <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="profilePhotoSectionNext();">Save</button>
+                                        <a href="#preview"
+                                           class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="profilePhotoSectionNext();" >Continue</a>
+                                        <a href="#preview"
+                                           class="btn btn-default fs-17 bold-text rounded-btn-nb"  onclick="profilePhotoSectionNext();">Skip</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+
+                        <div class="bg-white rounded block-area mt-60" id="previewSection" style="display: none;">
+                            <div class="panel">
+                                <div class="compose-checkin w-100">
+                                    <div class="d-flex flex-column text-center mt-2 mb-3">
+                                        <h4 class="m-auto font-weight-bold">Welcome to Sport Social</h4>
+                                        <h4 class="m-auto font-weight-bold">(1st Name, Last Name)</h4>
+                                    </div>
+                                    <div class="d-flex flex-column border m-auto width-70">
+                                        <div class="timelineImg">
+                                            <img src="./images/image-placeholder.jpg" alt="timeline-Img">
+                                        </div>
+                                        <div class="profileImg p-4">
+                                            <img src="./images/default-user-image.png" alt="user-avata">
+                                        </div>                                                
+                                    </div>
+                                    <br>
+                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                        <a href="#preview"
+                                            class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="PreviewBack();">Back</a>
+                                        <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="PreviewNext();">Save</button>
+                                        <a href="#my-location"
+                                            class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="PreviewNext();" >Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- location -->
+                        <div class="bg-white rounded block-area mt-60" id="myLocation" style="display: none" >
                             <form id="about-me-form" action="javascript:void(0);">
                                 <div class="panel-body">
-                                    <div class="form-row">
-
-                                        <div class="form-group p-2 w-100 m-0">
-                                            <textarea style="height:100px" class="form-control" name="about"
-                                                      placeholder="About me" id="about"></textarea>
-                                        </div>
-                                        <div class="form-group p-2 w-100 m-0">
-                                            <input type="text" name="moto" class="form-control"
-                                                   placeholder="Motto (optional)" id="moto" value="">
-                                        </div>
+                                    <div class="mb-4 font-weight-bold">Confirm your current location? </div>
+                                    <p class="tiny-font">Confirm your current location to find sport players and sport places near you. Or<span class="text-info">
+                                        <a href="#ex1" rel="modal:open">manually add your current location</a></span></p>
+                                    <div id="map"></div>
+                                    <div class="d-flex mt-2 mb-2">                                
+                                        <button type="button" class="btn btn-primary btn-sm w-50"><i class="fa fa-map-marker"></i> Edit</button>                           
+                                        <button type="button" class="btn btn-success btn-sm w-100">Confirm</button>
+                                    </div>
+                                    <div id="ex1" class="modal age-modal">
+                                        <a href="#" rel="modal:close" class="mt-auto tiny-font float-right closebtn">X</a>
+                                        <h6 class="font-weight-bold pb-2 top-margin">What is your current location</h6>                                        
+                                        <div class="d-flex mt-2">
+                                            <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
+                                                <i class="fa fa-map-marker"></i>
+                                                <span class="d-block">
+                                                    <div class="form-group">
+                                                        <input type="text"  value="" placeholder="address" class="form-control form-control-lg my_location" id="autocomplete_map" onFocus="geolocate()">
+                                                        <input type="hidden" id="lat" value="" name="latitude">
+                                                        <input type="hidden" id="lng" value="" name="longitude">
+                                                    </div>
+                                                    <span>
+                                                        <select class="form-control" id="country" data-live-search="true" name="country" onchange="getState('state', 'country');">
+                                                            <option value="">Country</option>    
+                                                        </select>
+                                                    </span>
+                                                    <span>
+                                                        <select class="form-control" id="state" name="state" data-live-search="true" onchange="getCity('city', 'state');">
+                                                            <option value="">State</option>    
+                                                        </select>
+                                                    </span>
+                                                    <span>
+                                                        <select class="form-control" name="city" data-live-search="true" id="city">
+                                                            <option value="">City</option>    
+                                                        </select>
+                                                    </span>
+                                                </span>
+                                            </div>
+                                        </div> 
+                                        <button type="button" class="btn btn-success btn-sm float-right w-50 mt-5">Confirm</button>                                                         
+                                    </div>                                                        
                                         <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                            <a href="#general-info"
-                                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep2AboutMeBack();">Back</a>
-                                            <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="backgroundSection();">Save</button>
+                                            <a href="#preview"
+                                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep4AboutMeBack();">Back</a>
+                                            <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="signUpStep4AboutMe();">Save</button>
                                             <a href="#about"
-                                               class="btn btn-success fs-17 bold-text rounded-btn-nb" onClick="backgroundSection();">Continue</a>
-                                            <a href="#about"
-                                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="backgroundSection();">Skip</a>
+                                               class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="signUpStep4AboutMe();">Continue</a>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        
 
-                        <div class="bg-white rounded block-area mt-60" id="aboutSection" style="display: none" >
+                        <div class="bg-white rounded block-area mt-60" id="aboutSection" style="display: none">
                             <form id="about-me-form" action="javascript:void(0);">
                                 <div class="panel-body">
                                     <div class="form-row">
-                                        <div>
+                                        <div class="text-center">
+                                            <h5 class="font-weight-bold">My Personal Profile</h5>
                                             <h6>
-                                                Please add the below to find similar sport friends with your background
+                                                Please add the below to find similar sport friends with your background and age
                                             </h6>
                                         </div>
                                         <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
@@ -186,9 +396,7 @@
                                         <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
                                             <i class="fa fa-birthday-cake"></i>
                                             <span class="d-flex">
-<!--                                                <input type="date" class="form-control" id="dob" name="dob" placeholder="Date of birth" value="">-->
-
-                                                                                                <span class="w-33">
+                                                <span class="w-33">
                                                     <select class="form-control" data-live-search="true" name="dob_month" id="dob-month" >
                                                     </select>
                                                 </span>
@@ -206,12 +414,12 @@
                                         </div>                           
 
                                         <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                            <a href="#about"
+                                            <a href="#location"
                                                class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep3AboutMeBack();">Back</a>
                                             <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="signUpStep3AboutMe();">Save</button>
-                                            <a href="#location"
+                                            <a href="#background"
                                                class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="signUpStep3AboutMe();">Continue</a>
-                                            <a href="#location"
+                                            <a href="#background"
                                                class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep3AboutMe();">Skip</a>
                                         </div>
                                     </div>
@@ -219,49 +427,61 @@
                             </form>
                         </div>
 
-                        <!-- location -->
-                        <div class="bg-white rounded block-area mt-60" id="section3" style="display: none" >
+                        <div class="bg-white rounded block-area mt-60" id="backgroundSection" style="display: none" >
                             <form id="about-me-form" action="javascript:void(0);">
-                                <div class="panel-body">
-                                    <div class="mb-4">What is your current location?</div>
-                                    <div id="map"></div>
-                                    <div class="d-flex m-3">
-                                        <button type="button" class="btn btn-primary btn-sm m-auto">Edit</button>
-                                        <button type="button" class="btn btn-success btn-sm m-auto">Confirm</button>
-                                    </div>
-                                    <div>Or manually add your current location</div>
-                                    <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
-                                        <i class="fa fa-map-marker"></i>
-                                        <span class="d-block">
-                                            <div class="form-group">
-                                                <input type="text"  value="" placeholder="address" class="form-control form-control-lg my_location" id="autocomplete_map" onFocus="geolocate()">
-                                                <input type="hidden" id="lat" value="" name="latitude">
-                                                <input type="hidden" id="lng" value="" name="longitude">
-                                               </div>
-                                                <span>
-                                                    <select class="form-control" id="country" data-live-search="true" name="country" onchange="getState('state', 'country');">
-                                                        <option value="">Country</option>
-
-                                                    </select>
-                                                </span>
-                                                <span>
-                                                    <select class="form-control" id="state" name="state" data-live-search="true" onchange="getCity('city', 'state');">
-                                                        <option value="">State</option>
-
-                                                    </select>
-                                                </span>
-                                                <span>
-                                                    <select class="form-control" name="city" data-live-search="true" id="city">
-                                                        <option value="">City</option>
-
-                                                    </select>
-                                                </span>
-                                            </span>
+                                <div class="panel-body  p-2">
+                                    <div class="form-row">
+                                        <div class="">
+                                            <h5 class="font-weight-bold mb-1">About Me</h5>
+                                            <h6 class="m-0">
+                                                Add some brief info about yourself or your favorite sports (optional)
+                                            </h6>
                                         </div>
-                                        <div>Where are you from?</div>
+                                        <div class="form-group w-100 m-0">
+                                            <textarea class="form-control" name="about" id="about" style="height:80px"></textarea>
+                                            <p class="tiny-font m-0">Max (xx) characters</p>
+                                        </div>
+                                        <div class="mt-2">
+                                            <h5 class="font-weight-bold mb-1">Motto</h5>
+                                            <h6 class="m-0">
+                                                Add your motto - sport related or otherwise
+                                            </h6>
+                                        </div>
+                                        <div class="form-group w-100 m-0">
+                                            <!-- <input class="p-5 w-100" type="text" name="moto" class="form-control" id="moto" value=""> -->
+                                            <textarea  class="form-control" name="moto" id="moto" style="height:80px" value=""></textarea>
+                                            <p class="tiny-font m-0">Max (xx) characters</p>
+                                        </div>
+                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                            <a href="#general-info"
+                                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep2AboutMeBack();">Back</a>
+                                            <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="backgroundSection();">Save</button>
+                                            <a href="#about"
+                                               class="btn btn-success fs-17 bold-text rounded-btn-nb" onClick="backgroundSection();">Continue</a>
+                                            <a href="#about"
+                                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="backgroundSection();">Skip</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+
+                        <div class="bg-white rounded block-area mt-60" id="aboutSection03" style="display: none">
+                            <form id="about-me-form" action="javascript:void(0);">
+                                <div class="panel-body p-4">
+                                    <div class="form-row">
+                                        <div class="">
+                                            <h5 class="font-weight-bold">Where are you from</h5>
+                                            <h6>
+                                                Connect and find sports people that you have a mutual connection with
+                                            </h6>
+                                        </div>
+                                        <!-- here -->
                                         <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
                                             <i class="fa fa-home"></i>
-                                            <span class="d-block">
+                                            
+                                            <div class="d-block">
                                                 <span>
                                                     <select class="form-control" id="country2" data-live-search="true" name="country2" onchange="getState('state2', 'country2');">
                                                         <option value="">Country</option>
@@ -280,234 +500,71 @@
 
                                                     </select>
                                                 </span>
-                                            </span>
-                                        </div>
-
+                                            </div>
+                                        </div>  
                                         <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                            <a href="#location"
-                                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep4AboutMeBack();">Back</a>
-                                            <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="signUpStep4AboutMe();">Save</button>
-                                            <a href="#photos"
-                                               class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="signUpStep4AboutMe();">Continue</a>
-                                            <a href="#photos"
-                                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep4AboutMe();">Skip</a>
+                                            <a href="#about"
+                                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="aboutAction03Back();">Back</a>
+                                            <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="aboutAction03();">Save</button>
+                                            <a href="#language"
+                                               class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="aboutAction03();">Continue</a>
+                                            <a href="#language"
+                                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="aboutAction03();">Skip</a>
                                         </div>
                                     </div>
                                 </div>
                             </form>
                         </div>
 
-                        <div class="bg-white rounded block-area mt-60 p-2" id="addgyms" style="display: none;">
+                        <div class="bg-white rounded block-area mt-60" id="languageSection" style="display: none;">
                             <div>
-                                <h4>Add your GYM & Sports Club</h4>
-                                <p>Make meeting, connecting and scheduling sport playing times with your Gym or Sports
-                                    Club’s members easier with Sport Social. Add yours below.</p>
+                                <h4>Language</h4>
                             </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div class="d-flex flex-column w-50">
-                                    <label for="" class="pl-4">My Gym</label>
-                                    <p class="pl-4">XX Gyms</p>
-                                </div>
-                                <div class="d-flex flex-column w-50">
-                                    <button type="button" class="btn btn-danger btn-sm w-50 ml-auto mb-3" onclick="addLocation();">Add</button>
-                                    <button type="button" class="btn btn-success btn-sm w-50 ml-auto" onclick="viewGyms();">View</button>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div class="d-flex flex-column w-50">
-                                    <label for="" class="pl-4">My Sports Club</label>
-                                    <p class="pl-4">XX Sports Clubs</p>
-                                </div>
-                                <div class="d-flex flex-column w-50">
-                                    <button type="button" class="btn btn-danger btn-sm w-50 ml-auto mb-3">Add</button>
-                                    <button type="button" class="btn btn-success btn-sm w-50 ml-auto">View</button>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div class="d-flex flex-column w-50">
-                                    <label for="" class="pl-4">My Golf Club</label>
-                                    <p class="pl-4">XX Golf Clubs</p>
-                                </div>
-                                <div class="d-flex flex-column w-50">
-                                    <button type="button" class="btn btn-danger btn-sm w-50 ml-auto mb-3">Add</button>
-                                    <button type="button" class="btn btn-success btn-sm w-50 ml-auto">View</button>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div class="d-flex flex-column w-50">
-                                    <label for="" class="pl-4">My Country Club</label>
-                                    <p class="pl-4">XX Country Clubs</p>
-                                </div>
-                                <div class="d-flex flex-column w-50">
-                                    <button type="button" class="btn btn-danger btn-sm w-50 ml-auto mb-3">Add</button>
-                                    <button type="button" class="btn btn-success btn-sm w-50 ml-auto">View</button>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div class="d-flex flex-column w-50">
-                                    <label for="" class="pl-4">My Sport League</label>
-                                    <p class="pl-4">XX Sport Leagues</p>
-                                </div>
-                                <div class="d-flex flex-column w-50">
-                                    <button type="button" class="btn btn-danger btn-sm w-50 ml-auto mb-3">Add</button>
-                                    <button type="button" class="btn btn-success btn-sm w-50 ml-auto">View</button>
-                                </div>
-                            </div>
-                            <hr>
-                            <form id="sign-up-step2-language">
-                                <div class="panel-body">
-    
-                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                        <a href="#addgyms" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                            onclick="signUp5AboutMeBack();">Back</a>
-                                        <button class="btn btn-danger fs-17 bold-text rounded-btn-nb"
-                                            onclick="signUp5AboutMe();">Save</button>
-                                        <a href="#locationName" class="btn btn-success fs-17 bold-text rounded-btn"
-                                            onclick="signUp5AboutMe();">Continue</a>
-                                        <a href="#locationName" class="btn btn-default fs-17 bold-text rounded-btn"
-                                            onclick="signUp5AboutMe();">Skip</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="bg-white rounded block-area mt-60 p-2" id="locationName" style="display: none;">
-                            <div>
-                                <h4>Add the name & address & confirm its location</h4>
-                            </div>
-                            <hr>
-                            <div id="locmap"></div>
                             <form id="sign-up-step2-language" action="javascript:void(0);">
                                 <div class="panel-body">
-                                    <div id="map-canvas-right"></div>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <h6>Select Languages you can speak</h6>
+                                        </div>
+                                        <div class="form-group w-100 p-2">
+                                            <select class="form-control" name="plng" id="plng">
+                                                <option value="0">Select Primary Language </option>
+                                                <option value="1">English</option>
+                                                <option value="3">Spanish</option>
+                                                <option value="5">German</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group w-100 p-2">
+                                            <select class="form-control" name="slng" id="slng">
+                                                <option value="">Select Secondary Language</option>
+                                                <option value="">English</option>
+                                                <option value="">Spanish</option>
+                                                <option value="">German</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                        <button class="btn btn-dark fs-17 bold-text rounded-btn-nb"
-                                            onclick="closeLocationPage();">Back</button>
-                                        <a href="#locationName" class="btn btn-success fs-17 bold-text rounded-btn"
-                                            onclick="closeLocationPage();">Save</a>
+                                        <a href="#location"
+                                           class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep6LanguageBack();">Back</a>
+                                        <button class="btn btn-danger fs-17 bold-text rounded-btn-nb" onclick="signUpStep6Language();">Save</button>
+                                        <a href="#socials"
+                                           class="btn btn-success fs-17 bold-text rounded-btn" onclick="signUpStep6Language();">Continue</a>
+                                        <a href="#socials"
+                                           class="btn btn-default fs-17 bold-text rounded-btn"  onclick="signUpStep6Language();">Skip</a>
                                     </div>
                                 </div>
                             </form>
-                        </div>
-
-                        <div class="bg-white rounded block-area mt-60 p-2 w-100" id="viewgyms" style="display: none;">
-                            <div>
-                                <h4>My Gyms</h4>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div class="d-flex flex-column w-50">
-                                    <div class="d-flex">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <div>
-                                            <p class="pl-4 m-0">(Name of Biz)</p>
-                                            <p class="pl-4 m-0">(Address)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-column w-50">
-                                    <button type="button" class="btn btn-success btn-sm w-50 ml-auto mb-3" onclick="locationView()">View</button>
-                                    <button type="button" class="btn btn-dark btn-sm w-50 ml-auto">Delete</button>
-                                </div>
-                            </div>
-                            <hr>
-                            <div class="d-flex">
-                                <div class="d-flex flex-column w-50">
-                                    <div class="d-flex">
-                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                        <div>
-                                            <p class="pl-4 m-0">(Name of Biz)</p>
-                                            <p class="pl-4 m-0">(Address)</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="d-flex flex-column w-50">
-                                    <button type="button" class="btn btn-success btn-sm w-50 ml-auto mb-3" onclick="locationView()">View</button>
-                                    <button type="button" class="btn btn-dark btn-sm w-50 ml-auto">Delete</button>
-                                </div>
-                            </div>
-                            <hr>                            
-                            <div class="panel-body">
-                                <div id="map-canvas-right"></div>
-                                <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                    <a href="#locationName" class="btn btn-success fs-17 bold-text rounded-btn"
-                                        onclick="closeView();">Back</a>
-                                </div>
-                            </div>                           
                         </div>
 
                         <div class="bg-white rounded block-area mt-60" id="photosSection" style="display: none;">
                             <div class="panel">
-                                <form id="sign-up-step2-images" action="javascript:void(0);">
-                                    <div class="compose-checkin w-100">
-                                        <div class="row Nmarg flex-wrap-wrap m-0">
-                                            <div class="d-flex">
-                                                <div class="d-flex w-50 text-center">
-                                                    <h4 class="m-auto font-weight-bold w-50">Profile Photo</h4>
-                                                </div>
-                                                <div class="w-50 p-1 upload-image">
-                                                    <div class="bg-grey">
-                                                        <div class="file-upload d-flex">
-                                                            <div class="w-50">
-                                                                <img src="./images/default-user-image.png" id="file-upload-image" class="w-100"
-                                                                     alt="">
-                                                            </div>
-                                                            <div class="image-upload-wrap w-50 d-flex">
-                                                                <input class="file-upload-input" name="file" type='file'
-                                                                       onchange="filereadURL(this);"  id="file"  accept="image/*" />
-                                                                <div class="drag-text">
-                                                                    <i class="fa fa-plus plus-icon"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="px-2">
-                                                            <b><small id="file-image-title" style=" word-wrap: break-word;">Add profile photo</small></b>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="d-flex">
-                                                <div class="d-flex w-50 text-center">
-                                                    <h4 class="m-auto font-weight-bold w-50">Cover Photo</h4>
-                                                </div>
-                                                <div class="w-50 p-1 upload-image">
-                                                    <div class="bg-grey">
-                                                        <div class="file-upload d-flex">
-                                                            <div class="w-50">
-                                                                <img src="./images/image-placeholder.jpg" id="file2-upload-image" class="w-100"
-                                                                     alt="">
-                                                            </div>
-                                                            <div class="image-upload-wrap w-50 d-flex">
-                                                                <input class="file-upload-input" name="file2" id="file2" type='file'
-                                                                       onchange="file2readURL(this);" accept="image/*" />
-                                                                <div class="drag-text">
-                                                                    <i class="fa fa-plus plus-icon"></i>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="px-2">
-                                                            <b><small id="file2-image-title" style=" word-wrap: break-word;">Add a cover photo</small></b>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="w-100 m-3">                                               
-                                                <h5 class="font-weight-bold">Are you COVID-19 Vaccinated?</h5>
-                                                <p>Let other Sport Social user know if you are vaccinated. Add it to your profile</p>
-                                                <div class="d-flex justify-content-around">
-                                                    <button type="button" class="btn btn-success btn-sm">Small button</button>
-                                                    <button type="button" class="btn btn-danger btn-sm">Small button</button>
-                                                    <button type="button" class="btn btn-light btn-sm">Remove</button>
-                                                </div>
-                                            </div> 
-                                            <div class="w-100 text-center mt-3">                                               
-                                                <h5 class="font-weight-bold">Add my Sport Photos</h5>
-                                            </div>                                            
+                                <div class="w-100 text-center mt-3">
+                                    <h4 class="font-weight-bold">Add My Sport Photos</h4>                                               
+                                    <p class="">Share your great sport moments </p>
+                                </div> 
+                                <form id="sign-up-step2-images" action="javascript:void(0);"> 
+                                    <div class="compose-checkin w-100"> 
+                                        <div class="d-flex">
                                             <div class="w-50 p-1 upload-image">
                                                 <div class="bg-grey">
                                                     <div class="file-upload d-flex">
@@ -548,6 +605,8 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div> 
+                                        <div class="d-flex"> 
                                             <div class="w-50 p-1 upload-image">
                                                 <div class="bg-grey">
                                                     <div class="file-upload d-flex">
@@ -588,6 +647,9 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                        </div>                                        
+                                            
+                                            
                                             <div class="w-100 p-1 upload-image">
                                                 <div class="bg-grey">
                                                     <div class="file-upload d-flex">
@@ -608,9 +670,9 @@
                                         <a href="#photos"
                                            class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep2ImagesBack();">Back</a>
                                         <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="signUpStep2Images();">Save</button>
-                                        <a href="#videos"
+                                        <a href="#videoSection"
                                            class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="signUpStep2Images();" >Continue</a>
-                                        <a href="#videos"
+                                        <a href="#videoSection"
                                            class="btn btn-default fs-17 bold-text rounded-btn-nb"  onclick="signUpStep2Images();">Skip</a>
                                     </div>
                                 </form>
@@ -620,7 +682,8 @@
                         <div class="bg-white rounded block-area mt-60" id="videoSection" style="display: none;">
                             <div class="panel">
                                 <div class="text-center pt-2">
-                                    <h5 class="font-weight-bold">Add my Sport Videos</h5>
+                                    <h5 class="font-weight-bold">Add My Sport Videos</h5>
+                                    <p>Share your great sport moments</p>
                                 </div>
                                 <form id="sign-up-step2-videos" action="javascript:void(0);">
                                     <div class="compose-checkin w-100">
@@ -694,7 +757,9 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="w-50 p-1 upload-image">
+
+                                            <!-- remove this -->
+                                            <div class="w-50 p-1 upload-image" style="display: none;">
                                                 <div class="bg-grey">
                                                     <div class="file-upload d-flex">
                                                         <div class="w-75">
@@ -740,7 +805,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="w-50 p-1 upload-image">
+                                            <!-- remove this -->
+                                            <div class="w-50 p-1 upload-image" style="display: none;">
                                                 <div class="bg-grey">
                                                     <div class="file-upload d-flex">
                                                         <div class="w-75">
@@ -780,117 +846,227 @@
                                         </div>
                                     </div><br>
                                     <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                        <a href="#photos"
+                                        <a href="#videos"
                                            class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep2VideoBack();" >Back</a>
                                         <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="signUpStep2Video();">Save</button>
-                                        <a href="#language"
+                                        <a href="#covid-test"
                                            class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="signUpStep2Video();">Continue</a>
-                                        <a href="#language"
+                                        <a href="#covid-test"
                                            class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep2Video();">Skip</a>
                                     </div>
                                 </form>
                             </div>
                         </div>
 
-                        <div class="bg-white rounded block-area mt-60" id="languageSection" style="display: none;">
-                            <div>
-                                <h4>Language</h4>
-                            </div>
-                            <form id="sign-up-step2-language" action="javascript:void(0);">
-                                <div class="panel-body">
-                                    <div class="form-row">
-                                        <div class="form-group">
-                                            <h6>Select Languages you can speak</h6>
-                                        </div>
-                                        <div class="form-group w-100 p-2">
-                                            <select class="form-control" name="plng" id="plng">
-                                                <option value="0">Select Primary Language </option>
-                                                <option value="1">English</option>
-                                                <option value="3">Spanish</option>
-                                                <option value="5">German</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group w-100 p-2">
-                                            <select class="form-control" name="slng" id="slng">
-                                                <option value="">Select Secondary Language</option>
-                                                <option value="">English</option>
-                                                <option value="">Spanish</option>
-                                                <option value="">German</option>
-                                            </select>
-                                        </div>
-                                        <!--                                        <div class="form-group w-100 p-2">-->
-                                        <!--                                            <select class="form-control">-->
-                                        <!--                                                <option value="">Select Secondary Language</option>-->
-                                        <!--                                                <option value="">English</option>-->
-                                        <!--                                                <option value="">Spanish</option>-->
-                                        <!--                                                <option value="">German</option>-->
-                                        <!--                                            </select>-->
-                                        <!--                                        </div>-->
-                                        <!--                                        <div class="form-group w-100 p-2 text-center text-success">-->
-                                        <!--                                            + Add more languages you are fluent in-->
-                                        <!--                                        </div>-->
+                        <div class="bg-white rounded block-area mt-60" id="covidTestPreview" style="display: none;">
+                            <div class="panel">
+                                <div class="compose-checkin w-100">
+                                    <div class="d-flex flex-column text-center mt-2">
+                                        <h4 class="m-auto font-weight-bold">Are you COVID-19 Vaccinated?</h4>
+                                        <p class="tiny-font"> Let other Sport Social users know if you 
+                                            are vaccinated  Add it to your profile.
+                                           </p>
                                     </div>
+                                    <div class="row Nmarg flex-wrap-wrap m-0">                                          
+                                        <div class="d-flex flex-column">
+                                            <div class="d-flex flex-column border m-auto width-70">
+                                                <div class="timelineImg">
+                                                    <img src="./images/image-placeholder.jpg" alt="timeline-Img">
+                                                </div>
+                                                <div class="profileImg p-4">
+                                                    <img src="./images/default-user-image.png" alt="user-avata">
+                                                </div>                                                
+                                            </div>
+                                            <p class="m-auto text-center">{Scott Holly}</p>                                                
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-around mt-5">
+                                        <button type="button" class="btn btn-success btn-sm">Preview</button>
+                                        <button type="button" class="btn btn-danger btn-sm">Save</button>
+                                        <button type="button" class="btn btn-light btn-sm">Remove</button>         
+                                    </div>
+                                    <br>
                                     <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                        <a href="#videos"
-                                           class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep6LanguageBack();">Back</a>
-                                        <button class="btn btn-danger fs-17 bold-text rounded-btn-nb" onclick="signUpStep6Language();">Save</button>
-                                        <a href="#socials"
-                                           class="btn btn-success fs-17 bold-text rounded-btn" onclick="signUpStep6Language();">Continue</a>
-                                        <a href="#socials"
-                                           class="btn btn-default fs-17 bold-text rounded-btn"  onclick="signUpStep6Language();">Skip</a>
+                                        <a href="#covid-test"
+                                            class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="covidPreviewBack();">Back</a>
+                                        <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="covidPreviewNext();">Save</button>
+                                        <a href="#gyms"
+                                            class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="covidPreviewNext();" >Continue</a>
+                                        <a href="#gyms"
+                                            class="btn btn-default fs-17 bold-text rounded-btn-nb"  onclick="covidPreviewNext();">Skip</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="bg-white rounded block-area mt-60 p-2" id="addgyms" style="display: none;">
+                            <div class="text-center">
+                                <h4 class="font-weight-bold">Add your Gym & Sports Club</h4>
+                                
+                                <p class="tiny-font"><span class="text-info"><a href="#ex2" rel="modal:open">Meet & connect</a></span> with your fellow Gym, Sport or Golf Club members more easily to schedule sport playing times. 
+                                </p>
+                            </div>
+                            <hr>
+                            
+                            <div class="text-center">
+                                <h4 class="font-weight-bold">Add My Gym </h4>
+                                <p class="tiny-font">Put your Gym’s name and location</p>
+                            </div>
+                            <div class="d-flex flex-column mb-3">
+                                <div class="d-flex loc m-auto">
+                                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                    <input class="p-2" type="text">
+                                </div>
+                            </div>
+                            <div id="locmap"></div>
+                            <div class="d-flex mt-2 mb-2">                                
+                                <button type="button" class="btn btn-primary btn-sm w-50">Edit</button>                           
+                                <button type="button" class="btn btn-success btn-sm w-100">Confirm</button>
+                            </div>
+
+                            <div class="d-flex mb-2 mr-4 ml-4">
+                                <div class="d-flex plus-icon" onclick="showDiv()">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <p class="ml-auto mb-0">Add another gym</p>
+                            </div>
+
+                            <div class="d-flex mb-2  mr-4 ml-4">
+                                <div class="d-flex plus-icon" onclick="showDiv()">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <p class="ml-auto mb-0">Add My Sport Club 
+                                </p>
+                            </div>
+                            
+                            <div class="d-flex mb-2  mr-4 ml-4">
+                                <div class="d-flex plus-icon" onclick="showDiv()">
+                                    <i class="fa fa-plus"></i>
+                                </div>
+                                <p class="ml-auto mb-0">Add My Golf Club 
+                                </p>
+                            </div>
+
+                            <div class="" id="hidenDiv" style="display: none;" >
+                                <div class="mt-5 text-center">
+                                    <h4 class="font-weight-bold">My Gyms & Sports Clubs</h4>
+                                </div>
+                                <hr>
+                                <div class="d-flex">
+                                    <div class="d-flex flex-column w-50">
+                                        <div class="d-flex">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <div>
+                                                <p class="pl-4 m-0">(Name of Biz)</p>
+                                                <p class="pl-4 m-0">(Address)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column w-50">
+                                        <button type="button" class="btn btn-success btn-sm w-50 ml-auto mb-3" onclick="locationView()">View</button>
+                                        <button type="button" class="btn btn-light btn-sm w-50 ml-auto">Delete</button>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="d-flex">
+                                    <div class="d-flex flex-column w-50">
+                                        <div class="d-flex">
+                                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                            <div>
+                                                <p class="pl-4 m-0">(Name of Biz)</p>
+                                                <p class="pl-4 m-0">(Address)</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column w-50">
+                                        <button type="button" class="btn btn-success btn-sm w-50 ml-auto mb-3" onclick="locationView()">View</button>
+                                        <button type="button" class="btn btn-light btn-sm w-50 ml-auto">Delete</button>
+                                    </div>
+                                </div>
+                                
+                                <button type="button" class="btn btn-success btn-sm w-100 mt-2">Add New</button>
+                            </div>
+
+                            <hr>
+                            <form id="sign-up-step2-language">
+                                <div class="panel-body">
+    
+                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                        <a href="#covid" class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                            onclick="signUp5AboutMeBack();">Back</a>
+                                        <button class="btn btn-danger fs-17 bold-text rounded-btn-nb"
+                                            onclick="signUp5AboutMe();">Save</button>
+                                        <a href="#social-media" class="btn btn-success fs-17 bold-text rounded-btn"
+                                            onclick="signUp5AboutMe();">Continue</a>
+                                        <a href="#social-media" class="btn btn-default fs-17 bold-text rounded-btn"
+                                            onclick="signUp5AboutMe();">Skip</a>
                                     </div>
                                 </div>
                             </form>
                         </div>
 
-                        <div class="bg-white rounded block-area mt-60" id="socials" style="display: none;">
-                            <div>
-                                <h4>For Sport Social members to verify your real profile please add your social page links to your profile page</h4>
-                                <h4 class="text-center">My Social Links</h4>
+                        <div id="ex2" class="modal age-modal">
+                            <p class="tiny-font">Invite your fellow Gym, Sport or Golf Club Members to Sport Social to connect & coordinate sport match times<span class="text-info"> Invite</span>. </p> 
+                            <a href="#" rel="modal:close" class="mt-auto tiny-font">Close</a>                                                      
+                        </div>
+
+                        <!-- prev next update required -->
+
+                        <div class="bg-white rounded block-area mt-60" id="socials" style="display: none;" >
+                            <div class="text-center pt-4">
+                                <h4 class="font-weight-bold">My Social Links </h4>
+                                <p class="tiny-font">Adding your social links helps verify your profile is real to other Sport Social Members </p>
                             </div>
                             <hr>
-                            <form id="sign-up-step2-language" action="javascript:void(0);">
-                                <div class="panel-body">
-                                    <div class="d-flex flex-column">
-                                        <div class="d-flex socail-media-icon">
-                                            <i class="fa fa-instagram" aria-hidden="true"></i>
-                                            <div>
-                                                <label for="">Intagram</label>
-                                                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                            </div>
+                            <form id="sign-up-step2-language" action="javascript:void(0);" class="m-auto">
+                                <!-- run to this -->
+                                <div class="d-flex flex-column w-100 pb-3">
+                                    <div class="d-flex">
+                                        <img src="./images/instagram-icon.jpg" alt=""  class="mr-4 mt-auto width-12 h-100">
+                                        <div class="w-100">
+                                            <label for="" class="m-0 tiny-font">Intagram</label>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
                                         </div>
-                                        <div class="d-flex socail-media-icon">
-                                            <i class="fa fa-facebook-square" aria-hidden="true"></i>
-                                            <div>
-                                                <label for="">Facebook</label>
-                                                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                            </div>
-                                        </div>
-                                        <div class="d-flex socail-media-icon">
-                                            <i class="fa fa-twitter-square" aria-hidden="true"></i>
-                                            <div>
-                                                <label for="">Twitter</label>
-                                                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                            </div>
-                                        </div>
-                                        <div class="d-flex socail-media-icon">
-                                            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                                            <div>
-                                                <label for="">Linkedin</label>
-                                                <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                        <a href="#socials"
-                                           class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep2LanguageBack();">Back</a>
-                                        <button class="btn btn-danger fs-17 bold-text rounded-btn-nb" onclick="signUpStep2Language();">Save</button>
-                                        <a href="sign-up-step-3.html"
-                                           class="btn btn-success fs-17 bold-text rounded-btn" onclick="signUpStep2Language();">Continue</a>
-                                        <a href="sign-up-step-3.html"
-                                           class="btn btn-default fs-17 bold-text rounded-btn"  onclick="signUpStep2Language();">Skip</a>
                                     </div>
                                 </div>
+                                <div class="d-flex flex-column w-100 pb-3">
+                                    <div class="d-flex">
+                                        <img src="./images/facebook.png" alt=""  class="mr-4 mt-auto width-12 h-100">
+                                        <div class="w-100">
+                                            <label for="" class="m-0 tiny-font">Facebook</label>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column w-100 pb-3">
+                                    <div class="d-flex">
+                                        <img src="./images/twitter.png" alt=""  class="mr-4 mt-auto width-12 h-100">
+                                        <div class="w-100">
+                                            <label for="" class="m-0 tiny-font">Twitter</label>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-column w-100 pb-3">
+                                    <div class="d-flex">
+                                        <img src="./images/linkedIn.png" alt=""  class="mr-4 mt-auto width-12 h-100">
+                                        <div class="w-100">
+                                            <label for="" class="m-0 tiny-font">Linkedin</label>
+                                            <input type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm">
+                                        </div>
+                                    </div>
+                                </div>                                
+                                
+                                <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                    <a href="#socials"
+                                        class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="signUpStep2LanguageBack();">Back</a>
+                                    <button class="btn btn-danger fs-17 bold-text rounded-btn-nb" onclick="signUpStep2Language();">Save</button>
+                                    <a href="sign-up-step-3.html"
+                                        class="btn btn-success fs-17 bold-text rounded-btn" onclick="signUpStep2Language();">Continue</a>
+                                    <a href="sign-up-step-3.html"
+                                        class="btn btn-default fs-17 bold-text rounded-btn"  onclick="signUpStep2Language();">Skip</a>
+                                </div>
+                                
                             </form>
                         </div>
 
@@ -1302,6 +1478,8 @@
         if(window.localStorage.getItem("editProfilePhoto")  === 'yes'){
             $('#generalSection').hide();
             $('#aboutSection').hide();
+            $('#previewSection').hide();
+            $('profilePhotoSection').hide();
             $('#photosSection').show();
             $('#videoSection').hide();
             $('#languageSection').hide();
@@ -1316,6 +1494,7 @@
             $('#generalSection').hide();
             $('#aboutSection').hide();
             $('#photosSection').hide();
+            // $('#previewSection').hide();
             $('#videoSection').show();
             $('#languageSection').hide();
             window.localStorage.removeItem("editProfileVideo");
@@ -1511,7 +1690,7 @@
                     showAlertMessage(type = 'error', String(value));
                 });
             }else if(param.data.message_status == true){
-                $('#backgroundSection').show();
+                $('#verificationSection').show();
                 $('#generalSection').hide();
                 window.localStorage.setItem("phone", param.data.usr.phone);
                 // signUpSetvalue(param.data);
@@ -1544,7 +1723,7 @@
 
         }else if(param.data.message_status == true){
 
-            $('#aboutSection').show();
+            $('#aboutSection03').show();
             $('#backgroundSection').hide();
             showAlertMessage(type = 'success', "Profile update successfully!");
 
@@ -1571,8 +1750,7 @@
 
 
         }else if(param.data.message_status == true){
-
-            $('#section3').show();
+            $('#backgroundSection').show();
             $('#aboutSection').hide();
             showAlertMessage(type = 'success', "Profile update successfully!");
 
@@ -1580,6 +1758,59 @@
         }
     }
 
+    }
+
+    // function aboutAction02(){
+
+    //     var parameters = '';
+    //     var data_language  = $('#sign-up-step2-language').serialize();
+    //     var data_general_information  = $('#general_information').serialize();
+    //     var data       = $('#about-me-form').serialize();
+    //     var url        = app_url+'profilesetting?'+data+'&'+data_general_information+'&'+data_language+'&loginuser='+window.localStorage.getItem("loginuser");
+    //     var method     = 'POST';
+    //     var param      = CallMethod(method, url, onSuccessLogin, parameters);
+    //     function onSuccessLogin(param){
+
+    //         if(param.data.message_status == false){
+    //             showAlertMessage(type = 'error', "Server error!");
+    //         }else if(param.data.message_status == true){
+    //             $('#aboutSection03').show();
+    //             $('#aboutSection02').hide();
+    //             showAlertMessage(type = 'success', "Profile update successfully!");
+    //         }
+    //     }
+    // }
+
+    function aboutAction02Back(){
+        $('#aboutSection').show();
+        $('#aboutSection02').hide();
+    }
+
+
+    function aboutAction03(){
+
+        var parameters = '';
+        var data_language  = $('#sign-up-step2-language').serialize();
+        var data_general_information  = $('#general_information').serialize();
+        var data       = $('#about-me-form').serialize();
+        var url        = app_url+'profilesetting?'+data+'&'+data_general_information+'&'+data_language+'&loginuser='+window.localStorage.getItem("loginuser");
+        var method     = 'POST';
+        var param      = CallMethod(method, url, onSuccessLogin, parameters);
+        function onSuccessLogin(param){
+
+            if(param.data.message_status == false){
+                showAlertMessage(type = 'error', "Server error!");
+            }else if(param.data.message_status == true){
+                $('#languageSection').show();
+                $('#aboutSection03').hide();
+                showAlertMessage(type = 'success', "Profile update successfully!");
+            }
+        }
+    }
+
+    function aboutAction03Back(){
+        $('#backgroundSection').show();
+        $('#aboutSection03').hide();
     }
 
     function signUpStep4AboutMe(){
@@ -1599,8 +1830,8 @@
 
             }else if(param.data.message_status == true){
 
-                $('#addgyms').show();
-                $('#section3').hide();
+                $('#aboutSection').show();
+                $('#myLocation').hide();
                 showAlertMessage(type = 'success', "Profile update successfully!");
 
 
@@ -1624,11 +1855,69 @@
 
             } else if (param.data.message_status == true) {
 
-                $('#photosSection').show();
+                $('#socials').show();
                 $('#addgyms').hide();
                 showAlertMessage(type = 'success', "Profile update successfully!");
             }
         }
+    }
+
+    function profilePhotoSectionNext() {
+        var parameters = '';
+        var data_language = $('#sign-up-step2-language').serialize();
+        var data_general_information = $('#general_information').serialize();
+        var data = $('#about-me-form').serialize();
+        var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+        var method = 'POST';
+        var param = CallMethod(method, url, onSuccessLogin, parameters);
+
+        function onSuccessLogin(param) {
+            if (param.data.message_status == false) {
+                showAlertMessage(type = 'error', "Server error!");
+
+            } else if (param.data.message_status == true) {
+
+                $('#previewSection').show();
+                $('#profilePhotoSection').hide();
+                showAlertMessage(type = 'success', "Profile update successfully!");
+            }
+        }
+    }
+
+    function profilePhotoSectionBack() {
+        $('#generalSection').show();
+        $('#profilePhotoSection').hide();
+    }
+
+    function PreviewNext(){
+
+        var parameters = '';
+        var data_language  = $('#sign-up-step2-language').serialize();
+        var data_general_information  = $('#general_information').serialize();
+        var data       = $('#about-me-form').serialize();
+        var url        = app_url+'profilesetting?'+data+'&'+data_general_information+'&'+data_language+'&loginuser='+window.localStorage.getItem("loginuser");
+        var method     = 'POST';
+        var param      = CallMethod(method, url, onSuccessLogin, parameters);
+        function onSuccessLogin(param){
+
+            if(param.data.message_status == false){
+
+                showAlertMessage(type = 'error', "Server error!");
+
+
+            }else if(param.data.message_status == true){
+
+                $('#myLocation').show();
+                $('#previewSection').hide();
+                showAlertMessage(type = 'success', "Profile update successfully!");
+
+            }
+        }
+    }
+
+    function PreviewBack(){
+        $('#profilePhotoSection').show();
+        $('#previewSection').hide();
     }
 
     function signUpStep6Language(){
@@ -1646,48 +1935,21 @@
 
             } else if (param.data.message_status == true) {
 
-                $('#socials').show();
+                $('#photosSection').show();
                 $('#languageSection').hide();
                 showAlertMessage(type = 'success', "Profile update successfully!");
             }
         }
     }
 
-    function addLocation(){
+    function addInvites(){
         $('#locationName').show();
         $('#addgyms').hide();
-    }
-
-    function closeLocationPage(){
-        var parameters = '';
-        var data_language = $('#sign-up-step2-language').serialize();
-        var data_general_information = $('#general_information').serialize();
-        var data = $('#about-me-form').serialize();
-        var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-        var method = 'POST';
-        var param = CallMethod(method, url, onSuccessLogin, parameters);
-
-        function onSuccessLogin(param) {
-            if (param.data.message_status == false) {
-                showAlertMessage(type = 'error', "Server error!");
-
-            } else if (param.data.message_status == true) {
-
-                $('#addgyms').show();
-                $('#locationName').hide();
-                showAlertMessage(type = 'success', "Profile update successfully!");
-            }
-        }
     }
 
     function viewGyms(){
         $('#viewgyms').show();
         $('#addgyms').hide();
-    }
-
-    function closeView(){
-        $('#addgyms').show();
-        $('#viewgyms').hide();
     }
 
     function locationView(){
@@ -1815,6 +2077,11 @@
         }
     }
 
+    // function PreviewNext(){
+    //     $('#videoSection').show();
+    //     $('#previewSection').hide();
+    // }
+
     function signUpStep2Video(){
         var formData = new FormData();
         formData.append('video', $('#video')[0].files[0]);
@@ -1841,11 +2108,71 @@
 
             }else if(param.data.message_status == true){
                 $('#videoSection').hide();
-                $('#languageSection').show();
+                $('#covidTestPreview').show();
+                // $('#languageSection').show();
                 showAlertMessage(type = 'success', "Profile update successfully!");
 
             }
         }
+    }
+
+    function covidPreviewNext() {
+
+        var parameters = '';
+        var data_language  = $('#sign-up-step2-language').serialize();
+        var data_general_information  = $('#general_information').serialize();
+        var data       = $('#about-me-form').serialize();
+        var url        = app_url+'profilesetting?'+data+'&'+data_general_information+'&'+data_language+'&loginuser='+window.localStorage.getItem("loginuser");
+        var method     = 'POST';
+        var param      = CallMethod(method, url, onSuccessLogin, parameters);
+        function onSuccessLogin(param){
+
+            if(param.data.message_status == false){
+
+                showAlertMessage(type = 'error', "Server error!");
+
+            }else if(param.data.message_status == true){
+                $('#covidTestPreview').hide();
+                $('#addgyms').show();
+
+            }
+        }
+        
+    }
+
+    function covidPreviewBack() {
+        
+        $('#videoSection').show();
+        $('#covidTestPreview').hide();
+    }
+
+    function VerifiedNumber(){
+
+        var parameters = '';
+        var data_language = $('#sign-up-step2-language').serialize();
+        var data_general_information = $('#general_information').serialize();
+        var data = $('#about-me-form').serialize();
+        var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+        var method = 'POST';
+        var param = CallMethod(method, url, onSuccessLogin, parameters);
+
+        function onSuccessLogin(param) {
+            if (param.data.message_status == false) {
+                showAlertMessage(type = 'error', "Server error!");
+
+            } else if (param.data.message_status == true) {
+
+                $('#profilePhotoSection').show();
+                $('#verificationSection').hide();
+                showAlertMessage(type = 'success', "Profile update successfully!");
+            }
+        }
+
+    }
+
+    function BackVerification() {
+        $('#generalSection').show();
+        $('#verificationSection').hide();
     }
     // function getLanguage(){
     //
@@ -1909,22 +2236,22 @@
     }
 
     function signUpStep2AboutMeBack(){
-        $('#generalSection').show();
+        $('#aboutSection').show();
         $('#backgroundSection').hide();
     }
 
     function signUpStep3AboutMeBack(){
-        $('#backgroundSection').show();
+        $('#myLocation').show();
         $('#aboutSection').hide();
     }
 
     function signUpStep4AboutMeBack(){
-        $('#aboutSection').show();
-        $('#section3').hide();
+        $('#previewSection').show();
+        $('#myLocation').hide();
     }
 
     function signUpStep2ImagesBack(){
-        $('#section3').show();
+        $('#languageSection').show();
         $('#photosSection').hide();
     }
 
@@ -1935,16 +2262,16 @@
 
     function signUpStep6LanguageBack(){
         $('#languageSection').hide();
-        $('#videoSection').show();
+        $('#aboutSection03').show();
     }
 
     function signUpStep2LanguageBack(){
-        $('#languageSection').show();
-        $('#socails').hide();
+        $('#covidTestPreview').show();
+        $('#socials').hide();
     }
 
     function signUp5AboutMeBack(){
-        $('#section3').show();
+        $('#covidTestPreview').show();
         $('#addgyms').hide();
     }
 
@@ -1965,6 +2292,11 @@
             map:map
         })
         
+    }
+
+    //show a hiden div
+    function showDiv() {
+        document.getElementById('hidenDiv').style.display="block";
     }
 
     </script>

@@ -23,6 +23,8 @@
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />     
 
 
 	<script src="js/modernizr.custom.js"></script>
@@ -37,7 +39,7 @@
             <div id="gn-menu" class="gn-menu-main">
                 <div class="row ss-nav pad-0 mx-0">
                     <div class="nav-logo text-success p-2 w-100">
-                        <img src="./images/ss-logo.png" />
+                        <img src="./images/ss-logo.svg" />
                     </div>
                 </div>
                 <div class="signup-progress-bar">
@@ -73,8 +75,9 @@
                                 <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
                                     <div class="bg-white rounded block-area" id="sportSection">
-                                        <div class="form-group text-center">
-                                            <h4>Select Your Sport Activity</h4>
+                                        <div class="form-group text-center mt-3">
+                                            <h4>Add My Sport</h4>
+                                            <p class="tiny-font">Add all your sports, preferences and availability sport at a time below.</p>
                                         </div>
                                         <div class="panel-body">
                                             <div class="form-row">
@@ -91,18 +94,17 @@
                                                 </div> -->
                                                 <div class="form-group w-100 p-1 mb-0">
                                                     <select class="form-control" name="skill" data-live-search="true" id="my-skill-level">
-                                                        <option value="">My SKill Level</option>
+                                                        <option value="">Select a Skill Level</option>
                                                     </select>
                                                 </div>
-                                                <div class="form-group w-100 p-1 mb-0">
+                                                <!-- <div class="form-group w-100 p-1 mb-0">
                                                     <select class="form-control" name="actively_playing" data-live-search="true" id="actively-playing">
                                                         <option value="">Actively playing</option>
                                                     </select>
-                                                </div>
+                                                </div> -->
                                                 <div class="form-group w-100 p-1 mb-0">
                                                     <select class="form-control" name="reqexp" id="prefer-player">
-                                                        <option value="">Prefer a player with the same experience
-                                                        </option>
+                                                        <option value="">Prefer a player at the same skill level </option>
                                                     </select>
                                                 </div>
                                                 <div class="form-group w-100 p-1 mb-0">
@@ -129,12 +131,11 @@
                                     </div>
 
                                     <div class="bg-white rounded block-area" id="sportSelectionSection" style="display: none;">
-                                        <div class="form-group text-center">
-                                            <h5 id="current-sports-time">Select the time you are generally available for this sport.</h5>
-                                            <p>This can be updated if your schediule changes</p>
+                                        <div class="form-group text-center mt-3">
+                                            <h5 id="current-sports-time" class="font-weight-bold">My Availability for (Name of Sport) </h5>
+                                            <p class="tiny-font">Select the days and time you are generally available for this sport. It can be updated anytime. </p>
                                         </div>
                                         <form id="time-you-are-generally-available" action="javascript:void(0);">
-                                            <h5 class="text-center font-weight-bold">My Sport Availability</h5>
                                             <div>
                                                 <div class="d-flex">
                                                     <div class="short-wd"></div>
@@ -454,7 +455,7 @@
                                     </div>
 
                                     <div class="bg-white rounded block-area" id="partnerSection" style="display: none;">
-                                        <div class="form-group text-center">
+                                        <div class="form-group text-center mt-3">
                                             <h4 id="current-sports-match">Specificy Your Sport Partner Match Options for this Sport
                                             </h4>
                                         </div>
@@ -480,28 +481,67 @@
                                                         <!--													</select>-->
                                                     <!-- </div> -->
                                                     <div class="form-group d-block w-100 p-1">
-                                                        <div class="w-100 mb-2">Age Range</div>
-                                                        <div class="d-flex mb-3">
-                                                            <div class="pr-2 d-flex">
-                                                                <label for="age-from" class="m-0 pr-3">From age</label>
-                                                                <input name="age-from" class="form-control-sm w-50 p-2" id="age-from" type="text" value="" placeholder="">
+                                                        <!-- <div class="w-100 mb-2">Age Range</div> -->
+                                                        <!-- <button type="button" class="btn btn-light btn-sm w-100" data-toggle="modal" data-target="#exampleModal">Age Range </button>
+                                                       
+                                                        <div class="modal" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                                            <div class="modal-dialog" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                    <span aria-hidden="true">&times;</span>
+                                                                </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                ...
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                                                <button type="button" class="btn btn-primary">Save changes</button>
+                                                                </div>
                                                             </div>
-                                                            <div class="d-flex">
-                                                                <label for="age-from" class="m-0 pr-3">To age</label>
-                                                                <input name="age-to" class="form-control-sm w-50 p-2" id="age-to" type="text" value="" placeholder="">
                                                             </div>
+                                                        </div> -->
+
+                                                        <p class="m-0">
+                                                            <a href="#ex1" rel="modal:open" type="button" class="btn btn-light btn-sm w-100 text-left pt-3 bg-white">Age Range</a>
+                                                        </p>
+                                                        <!-- show selected age range here -->
+                                                        <div class="d-flex w-100 aga-r" id="" >{13-16}</div>
+                                                        
+                                                        <div id="ex1" class="modal age-modal" style="min-height: 70%;">
+                                                            <a href="#" rel="modal:close" class="tiny-font float-right">Close</a>
+                                                            <h4 class="font-weight-bold mb-3">Select Age Preference</h4>
+                                                            <h6 class="font-weight-bold pb-2">No age preference</h6>
+                                                            <div class="d-flex mb-3">
+                                                                <div class="pr-2 d-flex">
+                                                                    <label for="age-from" class="m-0 pr-3 tiny-font">From age</label>
+                                                                    <input name="age-from" class="form-control-sm w-50 p-2" id="age-from" type="text" value="" placeholder="">
+                                                                </div>
+                                                                <div class="d-flex">
+                                                                    <label for="age-from" class="m-0 pr-3 tiny-font">To age</label>
+                                                                    <input name="age-to" class="form-control-sm w-50 p-2" id="age-to" type="text" value="" placeholder="">
+                                                                </div>
+                                                            </div>
+                                                            <h6 class="font-weight-bold pb-2">Or check age ranges</h6>
+                                                            
+                                                            <div class="d-flex mt-2">
+                                                                <select class="w-l00" multiple  name="age[]" id="age-range" style="min-height: 100%;">
+                                                                    <option value="13-16">13 - 16</option>
+                                                                    <option value="18-23">18 - 23</option>
+                                                                    <option value="24-30">24 - 30</option>
+                                                                    <option value="30-40">30 - 40</option>
+                                                                    <option value="40-50">40 - 50</option>
+                                                                    <option value="50-60">50 - 60</option>
+                                                                    <option value="60+">60+</option>
+                                                                </select>
+                                                            </div>
+                                                            
                                                         </div>
-                                                        <select class="w-l00" multiple  name="age[]" id="age-range">
-                                                            <option value="13-16">13 - 16</option>
-                                                            <option value="18-23">18 - 23</option>
-                                                            <option value="24-30">24 - 30</option>
-                                                            <option value="30-40">30 - 40</option>
-                                                            <option value="40-50">40 - 50</option>
-                                                            <option value="50-60">50 - 60</option>
-                                                            <option value="60+">60+</option>
-                                                        </select>
                                                     </div>
-                                                    <div class="form-group w-100 p-1">
+                                                    <div class="form-group w-100 p-1 m-0">
+                                                        <label for="" class="tiny-font m-0">Gender Preference</label>
                                                         <select class="form-control" name="sex" id="sex">
                                                             <option value="">Gender</option>
                                                             <option value="0">Only Male</option>
@@ -509,7 +549,8 @@
                                                             <option value="2">No Preference </option>
                                                         </select>
                                                     </div>
-                                                    <div class="form-group w-100 p-1">
+                                                    <div class="form-group w-100 p-1 m-0">
+                                                        <label for="" class="tiny-font m-0">Relationship Status</label>
                                                         <select class="form-control" name="marriage" id="marriage">
                                                             <option value="">Marriage Status</option>
                                                             <option value="0">Married</option>
@@ -518,20 +559,15 @@
                                                         </select>
                                                     </div>
                                                     <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                                        <a href="#sportSelectionSection"
-                                                           class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="sport_activity_partner_back();">Back</a>
-                                                        <button
-                                                            class="btn btn-danger fs-17 bold-text rounded-btn" onclick="sport_activity_partner();">SAVE</button>
-                                                        <a href="my-profile.html"
-                                                           class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="sport_activity_partner();">Continue</a>
+                                                        <a href="#sportSelectionSection" class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="sport_activity_partner_back();">Back</a>
+                                                        <!-- <button
+                                                            class="btn btn-danger fs-17 bold-text rounded-btn" onclick="sport_activity_partner();">SAVE</button> -->
+                                                        <a href="my-profile.html" class="btn btn-danger fs-17 bold-text rounded-btn-nb ml-2" onclick="sport_activity_partner();">SAVE</a>
+                                                        <a href="terms.html" class="btn btn-success fs-17 bold-text rounded-btn-nb ml-2" onclick="sport_activity_partner();">Add Your Next Sport </a>
                                                     </div>
-                                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                                        <a href="my-profile.html"
-                                                           class="btn btn-info fs-17 bold-text rounded-btn">View Sport
-                                                            Profile</a>
-                                                        <a href="edit-my-sports.html"
-                                                           class="btn btn-success fs-17 bold-text rounded-btn-nb">Add your
-                                                            next sport</a>
+                                                    <div class="d-flex flex-column w-100">
+                                                        <!-- <a href="my-profile.html" class="btn btn-info bold-text rounded mb-2 mt-2">Add Your Next Sport </a> -->
+                                                        <a href="edit-my-sports.html" class="btn btn-info bold-text rounded">View My Profile Page </a>
                                                     </div>
                                                 </div>
                                             </div>
@@ -590,11 +626,11 @@
         var param      = CallMethod(method, url, onSuccessSignUpStep3, parameters);
         function onSuccessSignUpStep3(param){
 
-            $('#current-sports-time').text('Select the time you are generally available for this sport '+ ( !isEmpty(param.data.sports_selection_detail[0]) && !isEmpty( param.data.sports_selection_detail[0].sportsName)?  param.data.sports_selection_detail[0].sportsName : ' ') +'.');
-            $('#current-sports-match').text('Select your sport partner preferences for this sport. '+ ( !isEmpty(param.data.sports_selection_detail[0]) && !isEmpty( param.data.sports_selection_detail[0].sportsName)?  param.data.sports_selection_detail[0].sportsName : ' ') +'.');
+            $('#current-sports-time').text('My availability for '+ ( !isEmpty(param.data.sports_selection_detail[0]) && !isEmpty( param.data.sports_selection_detail[0].sportsName)?  param.data.sports_selection_detail[0].sportsName : ' ') +'.');
+            $('#current-sports-match').text('Select Any '+ ( !isEmpty(param.data.sports_selection_detail[0]) && !isEmpty( param.data.sports_selection_detail[0].sportsName)?  param.data.sports_selection_detail[0].sportsName : ' ') +'    Match Preferences.');
                 var my_sports_option = '<option value="" >My Sports</option>';
                 var my_experience_option = '<option value="">My Experience</option>';
-                var my_skill_level_option = '<option value="">My SKill Level</option>';
+                var my_skill_level_option = '<option value="">My skill level</option>';
                 var actively_playing_option = '<option value="">Actively playing</option>';
                 var prefer_player = '<option value="">Prefer a player with the same experience</option>';
 
@@ -725,7 +761,7 @@
 
 
                 var sexOption = '';
-                sexOption += '<option value="">Gender Preference</option> <option value="2">No Preference </option><option value="0" ';
+                sexOption += '<option value=""></option> <option value="2">No Preference </option><option value="0" ';
                 if ((!isEmpty(param.data.sports_selection_detail[0]) ? param.data.sports_selection_detail[0].sex : '') === 0) {
                     sexOption += 'selected';
                 }
@@ -737,7 +773,7 @@
                 sexOption += '>Only Female</option>';
 
                 var merriageOption = '';
-                merriageOption += '<option value="">Relationship Status</option> <option value="2">No Preference </option> <option value="0"';
+                merriageOption += '<option value=""></option> <option value="2">No Preference </option> <option value="0"';
                 if ((!isEmpty(param.data.sports_selection_detail[0]) ? param.data.sports_selection_detail[0].marriage : '') === 1) {
                     merriageOption += 'selected';
                 }

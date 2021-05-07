@@ -32,7 +32,7 @@
             <div id="gn-menu" class="gn-menu-main">
                 <div class="row ss-nav pad-0 mx-0">
                     <div class="nav-logo text-success p-2 w-100">
-                        <img src="./images/ss-logo.png" />
+                        <img src="./images/ss-logo.svg" />
                     </div>
                 </div>
 
@@ -45,26 +45,53 @@
         <div class="content c-home">
             <div class="intro">
 
-                <div class="row nmarg">
+                <div class="row m-0 nmarg">
 
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
-                        <div class="form-area ss-form-area">
+                    <form action="javascript:void(0);" id="sign-up-step1-form" class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+                        <div class="form-area ss-form-area" id="nameSection">
 
-                            <form action="javascript:void(0);" id="sign-up-step1-form" method="" class="bg-white rounded">
+                            <div class="bg-white rounded">
 
                                 <div class="form-header rounded-top">
                                     <strong class="form-title">Create a new account</strong>
                                 </div>
+                                <div class="d-flex">
+                                    <strong class="m-auto pt-4">What’s your full name?</strong>
+                                </div>
                                 <div class="form-main-content">
-                                    <div id="message"> </div>
+                                    <!-- <div id="message"> </div> -->
                                     <div class="form-group">
                                         <input type="text" name="firstname" value="" class="form-control"
                                                placeholder="First name">
                                     </div>
                                     <div class="form-group">
                                         <input type="text" value="" name="lastname"  class="form-control" placeholder="Last name">
+                                        <p class="m-0 helper-text">Please use real names on Sport Social :) Thnx! </p>
                                     </div>
+                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                        <a href="login.html"
+                                           class="btn btn-default fs-17 bold-text rounded-btn-nb">Already Have
+                                            Account</a>
+                                        <a href="javascript:void(0);"
+                                           class="btn btn-success fs-17 bold-text rounded-btn" onclick="stepTest();" >Continue</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-area ss-form-area" id="emailPasswordSection" style="display: none">
+
+                            <div class="bg-white rounded">
+
+                                <div class="form-header rounded-top">
+                                    <strong class="form-title">Create a new account</strong>
+                                </div>
+                                <div class="d-flex">
+                                    <strong class="m-auto pt-4">Create a login and password </strong>
+                                </div>
+                                <div class="form-main-content">
+                                    <div id="message"></div>
                                     <div class="form-group">
                                         <input type="text" value="" class="form-control" name="email"
                                                placeholder="Email">
@@ -77,16 +104,60 @@
                                         <input type="password" value="" name="password_confirmation" class="form-control"
                                                placeholder="Repeat Password">
                                     </div>
+                                    <div class="d-flex m-auto text-center">
+                                        <div class="d-fex p-2 bg-warning rounded warning-txt">
+                                            <i class="fa fa-lock"></i>
+                                        </div>
+                                        <p class="tiny-font mt-auto mb-auto pl-2">
+                                            We never share your Email with anyone
+                                        </p> 
+                                    </div>
                                     <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                        <a href="javascript:void(0);"
-                                           class="btn btn-success fs-17 bold-text rounded-btn" onclick="signUpStep1();" >Continue</a>
                                         <a href="login.html"
                                            class="btn btn-default fs-17 bold-text rounded-btn-nb">Already Have
                                             Account</a>
+                                        <a href="javascript:void(0);"
+                                           class="btn btn-success fs-17 bold-text rounded-btn" onclick="signUpStep1();" >Continue</a>
                                     </div>
                                 </div>
-                            </form>
+                            </div>
                         </div>
+                    </form>
+                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad bg-white rounded m-3 p-2 hugemt" id="verificationSection" style="display: none">
+                        <div class="d-flex">
+                            <strong class="m-auto pt-4">Verify your email </strong>
+                        </div>
+                        <div class="d-flex">
+                            <p class="text-center">Enter code we've sent you by Email (Email address) <span><a href="#">Change</a></span></p>
+                        </div>
+                        <div class="d-flex">
+                            <div class="col-sm">
+                                <input type="text" class="w-100 pt-4 pb-4 rounded">
+                            </div>
+                            <div class="col-sm">
+                                <input type="text" class="w-100 pt-4 pb-4 rounded">
+                            </div>
+                            <div class="col-sm">
+                                <input type="text" class="w-100 pt-4 pb-4 rounded">
+                            </div>
+                            <div class="col-sm">
+                                <input type="text" class="w-100 pt-4 pb-4 rounded">
+                            </div>
+                        </div>
+                        <div class="d-flex p-4 mt-5">
+                            <a href="#">
+                                Didn't get email?
+                            </a>
+                        </div>  
+                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                            <a href="#about"
+                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="Back();">Back</a>
+                            <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="Verified();">Save</button>
+                            <a href="#location"
+                               class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="Verified();">Continue</a>
+                            <a href="#location"
+                               class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="Verified();">Skip</a>
+                        </div>                      
                     </div>
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
                 </div>
@@ -104,6 +175,13 @@
     <script src="js/sports-social/statistics.js"></script>
     <script src="js/main.js"></script>
     <script>
+
+        function stepTest (){
+            $('#emailPasswordSection').show();
+            $('#nameSection').hide();
+        }
+
+
             function signUpStep1(){
 
                 var parameters = '';
@@ -138,6 +216,18 @@
 
 
             }
+
+
+            function Verified(){
+                $('#verificationSection').hide();
+                window.location.href = 'sign-up-step-2.html';
+            }
+
+            function Back(){
+                $('#verificationSection').hide();
+                $('#emailPasswordSection').show();
+            }
+
         </script>
 </body>
 

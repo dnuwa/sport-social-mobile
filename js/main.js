@@ -86,11 +86,11 @@ function handleData(name, data) {
 
             window.location.href = window.localStorage.getItem("restricted_url");
         }else {
-
-            window.location.href = 'sign-up-step-2.html';
+            $('#verificationSection').show();
+            $('#emailPasswordSection').hide();
+            // window.location.href = 'sign-up-step-2.html';
         }
     }
-
 
 }
 function showAlert(content = '', header = '' ){
