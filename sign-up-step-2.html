@@ -22,11 +22,11 @@
     <script src="./bootstrap/js/bootstrap.min.js"></script>
     <!-- //changer -->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
-
     <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
 
     <script src="js/modernizr.custom.js"></script>
     <link rel="stylesheet" href="css/alertify.min.css" />
@@ -39,7 +39,7 @@
             <div class="header">
                 <div id="gn-menu" class="gn-menu-main">
                     <div class="row ss-nav pad-0 mx-0">
-                        <div class="nav-logo text-success p-2 w-100">
+                        <div class="nav-logo text-success w-100">
                             <img src="./images/ss-logo.svg" />
                         </div>
                     </div>
@@ -70,120 +70,111 @@
                     <div class="row nmarg mt-90">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
-                            <div class="page-heading">
-                                <h3 class="text-success x-bold-text"> Sign up </h3>
+                            <!-- <div class="page-heading">
+                            <h3 class="text-success x-bold-text"> Sign up </h3>
+                        </div>
+                        <div class="bg-white rounded block-area mt-60" id="generalSection">
+                            <div class="text-center">
+                                <h4>
+                                    <strong>What’s your number? </strong>
+                                </h4>
+                                <p>
+                                    We protect our community by making sure everyone on Sport Social is real.
+                                </p>
                             </div>
-                            <div class="bg-white rounded block-area mt-60" id="generalSection">
-                                <div class="text-center">
-                                    <h4>
-                                        <strong>What’s your number? </strong>
-                                    </h4>
-                                    <p>
-                                        We protect our community by making sure everyone on Sport Social is real.
-                                    </p>
-                                </div>
-                                <form id="general_information" action="javascript:void(0);">
-                                    <div class="panel-body">
-                                        <div class="form-row w-100 p-1">
-                                            <!-- remove this div/ display is none because it would pass the validation -->
-                                            <div style="display: none">
-                                                <div class="d-flex w-100">
-                                                    <div class="form-group w-50">
-                                                        <input type="text" class="form-control" id="firstname"
-                                                            placeholder="First Name" name="firstname">
-                                                    </div>
-                                                    <div class="form-group w-50">
-                                                        <input type="text" name="lastname" id="lastname"
-                                                            class="form-control" placeholder="Last Name">
-                                                    </div>
+                            <form id="general_information" action="javascript:void(0);">
+                                <div class="panel-body">
+                                    <div class="form-row w-100 p-1">
+                                        <div style="display: none">
+                                            <div class="d-flex w-100">
+                                                <div class="form-group w-50">
+                                                    <input type="text" class="form-control" id="firstname" placeholder="First Name"
+                                                           name="firstname">
                                                 </div>
-                                                <div class="form-group w-100">
-                                                    <input type="email" name="email" id="email" class="form-control"
-                                                        placeholder="Enter Email Address" value="">
-                                                </div>
-                                                <div class="form-group text-center w-100 m-0">
-                                                    <a href="#"
-                                                        class="btn btn-default fs-17 bold-text rounded-btn-nb">Verify</a>
+                                                <div class="form-group w-50">
+                                                    <input type="text" name="lastname" id="lastname" class="form-control"
+                                                           placeholder="Last Name">
                                                 </div>
                                             </div>
-
-                                            <p class="m-0 pl-1">Add Phone Number</p>
-                                            <div class="form-group w-100 p-1 m-0">
-                                                <input class="form-control" id="phone" name="phone" placeholder=""
-                                                    type="tel" value="">
+                                            <div class="form-group w-100">
+                                                <input type="email" name="email" id="email" class="form-control"
+                                                       placeholder="Enter Email Address" value="">
                                             </div>
-
-                                            <div class="d-flex text-center mt-3">
-                                                <div class="d-fex p-2 bg-warning rounded warning-txt">
-                                                    <i class="fa fa-lock"></i>
-                                                </div>
-                                                <p class="tiny-font mt-auto mb-auto pl-2">
-                                                    We never share this number with anyone
-                                                </p>
-                                            </div>
-
-                                            <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                                <a href="sign-up-step-1.html"
-                                                    class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                                    onclick="signUpStep2GeneralInformationBack();">Back</a>
-                                                <button class="btn btn-danger fs-17 bold-text rounded-btn"
-                                                    onclick="signUpStep2GeneralInformation();">SAVE</button>
-                                                <a href="#number-verification"
-                                                    class="btn btn-success fs-17 bold-text rounded-btn-nb general-information-continue"
-                                                    onclick=signUpStep2GeneralInformation();>Continue</a>
-                                                <a href="#number-verification"
-                                                    class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                                    onclick="signUpStep2GeneralInformation();">Skip</a>
-
+                                            <div class="form-group text-center w-100 m-0">
+                                                <a href="#"
+                                                   class="btn btn-default fs-17 bold-text rounded-btn-nb">Verify</a>
                                             </div>
                                         </div>
+                                        
+                                        <p class="m-0 pl-1">Add Phone Number</p>
+                                        <div class="form-group w-100 p-1 m-0">
+                                            <input class="form-control" id="phone" name="phone"
+                                                   placeholder="" type="tel" value="">
+                                        </div>
+
+                                        <div class="d-flex text-center mt-3">
+                                            <div class="d-fex p-2 bg-warning rounded warning-txt">
+                                                <i class="fa fa-lock"></i>
+                                            </div>
+                                            <p class="tiny-font mt-auto mb-auto pl-2">
+                                               We never share this number with anyone 
+                                            </p> 
+                                        </div>
+
+                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                            <a href="sign-up-step-1.html"
+                                               class="btn btn-default fs-17 bold-text rounded-btn-nb"  onclick="signUpStep2GeneralInformationBack();">Back</a>
+                                            <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="signUpStep2GeneralInformation();" >SAVE</button>
+                                            <a href="#number-verification"
+                                               class="btn btn-success fs-17 bold-text rounded-btn-nb general-information-continue" onclick=signUpStep2GeneralInformation(); >Continue</a>
+                                            <a href="#number-verification"
+                                               class="btn btn-default fs-17 bold-text rounded-btn-nb"  onclick="signUpStep2GeneralInformation();">Skip</a>
+
+                                        </div>
                                     </div>
-                                </form>
+                                </div>
+                            </form>
+                        </div> -->
+
+                            <!-- <div class="bg-white rounded block-area mt-60" id="verificationSection" style="display: none">
+                            <div class="d-flex">
+                                <strong class="m-auto pt-4">Verify your number </strong>
                             </div>
-
-                            <div class="bg-white rounded block-area mt-60" id="verificationSection"
-                                style="display: none">
-                                <div class="d-flex">
-                                    <strong class="m-auto pt-4">Verify your number </strong>
+                            <div class="d-flex">
+                                <p class="text-center">Enter code we've sent you by text to (phone number) <span><a href="#">Change</a></span></p>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-sm">
+                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
                                 </div>
-                                <div class="d-flex">
-                                    <p class="text-center">Enter code we've sent you by text to (phone number) <span><a
-                                                href="#">Change</a></span></p>
+                                <div class="col-sm">
+                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
                                 </div>
-                                <div class="d-flex">
-                                    <div class="col-sm">
-                                        <input type="text" class="w-100 pt-4 pb-4 rounded">
-                                    </div>
-                                    <div class="col-sm">
-                                        <input type="text" class="w-100 pt-4 pb-4 rounded">
-                                    </div>
-                                    <div class="col-sm">
-                                        <input type="text" class="w-100 pt-4 pb-4 rounded">
-                                    </div>
-                                    <div class="col-sm">
-                                        <input type="text" class="w-100 pt-4 pb-4 rounded">
-                                    </div>
+                                <div class="col-sm">
+                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
                                 </div>
-                                <div class="d-flex p-4 mt-5">
-                                    <a href="#">
-                                        Didn't get text?
-                                    </a>
-                                </div>
-                                <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                    <a href="#phone-number" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                        onclick="BackVerification();">Back</a>
-                                    <button class="btn btn-danger fs-17 bold-text rounded-btn"
-                                        onclick="VerifiedNumber();">Save</button>
-                                    <a href="#profile01" class="btn btn-success fs-17 bold-text rounded-btn-nb"
-                                        onclick="VerifiedNumber();">Continue</a>
-                                    <a href="#profile01" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                        onclick="VerifiedNumber();">Skip</a>
+                                <div class="col-sm">
+                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
                                 </div>
                             </div>
+                            <div class="d-flex p-4 mt-5">
+                                <a href="#">
+                                    Didn't get text?
+                                </a>
+                            </div>  
+                            <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                <a href="#phone-number"
+                                   class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="BackVerification();">Back</a>
+                                <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="VerifiedNumber();">Save</button>
+                                <a href="#profile01"
+                                   class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="VerifiedNumber();">Continue</a>
+                                <a href="#profile01"
+                                   class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="VerifiedNumber();">Skip</a>
+                            </div>                      
+                        </div> -->
 
 
-                            <div class="bg-white rounded block-area mt-60" id="profilePhotoSection"
-                                style="display: none;">
+                            <div class="bg-white rounded block-area mt-90" id="profilePhotoSection">
                                 <div class="panel">
                                     <form id="sign-up-step2-language" action="javascript:void(0);">
                                         <div class="compose-checkin w-100">
@@ -196,77 +187,65 @@
                                                     background cover photo is optional </p>
                                             </div>
                                             <div class="row Nmarg flex-wrap-wrap m-0">
-                                                <div class="d-flex">
-                                                    <div class="d-flex flex-column">
-                                                        <div class="d-flex text-center">
-                                                            <p class="m-auto font-weight-bold tiny-font">Add your
-                                                                profile photo
-                                                            </p>
-                                                        </div>
-                                                        <div class="p-1 upload-image">
-                                                            <div class="bg-grey">
-                                                                <div class="file-upload d-flex">
-                                                                    <div class="w-50">
-                                                                        <img src="./images/default-user-image.png"
-                                                                            id="file-upload-image" class="w-100" alt="">
-                                                                    </div>
-                                                                    <div class="image-upload-wrap w-50 d-flex">
-                                                                        <input class="file-upload-input" name="file"
-                                                                            type='file' onchange="filereadURL(this);"
-                                                                            id="file" accept="image/*" />
-                                                                        <div class="drag-text">
-                                                                            <i class="fa fa-plus plus-icon"></i>
-                                                                        </div>
-                                                                    </div>
+                                                <!-- <div class="d-flex">
+                                                <div class="d-flex flex-column">
+                                                    <div class="d-flex text-center">
+                                                        <p class="m-auto font-weight-bold tiny-font">Add your profile photo
+                                                        </p>
+                                                    </div>
+                                                    <div class="p-1 upload-image">
+                                                        <div class="bg-grey">
+                                                            <div class="file-upload d-flex">
+                                                                <div class="w-50">
+                                                                    <img src="./images/default-user-image.png" id="file-upload-image" class="w-100"
+                                                                         alt="">
                                                                 </div>
-                                                                <div class="px-2">
-                                                                    <b><small id="file-image-title"
-                                                                            style=" word-wrap: break-word;">Add profile
-                                                                            photo</small></b>
+                                                                <div class="image-upload-wrap w-50 d-flex">
+                                                                    <input class="file-upload-input" name="file" type='file'
+                                                                           onchange="filereadURL(this);"  id="file"  accept="image/*" />
+                                                                    <div class="drag-text">
+                                                                        <i class="fa fa-plus plus-icon"></i>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </div>
-                                                        <div class="d-flex text-center">
-                                                            <a href="#" class="m-auto tiny-font">Choose a different
-                                                                photo</a>
+                                                            <div class="px-2">
+                                                                <b><small id="file-image-title" style=" word-wrap: break-word;">Add profile photo</small></b>
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="d-flex flex-column">
-                                                        <div class="d-flex text-center">
-                                                            <p class="m-auto font-weight-bold tiny-font">Add a cover
-                                                                photo</p>
-                                                        </div>
-                                                        <div class="p-1 upload-image">
-                                                            <div class="bg-grey">
-                                                                <div class="file-upload d-flex">
-                                                                    <div class="w-50">
-                                                                        <img src="./images/image-placeholder.jpg"
-                                                                            id="file2-upload-image" class="w-100"
-                                                                            alt="">
-                                                                    </div>
-                                                                    <div class="image-upload-wrap w-50 d-flex">
-                                                                        <input class="file-upload-input" name="file2"
-                                                                            id="file2" type='file'
-                                                                            onchange="file2readURL(this);"
-                                                                            accept="image/*" />
-                                                                        <div class="drag-text">
-                                                                            <i class="fa fa-plus plus-icon"></i>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="px-2">
-                                                                    <b><small id="file2-image-title"
-                                                                            style=" word-wrap: break-word;">Add a cover
-                                                                            photo</small></b>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="d-flex text-center">
-                                                            <a href="#" class="m-auto tiny-font">Choose a different
-                                                                photo</a>
-                                                        </div>
+                                                    <div class="d-flex text-center">
+                                                        <a href="#" class="m-auto tiny-font">Choose a different photo</a>
                                                     </div>
                                                 </div>
+                                                <div class="d-flex flex-column">
+                                                    <div class="d-flex text-center">
+                                                        <p class="m-auto font-weight-bold tiny-font">Add a cover photo</p>
+                                                    </div>
+                                                    <div class="p-1 upload-image">
+                                                        <div class="bg-grey">
+                                                            <div class="file-upload d-flex">
+                                                                <div class="w-50">
+                                                                    <img src="./images/image-placeholder.jpg" id="file2-upload-image" class="w-100"
+                                                                         alt="">
+                                                                </div>
+                                                                <div class="image-upload-wrap w-50 d-flex">
+                                                                    <input class="file-upload-input" name="file2" id="file2" type='file'
+                                                                           onchange="file2readURL(this);" accept="image/*" />
+                                                                    <div class="drag-text">
+                                                                        <i class="fa fa-plus plus-icon"></i>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="px-2">
+                                                                <b><small id="file2-image-title" style=" word-wrap: break-word;">Add a cover photo</small></b>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex text-center">
+                                                        <a href="#" class="m-auto tiny-font">Choose a different photo</a>
+                                                    </div>
+                                                </div>
+                                            </div> -->
                                                 <div class="w-100 text-center mt-3">
                                                     <h5 class="font-weight-bold tiny-font">Great! How are these photos?
                                                     </h5>
@@ -281,6 +260,10 @@
                                                 </div>
                                             </div>
                                         </div><br>
+                                        <div class="d-flex flex-column w-75 m-auto">
+                                            <button class="btn btn-light mb-2">Add a profile picture</button>
+                                            <button class="btn btn-light mb-3">Add a banner</button>
+                                        </div>
                                         <div class="d-flex justify-content-around px-5 py-2 w-100">
                                             <a href="#profile01" class="btn btn-default fs-17 bold-text rounded-btn-nb"
                                                 onclick="profilePhotoSectionBack();">Back</a>
@@ -295,8 +278,8 @@
                                 </div>
                             </div>
 
-
-                            <div class="bg-white rounded block-area mt-60" id="previewSection" style="display: none;">
+                            <!-- needed -->
+                            <div class="bg-white rounded block-area mt-90" id="previewSection" style="display: none;">
                                 <div class="panel">
                                     <div class="compose-checkin w-100">
                                         <div class="d-flex flex-column text-center mt-2 mb-3">
@@ -326,7 +309,7 @@
                             </div>
 
                             <!-- location -->
-                            <div class="bg-white rounded block-area mt-60" id="myLocation" style="display: none">
+                            <div class="bg-white rounded block-area mt-90" id="myLocation" style="display: none">
                                 <form id="about-me-form" action="javascript:void(0);">
                                     <div class="panel-body">
                                         <div class="mb-4 font-weight-bold">Confirm your current location? </div>
@@ -393,146 +376,127 @@
                                     </div>
                             </div>
                             </form>
-                        </div>
 
-                        <div class="bg-white rounded block-area mt-60" id="aboutSection" style="display: none">
-                            <form id="about-me-form" action="javascript:void(0);">
-                                <div class="panel-body">
-                                    <div class="form-row">
-                                        <div class="text-center">
-                                            <h5 class="font-weight-bold">My Personal Profile</h5>
-                                            <h6>
-                                                Please add the below to find similar sport friends with your background
-                                                and age
-                                            </h6>
-                                        </div>
-                                        <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
-                                            <i class="fa fa-briefcase"></i>
-                                            <span class="">
-                                                <input type="text" class="form-control"
-                                                    placeholder="Where do you work ?" id="work" value="" name="work">
-                                            </span>
-                                        </div>
-                                        <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
-                                            <i class="fa fa-graduation-cap"></i>
-                                            <span class="">
-                                                <input type="text" class="form-control"
-                                                    placeholder="Which College/University ?" name="university"
-                                                    id="university" value="">
-                                            </span>
-                                        </div>
-                                        <div class="container1 w-100">
+                            <div class="bg-white rounded block-area mt-90" id="aboutSection" style="display: none">
+                                <form id="about-me-form" action="javascript:void(0);">
+                                    <div class="panel-body p-4">
+                                        <div class="form-row">
+                                            <div class="text-center">
+                                                <h5 class="font-weight-bold">My Personal Profile</h5>
+                                                <h6>
+                                                    Please add the below to find similar sport friends with your
+                                                    background
+                                                    and age
+                                                </h6>
+                                            </div>
+                                            <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
+                                                <i class="fa fa-briefcase"></i>
+                                                <span class="">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Where do you work ?" id="work" value=""
+                                                        name="work">
+                                                </span>
+                                            </div>
+                                            <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
+                                                <i class="fa fa-graduation-cap"></i>
+                                                <span class="">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="Which College/University ?" name="university"
+                                                        id="university" value="">
+                                                </span>
+                                            </div>
 
-                                        </div>
-                                        <div class="form-group p-2 w-100 mb-0 ml-4 d-flex signup-input-wrap">
-                                            <a href="" class="text-secondary add_form_field">+ Add a
-                                                College/University</a>
-                                        </div>
-                                        <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
-                                            <i class="fa fa-graduation-cap"></i>
-                                            <span class="">
-                                                <input type="text" class="form-control"
-                                                    placeholder="High school you graduated from?" id="high_school"
-                                                    name="high_school" value="">
-                                            </span>
-                                        </div>
-                                        <!-- <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
-                                            <i class="fa fa-graduation-cap"></i>
-                                            <span class="">
-                                                <input type="text" class="form-control"
-                                                       placeholder="High school you graduated from?" id="high_school" name="high_school" value="">
-                                            </span>
-                                        </div> -->
-                                        <div class="container2 w-100">
+                                            <div class="container1 w-100">
 
-                                        </div>
-                                        <div class="form-group p-2 w-100 mb-0 ml-4 d-flex signup-input-wrap">
-                                            <a href="" class="text-secondary add_form_field2">+ Add a High school</a>
-                                        </div>
-                                        <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
-                                            <i class="fa fa-venus-mars"></i>
-                                            <span class="">
-                                                <select class="form-control" name="sex" id="sex">
-                                                    <option value="">Select gender</option>
-                                                    <option value="1">Male</option>
-                                                    <option value="0">Female</option>
-                                                    <option value="2">No Preference</option>
-                                                </select>
-                                            </span>
-                                        </div>
-                                        <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
-                                            <i class="fa fa-mars-double" aria-hidden="true"></i>
-                                            <span class="">
-                                                <select class="form-control" name="status" id="status">
-                                                    <option value="">Relationship status</option>
-                                                    <option value="1">Single</option>
-                                                    <option value="0">Married</option>
-                                                    <option value="2">No Preference</option>
-                                                </select>
-                                            </span>
-                                        </div>
-                                        <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
-                                            <i class="fa fa-birthday-cake"></i>
-                                            <span class="d-flex">
-                                                <span class="w-33">
-                                                    <label for="" class="mb-0">Month</label>
-                                                    <select class="form-control" data-live-search="true"
-                                                        name="dob_month" id="dob-month">
+                                            </div>
+                                            <div class="form-group p-2 w-100 mb-0 ml-4 d-flex signup-input-wrap">
+                                                <a href="" class="text-secondary border-bottom add_form_field">+ Add a
+                                                    2nd
+                                                    Collage/University</a>
+                                            </div>
+                                            <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
+                                                <i class="fa fa-graduation-cap"></i>
+                                                <span class="">
+                                                    <input type="text" class="form-control"
+                                                        placeholder="High school you graduated from?" id="high_school"
+                                                        name="high_school" value="">
+                                                </span>
+                                            </div>
+                                            <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
+                                                <i class="fa fa-venus-mars"></i>
+                                                <span class="">
+                                                    <select class="form-control" name="sex" id="sex">
+                                                        <option value="">Select gender</option>
+                                                        <option value="1">Male</option>
+                                                        <option value="0">Female</option>
+                                                        <option value="2">No Preference</option>
                                                     </select>
                                                 </span>
-                                                <span class="w-33 d-flex flex-column mr-3">
-                                                    <label for="" class="mb-0">Day</label>
-                                                    <select class="form-control" data-live-search="true" name="dob_day"
-                                                        id="dob-day">
-                                                    </select>
-                                                </span>
-                                                <span class="w-33 d-flex flex-column">
-                                                    <label for="" class="mb-0">Year</label>
-                                                    <select class="form-control" name="dob_year" data-live-search="true"
-                                                        id="dob-year">
+                                            </div>
+                                            <div class="form-group p-2 w-100 m-0 d-flex signup-input-wrap">
+                                                <i class="fa fa-birthday-cake"></i>
+                                                <span class="d-flex">
+                                                    <span class="w-33">
+                                                        <select class="form-control" data-live-search="true"
+                                                            name="dob_month" id="dob-month">
+                                                        </select>
+                                                    </span>
+                                                    <span class="w-33">
+                                                        <select class="form-control" data-live-search="true"
+                                                            name="dob_day" id="dob-day">
 
-                                                    </select>
-                                                </span>
-                                            </span>
-                                        </div>
+                                                        </select>
+                                                    </span>
+                                                    <span class="w-33">
+                                                        <select class="form-control" name="dob_year"
+                                                            data-live-search="true" id="dob-year">
 
-                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                            <a href="#location" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                                onclick="signUpStep3AboutMeBack();">Back</a>
-                                            <button class="btn btn-danger fs-17 bold-text rounded-btn"
-                                                onclick="signUpStep3AboutMe();">Save</button>
-                                            <a href="#background" class="btn btn-success fs-17 bold-text rounded-btn-nb"
-                                                onclick="signUpStep3AboutMe();">Continue</a>
-                                            <a href="#background" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                                onclick="signUpStep3AboutMe();">Skip</a>
+                                                        </select>
+                                                    </span>
+                                                </span>
+                                            </div>
+
+                                            <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                                <a href="#location"
+                                                    class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                    onclick="signUpStep3AboutMeBack();">Back</a>
+                                                <button class="btn btn-danger fs-17 bold-text rounded-btn"
+                                                    onclick="signUpStep3AboutMe();">Save</button>
+                                                <a href="#background"
+                                                    class="btn btn-success fs-17 bold-text rounded-btn-nb"
+                                                    onclick="signUpStep3AboutMe();">Continue</a>
+                                                <a href="#background"
+                                                    class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                    onclick="signUpStep3AboutMe();">Skip</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
-                        </div>
+                                </form>
+                            </div>
+                            <!-- needed -->
+                            <div class="bg-white rounded mt-90" id="backgroundSection" style="display: none">
+                                <form id="about-me-form" action="javascript:void(0);">
+                                    <div class="panel">
+                                        <!-- <div class="panel-body"> -->
 
-                        <div class="bg-white rounded block-area mt-60" id="backgroundSection" style="display: none">
-                            <form id="about-me-form" action="javascript:void(0);">
-                                <div class="panel-body  p-2">
-                                    <div class="form-row">
-                                        <div class="">
-                                            <h5 class="font-weight-bold mb-1">About Me</h5>
+                                        <div class="px-3">
+                                            <h5 class="font-weight-bold mb-1 pt-4">About Me</h5>
                                             <h6 class="m-0">
                                                 Add some brief info about yourself or your favorite sports (optional)
                                             </h6>
                                         </div>
-                                        <div class="form-group w-100 m-0">
+                                        <div class="form-group w-100 m-0 px-3">
                                             <textarea class="form-control" name="about" id="about"
                                                 style="height:80px"></textarea>
                                             <p class="tiny-font m-0">Max (xx) characters</p>
                                         </div>
-                                        <div class="mt-2">
+                                        <div class="mt-2 px-3">
                                             <h5 class="font-weight-bold mb-1">Motto</h5>
                                             <h6 class="m-0">
                                                 Add your motto - sport related or otherwise
                                             </h6>
                                         </div>
-                                        <div class="form-group w-100 m-0">
+                                        <div class="form-group w-100 m-0 px-3">
                                             <!-- <input class="p-5 w-100" type="text" name="moto" class="form-control" id="moto" value=""> -->
                                             <textarea class="form-control" name="moto" id="moto" style="height:80px"
                                                 value=""></textarea>
@@ -549,22 +513,23 @@
                                             <a href="#about" class="btn btn-default fs-17 bold-text rounded-btn-nb"
                                                 onclick="backgroundSection();">Skip</a>
                                         </div>
+
+                                        <!-- </div> -->
                                     </div>
-                                </div>
-                            </form>
-                        </div>
+                                </form>
+                            </div>
 
+                            <!-- needed -->
+                            <div class="bg-white mt-90 p-4" id="aboutSection03" style="display: none">
+                                <form id="about-me-form" action="javascript:void(0);">
 
-                        <div class="bg-white rounded block-area mt-60" id="aboutSection03" style="display: none">
-                            <form id="about-me-form" action="javascript:void(0);">
-                                <div class="panel-body p-4">
-                                    <div class="form-row">
-                                        <div class="">
-                                            <h5 class="font-weight-bold">Where are you from</h5>
-                                            <h6>
-                                                Connect and find sports people that you have a mutual connection with
-                                            </h6>
-                                        </div>
+                                    <div class="d-flex flex-column mt-60">
+
+                                        <h5 class="font-weight-bold px-3">Where are you from</h5>
+                                        <h6 class="px-3">
+                                            Connect and find sports people that you have a mutual connection with
+                                        </h6>
+
                                         <!-- here -->
                                         <div class="form-group p-2 w-100 m-0 d-flex">
 
@@ -595,7 +560,7 @@
                                             </div>
 
                                         </div>
-                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                        <div class="d-flex justify-content-around px-5 py-2 ">
                                             <a href="#about" class="btn btn-default fs-17 bold-text rounded-btn-nb"
                                                 onclick="aboutAction03Back();">Back</a>
                                             <button class="btn btn-danger fs-17 bold-text rounded-btn"
@@ -606,383 +571,462 @@
                                                 onclick="aboutAction03();">Skip</a>
                                         </div>
                                     </div>
-                                </div>
-                            </form>
-                        </div>
 
-                        <div class="bg-white rounded block-area mt-60" id="languageSection" style="display: none;">
-                            <div>
-                                <h4>Language</h4>
+                                </form>
                             </div>
-                            <form id="sign-up-step2-language" action="javascript:void(0);">
-                                <div class="panel-body">
-                                    <div class="form-row">
+
+                            <div class="bg-white rounded mt-90" id="languageSection" style="display: none;">
+                                <div class="p-4">
+                                    <h4>Language</h4>
+                                </div>
+                                <form id="sign-up-step2-language" action="javascript:void(0);">
+                                    <div class="panel-body px-4">
+
                                         <div class="form-group">
                                             <h6>Select Languages you can speak</h6>
                                         </div>
-                                        <div class="form-group w-100 p-2">
-                                            <select class="form-control" name="plng" id="plng">
-                                                <option value="0">Select Primary Language </option>
-                                                <option value="1">English</option>
-                                                <option value="3">Spanish</option>
-                                                <option value="5">German</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group w-100 p-2">
-                                            <select class="form-control" name="slng" id="slng">
-                                                <option value="">Select Secondary Language</option>
-                                                <option value="">English</option>
-                                                <option value="">Spanish</option>
-                                                <option value="">German</option>
-                                            </select>
+
+                                        <select class="form-control" name="plng" id="plng">
+                                            <option value="0">Select Primary Language </option>
+                                            <option value="1">English</option>
+                                            <option value="3">Spanish</option>
+                                            <option value="5">German</option>
+                                        </select>
+
+                                        <div class="mb-3"></div>
+
+                                        <select class="form-control" name="slng" id="slng">
+                                            <option value="">Select Secondary Language</option>
+                                            <option value="">English</option>
+                                            <option value="">Spanish</option>
+                                            <option value="">German</option>
+                                        </select>
+                                        <div class="mb-3"></div>
+                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                            <a href="#location" class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                onclick="signUpStep6LanguageBack();">Back</a>
+                                            <button class="btn btn-danger fs-17 bold-text rounded-btn-nb"
+                                                onclick="signUpStep6Language();">Save</button>
+                                            <a href="#socials" class="btn btn-success fs-17 bold-text rounded-btn"
+                                                onclick="signUpStep6Language();">Continue</a>
+                                            <a href="#socials" class="btn btn-default fs-17 bold-text rounded-btn"
+                                                onclick="signUpStep6Language();">Skip</a>
                                         </div>
                                     </div>
-                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                        <a href="#location" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                            onclick="signUpStep6LanguageBack();">Back</a>
-                                        <button class="btn btn-danger fs-17 bold-text rounded-btn-nb"
-                                            onclick="signUpStep6Language();">Save</button>
-                                        <a href="#socials" class="btn btn-success fs-17 bold-text rounded-btn"
-                                            onclick="signUpStep6Language();">Continue</a>
-                                        <a href="#socials" class="btn btn-default fs-17 bold-text rounded-btn"
-                                            onclick="signUpStep6Language();">Skip</a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="bg-white rounded block-area mt-60" id="photosSection" style="display: none;">
-                            <div class="panel">
-                                <div class="w-100 text-center mt-3">
-                                    <h4 class="font-weight-bold">Add My Sport Photos</h4>
-                                    <p class="">Share your great sport moments </p>
-                                </div>
-                                <form id="sign-up-step2-images" action="javascript:void(0);">
-                                    <div class="compose-checkin w-100">
-                                        <div class="d-flex">
-                                            <div class="w-50 p-1 upload-image">
-                                                <div class="bg-grey">
-                                                    <div class="file-upload d-flex">
-                                                        <div class="w-50">
-                                                            <img src="./images/default-user-image.png"
-                                                                id="file3-upload-image" class="w-100" alt="">
-                                                        </div>
-                                                        <div class="image-upload-wrap w-50 d-flex">
-                                                            <input class="file-upload-input" type='file' name="file3"
-                                                                onchange="file3readURL(this);" id="file3"
-                                                                accept="image/*" />
-                                                            <div class="drag-text">
-                                                                <i class="fa fa-plus plus-icon"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="px-2">
-                                                        <b><small id="file3-image-title"
-                                                                style=" word-wrap: break-word;">Add a sport
-                                                                photo</small></b>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="w-50 p-1 upload-image">
-                                                <div class="bg-grey">
-                                                    <div class="file-upload d-flex">
-                                                        <div class="w-50">
-                                                            <img src="./images/default-user-image.png"
-                                                                id="file4-upload-image" class="w-100" alt="">
-                                                        </div>
-                                                        <div class="image-upload-wrap w-50 d-flex">
-                                                            <input class="file-upload-input" type='file' name="file4"
-                                                                id="file4" onchange="file4readURL(this);"
-                                                                accept="image/*" />
-                                                            <div class="drag-text">
-                                                                <i class="fa fa-plus plus-icon"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="px-2">
-                                                        <b><small id="file4-image-title"
-                                                                style=" word-wrap: break-word;">Add a sport
-                                                                photo</small></b>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex">
-                                            <div class="w-50 p-1 upload-image">
-                                                <div class="bg-grey">
-                                                    <div class="file-upload d-flex">
-                                                        <div class="w-50">
-                                                            <img src="./images/default-user-image.png" class="w-100"
-                                                                id="file5-upload-image" alt="">
-                                                        </div>
-                                                        <div class="image-upload-wrap w-50 d-flex">
-                                                            <input class="file-upload-input" type='file' name="file5"
-                                                                id="file5" onchange="file5readURL(this);"
-                                                                accept="image/*" />
-                                                            <div class="drag-text">
-                                                                <i class="fa fa-plus plus-icon"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="px-2">
-                                                        <b><small id="file5-image-title"
-                                                                style=" word-wrap: break-word;">Add a sport
-                                                                photo</small></b>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="w-50 p-1 upload-image">
-                                                <div class="bg-grey">
-                                                    <div class="file-upload d-flex">
-                                                        <div class="w-50">
-                                                            <img src="./images/default-user-image.png"
-                                                                id="file6-upload-image" class="w-100" alt="">
-                                                        </div>
-                                                        <div class="image-upload-wrap w-50 d-flex">
-                                                            <input class="file-upload-input" type='file'
-                                                                onchange="file6readURL(this);" name="file6" id="file6"
-                                                                accept="image/*" />
-                                                            <div class="drag-text">
-                                                                <i class="fa fa-plus plus-icon"></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="px-2">
-                                                        <b><small id="file6-image-title"
-                                                                style=" word-wrap: break-word;">Add a sport
-                                                                photo</small></b>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-                                        <div class="w-100 p-1 upload-image">
-                                            <div class="bg-grey">
-                                                <div class="file-upload d-flex">
-                                                    <div class="w-50 text-center m-auto font-weight-bold">
-                                                        Add More Sport Photos
-                                                    </div>
-                                                    <div class="image-upload-wrap w-50 d-flex text-center m-auto">
-                                                        <div class="drag-text">
-                                                            <i class="fa fa-plus plus-icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div><br>
-                            <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                <a href="#photos" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                    onclick="signUpStep2ImagesBack();">Back</a>
-                                <button class="btn btn-danger fs-17 bold-text rounded-btn"
-                                    onclick="signUpStep2Images();">Save</button>
-                                <a href="#videoSection" class="btn btn-success fs-17 bold-text rounded-btn-nb"
-                                    onclick="signUpStep2Images();">Continue</a>
-                                <a href="#videoSection" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                    onclick="signUpStep2Images();">Skip</a>
+                                </form>
                             </div>
-                            </form>
-                        </div>
-                    </div>
 
-                    <div class="bg-white rounded block-area mt-60" id="videoSection" style="display: none;">
-                        <div class="panel">
-                            <div class="text-center pt-2">
-                                <h5 class="font-weight-bold">Add My Sport Videos</h5>
-                                <p>Share your great sport moments</p>
-                            </div>
-                            <form id="sign-up-step2-videos" action="javascript:void(0);">
-                                <div class="compose-checkin w-100">
-                                    <div class="row Nmarg flex-wrap-wrap m-0">
-                                        <div class="w-50 p-1 upload-image">
-                                            <div class="bg-grey">
-                                                <div class="file-upload d-flex">
-                                                    <div class="w-75">
-                                                        <video class="w-100" controls>
-                                                            <source src="./images/video placeholder - YouTube.mp4"
-                                                                id="video-upload-image" type="video/mp4">
-                                                            Your browser does not support the video tag.
-                                                        </video>
-                                                    </div>
-                                                    <div class="image-upload-wrap w-25 d-flex">
-                                                        <input class="file-upload-input" name="video" type='file'
-                                                            onchange="videoreadURL(this);" accept="image/*"
-                                                            id="video" />
-                                                        <div class="drag-text">
-                                                            <i class="fa fa-plus plus-icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="px-2">
-                                                    <b><small id="video-image-title" style=" word-wrap: break-word;">Add
-                                                            a sport video</small></b>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="w-50 p-1 upload-image">
-                                            <div class="bg-grey">
-                                                <div class="file-upload d-flex">
-                                                    <div class="w-75">
-                                                        <video class="w-100" controls>
-                                                            <source src="./images/video placeholder - YouTube.mp4"
-                                                                id="video1-upload-image" type="video/mp4">
-                                                            Your browser does not support the video tag.
-                                                        </video>
-                                                    </div>
-                                                    <div class="image-upload-wrap w-25 d-flex">
-                                                        <input class="file-upload-input" name="video1" type='file'
-                                                            onchange="video1readURL(this);" id="video1"
-                                                            accept="image/*" />
-                                                        <div class="drag-text">
-                                                            <i class="fa fa-plus plus-icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="px-2">
-                                                    <b><small id="video1-image-title"
-                                                            style=" word-wrap: break-word;">Add a sport
-                                                            video</small></b>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="w-50 p-1 upload-image">
-                                            <div class="bg-grey">
-                                                <div class="file-upload d-flex">
-                                                    <div class="w-75">
-                                                        <video class="w-100" controls>
-                                                            <source src="./images/video placeholder - YouTube.mp4"
-                                                                id="video2-upload-image" type="video/mp4">
-                                                            Your browser does not support the video tag.
-                                                        </video>
-                                                    </div>
-                                                    <div class="image-upload-wrap w-25 d-flex">
-                                                        <input class="file-upload-input" type='file' name="video2"
-                                                            onchange="video2readURL(this);" id="video2"
-                                                            accept="image/*" />
-                                                        <div class="drag-text">
-                                                            <i class="fa fa-plus plus-icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="px-2">
-                                                    <b><small id="video2-image-title"
-                                                            style=" word-wrap: break-word;">Add a sport
-                                                            video</small></b>
-                                                </div>
-                                            </div>
-                                        </div>
 
-                                        <!-- remove this -->
-                                        <div class="w-50 p-1 upload-image" style="display: none;">
-                                            <div class="bg-grey">
-                                                <div class="file-upload d-flex">
-                                                    <div class="w-75">
-                                                        <video class="w-100" controls>
-                                                            <source src="./images/video placeholder - YouTube.mp4"
-                                                                id="video3-upload-image" type="video/mp4">
-                                                            Your browser does not support the video tag.
-                                                        </video>
-                                                    </div>
-                                                    <div class="image-upload-wrap w-25 d-flex">
-                                                        <input class="file-upload-input" type='file'
-                                                            onchange="video3readURL(this);" name="video3" id="video3"
-                                                            accept="image/*" />
-                                                        <div class="drag-text">
-                                                            <i class="fa fa-plus plus-icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="px-2">
-                                                    <b><small id="video3-image-title"
-                                                            style=" word-wrap: break-word;">Add a sport
-                                                            video</small></b>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="w-50 p-1 upload-image">
-                                            <div class="bg-grey">
-                                                <div class="file-upload d-flex">
-                                                    <div class="w-75">
-                                                        <video class="w-100" controls>
-                                                            <source src="./images/video placeholder - YouTube.mp4"
-                                                                id="video4-upload-image" type="video/mp4">
-                                                            Your browser does not support the video tag.
-                                                        </video>
-                                                    </div>
-                                                    <div class="image-upload-wrap w-25 d-flex">
-                                                        <input class="file-upload-input" type='file'
-                                                            onchange="video4readURL(this);" name="video4"
-                                                            accept="image/*" id="video4" />
-                                                        <div class="drag-text">
-                                                            <i class="fa fa-plus plus-icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="px-2">
-                                                    <b><small id="video4-image-title"
-                                                            style=" word-wrap: break-word;">Add a sport
-                                                            video</small></b>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!-- remove this -->
-                                        <div class="w-50 p-1 upload-image" style="display: none;">
-                                            <div class="bg-grey">
-                                                <div class="file-upload d-flex">
-                                                    <div class="w-75">
-                                                        <video class="w-100" controls>
-                                                            <source src="./images/video placeholder - YouTube.mp4"
-                                                                id="video5-upload-image" type="video/mp4">
-                                                            Your browser does not support the video tag.
-                                                        </video>
-                                                    </div>
-                                                    <div class="image-upload-wrap w-25 d-flex">
-                                                        <input class="file-upload-input" type='file' name="video5"
-                                                            onchange="video5readURL(this);" id="video5"
-                                                            accept="image/*" />
-                                                        <div class="drag-text">
-                                                            <i class="fa fa-plus plus-icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="px-2">
-                                                    <b><small id="video5-image-title"
-                                                            style=" word-wrap: break-word;">Add a sport
-                                                            video</small></b>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="w-100 p-1 upload-image">
-                                            <div class="bg-grey">
-                                                <div class="file-upload d-flex">
-                                                    <div class="w-50 text-center m-auto font-weight-bold">
-                                                        Add More Sport Videos
-                                                    </div>
-                                                    <div class="image-upload-wrap w-50 d-flex">
-                                                        <div class="drag-text">
-                                                            <i class="fa fa-plus plus-icon"></i>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                            <div class="bg-white rounded mt-90 p-4" id="photosSection" style="display: none;">
+                                <div class="">
+                                    <div class="w-100 text-center mt-3">
+                                        <h4 class="font-weight-bold">Add My Sport Photos</h4>
+                                        <p class="">Share your great sport moments </p>
                                     </div>
+                                    <form id="sign-up-step2-images" action="javascript:void(0);">
+                                        <div class="compose-checkin w-100">
+                                            <div class="d-flex">
+                                                <div class="w-50 p-1 upload-image">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-50">
+                                                                <img src="./images/default-user-image.png"
+                                                                    id="file3-upload-image" class="w-100" alt="">
+                                                            </div>
+                                                            <div class="image-upload-wrap w-50 d-flex">
+                                                                <input class="file-upload-input" type='file'
+                                                                    name="file3" onchange="file3readURL(this);"
+                                                                    id="file3" accept="image/*" />
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <b><small id="file3-image-title"
+                                                                    style=" word-wrap: break-word;">Add a sport
+                                                                    photo</small></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-50 p-1 upload-image">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-50">
+                                                                <img src="./images/default-user-image.png"
+                                                                    id="file4-upload-image" class="w-100" alt="">
+                                                            </div>
+                                                            <div class="image-upload-wrap w-50 d-flex">
+                                                                <input class="file-upload-input" type='file'
+                                                                    name="file4" id="file4"
+                                                                    onchange="file4readURL(this);" accept="image/*" />
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <b><small id="file4-image-title"
+                                                                    style=" word-wrap: break-word;">Add a sport
+                                                                    photo</small></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex">
+                                                <div class="w-50 p-1 upload-image">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-50">
+                                                                <img src="./images/default-user-image.png" class="w-100"
+                                                                    id="file5-upload-image" alt="">
+                                                            </div>
+                                                            <div class="image-upload-wrap w-50 d-flex">
+                                                                <input class="file-upload-input" type='file'
+                                                                    name="file5" id="file5"
+                                                                    onchange="file5readURL(this);" accept="image/*" />
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <b><small id="file5-image-title"
+                                                                    style=" word-wrap: break-word;">Add a sport
+                                                                    photo</small></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-50 p-1 upload-image">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-50">
+                                                                <img src="./images/default-user-image.png"
+                                                                    id="file6-upload-image" class="w-100" alt="">
+                                                            </div>
+                                                            <div class="image-upload-wrap w-50 d-flex">
+                                                                <input class="file-upload-input" type='file'
+                                                                    onchange="file6readURL(this);" name="file6"
+                                                                    id="file6" accept="image/*" />
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <b><small id="file6-image-title"
+                                                                    style=" word-wrap: break-word;">Add a sport
+                                                                    photo</small></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+
+                                            <div class="w-100 p-1 upload-image">
+                                                <div class="bg-grey">
+                                                    <div class="file-upload d-flex">
+                                                        <div class="w-50 text-center m-auto font-weight-bold">
+                                                            Add More Sport Photos
+                                                        </div>
+                                                        <div class="image-upload-wrap w-50 d-flex text-center m-auto">
+                                                            <div class="drag-text">
+                                                                <i class="fa fa-plus plus-icon"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                 </div><br>
                                 <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                    <a href="#videos" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                        onclick="signUpStep2VideoBack();">Back</a>
+                                    <a href="#photos" class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                        onclick="signUpStep2ImagesBack();">Back</a>
                                     <button class="btn btn-danger fs-17 bold-text rounded-btn"
-                                        onclick="signUpStep2Video();">Save</button>
-                                    <a href="#covid-test" class="btn btn-success fs-17 bold-text rounded-btn-nb"
-                                        onclick="signUpStep2Video();">Continue</a>
-                                    <a href="#covid-test" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                        onclick="signUpStep2Video();">Skip</a>
+                                        onclick="signUpStep2Images();">Save</button>
+                                    <a href="#videoSection" class="btn btn-success fs-17 bold-text rounded-btn-nb"
+                                        onclick="signUpStep2Images();">Continue</a>
+                                    <a href="#videoSection" class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                        onclick="signUpStep2Images();">Skip</a>
                                 </div>
-                            </form>
+                                </form>
+                            </div>
+
+                            <div class="bg-white rounded block-area mt-90 p-4" id="videoSection" style="display: none;">
+                                <div class="panel">
+                                    <div class="text-center pt-2">
+                                        <h5 class="font-weight-bold">Add My Sport Videos</h5>
+                                        <p>Share your great sport moments</p>
+                                    </div>
+                                    <form id="sign-up-step2-videos" action="javascript:void(0);">
+                                        <div class="compose-checkin w-100">
+                                            <div class="row Nmarg flex-wrap-wrap m-0">
+                                                <div class="w-50 p-1 upload-image">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-75">
+                                                                <video class="w-100" controls>
+                                                                    <source
+                                                                        src="./images/video placeholder - YouTube.mp4"
+                                                                        id="video-upload-image" type="video/mp4">
+                                                                    Your browser does not support the video tag.
+                                                                </video>
+                                                            </div>
+                                                            <div class="image-upload-wrap w-25 d-flex">
+                                                                <input class="file-upload-input" name="video"
+                                                                    type='file' onchange="videoreadURL(this);"
+                                                                    accept="image/*" id="video" />
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <b><small id="video-image-title"
+                                                                    style=" word-wrap: break-word;">Add
+                                                                    a sport video</small></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-50 p-1 upload-image">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-75">
+                                                                <video class="w-100" controls>
+                                                                    <source
+                                                                        src="./images/video placeholder - YouTube.mp4"
+                                                                        id="video1-upload-image" type="video/mp4">
+                                                                    Your browser does not support the video tag.
+                                                                </video>
+                                                            </div>
+                                                            <div class="image-upload-wrap w-25 d-flex">
+                                                                <input class="file-upload-input" name="video1"
+                                                                    type='file' onchange="video1readURL(this);"
+                                                                    id="video1" accept="image/*" />
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <b><small id="video1-image-title"
+                                                                    style=" word-wrap: break-word;">Add a sport
+                                                                    video</small></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-50 p-1 upload-image">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-75">
+                                                                <video class="w-100" controls>
+                                                                    <source
+                                                                        src="./images/video placeholder - YouTube.mp4"
+                                                                        id="video2-upload-image" type="video/mp4">
+                                                                    Your browser does not support the video tag.
+                                                                </video>
+                                                            </div>
+                                                            <div class="image-upload-wrap w-25 d-flex">
+                                                                <input class="file-upload-input" type='file'
+                                                                    name="video2" onchange="video2readURL(this);"
+                                                                    id="video2" accept="image/*" />
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <b><small id="video2-image-title"
+                                                                    style=" word-wrap: break-word;">Add a sport
+                                                                    video</small></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- remove this -->
+                                                <div class="w-50 p-1 upload-image" style="display: none;">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-75">
+                                                                <video class="w-100" controls>
+                                                                    <source
+                                                                        src="./images/video placeholder - YouTube.mp4"
+                                                                        id="video3-upload-image" type="video/mp4">
+                                                                    Your browser does not support the video tag.
+                                                                </video>
+                                                            </div>
+                                                            <div class="image-upload-wrap w-25 d-flex">
+                                                                <input class="file-upload-input" type='file'
+                                                                    onchange="video3readURL(this);" name="video3"
+                                                                    id="video3" accept="image/*" />
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <b><small id="video3-image-title"
+                                                                    style=" word-wrap: break-word;">Add a sport
+                                                                    video</small></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-50 p-1 upload-image">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-75">
+                                                                <video class="w-100" controls>
+                                                                    <source
+                                                                        src="./images/video placeholder - YouTube.mp4"
+                                                                        id="video4-upload-image" type="video/mp4">
+                                                                    Your browser does not support the video tag.
+                                                                </video>
+                                                            </div>
+                                                            <div class="image-upload-wrap w-25 d-flex">
+                                                                <input class="file-upload-input" type='file'
+                                                                    onchange="video4readURL(this);" name="video4"
+                                                                    accept="image/*" id="video4" />
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <b><small id="video4-image-title"
+                                                                    style=" word-wrap: break-word;">Add a sport
+                                                                    video</small></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- remove this -->
+                                                <div class="w-50 p-1 upload-image" style="display: none;">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-75">
+                                                                <video class="w-100" controls>
+                                                                    <source
+                                                                        src="./images/video placeholder - YouTube.mp4"
+                                                                        id="video5-upload-image" type="video/mp4">
+                                                                    Your browser does not support the video tag.
+                                                                </video>
+                                                            </div>
+                                                            <div class="image-upload-wrap w-25 d-flex">
+                                                                <input class="file-upload-input" type='file'
+                                                                    name="video5" onchange="video5readURL(this);"
+                                                                    id="video5" accept="image/*" />
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="px-2">
+                                                            <b><small id="video5-image-title"
+                                                                    style=" word-wrap: break-word;">Add a sport
+                                                                    video</small></b>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="w-100 p-1 upload-image">
+                                                    <div class="bg-grey">
+                                                        <div class="file-upload d-flex">
+                                                            <div class="w-50 text-center m-auto font-weight-bold">
+                                                                Add More Sport Videos
+                                                            </div>
+                                                            <div class="image-upload-wrap w-50 d-flex">
+                                                                <div class="drag-text">
+                                                                    <i class="fa fa-plus plus-icon"></i>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div><br>
+                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                            <a href="#videos" class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                onclick="signUpStep2VideoBack();">Back</a>
+                                            <button class="btn btn-danger fs-17 bold-text rounded-btn"
+                                                onclick="signUpStep2Video();">Save</button>
+                                            <a href="#covid-test" class="btn btn-success fs-17 bold-text rounded-btn-nb"
+                                                onclick="signUpStep2Video();">Continue</a>
+                                            <a href="#covid-test" class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                onclick="signUpStep2Video();">Skip</a>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="bg-white rounded block-area mt-90 p-4" id="socials" style="display: none;">
+                                <div class="text-center pt-4">
+                                    <h4 class="font-weight-bold">My Social Links </h4>
+                                    <p class="tiny-font">Adding your social links helps verify your profile is real to
+                                        other
+                                        Sport Social Members </p>
+                                </div>
+                                <hr>
+                                <form id="sign-up-step2-language" action="javascript:void(0);" class="m-auto">
+                                    <!-- run to this -->
+                                    <div class="d-flex flex-column w-100 pb-3">
+                                        <div class="d-flex">
+                                            <img src="./images/instagram-icon.jpg" alt=""
+                                                class="mr-4 mt-auto width-12 h-100">
+                                            <div class="w-100">
+                                                <label for="" class="m-0 tiny-font">Intagram</label>
+                                                <input type="text" class="form-control" aria-label="Small"
+                                                    aria-describedby="inputGroup-sizing-sm">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column w-100 pb-3">
+                                        <div class="d-flex">
+                                            <img src="./images/facebook.png" alt="" class="mr-4 mt-auto width-12 h-100">
+                                            <div class="w-100">
+                                                <label for="" class="m-0 tiny-font">Facebook</label>
+                                                <input type="text" class="form-control" aria-label="Small"
+                                                    aria-describedby="inputGroup-sizing-sm">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column w-100 pb-3">
+                                        <div class="d-flex">
+                                            <img src="./images/twitter.png" alt="" class="mr-4 mt-auto width-12 h-100">
+                                            <div class="w-100">
+                                                <label for="" class="m-0 tiny-font">Twitter</label>
+                                                <input type="text" class="form-control" aria-label="Small"
+                                                    aria-describedby="inputGroup-sizing-sm">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex flex-column w-100 pb-3">
+                                        <div class="d-flex">
+                                            <img src="./images/linkedIn.png" alt="" class="mr-4 mt-auto width-12 h-100">
+                                            <div class="w-100">
+                                                <label for="" class="m-0 tiny-font">Linkedin</label>
+                                                <input type="text" class="form-control" aria-label="Small"
+                                                    aria-describedby="inputGroup-sizing-sm">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                        <a href="#socials" class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                            onclick="signUpStep2LanguageBack();">Back</a>
+                                        <button class="btn btn-danger fs-17 bold-text rounded-btn-nb"
+                                            onclick="signUpStep2Language();">Save</button>
+                                        <a href="sign-up-step-3.html"
+                                            class="btn btn-success fs-17 bold-text rounded-btn"
+                                            onclick="signUpStep2Language();">Continue</a>
+                                        <a href="sign-up-step-3.html"
+                                            class="btn btn-default fs-17 bold-text rounded-btn"
+                                            onclick="signUpStep2Language();">Skip</a>
+                                    </div>
+
+                                </form>
+                            </div>
                         </div>
                     </div>
+
+
 
                     <div class="bg-white rounded block-area mt-60" id="covidTestPreview" style="display: none;">
                         <div class="panel">
@@ -1144,69 +1188,7 @@
 
                     <!-- prev next update required -->
 
-                    <div class="bg-white rounded block-area mt-60" id="socials" style="display: none;">
-                        <div class="text-center pt-4">
-                            <h4 class="font-weight-bold">My Social Links </h4>
-                            <p class="tiny-font">Adding your social links helps verify your profile is real to other
-                                Sport Social Members </p>
-                        </div>
-                        <hr>
-                        <form id="sign-up-step2-language" action="javascript:void(0);" class="m-auto">
-                            <!-- run to this -->
-                            <div class="d-flex flex-column w-100 pb-3">
-                                <div class="d-flex">
-                                    <img src="./images/instagram-icon.jpg" alt="" class="mr-4 mt-auto width-12 h-100">
-                                    <div class="w-100">
-                                        <label for="" class="m-0 tiny-font">Intagram</label>
-                                        <input type="text" class="form-control" aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column w-100 pb-3">
-                                <div class="d-flex">
-                                    <img src="./images/facebook.png" alt="" class="mr-4 mt-auto width-12 h-100">
-                                    <div class="w-100">
-                                        <label for="" class="m-0 tiny-font">Facebook</label>
-                                        <input type="text" class="form-control" aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column w-100 pb-3">
-                                <div class="d-flex">
-                                    <img src="./images/twitter.png" alt="" class="mr-4 mt-auto width-12 h-100">
-                                    <div class="w-100">
-                                        <label for="" class="m-0 tiny-font">Twitter</label>
-                                        <input type="text" class="form-control" aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="d-flex flex-column w-100 pb-3">
-                                <div class="d-flex">
-                                    <img src="./images/linkedIn.png" alt="" class="mr-4 mt-auto width-12 h-100">
-                                    <div class="w-100">
-                                        <label for="" class="m-0 tiny-font">Linkedin</label>
-                                        <input type="text" class="form-control" aria-label="Small"
-                                            aria-describedby="inputGroup-sizing-sm">
-                                    </div>
-                                </div>
-                            </div>
 
-                            <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                <a href="#socials" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                    onclick="signUpStep2LanguageBack();">Back</a>
-                                <button class="btn btn-danger fs-17 bold-text rounded-btn-nb"
-                                    onclick="signUpStep2Language();">Save</button>
-                                <a href="sign-up-step-3.html" class="btn btn-success fs-17 bold-text rounded-btn"
-                                    onclick="signUpStep2Language();">Continue</a>
-                                <a href="sign-up-step-3.html" class="btn btn-default fs-17 bold-text rounded-btn"
-                                    onclick="signUpStep2Language();">Skip</a>
-                            </div>
-
-                        </form>
-                    </div>
 
                 </div>
 
@@ -1253,9 +1235,14 @@
     <!-- <script src="js/smooth-scroll.js"></script> -->
     <!-- <script src="js/gnmenu.js"></script> -->
 
-    <!-- <script>
-    new gnMenu(document.getElementById('gn-menu'));
-</script> -->
+    <script>
+        $('select').selectpicker();
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
 
     <script
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGiqraKgOPR2ksK2nVLOnhQ5JFPGmNm8A&amp;libraries=places">
@@ -1263,6 +1250,8 @@
 
 
     <script>
+
+
         let locate_me = false;
         function fetchCurrentLocation() {
             locate_me = true;
@@ -1716,11 +1705,11 @@
                 // $('#country2').html(countryOption1);
 
 
-                var stateOption1 = '<option value="' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.state) ? param.data.profile_setting['0'].location.from_location.state.id : '') + '">' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.state) ? param.data.profile_setting['0'].location.from_location.state.name : '') + '</option>';
+                var stateOption1 = '<option value="">Select State</option><option value="' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.state) ? param.data.profile_setting['0'].location.from_location.state.id : '') + '">' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.state) ? param.data.profile_setting['0'].location.from_location.state.name : '') + '</option>';
                 $('#state2').html(stateOption1);
 
 
-                var cityOption1 = '<option value="' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.city) ? param.data.profile_setting['0'].location.from_location.city.id : '') + '">' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.city) ? param.data.profile_setting['0'].location.from_location.city.name : '') + '</option>';
+                var cityOption1 = '<option value="">Select City</option><option value="' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.city) ? param.data.profile_setting['0'].location.from_location.city.id : '') + '">' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.city) ? param.data.profile_setting['0'].location.from_location.city.name : '') + '</option>';
                 $('#city2').html(cityOption1);
 
 
@@ -1846,56 +1835,62 @@
 
         function backgroundSection() {
 
-            var parameters = '';
-            var data_language = $('#sign-up-step2-language').serialize();
-            var data_general_information = $('#general_information').serialize();
-            var data = $('#about-me-form').serialize();
-            var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
-            function onSuccessLogin(param) {
+            // $('#aboutSection03').show();
+            $('#aboutSection').show();
+            $('#backgroundSection').hide();
 
-                if (param.data.message_status == false) {
+            // var parameters = '';
+            // var data_language = $('#sign-up-step2-language').serialize();
+            // var data_general_information = $('#general_information').serialize();
+            // var data = $('#about-me-form').serialize();
+            // var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
+            // function onSuccessLogin(param) {
 
-                    showAlertMessage(type = 'error', "Server error!");
+            //     if (param.data.message_status == false) {
 
-
-                } else if (param.data.message_status == true) {
-
-                    $('#aboutSection03').show();
-                    $('#backgroundSection').hide();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
+            //         showAlertMessage(type = 'error', "Server error!");
 
 
-                }
-            }
+            //     } else if (param.data.message_status == true) {
+
+            //         $('#aboutSection03').show();
+            //         $('#backgroundSection').hide();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
+
+
+            //     }
+            // }
 
         }
 
         function signUpStep3AboutMe() {
+            $('#aboutSection03').show();
+            $('#aboutSection').hide();
 
-            var parameters = '';
-            var data_language = $('#sign-up-step2-language').serialize();
-            var data_general_information = $('#general_information').serialize();
-            var data = $('#about-me-form').serialize();
-            var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
-            function onSuccessLogin(param) {
+            // var parameters = '';
+            // var data_language = $('#sign-up-step2-language').serialize();
+            // var data_general_information = $('#general_information').serialize();
+            // var data = $('#about-me-form').serialize();
+            // var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
+            // function onSuccessLogin(param) {
 
-                if (param.data.message_status == false) {
+            //     if (param.data.message_status == false) {
 
-                    showAlertMessage(type = 'error', "Server error!");
-
-
-                } else if (param.data.message_status == true) {
-                    $('#backgroundSection').show();
-                    $('#aboutSection').hide();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
+            //         showAlertMessage(type = 'error', "Server error!");
 
 
-                }
-            }
+            //     } else if (param.data.message_status == true) {
+            //         $('#backgroundSection').show();
+            //         $('#aboutSection').hide();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
+
+
+            //     }
+            // }
 
         }
 
@@ -1927,28 +1922,30 @@
 
 
         function aboutAction03() {
+            $('#languageSection').show();
+            $('#aboutSection03').hide();
 
-            var parameters = '';
-            var data_language = $('#sign-up-step2-language').serialize();
-            var data_general_information = $('#general_information').serialize();
-            var data = $('#about-me-form').serialize();
-            var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
-            function onSuccessLogin(param) {
+            // var parameters = '';
+            // var data_language = $('#sign-up-step2-language').serialize();
+            // var data_general_information = $('#general_information').serialize();
+            // var data = $('#about-me-form').serialize();
+            // var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
+            // function onSuccessLogin(param) {
 
-                if (param.data.message_status == false) {
-                    showAlertMessage(type = 'error', "Server error!");
-                } else if (param.data.message_status == true) {
-                    $('#languageSection').show();
-                    $('#aboutSection03').hide();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
-                }
-            }
+            //     if (param.data.message_status == false) {
+            //         showAlertMessage(type = 'error', "Server error!");
+            //     } else if (param.data.message_status == true) {
+            //         $('#languageSection').show();
+            //         $('#aboutSection03').hide();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
+            //     }
+            // }
         }
 
         function aboutAction03Back() {
-            $('#backgroundSection').show();
+            $('#aboutSection').show();
             $('#aboutSection03').hide();
         }
 
@@ -2002,56 +1999,62 @@
         }
 
         function profilePhotoSectionNext() {
-            var parameters = '';
-            var data_language = $('#sign-up-step2-language').serialize();
-            var data_general_information = $('#general_information').serialize();
-            var data = $('#about-me-form').serialize();
-            var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
+            $('#previewSection').show();
+            $('#profilePhotoSection').hide();
+            // var parameters = '';
+            // var data_language = $('#sign-up-step2-language').serialize();
+            // var data_general_information = $('#general_information').serialize();
+            // var data = $('#about-me-form').serialize();
+            // var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
 
-            function onSuccessLogin(param) {
-                if (param.data.message_status == false) {
-                    showAlertMessage(type = 'error', "Server error!");
+            // function onSuccessLogin(param) {
+            //     if (param.data.message_status == false) {
+            //         showAlertMessage(type = 'error', "Server error!");
 
-                } else if (param.data.message_status == true) {
+            //     } else if (param.data.message_status == true) {
 
-                    $('#previewSection').show();
-                    $('#profilePhotoSection').hide();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
-                }
-            }
+            //         $('#previewSection').show();
+            //         $('#profilePhotoSection').hide();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
+            //     }
+            // }
         }
 
         function profilePhotoSectionBack() {
             $('#generalSection').show();
-            $('#profilePhotoSection').hide();
+            // $('#profilePhotoSection').hide();
+            window.location.href = 'sign-up-step-2-a.html';
         }
 
         function PreviewNext() {
 
-            var parameters = '';
-            var data_language = $('#sign-up-step2-language').serialize();
-            var data_general_information = $('#general_information').serialize();
-            var data = $('#about-me-form').serialize();
-            var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
-            function onSuccessLogin(param) {
+            $('#backgroundSection').show();
+            $('#previewSection').hide();
 
-                if (param.data.message_status == false) {
+            // var parameters = '';
+            // var data_language = $('#sign-up-step2-language').serialize();
+            // var data_general_information = $('#general_information').serialize();
+            // var data = $('#about-me-form').serialize();
+            // var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
+            // function onSuccessLogin(param) {
 
-                    showAlertMessage(type = 'error', "Server error!");
+            //     if (param.data.message_status == false) {
+
+            //         showAlertMessage(type = 'error', "Server error!");
 
 
-                } else if (param.data.message_status == true) {
+            //     } else if (param.data.message_status == true) {
 
-                    $('#myLocation').show();
-                    $('#previewSection').hide();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
+            //         $('#myLocation').show();
+            //         $('#previewSection').hide();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
 
-                }
-            }
+            //     }
+            // }
         }
 
         function PreviewBack() {
@@ -2060,25 +2063,27 @@
         }
 
         function signUpStep6Language() {
-            var parameters = '';
-            var data_language = $('#sign-up-step2-language').serialize();
-            var data_general_information = $('#general_information').serialize();
-            var data = $('#about-me-form').serialize();
-            var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
+            $('#photosSection').show();
+            $('#languageSection').hide();
+            // var parameters = '';
+            // var data_language = $('#sign-up-step2-language').serialize();
+            // var data_general_information = $('#general_information').serialize();
+            // var data = $('#about-me-form').serialize();
+            // var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
 
-            function onSuccessLogin(param) {
-                if (param.data.message_status == false) {
-                    showAlertMessage(type = 'error', "Server error!");
+            // function onSuccessLogin(param) {
+            //     if (param.data.message_status == false) {
+            //         showAlertMessage(type = 'error', "Server error!");
 
-                } else if (param.data.message_status == true) {
+            //     } else if (param.data.message_status == true) {
 
-                    $('#photosSection').show();
-                    $('#languageSection').hide();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
-                }
-            }
+            //         $('#photosSection').show();
+            //         $('#languageSection').hide();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
+            //     }
+            // }
         }
 
         function addInvites() {
@@ -2183,37 +2188,39 @@
         }
 
         function signUpStep2Images() {
-            var formData = new FormData();
-            formData.append('file', $('#file')[0].files[0]);
-            formData.append('file2', $('#file2')[0].files[0]);
-            formData.append('file3', $('#file3')[0].files[0]);
-            formData.append('file4', $('#file4')[0].files[0]);
-            formData.append('file5', $('#file5')[0].files[0]);
-            formData.append('file6', $('#file6')[0].files[0]);
+            $('#videoSection').show();
+            $('#photosSection').hide();
+            // var formData = new FormData();
+            // formData.append('file', $('#file')[0].files[0]);
+            // formData.append('file2', $('#file2')[0].files[0]);
+            // formData.append('file3', $('#file3')[0].files[0]);
+            // formData.append('file4', $('#file4')[0].files[0]);
+            // formData.append('file5', $('#file5')[0].files[0]);
+            // formData.append('file6', $('#file6')[0].files[0]);
 
-            var parameters = formData;
+            // var parameters = formData;
 
 
 
-            var data_language = $('#sign-up-step2-language').serialize();
-            var data_general_information = $('#general_information').serialize();
-            var data = $('#about-me-form').serialize();
-            var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
-            function onSuccessLogin(param) {
+            // var data_language = $('#sign-up-step2-language').serialize();
+            // var data_general_information = $('#general_information').serialize();
+            // var data = $('#about-me-form').serialize();
+            // var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
+            // function onSuccessLogin(param) {
 
-                if (param.data.message_status == false) {
+            //     if (param.data.message_status == false) {
 
-                    showAlertMessage(type = 'error', "Server error!");
+            //         showAlertMessage(type = 'error', "Server error!");
 
-                } else if (param.data.message_status == true) {
-                    $('#videoSection').show();
-                    $('#photosSection').hide();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
+            //     } else if (param.data.message_status == true) {
+            //         $('#videoSection').show();
+            //         $('#photosSection').hide();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
 
-                }
-            }
+            //     }
+            // }
         }
 
         // function PreviewNext(){
@@ -2222,37 +2229,39 @@
         // }
 
         function signUpStep2Video() {
-            var formData = new FormData();
-            formData.append('video', $('#video')[0].files[0]);
-            formData.append('video1', $('#video1')[0].files[0]);
-            formData.append('video2', $('#video2')[0].files[0]);
-            formData.append('video3', $('#video3')[0].files[0]);
-            formData.append('video4', $('#video4')[0].files[0]);
-            formData.append('video5', $('#video5')[0].files[0]);
+            $('#videoSection').hide();
+            $('#socials').show();
+            // var formData = new FormData();
+            // formData.append('video', $('#video')[0].files[0]);
+            // formData.append('video1', $('#video1')[0].files[0]);
+            // formData.append('video2', $('#video2')[0].files[0]);
+            // formData.append('video3', $('#video3')[0].files[0]);
+            // formData.append('video4', $('#video4')[0].files[0]);
+            // formData.append('video5', $('#video5')[0].files[0]);
 
-            var parameters = formData;
+            // var parameters = formData;
 
 
-            var data_language = $('#sign-up-step2-language').serialize();
-            var data_general_information = $('#general_information').serialize();
-            var data = $('#about-me-form').serialize();
-            var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
-            function onSuccessLogin(param) {
+            // var data_language = $('#sign-up-step2-language').serialize();
+            // var data_general_information = $('#general_information').serialize();
+            // var data = $('#about-me-form').serialize();
+            // var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
+            // function onSuccessLogin(param) {
 
-                if (param.data.message_status == false) {
+            //     if (param.data.message_status == false) {
 
-                    showAlertMessage(type = 'error', "Server error!");
+            //         showAlertMessage(type = 'error', "Server error!");
 
-                } else if (param.data.message_status == true) {
-                    $('#videoSection').hide();
-                    $('#covidTestPreview').show();
-                    // $('#languageSection').show();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
+            //     } else if (param.data.message_status == true) {
+            //         $('#videoSection').hide();
+            //         $('#covidTestPreview').show();
+            //         // $('#languageSection').show();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
 
-                }
-            }
+            //     }
+            // }
         }
 
         function covidPreviewNext() {
@@ -2375,12 +2384,12 @@
         }
 
         function signUpStep2AboutMeBack() {
-            $('#aboutSection').show();
+            $('#previewSection').show();
             $('#backgroundSection').hide();
         }
 
         function signUpStep3AboutMeBack() {
-            $('#myLocation').show();
+            $('#backgroundSection').show();
             $('#aboutSection').hide();
         }
 
@@ -2439,7 +2448,6 @@
         }
 
     </script>
-
     <script>
         $(document).ready(function () {
             var max_fields = 10;
@@ -2452,12 +2460,12 @@
                 if (x < max_fields) {
                     x++;
                     $(wrapper).append(`<div class="form-group p-2 m-0 d-flex">
-                                            <i class="fa fa-graduation-cap fa-lg mr-2"></i>
-                                            <input type="text" class="form-control mr-1"
-                                                placeholder="" name="university"
-                                                id="university" value="">
-                                                <a href="#" class="delete text-secondary"><strong>x</strong></a>
-                                        </div></div>`); //add input box
+                                                <i class="fa fa-graduation-cap fa-lg mr-2"></i>
+                                                <input type="text" class="form-control mr-1"
+                                                    placeholder="" name="university"
+                                                    id="university" value="">
+                                                    <a href="#" class="delete text-secondary"><strong>x</strong></a>
+                                            </div></div>`); //add input box
                 } else {
                     alert('You Reached the limits')
                 }
@@ -2473,37 +2481,6 @@
         $(document).ready(function () {
             //change selectboxes to selectize mode to be searchable
             $("select").select2();
-        });
-    </script>
-
-    <script>
-        $(document).ready(function () {
-            var max_fields_2 = 10;
-            var wrapper_2 = $(".container2");
-            var add_button_2 = $(".add_form_field2");
-
-            var x = 1;
-            $(add_button_2).click(function (e) {
-                e.preventDefault();
-                if (x < max_fields_2) {
-                    x++;
-                    $(wrapper_2).append(`<div class="form-group p-2 m-0 d-flex">
-                                            <i class="fa fa-graduation-cap fa-lg mr-2"></i>
-                                            <input type="text" class="form-control mr-1"
-                                                placeholder="" name="high_school"
-                                                id="high_school" value="">
-                                                <a href="#" class="delete text-secondary"><strong>x</strong></a>
-                                        </div></div>`); //add input box
-                } else {
-                    alert('You Reached the limits')
-                }
-            });
-
-            $(wrapper_2).on("click", ".delete", function (e) {
-                e.preventDefault();
-                $(this).parent('div').remove();
-                x--;
-            })
         });
     </script>
     <script async
