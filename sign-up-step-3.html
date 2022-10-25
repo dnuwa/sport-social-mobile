@@ -38,8 +38,8 @@
             <div class="header">
                 <div id="gn-menu" class="gn-menu-main">
                     <div class="row ss-nav pad-0 mx-0">
-                        <div class="nav-logo text-success p-2 w-100">
-                            <img src="./images/ss-logo.svg" />
+                        <div class="nav-logo text-success w-100">
+                            <img src="./images/ss-logo.svg"/>
                         </div>
                     </div>
                     <div class="signup-progress-bar">
@@ -70,7 +70,7 @@
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
 
-                            <div class="edit-sports-wrapper center-block mt-10">
+                            <div class="edit-sports-wrapper center-block mt-60">
                                 <form id="sport-activity" action="javascript:void(0);">
                                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
@@ -92,13 +92,12 @@
                                                         </select>
                                                     </div>
                                                     <div class="form-group w-100 p-1 mb-0">
-                                                        <select class="form-control" name="exp" data-live-search="true"
-                                                            id="my-experience">
-                                                            <option value="">Actively Playing</option>
-                                                            <option value="">Yes</option>
-                                                            <option value="">No</option>
-                                                        </select>
-                                                    </div>
+                                                    <select class="form-control" name="exp" data-live-search="true" id="my-experience">
+                                                        <option value="">Actively Playing</option>
+                                                        <option value="">Yes</option>
+                                                        <option value="">No</option>
+                                                    </select>
+                                                </div>
                                                     <div class="form-group w-100 p-1 mb-0">
                                                         <select class="form-control" name="skill"
                                                             data-live-search="true" id="my-skill-level">
@@ -640,12 +639,11 @@
                                                 <option value="2">No Preference </option>
                                             </select>
                                         </div>
-                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                        <!-- <div class="d-flex justify-content-around px-5 py-2 w-100">
                                             <a href="#sportSelectionSection"
                                                 class="btn btn-default fs-17 bold-text rounded-btn-nb"
                                                 onclick="sport_activity_partner_back();">Back</a>
-                                            <!-- <button
-                                                            class="btn btn-danger fs-17 bold-text rounded-btn" onclick="sport_activity_partner();">SAVE</button> -->
+                                        
                                             <a href="my-profile.html"
                                                 class="btn btn-danger fs-17 bold-text rounded-btn-nb ml-2"
                                                 onclick="sport_activity_partner();">SAVE</a>
@@ -654,8 +652,23 @@
                                                 onclick="sport_activity_partner();">Add Your Next Sport </a>
                                         </div>
                                         <div class="d-flex flex-column w-100">
-                                            <!-- <a href="my-profile.html" class="btn btn-info bold-text rounded mb-2 mt-2">Add Your Next Sport </a> -->
+                                           
                                             <a href="edit-my-sports.html" class="btn btn-info bold-text rounded">View My
+                                                Profile Page </a>
+                                        </div> -->
+                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                            <a href="#sportSelectionSection"
+                                                class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                onclick="sport_activity_partner_back();">Back</a>
+
+                                            <a href="#"
+                                                class="btn btn-danger fs-17 bold-text rounded-btn-nb ml-2">SAVE</a>
+                                            <a href="#" class="btn btn-success fs-17 bold-text rounded-btn-nb ml-2">Add
+                                                Your Next Sport </a>
+                                        </div>
+                                        <div class="d-flex flex-column w-100">
+
+                                            <a href="#" class="btn btn-info bold-text rounded">View My
                                                 Profile Page </a>
                                         </div>
                                     </div>
@@ -719,7 +732,7 @@
                 $('#current-sports-time').text('My availability for ' + (!isEmpty(param.data.sports_selection_detail[0]) && !isEmpty(param.data.sports_selection_detail[0].sportsName) ? param.data.sports_selection_detail[0].sportsName : ' ') + '.');
                 $('#current-sports-match').text('Select Any ' + (!isEmpty(param.data.sports_selection_detail[0]) && !isEmpty(param.data.sports_selection_detail[0].sportsName) ? param.data.sports_selection_detail[0].sportsName : ' ') + '    Match Preferences.');
                 var my_sports_option = '<option value="" >My Sport</option>';
-                var my_experience_option = '<option value="">My Experience</option>';
+                var my_experience_option = '<option value="">Actively Playing</option>';
                 var my_skill_level_option = '<option value="">My skill level</option>';
                 var actively_playing_option = '<option value="">Actively playing</option>';
                 var prefer_player = '<option value="">Prefer a player with the same experience</option>';
@@ -1045,59 +1058,61 @@
 
         function sport_activity() {
 
-            var parameters = '';
-            var data = $('#sport-activity').serialize();
-            var data_specific_your_sport = $('#specific-your-sport').serialize();
-            var time_you_are_generally_available = $('#time-you-are-generally-available').serialize();
+            $('#sportSection').hide();
+            $('#sportSelectionSection').show();
 
-            var url = app_url + 'profilesportsselection?' + data + '&' + data_specific_your_sport + '&' + time_you_are_generally_available + '&loginuser=' + window.localStorage.getItem("loginuser") + '&sports_id=' + window.localStorage.getItem("sportsid");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
-            function onSuccessLogin(param) {
-                window.localStorage.setItem("sportsid", param.data.sportsIDlastInsertId);
-                if (param.data.message_status == false) {
+            // var parameters = '';
+            // var data = $('#sport-activity').serialize();
+            // var data_specific_your_sport = $('#specific-your-sport').serialize();
+            // var time_you_are_generally_available = $('#time-you-are-generally-available').serialize();
 
-                    $.each(param.data.errors, function (key, value) {
-                        showAlertMessage(type = 'error', String(value));
-                    });
+            // var url        = app_url+'profilesportsselection?'+data+'&'+data_specific_your_sport+'&'+time_you_are_generally_available+'&loginuser='+ window.localStorage.getItem("loginuser")+'&sports_id=' + window.localStorage.getItem("sportsid");
+            // var method     = 'POST';
+            // var param      = CallMethod(method, url, onSuccessLogin, parameters);
+            // function onSuccessLogin(param){
+            //     window.localStorage.setItem("sportsid" ,param.data.sportsIDlastInsertId );
+            //     if(param.data.message_status == false){
 
-                } else if (param.data.message_status == true) {
-                    $('#sportSection').hide();
-                    $('#sportSelectionSection').show();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
-                }
+            //         $.each(param.data.errors, function(key, value){
+            //             showAlertMessage(type = 'error', String(value));
+            //         });
 
-            }
+            //     }else if(param.data.message_status == true){
+            //         $('#sportSection').hide();
+            //         $('#sportSelectionSection').show();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
+            //     }
 
-
-
+            // }
         }
 
         function sport_activity_time() {
+            $('#partnerSection').show();
+            $('#sportSelectionSection').hide();
 
-            var parameters = '';
-            var data = $('#sport-activity').serialize();
-            var data_specific_your_sport = $('#specific-your-sport').serialize();
-            var time_you_are_generally_available = $('#time-you-are-generally-available').serialize();
+            // var parameters = '';
+            // var data = $('#sport-activity').serialize();
+            // var data_specific_your_sport = $('#specific-your-sport').serialize();
+            // var time_you_are_generally_available = $('#time-you-are-generally-available').serialize();
 
-            var url = app_url + 'profilesportsselection?' + data + '&' + data_specific_your_sport + '&' + time_you_are_generally_available + '&loginuser=' + window.localStorage.getItem("loginuser") + '&sports_id=' + window.localStorage.getItem("sportsid");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
-            function onSuccessLogin(param) {
-                window.localStorage.setItem("sportsid", param.data.sportsIDlastInsertId);
-                if (param.data.message_status == false) {
+            // var url = app_url + 'profilesportsselection?' + data + '&' + data_specific_your_sport + '&' + time_you_are_generally_available + '&loginuser=' + window.localStorage.getItem("loginuser") + '&sports_id=' + window.localStorage.getItem("sportsid");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
+            // function onSuccessLogin(param) {
+            //     window.localStorage.setItem("sportsid", param.data.sportsIDlastInsertId);
+            //     if (param.data.message_status == false) {
 
-                    $.each(param.data.errors, function (key, value) {
-                        showAlertMessage(type = 'error', String(value));
-                    });
+            //         $.each(param.data.errors, function (key, value) {
+            //             showAlertMessage(type = 'error', String(value));
+            //         });
 
-                } else if (param.data.message_status == true) {
-                    $('#partnerSection').show();
-                    $('#sportSelectionSection').hide();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
-                }
+            //     } else if (param.data.message_status == true) {
+            //         $('#partnerSection').show();
+            //         $('#sportSelectionSection').hide();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
+            //     }
 
-            }
+            // }
 
 
 
