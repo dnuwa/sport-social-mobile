@@ -138,7 +138,7 @@
                                 </div>
                             </div>
                         </form>
-                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad bg-white rounded m-3 p-2 hugemt"
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 bg-white rounded mx-auto p-2 hugemt"
                             id="verificationSection" style="display: none">
                             <div class="d-flex">
                                 <strong class="m-auto pt-4">Verify your email </strong>
@@ -177,7 +177,6 @@
                                     onclick="Verified();">Skip</a>
                             </div>
                         </div>
-                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
                     </div>
 
                 </div><!-- /intro -->
@@ -203,7 +202,7 @@
         function signUpStep1() {
 
             $('#emailPasswordSection').hide();
-            window.location.href = 'sign-up-step-2-a.html';
+            $('#verificationSection').show();
 
             // var parameters = '';
             // var data = $('#sign-up-step1-form').serialize();
@@ -239,6 +238,7 @@
         function Verified() {
             $('#verificationSection').hide();
             window.location.href = 'sign-up-step-2.html';
+            // window.location.href = 'sign-up-step-2-a.html';
         }
 
         function Back() {

@@ -39,7 +39,7 @@
                 <div id="gn-menu" class="gn-menu-main">
                     <div class="row ss-nav pad-0 mx-0">
                         <div class="nav-logo text-success w-100">
-                            <img src="./images/ss-logo.svg"/>
+                            <img src="./images/ss-logo.svg" />
                         </div>
                     </div>
                     <div class="signup-progress-bar">
@@ -74,97 +74,742 @@
                                 <form id="sport-activity" action="javascript:void(0);">
                                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
-                                        <div class="bg-white rounded block-area" id="sportSection">
+                                        <div class="bg-white rounded block-area p-3" id="sportSection">
                                             <div class="form-group mt-3">
-                                                <h4 class="text-center">Add My Sport</h4>
-                                                <p class="tiny-font">Add all your sports, you play one at time. <br>
-                                                    Please indicate if you are currently actively play thissport now or
-                                                    not. If you are active now please add your general availability. you
-                                                    can update itat any time.
-                                                </p>
+                                                <h4 class="text-center">Add My Sport Info</h4>
                                             </div>
-                                            <div class="panel-body">
-                                                <div class="form-row">
-                                                    <div class="form-group w-100 p-1 mb-0">
-                                                        <select class="form-control" name="sports"
-                                                            data-live-search="true" id="my-sports">
-                                                            <option value="">My Sport</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group w-100 p-1 mb-0">
-                                                    <select class="form-control" name="exp" data-live-search="true" id="my-experience">
-                                                        <option value="">Actively Playing</option>
-                                                        <option value="">Yes</option>
-                                                        <option value="">No</option>
-                                                    </select>
-                                                </div>
-                                                    <div class="form-group w-100 p-1 mb-0">
-                                                        <select class="form-control" name="skill"
-                                                            data-live-search="true" id="my-skill-level">
-                                                            <option value="">Select a Skill Level</option>
-                                                        </select>
-                                                    </div>
-                                                    <!-- <div class="form-group w-100 p-1 mb-0">
-                                                    <select class="form-control" name="actively_playing" data-live-search="true" id="actively-playing">
-                                                        <option value="">Actively playing</option>
-                                                    </select>
-                                                </div> -->
-                                                    <div class="form-group w-100 p-1 mb-0">
-                                                        <select class="form-control" name="reqexp" id="prefer-player">
-                                                            <option value="">Prefer a player at the same skill level
-                                                            </option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="form-group w-100 p-1 mb-0">
-                                                        <select class="form-control" name="reqcoach">
-                                                            <option value="">Recommend a Coach or Trainer</option>
-                                                            <option value="0">Select one</option>
-                                                            <option value="1">Select two</option>
-                                                            <option value="2">Select three</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                                        <a href="sign-up-step-2.html"
-                                                            class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                                            onclick="sport_activity();">Back</a>
-                                                        <button class="btn btn-danger fs-17 bold-text rounded-btn"
-                                                            onclick="sport_activity();">SAVE</button>
-                                                        <a href="#sportSelectionSection"
-                                                            class="btn btn-success fs-17 bold-text rounded-btn-nb"
-                                                            onclick="sport_activity();">Continue</a>
-                                                        <a href="#sportSelectionSection"
-                                                            class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                                            onclick="sport_activity();">Skip</a>
 
-                                                    </div>
+                                            <p id="confirm-last" class="d-none">
+                                                <span><strong>Congrats, your (Sport Name) information has
+                                                        saved.</strong>You can update the information anytime in your
+                                                    profile settings. You can now update your next sport </span>
+                                            </p>
+
+                                            <p class="mb-0"><strong class="h-text">Select Your Sport</strong></p>
+                                            <div class="d-flex border br-5 mb-2">
+                                                <button
+                                                    class="btn btn-sm btn-secondary sport-btn px-2 text-white d-flex m-2"><span
+                                                        class="my-auto mr-2">Golf</span>
+                                                    <i class="fa fa-circle my-auto" aria-hidden="true"></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-sm btn-secondary sport-btn px-2 text-white d-flex mr-2 my-2"><span
+                                                        class="my-auto mr-2">Pickleball</span>
+                                                    <i class="fa fa-circle my-auto" aria-hidden="true"></i>
+                                                </button>
+                                                <button
+                                                    class="btn btn-sm btn-secondary sport-btn px-2 text-white d-flex mr-2 my-2"><span
+                                                        class="my-auto mr-2">Tennis</span>
+                                                    <i class="fa fa-circle my-auto" aria-hidden="true"></i>
+                                                </button>
+                                            </div>
+
+                                            <div class="active-sport">
+                                                <div class="d-flex">
+                                                    <p class="my-auto"><strong>#1) Are you Active with (Sport)
+                                                            now?</strong>
+                                                    </p>
+                                                    <span class="d-flex mx-4">
+                                                        <input type="radio" class="form-control my-auto">
+                                                        <span class="my-auto ml-2"> Yes</span>
+                                                    </span>
+                                                    <span class="d-flex mx-4">
+                                                        <input type="radio" class="form-control my-auto">
+                                                        <span class="my-auto ml-2"> No</span>
+                                                    </span>
+                                                </div>
+                                                <p class="p-2"><small>
+                                                        If you are “Active” with this sport this indicates that you are
+                                                        or
+                                                        want to play the sport now. If you say “No” this indicates that
+                                                        you
+                                                        don’t want to play the sport right now due to other sport
+                                                        interests
+                                                        of the time of year. Only your Active sports with show on your
+                                                        Play
+                                                        Sports page. All of your sports will show in your profile.
+
+                                                    </small></p>
+
+                                                <div class="d-flex">
+                                                    <p class="my-auto"><strong>#2) What is your (Sport name) Skill
+                                                            Level</strong></p>
+                                                </div>
+
+                                                <div class="d-flex mb-3">
+                                                    <span class="d-flex mx-2">
+                                                        <input type="radio" class="form-control my-auto">
+                                                        <span class="my-auto ml-2"> Beginner</span>
+                                                    </span>
+                                                    <span class="d-flex mx-2">
+                                                        <input type="radio" class="form-control my-auto">
+                                                        <span class="my-auto ml-2"> Intermediate</span>
+                                                    </span>
+                                                    <span class="d-flex mx-2">
+                                                        <input type="radio" class="form-control my-auto">
+                                                        <span class="my-auto ml-2"> Advanced</span>
+                                                    </span>
+                                                    <span class="d-flex mx-2">
+                                                        <input type="radio" class="form-control my-auto">
+                                                        <span class="my-auto ml-2"> Export </span>
+                                                    </span>
+                                                    <span class="d-flex mx-2">
+                                                        <input type="radio" class="form-control my-auto">
+                                                        <span class="my-auto ml-2"> Pro</span>
+                                                    </span>
+                                                </div>
+                                                <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                                    <a href="sign-up-step-2.html"
+                                                        class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                        onclick="active_sport();">Back</a>
+
+                                                    <button
+                                                        class="btn btn-success fs-17 bold-text rounded-btn-nb"
+                                                        onclick="active_sport();">Continue</button>
+
+
                                                 </div>
                                             </div>
-                                        </div>
 
-                                        <div class="bg-white rounded block-area" id="sportSelectionSection"
-                                            style="display: none;">
-                                            <div class="form-group text-center mt-3">
-                                                <h5 id="current-sports-time" class="font-weight-bold">My Availability
-                                                    for (Name of Sport) </h5>
-                                                <p class="tiny-font">Select the days and time you are generally
-                                                    available for this sport. It can be updated anytime. </p>
+
+
+                                            <div class="visibility d-none">
+                                                <div class="my-2">
+                                                    <h5 class=""><strong>Visibility - Who can see my sport listing for
+                                                            this sport?</strong>
+                                                    </h5>
+                                                    <ul class="list-unstyled">
+                                                        <li class="d-flex">
+                                                            <div class="mr-2">
+                                                                <input type="radio" name="filter" id="" value="ss"
+                                                                    class="form-control">
+                                                            </div><span class="my-auto"> Everyone on Sport Social
+                                                            </span>
+                                                        </li>
+                                                        <li class="d-flex">
+                                                            <div class="mr-2">
+                                                                <input type="radio" name="filter" id="" value="audience"
+                                                                    class="form-control">
+                                                            </div><span class="my-auto"> Select Audience </span>
+                                                        </li>
+                                                    </ul>
+                                                    <div class="fitersWrapper d-none">
+                                                        <p class="text-center"><strong>Select who can see your (sport
+                                                                name) listing</strong></p>
+                                                        <div class="d-flex flex-wrap">
+                                                            <div
+                                                                class="w-33 px-1 mb-2 text-center skillFilterContainer">
+                                                                <label for="" class="mb-0"><strong>Skill
+                                                                        Level</strong></label>
+                                                                <div class="d-flex">
+                                                                    <div class="btn-group w-100 drop">
+                                                                        <button type="button"
+                                                                            class="btn btn-default border-grey text-secondary bg-white w-100 p-0 skillText">
+                                                                            Select
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="btn bg-dark- dropdown-toggle text-white dropdown-toggle-split"
+                                                                            data-toggle="dropdown">
+                                                                            <span class="caret"></span>
+                                                                        </button>
+                                                                        <div class="dropdown-menu px-0 left">
+                                                                            <ul class="px-0 skillLevelsOptions">
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setskillText('Beginner')">
+                                                                                    <input type="checkbox">
+                                                                                    Beginner
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setskillText('Intermediate')">
+                                                                                    <input id="2" type="checkbox">
+                                                                                    Intermediate
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setskillText('Advanced')">
+                                                                                    <input id="3" type="checkbox">
+                                                                                    Advanced
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setskillText('Expert')">
+                                                                                    <input id="4" type="checkbox">
+                                                                                    Expert
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setskillText('Coach')">
+                                                                                    <input id="5" type="checkbox">
+                                                                                    Coach
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="w-33 px-1 mb-2 text-center">
+                                                                <label for=""
+                                                                    class="mb-0"><strong>Distance</strong></label>
+                                                                <div class="d-flex">
+                                                                    <div class="btn-group w-100 drop">
+                                                                        <button type="button"
+                                                                            class="btn btn-default border-grey bg-white text-secondary w-100 p-0 selectedDistance">
+                                                                            Select
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="btn bg-dark- dropdown-toggle text-white dropdown-toggle-split"
+                                                                            data-toggle="dropdown">
+                                                                            <span class="caret"></span>
+                                                                        </button>
+                                                                        <div class="dropdown-menu px-0 left">
+                                                                            <ul class="px-0 skillLevelsOptions">
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSlectedDistance('1 Mile')">
+                                                                                    <input type="checkbox">
+                                                                                    1 Mile
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSlectedDistance('5 Miles')">
+                                                                                    <input type="checkbox">
+                                                                                    5 Miles
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSlectedDistance('10 Miles')">
+                                                                                    <input type="checkbox">
+                                                                                    10 Miles
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSlectedDistance('20 Miles')">
+                                                                                    <input type="checkbox">
+                                                                                    20 Miles
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSlectedDistance('50 Miles')">
+                                                                                    <input type="checkbox">
+                                                                                    50 Miles
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="w-33 px-1 mb-2 text-center">
+                                                                <label for=""
+                                                                    class="mb-0"><strong>Connections</strong></label>
+                                                                <div class="d-flex">
+                                                                    <div class="btn-group w-100 drop">
+                                                                        <button type="button"
+                                                                            class="btn btn-default border-grey bg-white w-100 text-secondary p-0 selectedConnections">
+                                                                            Select
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="btn bg-dark- dropdown-toggle text-white dropdown-toggle-split"
+                                                                            data-toggle="dropdown">
+                                                                            <span class="caret"></span>
+                                                                        </button>
+                                                                        <div class="dropdown-menu px-0 left">
+                                                                            <ul class="px-0 connectionsOptions">
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSelectedConnections('Only My Sport Contacts')">
+                                                                                    <input type="checkbox"> Only My
+                                                                                    Sport Contacts
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSelectedConnections('My Gym')">
+                                                                                    <input type="checkbox"> My Gym
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSelectedConnections('My Sport Clubs')">
+                                                                                    <input type="checkbox"> My Sport
+                                                                                    Clubs
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSelectedConnections('My Sport Leagues')">
+                                                                                    <input type="checkbox"> My Sport
+                                                                                    Leagues
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSelectedConnections('My Colleges')">
+                                                                                    <input type="checkbox"> My Colleges
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSelectedConnections('My High School')">
+                                                                                    <input type="checkbox">My High
+                                                                                    School
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSelectedConnections('My Work')">
+                                                                                    <input type="checkbox"> My Work
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setSelectedConnections('Mutual Connections')">
+                                                                                    <input type="checkbox"> Mutual
+                                                                                    Connections
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="w-33 px-1 mb-2 text-center">
+                                                                <label for="" class="mb-0"><strong>Age</strong></label>
+                                                                <div class="d-flex">
+                                                                    <div class="btn-group w-100 drop">
+                                                                        <button type="button"
+                                                                            class="btn btn-default border-grey bg-white w-100 text-secondary p-0 preferredAgeRangeText">
+                                                                            Select
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="btn bg-dark- dropdown-toggle text-white dropdown-toggle-split"
+                                                                            data-toggle="dropdown">
+                                                                            <span class="caret"></span>
+                                                                        </button>
+                                                                        <div class="dropdown-menu px-0 left">
+                                                                            <div class="text-center">
+                                                                                <div>Select Age Range</div>
+                                                                                <div>or Add Below</div>
+                                                                            </div>
+                                                                            <div class="d-flex w-100 p-3">
+                                                                                <span class="w-50"><input type="text"
+                                                                                        class="form-control"></span>
+                                                                                <div class="px-3">to</div>
+                                                                                <span class="w-50"><input type="text"
+                                                                                        class="form-control"></span>
+                                                                            </div>
+                                                                            <div class="pt-2 px-4">
+                                                                                <div class="px-1 text-dark">
+                                                                                    <a tabIndex="-1" class="text-dark"
+                                                                                        onclick="setAgesText('13-16')">
+                                                                                        <div
+                                                                                            class="form-check customFormCheck">
+                                                                                            <input id="5"
+                                                                                                type="checkbox">
+                                                                                            <label for="">
+                                                                                                <span>13 - 16</span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="px-1 text-dark">
+                                                                                    <a tabIndex="-1" class="text-dark"
+                                                                                        onclick="setAgesText('17-23')">
+                                                                                        <div
+                                                                                            class="form-check customFormCheck">
+                                                                                            <input id="6-12"
+                                                                                                type="checkbox">
+                                                                                            <label for="">
+                                                                                                <span>17 - 23</span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="px-1 text-dark">
+                                                                                    <a tabIndex="-1" class="text-dark"
+                                                                                        onclick="setAgesText('24-30')">
+                                                                                        <div
+                                                                                            class="form-check customFormCheck">
+                                                                                            <input id="13-20"
+                                                                                                type="checkbox">
+                                                                                            <label for="">
+                                                                                                <span>24 - 30</span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="px-1 text-dark">
+                                                                                    <a tabIndex="-1" class="text-dark"
+                                                                                        onclick="setAgesText('31-40')">
+                                                                                        <div
+                                                                                            class="form-check customFormCheck">
+                                                                                            <input id="21-28"
+                                                                                                type="checkbox">
+                                                                                            <label for="">
+                                                                                                <span>31 - 40</span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="px-1 text-dark">
+                                                                                    <a tabIndex="-1" class="text-dark"
+                                                                                        onclick="setAgesText('41-50')">
+                                                                                        <div
+                                                                                            class="form-check customFormCheck">
+                                                                                            <input id="21-28"
+                                                                                                type="checkbox">
+                                                                                            <label for="">
+                                                                                                <span>41 - 50</span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="px-1 text-dark">
+                                                                                    <a tabIndex="-1" class="text-dark"
+                                                                                        onclick="setAgesText('51-60')">
+                                                                                        <div
+                                                                                            class="form-check customFormCheck">
+                                                                                            <input id="21-28"
+                                                                                                type="checkbox">
+                                                                                            <label for="">
+                                                                                                <span>51 - 60</span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="px-1 text-dark">
+                                                                                    <a tabIndex="-1" class="text-dark"
+                                                                                        onclick="setAgesText('61-70')">
+                                                                                        <div
+                                                                                            class="form-check customFormCheck">
+                                                                                            <input id="21-28"
+                                                                                                type="checkbox">
+                                                                                            <label for="">
+                                                                                                <span>61 - 70</span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="px-1 text-dark">
+                                                                                    <a tabIndex="-1" class="text-dark"
+                                                                                        onclick="setAgesText('70>')">
+                                                                                        <div
+                                                                                            class="form-check customFormCheck">
+                                                                                            <input id="21-28"
+                                                                                                type="checkbox">
+                                                                                            <label for="">
+                                                                                                <span>Over 70</span>
+                                                                                            </label>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="d-flex justify-content-center">
+                                                                                <button class="btn btn-success"
+                                                                                    onclick="confirmAgesText()">
+                                                                                    Confirm
+                                                                                </button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="w-33 px-1 mb-2 text-center">
+                                                                <label for=""
+                                                                    class="mb-0"><strong>Gender</strong></label>
+                                                                <div class="d-flex">
+                                                                    <div class="btn-group w-100 drop">
+                                                                        <button type="button"
+                                                                            class="btn btn-default border-grey bg-white w-100 text-secondary p-0 selectedGender">
+                                                                            Select
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="btn bg-dark- dropdown-toggle text-white dropdown-toggle-split"
+                                                                            data-toggle="dropdown">
+                                                                            <span class="caret"></span>
+                                                                        </button>
+                                                                        <div class="dropdown-menu px-0 left">
+                                                                            <ul class="px-0 genderOptions">
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setGender('Men Only')">
+                                                                                    <input type="checkbox"> Men Only
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setGender('Female Only')">
+                                                                                    <input type="checkbox"> Female Only
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setGender('Both')">
+                                                                                    <input type="checkbox"> Both
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="w-33 px-1 mb-2 text-center">
+                                                                <label for=""
+                                                                    class="mb-0"><strong>Status</strong></label>
+                                                                <div class="d-flex">
+                                                                    <div class="btn-group w-100 drop">
+                                                                        <button type="button"
+                                                                            class="btn btn-default border-grey bg-white w-100 text-secondary p-0 selectedStatus">
+                                                                            Select
+                                                                        </button>
+                                                                        <button type="button"
+                                                                            class="btn bg-dark- dropdown-toggle text-white dropdown-toggle-split"
+                                                                            data-toggle="dropdown">
+                                                                            <span class="caret"></span>
+                                                                        </button>
+                                                                        <div class="dropdown-menu px-0 left">
+                                                                            <ul class="px-0 relationOptions">
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setStatus('Any status')">
+                                                                                    <input type="checkbox"> Any status
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setStatus('Single')">
+                                                                                    <input type="checkbox"> Single
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setStatus('Married')">
+                                                                                    <input type="checkbox"> Married
+                                                                                </li>
+                                                                                <li class="dropdown-item px-2"
+                                                                                    onclick="setStatus('Divorced')">
+                                                                                    <input type="checkbox"> Divorced
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <p class="text-center text-danger"><small>You can update these
+                                                                selections anytime in your sport settings
+                                                            </small></p>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                                    <button
+                                                        class="btn btn-default fs-17 bold-text rounded-btn-nb bg-transparent text-primary border-0"
+                                                        onclick="sport_activity_back();">Back</button>
+                                                    <!-- <button class="btn btn-danger fs-17 bold-text rounded-btn"
+                                                        onclick="sport_activity();">SAVE</button> -->
+                                                    <button
+                                                        class="btn btn-success fs-17 bold-text rounded-btn-nb"
+                                                        onclick="sport_activity();">Continue</button>
+                                                    <!-- <a href="#sportSelectionSection"
+                                                        class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                        onclick="sport_activity();">Skip</a> -->
+
+                                                </div>
                                             </div>
-                                            <form id="time-you-are-generally-available" action="javascript:void(0);">
-                                                <div>
-                                                    <div class="d-flex">
-                                                        <div class="short-wd"></div>
-                                                        <div class="d-flex justify-content-between long-wd">
-                                                            <div class="p-2">Mo</div>
-                                                            <div class="p-2">Tu</div>
-                                                            <div class="p-2">We</div>
-                                                            <div class="p-2">Th</div>
-                                                            <div class="p-2">Fr</div>
-                                                            <div class="p-2">Sa</div>
-                                                            <div class="p-2">Su</div>
+
+                                            <div id="sportSelectionSection" class="availability d-none">
+                                                <div class="form-group text-center mt-3">
+                                                    <h5 id="current-sports-time" class="font-weight-bold">My
+                                                        Availability
+                                                        for (Name of Sport) </h5>
+                                                    <p class="tiny-font">Select the days and time you are generally
+                                                        available for this sport. It can be updated anytime. </p>
+                                                </div>
+                                                <form id="time-you-are-generally-available"
+                                                    action="javascript:void(0);">
+                                                    <div>
+                                                        <div class="d-flex">
+                                                            <div class="short-wd"></div>
+                                                            <div class="d-flex justify-content-between long-wd">
+                                                                <div class="p-2">Mo</div>
+                                                                <div class="p-2">Tu</div>
+                                                                <div class="p-2">We</div>
+                                                                <div class="p-2">Th</div>
+                                                                <div class="p-2">Fr</div>
+                                                                <div class="p-2">Sa</div>
+                                                                <div class="p-2">Su</div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div class="short-wd">
+                                                                <div>
+                                                                    <small>
+                                                                        <b>Early Morning</b>
+                                                                    </small>
+                                                                </div>
+                                                                <div>
+                                                                    <small>(5a-9a)</small>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex bg-grey long-wd">
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="mon[early_morning]"
+                                                                        value="5a-9a" id="mon-early-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="tue[early_morning]"
+                                                                        value="5a-9a" id="tue-early-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="wed[early_morning]"
+                                                                        value="5a-9a" id="wed-early-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="thr[early_morning]"
+                                                                        value="5a-9a" id="thr-early-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="fri[early_morning]"
+                                                                        value="5a-9a" id="fri-early-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="sat[early_morning]"
+                                                                        value="5a-9a" id="sat-early-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="sun[early_morning]"
+                                                                        value="5a-9a" id="sun-early-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div class="short-wd">
+                                                                <div>
+                                                                    <small>
+                                                                        <b> Morning</b>
+                                                                    </small>
+                                                                </div>
+                                                                <div>
+                                                                    <small>(9a-12p)</small>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex bg-grey long-wd">
+                                                                <div class="p-2 m-auto m-auto">
+                                                                    <input type="checkbox" name="mon[morning]"
+                                                                        value="9a-12p" id="mon-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="tue[morning]"
+                                                                        value="9a-12p" id="tue-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="wed[morning]"
+                                                                        value="9a-12p" id="wed-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="thr[morning]"
+                                                                        value="9a-12p" id="thr-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="fri[morning]"
+                                                                        value="9a-12p" id="fri-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="sat[morning]"
+                                                                        value="9a-12p" id="sat-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="sun[morning]"
+                                                                        value="9a-12p" id="sun-morning"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div class="short-wd">
+                                                                <div>
+                                                                    <small>
+                                                                        <b>Afternoon</b>
+                                                                    </small>
+                                                                </div>
+                                                                <div>
+                                                                    <small>(12p-5p)</small>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex bg-grey long-wd">
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="mon[afternoon]"
+                                                                        value="12p-5p" id="mon-afternoon"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="tue[afternoon]"
+                                                                        value="12p-5p" id="tue-afternoon"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="wed[afternoon]"
+                                                                        value="12p-5p" id="wed-afternoon"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="tue[afternoon]"
+                                                                        value="12p-5p" id="tue-afternoon"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="fri[afternoon]"
+                                                                        value="12p-5p" id="fri-afternoon"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="sat[afternoon]"
+                                                                        value="12p-5p" id="sat-afternoon"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="sun[afternoon]"
+                                                                        value="12p-5p" id="sun-afternoon"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div class="short-wd">
+                                                                <div>
+                                                                    <small>
+                                                                        <b>Evening</b>
+                                                                    </small>
+                                                                </div>
+                                                                <div>
+                                                                    <small>(5p-10p)</small>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-flex bg-grey long-wd">
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="mon[evening]"
+                                                                        value="5p-10p" id="mon-evening"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="tue[evening]"
+                                                                        value="5p-10p" id="tue-evening"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="wed[evening]"
+                                                                        value="5p-10p" id="wed-evening"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="thr[evening]"
+                                                                        value="5p-10p" id="thr-evening"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="fri[evening]"
+                                                                        value="5p-10p" id="fri-evening"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="sat[evening]"
+                                                                        value="5p-10p" id="sat-evening"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                                <div class="p-2 m-auto">
+                                                                    <input type="checkbox" name="sun[evening]"
+                                                                        value="5p-10p" id="sun-evening"
+                                                                        class="checkbox-rounded">
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
+                                                    <!-- <div class="panel-body">
                                                     <div class="d-flex">
-                                                        <div class="short-wd">
+                                                    <span class="pr-3">
+                                                        <div class="text-center">
                                                             <div>
                                                                 <small>
                                                                     <b>Early Morning</b>
@@ -173,47 +818,8 @@
                                                             <div>
                                                                 <small>(5a-9a)</small>
                                                             </div>
-                                                        </div>
-                                                        <div class="d-flex bg-grey long-wd">
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="mon[early_morning]"
-                                                                    value="5a-9a" id="mon-early-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="tue[early_morning]"
-                                                                    value="5a-9a" id="tue-early-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="wed[early_morning]"
-                                                                    value="5a-9a" id="wed-early-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="thr[early_morning]"
-                                                                    value="5a-9a" id="thr-early-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="fri[early_morning]"
-                                                                    value="5a-9a" id="fri-early-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="sat[early_morning]"
-                                                                    value="5a-9a" id="sat-early-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="sun[early_morning]"
-                                                                    value="5a-9a" id="sun-early-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex">
-                                                        <div class="short-wd">
+                                                        </div><br>
+                                                        <div class="text-center">
                                                             <div>
                                                                 <small>
                                                                     <b> Morning</b>
@@ -222,47 +828,8 @@
                                                             <div>
                                                                 <small>(9a-12p)</small>
                                                             </div>
-                                                        </div>
-                                                        <div class="d-flex bg-grey long-wd">
-                                                            <div class="p-2 m-auto m-auto">
-                                                                <input type="checkbox" name="mon[morning]"
-                                                                    value="9a-12p" id="mon-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="tue[morning]"
-                                                                    value="9a-12p" id="tue-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="wed[morning]"
-                                                                    value="9a-12p" id="wed-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="thr[morning]"
-                                                                    value="9a-12p" id="thr-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="fri[morning]"
-                                                                    value="9a-12p" id="fri-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="sat[morning]"
-                                                                    value="9a-12p" id="sat-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="sun[morning]"
-                                                                    value="9a-12p" id="sun-morning"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex">
-                                                        <div class="short-wd">
+                                                        </div><br>
+                                                        <div class="text-center">
                                                             <div>
                                                                 <small>
                                                                     <b>Afternoon</b>
@@ -271,47 +838,8 @@
                                                             <div>
                                                                 <small>(12p-5p)</small>
                                                             </div>
-                                                        </div>
-                                                        <div class="d-flex bg-grey long-wd">
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="mon[afternoon]"
-                                                                    value="12p-5p" id="mon-afternoon"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="tue[afternoon]"
-                                                                    value="12p-5p" id="tue-afternoon"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="wed[afternoon]"
-                                                                    value="12p-5p" id="wed-afternoon"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="tue[afternoon]"
-                                                                    value="12p-5p" id="tue-afternoon"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="fri[afternoon]"
-                                                                    value="12p-5p" id="fri-afternoon"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="sat[afternoon]"
-                                                                    value="12p-5p" id="sat-afternoon"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="sun[afternoon]"
-                                                                    value="12p-5p" id="sun-afternoon"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="d-flex">
-                                                        <div class="short-wd">
+                                                        </div><br>
+                                                        <div class="text-center">
                                                             <div>
                                                                 <small>
                                                                     <b>Evening</b>
@@ -321,209 +849,195 @@
                                                                 <small>(5p-10p)</small>
                                                             </div>
                                                         </div>
-                                                        <div class="d-flex bg-grey long-wd">
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="mon[evening]"
-                                                                    value="5p-10p" id="mon-evening"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="tue[evening]"
-                                                                    value="5p-10p" id="tue-evening"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="wed[evening]"
-                                                                    value="5p-10p" id="wed-evening"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="thr[evening]"
-                                                                    value="5p-10p" id="thr-evening"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="fri[evening]"
-                                                                    value="5p-10p" id="fri-evening"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="sat[evening]"
-                                                                    value="5p-10p" id="sat-evening"
-                                                                    class="checkbox-rounded">
-                                                            </div>
-                                                            <div class="p-2 m-auto">
-                                                                <input type="checkbox" name="sun[evening]"
-                                                                    value="5p-10p" id="sun-evening"
-                                                                    class="checkbox-rounded">
-                                                            </div>
+                                                    </span>
+                                                    <span class="p-2 bg-grey">
+                                                        <div class="chk">
+                                                            <div><b>Mo</b></div>
+                                                            <input type="checkbox" name="mon[early_morning]" value="5a-9a" id="mon-early-morning" class="checkbox-rounded">
                                                         </div>
-                                                    </div>
-                                                </div>
-                                                <!-- <div class="panel-body">
-                                                <div class="d-flex">
-												<span class="pr-3">
-													<div class="text-center">
-														<div>
-															<small>
-																<b>Early Morning</b>
-															</small>
-														</div>
-														<div>
-															<small>(5a-9a)</small>
-														</div>
-													</div><br>
-													<div class="text-center">
-														<div>
-															<small>
-																<b> Morning</b>
-															</small>
-														</div>
-														<div>
-															<small>(9a-12p)</small>
-														</div>
-													</div><br>
-													<div class="text-center">
-														<div>
-															<small>
-																<b>Afternoon</b>
-															</small>
-														</div>
-														<div>
-															<small>(12p-5p)</small>
-														</div>
-													</div><br>
-													<div class="text-center">
-														<div>
-															<small>
-																<b>Evening</b>
-															</small>
-														</div>
-														<div>
-															<small>(5p-10p)</small>
-														</div>
-													</div>
-												</span>
-                                                <span class="p-2 bg-grey">
-													<div class="chk">
-														<div><b>Mo</b></div>
-														<input type="checkbox" name="mon[early_morning]" value="5a-9a" id="mon-early-morning" class="checkbox-rounded">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="mon[morning]" value="9a-12p" id="mon-morning" class="checkbox-rounded mt-4">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="mon[afternoon]" value="12p-5p" id="mon-afternoon" class="checkbox-rounded mt-5">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="mon[evening]" value="5p-10p" id="mon-evening" class="checkbox-rounded mt-4">
-													</div>
-												</span>
-                                                    <span class="p-2 bg-grey">
-													<div class="chk">
-														<div><b>Tu</b></div>
-														<input type="checkbox" name="tue[early_morning]" value="5a-9a" id="tue-early-morning"  class="checkbox-rounded">
-													</div>
-													<div class="chk bg-grey">
-														<input type="checkbox" name="tue[morning]" value="9a-12p" id="tue-morning" class="checkbox-rounded mt-4">
-													</div>
-													<div class="chk bg-grey">
-														<input type="checkbox" name="tue[afternoon]"  value="12p-5p" id="tue-afternoon" class="checkbox-rounded mt-5">
-													</div>
-													<div class="chk bg-grey">
-														<input type="checkbox" name="tue[evening]" value="5p-10p" id="tue-evening" class="checkbox-rounded mt-4">
-													</div>
-												</span>
-                                                    <span class="p-2 bg-grey">
-													<div class="chk">
-														<div><b>We</b></div>
-														<input type="checkbox" name="wed[early_morning]" value="5a-9a" id="wed-early-morning" class="checkbox-rounded">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="wed[morning]"  value="9a-12p" id="wed-morning" class="checkbox-rounded mt-4">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="wed[afternoon]" value="12p-5p" id="wed-afternoon" class="checkbox-rounded mt-5">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="wed[evening]" value="5p-10p" id="wed-evening" class="checkbox-rounded mt-4">
-													</div>
-												</span>
-                                                    <span class="p-2 bg-grey">
-													<div class="chk">
-														<div><b>Th</b></div>
-														<input type="checkbox" name="thr[early_morning]"  value="5a-9a" id="thr-early-morning" class="checkbox-rounded">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="thr[morning]" value="9a-12p" id="thr-morning" class="checkbox-rounded mt-4">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="thr[afternoon]" value="12p-5p" id="thr-afternoon" class="checkbox-rounded mt-5">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="thr[evening]" value="5p-10p" id="thr-evening" class="checkbox-rounded mt-4">
-													</div>
-												</span>
-                                                    <span class="p-2 bg-grey">
-													<div class="chk">
-														<div><b>Fr</b></div>
-														<input type="checkbox" name="fri[early_morning]" value="5a-9a" id="fri-early-morning" class="checkbox-rounded">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="fri[morning]" value="9a-12p" id="fri-morning" class="checkbox-rounded mt-4">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="fri[afternoon]" value="12p-5p" id="fri-afternoon" class="checkbox-rounded mt-5">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="fri[evening]" value="5p-10p" id="fri-evening" class="checkbox-rounded mt-4">
-													</div>
-												</span>
-                                                    <span class="p-2 bg-grey">
-													<div class="chk">
-														<div><b>Sa</b></div>
-														<input type="checkbox" name="sat[early_morning]" value="5a-9a" id="sat-early-morning" class="checkbox-rounded">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="sat[morning]" value="9a-12p" id="sat-morning" class="checkbox-rounded mt-4">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="sat[afternoon]" value="12p-5p" id="sat-afternoon" class="checkbox-rounded mt-5">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="sat[evening]" value="5p-10p" id="sat-evening" class="checkbox-rounded mt-4">
-													</div>
-												</span>
-                                                    <span class="p-2 bg-grey">
-													<div class="chk">
-														<div><b>Su</b></div>
-														<input type="checkbox" name="sun[early_morning]" value="5a-9a" id="sun-early-morning" class="checkbox-rounded">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="sun[morning]" value="9a-12p" id="sun-morning" class="checkbox-rounded mt-4">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="sun[afternoon]" value="12p-5p" id="sun-afternoon" class="checkbox-rounded mt-5">
-													</div>
-													<div class="chk">
-														<input type="checkbox" name="sun[evening]" value="5p-10p" id="sun-evening" class="checkbox-rounded mt-4">
-													</div>
-												</span>
-                                                </div> -->
-                                                <div class="d-flex justify-content-around px-5 py-2 mt-4 w-100">
-                                                    <a href="#sportSection"
-                                                        class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                                        onclick="sport_activity_time_back();">Back</a>
-                                                    <button class="btn btn-danger fs-17 bold-text rounded-btn"
-                                                        onclick="sport_activity_time();">SAVE</button>
-                                                    <a href="#partnerSection"
-                                                        class="btn btn-success fs-17 bold-text rounded-btn-nb"
-                                                        onclick="sport_activity_time();">Continue</a>
-                                                    <a href="#partnerSection"
-                                                        class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                                        onclick="sport_activity_time();">Skip</a>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="mon[morning]" value="9a-12p" id="mon-morning" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="mon[afternoon]" value="12p-5p" id="mon-afternoon" class="checkbox-rounded mt-5">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="mon[evening]" value="5p-10p" id="mon-evening" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                    </span>
+                                                        <span class="p-2 bg-grey">
+                                                        <div class="chk">
+                                                            <div><b>Tu</b></div>
+                                                            <input type="checkbox" name="tue[early_morning]" value="5a-9a" id="tue-early-morning"  class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="chk bg-grey">
+                                                            <input type="checkbox" name="tue[morning]" value="9a-12p" id="tue-morning" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                        <div class="chk bg-grey">
+                                                            <input type="checkbox" name="tue[afternoon]"  value="12p-5p" id="tue-afternoon" class="checkbox-rounded mt-5">
+                                                        </div>
+                                                        <div class="chk bg-grey">
+                                                            <input type="checkbox" name="tue[evening]" value="5p-10p" id="tue-evening" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                    </span>
+                                                        <span class="p-2 bg-grey">
+                                                        <div class="chk">
+                                                            <div><b>We</b></div>
+                                                            <input type="checkbox" name="wed[early_morning]" value="5a-9a" id="wed-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="wed[morning]"  value="9a-12p" id="wed-morning" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="wed[afternoon]" value="12p-5p" id="wed-afternoon" class="checkbox-rounded mt-5">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="wed[evening]" value="5p-10p" id="wed-evening" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                    </span>
+                                                        <span class="p-2 bg-grey">
+                                                        <div class="chk">
+                                                            <div><b>Th</b></div>
+                                                            <input type="checkbox" name="thr[early_morning]"  value="5a-9a" id="thr-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="thr[morning]" value="9a-12p" id="thr-morning" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="thr[afternoon]" value="12p-5p" id="thr-afternoon" class="checkbox-rounded mt-5">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="thr[evening]" value="5p-10p" id="thr-evening" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                    </span>
+                                                        <span class="p-2 bg-grey">
+                                                        <div class="chk">
+                                                            <div><b>Fr</b></div>
+                                                            <input type="checkbox" name="fri[early_morning]" value="5a-9a" id="fri-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="fri[morning]" value="9a-12p" id="fri-morning" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="fri[afternoon]" value="12p-5p" id="fri-afternoon" class="checkbox-rounded mt-5">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="fri[evening]" value="5p-10p" id="fri-evening" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                    </span>
+                                                        <span class="p-2 bg-grey">
+                                                        <div class="chk">
+                                                            <div><b>Sa</b></div>
+                                                            <input type="checkbox" name="sat[early_morning]" value="5a-9a" id="sat-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="sat[morning]" value="9a-12p" id="sat-morning" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="sat[afternoon]" value="12p-5p" id="sat-afternoon" class="checkbox-rounded mt-5">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="sat[evening]" value="5p-10p" id="sat-evening" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                    </span>
+                                                        <span class="p-2 bg-grey">
+                                                        <div class="chk">
+                                                            <div><b>Su</b></div>
+                                                            <input type="checkbox" name="sun[early_morning]" value="5a-9a" id="sun-early-morning" class="checkbox-rounded">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="sun[morning]" value="9a-12p" id="sun-morning" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="sun[afternoon]" value="12p-5p" id="sun-afternoon" class="checkbox-rounded mt-5">
+                                                        </div>
+                                                        <div class="chk">
+                                                            <input type="checkbox" name="sun[evening]" value="5p-10p" id="sun-evening" class="checkbox-rounded mt-4">
+                                                        </div>
+                                                    </span>
+                                                    </div> -->
+                                                    <div class="d-flex justify-content-around px-5 py-2 mt-4 w-100">
+                                                        <button
+                                                            class="btn btn-default fs-17 bold-text text-primary bg-transparent border-0"
+                                                            onclick="sport_activity_time_back();">Back</button>
+                                                        <button
+                                                            class="btn btn-success fs-17 bold-text rounded-btn-nb"
+                                                            onclick="sport_activity_time();">Continue</button>
+                                                       
 
+                                                    </div>
+                                                </form>
+                                            </div>
+
+                                            <div class="open-invite text-center d-none">
+                                                <h5><strong>Post an open invite for this sport</strong></h5>
+                                                <p>To quickly connect with others that play this sport, post in open
+                                                    invites to play invite to play, practice or compete. you can select
+                                                    how long it posts for and any specific audience preference. </p>
+                                                <button class="btn btn-primary br-5 px-4 my-2 btn-sm">Post an Open
+                                                    Invite</button>
+                                                <p>You can also post an open invite later once you've completed your
+                                                    sign up</p>
+                                                <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                                    <button
+                                                        class="btn bg-transparent text-primary fs-17 bold-text border-0"
+                                                        onclick="openInvitesBack();">Back</button>
+                                                    <a href="#sportSelectionSection"
+                                                        class="btn btn-success fs-17 bold-text rounded-btn-nb"
+                                                        onclick="openInvitesNext();">Continue</a>
                                                 </div>
+                                            </div>
+
+                                            <div class="summery d-none">
+                                                
+                                                    <div class="d-flex">
+                                                        <p class="my-auto"><strong>#1) Are you Active with (Sport)
+                                                                now?</strong>
+                                                        </p>
+                                                        <span class="d-flex mx-4">
+                                                            <input type="radio" class="form-control my-auto">
+                                                            <span class="my-auto ml-2"> Yes</span>
+                                                        </span>
+                                                        <span class="d-flex mx-4">
+                                                            <input type="radio" class="form-control my-auto">
+                                                            <span class="my-auto ml-2"> No</span>
+                                                        </span>
+                                                    </div>
+
+
+                                                    <div class="d-flex">
+                                                        <p class="my-auto"><strong>#2) What is your (Sport name) Skill
+                                                                Level?</strong></p>
+                                                    </div>
+
+                                                    <div class="d-flex mb-3">
+                                                        <span class="d-flex mx-2">
+                                                            <input type="radio" class="form-control my-auto">
+                                                            <span class="my-auto ml-2"> Beginner</span>
+                                                        </span>
+                                                        <span class="d-flex mx-2">
+                                                            <input type="radio" class="form-control my-auto">
+                                                            <span class="my-auto ml-2"> Intermediate</span>
+                                                        </span>
+                                                        <span class="d-flex mx-2">
+                                                            <input type="radio" class="form-control my-auto">
+                                                            <span class="my-auto ml-2"> Advanced</span>
+                                                        </span>
+                                                        <span class="d-flex mx-2">
+                                                            <input type="radio" class="form-control my-auto">
+                                                            <span class="my-auto ml-2"> Export </span>
+                                                        </span>
+                                                        <span class="d-flex mx-2">
+                                                            <input type="radio" class="form-control my-auto">
+                                                            <span class="my-auto ml-2"> Pro</span>
+                                                        </span>
+                                                    </div>
+                                                    <div class="d-flex justify-content-end px-5 py-2 w-100">
+                                                        <button>Go To My Account</button>
+                                                    </div>
+                                                
+                                            </div>
+
                                         </div>
                                 </form>
                             </div>
@@ -1054,69 +1568,62 @@
 
         });
 
+        function active_sport() {
+            $('.active-sport').removeClass('d-block');
+            $('.active-sport').addClass('d-none');
+            $('.visibility').removeClass('d-none');
+            $('.visibility').addClass('d-block');
+        }
+
+        function sport_activity_back() {
+            $('.visibility').removeClass('d-block');
+            $('.visibility').addClass('d-none');
+            $('.active-sport').removeClass('d-none');
+            $('.active-sport').addClass('d-block');
+
+        }
 
 
         function sport_activity() {
-
-            $('#sportSection').hide();
-            $('#sportSelectionSection').show();
-
-            // var parameters = '';
-            // var data = $('#sport-activity').serialize();
-            // var data_specific_your_sport = $('#specific-your-sport').serialize();
-            // var time_you_are_generally_available = $('#time-you-are-generally-available').serialize();
-
-            // var url        = app_url+'profilesportsselection?'+data+'&'+data_specific_your_sport+'&'+time_you_are_generally_available+'&loginuser='+ window.localStorage.getItem("loginuser")+'&sports_id=' + window.localStorage.getItem("sportsid");
-            // var method     = 'POST';
-            // var param      = CallMethod(method, url, onSuccessLogin, parameters);
-            // function onSuccessLogin(param){
-            //     window.localStorage.setItem("sportsid" ,param.data.sportsIDlastInsertId );
-            //     if(param.data.message_status == false){
-
-            //         $.each(param.data.errors, function(key, value){
-            //             showAlertMessage(type = 'error', String(value));
-            //         });
-
-            //     }else if(param.data.message_status == true){
-            //         $('#sportSection').hide();
-            //         $('#sportSelectionSection').show();
-            //         showAlertMessage(type = 'success', "Profile update successfully!");
-            //     }
-
-            // }
+            $('.visibility').removeClass('d-block');
+            $('.visibility').addClass('d-none');
+            $('.availability').removeClass('d-none');
+            $('.availability').addClass('d-block');
         }
 
         function sport_activity_time() {
-            $('#partnerSection').show();
-            $('#sportSelectionSection').hide();
-
-            // var parameters = '';
-            // var data = $('#sport-activity').serialize();
-            // var data_specific_your_sport = $('#specific-your-sport').serialize();
-            // var time_you_are_generally_available = $('#time-you-are-generally-available').serialize();
-
-            // var url = app_url + 'profilesportsselection?' + data + '&' + data_specific_your_sport + '&' + time_you_are_generally_available + '&loginuser=' + window.localStorage.getItem("loginuser") + '&sports_id=' + window.localStorage.getItem("sportsid");
-            // var method = 'POST';
-            // var param = CallMethod(method, url, onSuccessLogin, parameters);
-            // function onSuccessLogin(param) {
-            //     window.localStorage.setItem("sportsid", param.data.sportsIDlastInsertId);
-            //     if (param.data.message_status == false) {
-
-            //         $.each(param.data.errors, function (key, value) {
-            //             showAlertMessage(type = 'error', String(value));
-            //         });
-
-            //     } else if (param.data.message_status == true) {
-            //         $('#partnerSection').show();
-            //         $('#sportSelectionSection').hide();
-            //         showAlertMessage(type = 'success', "Profile update successfully!");
-            //     }
-
-            // }
-
-
+            $('.open-invite').removeClass('d-none');
+            $('.open-invite').addClass('d-block');
+            $('.availability').removeClass('d-block');
+            $('.availability').addClass('d-none');
 
         }
+
+        function sport_activity_time_back(){
+            
+            $('.availability').removeClass('d-block');
+            $('.availability').addClass('d-none');
+            $('.visibility').removeClass('d-none');
+            $('.visibility').addClass('d-block');
+        }
+
+        function openInvitesNext(){
+            $('.open-invite').addClass('d-none');
+            $('.open-invite').removeClass('d-block');
+            $('#confirm-last').removeClass('d-none')
+            $('#confirm-last').addClass('d-block')
+            $('.summery').removeClass('d-none')
+            $('.summery').addClass('d-block')
+        }
+
+        function openInvitesBack(){
+            $('.open-invite').addClass('d-none');
+            $('.open-invite').removeClass('d-block');
+            $('.availability').removeClass('d-none');
+            $('.availability').addClass('d-kd-block');
+
+        }
+
         function sport_activity_partner() {
 
             var parameters = '';
@@ -1155,9 +1662,164 @@
             $('#partnerSection').hide();
         }
 
-
-
     </script>
+
+    <script>
+        // Dynamic skill Checkbox select
+        let skillArr = [];
+        function setskillText(level) {
+            if (skillArr.includes(level)) {
+                skillArr = skillArr.filter(elem => elem !== level)
+                if (skillArr.length < 1) {
+                    $(".skillText").html("Select")
+                } else {
+                    $(".skillText").html(skillArr.join(", "))
+                }
+            } else {
+                skillArr.push(level)
+                if (skillArr.length < 1) {
+                    $(".skillText").html("Select")
+                } else {
+                    $(".skillText").html(skillArr.join(", "))
+                }
+            }
+        }
+
+        // setSlectedDistance
+        let distances = [];
+        function setSlectedDistance(distance) {
+            if (distances.includes(distance)) {
+                distances = distances.filter(elem => elem !== distance)
+                if (distances.length < 1) {
+                    $(".selectedDistance").html("Select")
+                } else {
+                    $(".selectedDistance").html(distances.join(", "))
+                }
+            } else {
+                distances.push(distance)
+                if (distances.length < 1) {
+                    $(".selectedDistance").html("Select")
+                } else {
+                    $(".selectedDistance").html(distances.join(", "))
+                }
+            }
+        }
+
+        // setSelectedConnections
+        let connections = [];
+        function setSelectedConnections(connection) {
+            if (connections.includes(connection)) {
+                connections = connections.filter(elem => elem !== connection)
+                if (connections.length < 1) {
+                    $(".selectedConnections").html("Select")
+                } else {
+                    $(".selectedConnections").html(connections.join(", "))
+                }
+            } else {
+                connections.push(connection)
+                if (connections.length < 1) {
+                    $(".selectedConnections").html("Select")
+                } else {
+                    $(".selectedConnections").html(connections.join(", "))
+                }
+            }
+        }
+
+        // Dynamic Ages Checkbox select
+        let agesArr = []
+        function setAgesText(age) {
+            if (agesArr.includes(age)) {
+                agesArr = agesArr.filter(elem => elem !== age)
+                if (agesArr.length < 1) {
+                    $(".preferredAgeRangeText").html("Select")
+                } else {
+                    $(".preferredAgeRangeText").html(agesArr.join(", "))
+                }
+            } else {
+                agesArr.push(age)
+                if (agesArr.length < 1) {
+                    $(".preferredAgeRangeText").html("Select")
+                } else {
+                    $(".preferredAgeRangeText").html(agesArr.join(", "))
+                }
+            }
+        }
+
+        // setGender
+        let selectedGender = []
+        function setGender(gender) {
+            if (selectedGender.includes(gender)) {
+                selectedGender = selectedGender.filter(elem => elem !== gender)
+                if (selectedGender.length < 1) {
+                    $(".selectedGender").html("Select")
+                } else {
+                    $(".selectedGender").html(selectedGender.join(", "))
+                }
+            } else {
+                selectedGender.push(gender)
+                if (selectedGender.length < 1) {
+                    $(".selectedGender").html("Select")
+                } else {
+                    $(".selectedGender").html(selectedGender.join(", "))
+                }
+            }
+        }
+
+        // setStatus
+        let selectedStatus = []
+        function setStatus(status) {
+            if (selectedStatus.includes(status)) {
+                selectedStatus = selectedStatus.filter(elem => elem !== status)
+                if (selectedStatus.length < 1) {
+                    $(".selectedStatus").html("Select")
+                } else {
+                    $(".selectedStatus").html(selectedStatus.join(", "))
+                }
+            } else {
+                selectedStatus.push(status)
+                if (selectedStatus.length < 1) {
+                    $(".selectedStatus").html("Select")
+                } else {
+                    $(".selectedStatus").html(selectedStatus.join(", "))
+                }
+            }
+        }
+
+
+        $(document).ready(function () {
+            // Add a click event listener to all buttons
+            $(".sport-btn").click(function () {
+                // Remove the 'btn-success' class from all buttons
+                $(".sport-btn").removeClass("btn-success");
+                // Add the 'btn-success' class to the clicked button
+                $(this).addClass("btn-success");
+
+
+                // Get the text of the clicked button
+                var selectedSport = $(this).find("span").text();
+
+                // Update the text of the h4 element
+                $(".h-text").text("Sport Selected");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            // Add a change event listener to all radio buttons with name "filter"
+            $("input[name='filter']").change(function () {
+                if ($(this).val() === "audience" && $(this).is(":checked")) {
+                    // If "Select Audience" is selected, remove the "d-none" class to show the filters wrapper
+                    $(".fitersWrapper").removeClass("d-none");
+                } else if ($(this).val() === "ss" && $(this).is(":checked")) {
+                    // If "Everyone on Sport Social" is selected, add the "d-none" class to hide the filters wrapper
+                    $(".fitersWrapper").addClass("d-none");
+                }
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>

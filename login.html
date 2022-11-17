@@ -2,180 +2,244 @@
 <html lang="en" class="no-js">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title> Sport Social App </title>
-	<link rel="shortcut icon" href="../favicon.ico">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sport Social App </title>
+    <link rel="shortcut icon" href="../favicon.ico">
 
-	<!--   CSS  -->
+    <!--   CSS  -->
 
-	<link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
 
-	<link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
-	<link rel="stylesheet" href="flags/build/css/intlTelInput.css">
-	<link rel="stylesheet" href="flags/build/css/demo.css">
-	<link rel="stylesheet" type="text/css" href="css/css.css">
+    <link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="flags/build/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
 
-	<!--   JS   -->
-	<script src="./jquery/3.5.1/jquery.min.js"></script>
-	<script src="./popper/popper.min.js"></script>
-	<script src="./bootstrap/js/bootstrap.min.js"></script>
+    <!--   JS   -->
+    <script src="./jquery/3.5.1/jquery.min.js"></script>
+    <script src="./popper/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
 
-	<script src="js/modernizr.custom.js"></script>
+    <script src="js/modernizr.custom.js"></script>
     <link rel="stylesheet" href="css/alertify.min.css" />
     <script src="js/alertify.min.js"></script>
 </head>
 
 <body>
-<div class="wrapper gray-wrapper">
-    <div class="container full-container index-page">
-        <div class="header">
-            <div id="gn-menu" class="gn-menu-main">
-                <div class="row nmarg">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
-                        <li class="com-name login-logo"><span class="com-l com-l-index"><img src="images/ss-logo.svg" class="com-logo"></span></li>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right ">
+    <div class="wrapper gray-wrapper">
+        <div class="container full-container index-page">
+            <div class="header">
+                <div id="gn-menu" class="gn-menu-main">
+                    <div class="row nmarg">
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            <li class="com-name login-logo"><span class="com-l com-l-index"><img
+                                        src="images/ss-logo.svg" class="com-logo"></span></li>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right ">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="content c-home">
-            <div class="intro">
-
-                <div class="row nmarg">
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
-                    <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
-
-                        <div class="form-area">
-                            <h3 class="text-success x-bold-text"> Login </h3>
-                            <form action="javascript:void(0);" class="bg-white rounded" id="login-form">
-                                <div class="form-header rounded-top header-img-rounded">
-                                    <img src="images/img34.jpg" class="header-img full-span">
+            <div class="content c-home">
+                
+                    <form action="javascript:void(0);" class="bg-white rounded d-flex flex-wrap p-4" id="login-form">
+                        <div class="col-sm p-3 bg-light">
+                            <div class="bg-success text-center">
+                                <h5 class="text-white p-3">
+                                    Play Sports with People at <br> Your Skill Level, Anywhere
+                                </h5>
+                            </div>
+                            <p class="mb-0"><small><strong>Over 100 Sports listed</strong></small></p>
+                            <div class="d-flex">
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/Tennis.png" alt="" class="sport-icon">
                                 </div>
-                                <div class="form-main-content">
-                                    <div id="message"> </div>
-
-                                    <h4> Login & Password </h4>
-<!--                                    <div class="form-group">-->
-<!--                                        <input class="form-control" id="phone" name="phone" placeholder="Cell number" type="tel" value="">-->
-<!--                                    </div>-->
-                                    <div class="form-group">
-                                        <input type="email" value="" name="email" class="form-control" placeholder="Email">
-                                    </div>
-                                    <div class="form-group">
-                                        <input type="password" value="" class="form-control" name="password" placeholder="Password">
-                                    </div>
-
-                                    <div class="d-flex">
-                                        <a href="javascript:void(0);" class="btn btn-primary fs-17 w-40 p-1 m-auto" onclick="login();">Login</a><br><br>
-<!--                                        <fieldset>-->
-<!--                                            <legend align="center" class="signup-legend text-center"> OR </legend>-->
-<!--                                            <a href="home.html" class="btn btn-primary full-span bold-text">-->
-<!--                                                <i class="fab fa-facebook"></i> Log in with Facebook-->
-<!--                                            </a>-->
-<!--                                        </fieldset><br>-->
-                                        <a href="sign-up-step-1.html" class="btn btn-success fs-17 w-40 m-auto">Sign up</a>
-                                    </div>
-                                    <!--
-                                    <div class="form-group">
-                                      <p class="text-center"><a href="index.html">Create New Account</a></p>
-                                      <p class="text-center"><a href="" class="text-danger">Forgot Password</a></p>
-                                    </div>
-                                    -->
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/golf.png" alt="" class="sport-icon">
                                 </div>
-                            </form>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/kite-boarding.png" alt="" class="sport-icon">
+                                </div>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/pickleball.png" alt="" class="sport-icon">
+                                </div>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/squash.png" alt="" class="sport-icon">
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/cycling.png" alt="" class="sport-icon">
+                                </div>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/mtn-biking.png" alt="" class="sport-icon">
+                                </div>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/climbing.png" alt="" class="sport-icon">
+                                </div>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/frisbee-golf.png" alt="" class="sport-icon">
+                                </div>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/kayaking.png" alt="" class="sport-icon">
+                                </div>
+                            </div>
+                            <div class="d-flex">
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/table-tennis.png" alt="" class="sport-icon">
+                                </div>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/surf.png" alt="" class="sport-icon">
+                                </div>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/skiing.png" alt="" class="sport-icon">
+                                </div>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/snowboarding.png" alt="" class="sport-icon">
+                                </div>
+                                <div class="col-sm p-2">
+                                    <img src="./images/sports/billiards.png" alt="" class="sport-icon">
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
-                </div>
+                        <div class="text-center col-sm py-3">
+                            <div id="message"></div>
+                            <div class="bg-success mb-5">
+                                <p class="text-white py-2 px-1">Create a new account</p>
+                            </div>
+                            <h5 class="py-3">Whats your full name</h5>
+                            <!-- <div class="form-group">
+                                        <input class="form-control" id="phone" name="phone" placeholder="Cell number" type="tel" value="">
+                                      </div> -->
+                            <div class="form-group">
+                                <input type="text" value="" name="first-name" class="form-control"
+                                    placeholder="First name" />
+                            </div>
+                            <div class="form-group text-left">
+                                <input type="text" value="" name="first-name" class="form-control"
+                                    placeholder="Last name" />
+                                <small>Please use real names on Sport Social :) Thanks.</small>
+                            </div>
+                            <!-- <div class="form-group">
+                                        <input type="email" value="" name="email" class="form-control" placeholder="Email" />
+                                      </div>
+                                      <div class="form-group">
+                                        <input type="password" value="" class="form-control" name="password" placeholder="Password" />
+                                      </div> -->
+                            <div class="d-flex">
+                                <div class="d-flex text-center w-100">
+                                    <h6 class="text-primary mx-auto"><strong>Already Have Account</strong></h6>
+                                </div>
+                                <div>
+                                    <!-- <button class="btn btn-success ml-auto">Continue</button> -->
+                                    <a href="sign-up-step-1.html" class="btn btn-success ml-auto">Continue</a>
+                                </div>
+                            </div>
+                            <!-- <div class="d-flex justify-content-between">
+                                        <span class="w-50 pr-2">
+                                          <a href="javascript:void(0);" class="btn btn-primary fs-17 bold-text w-100"
+                                            onclick="login();">Login</a>
+                                        </span>
+                                        <span class="w-50 pl-2">
+                                          <a href="sign-up-step-1.html" class="btn btn-success fs-17 bold-text w-100">Sign up</a>
+                                        </span>
+                                      </div> -->
 
-            </div><!-- /intro -->
-        </div><!-- /content -->
-    </div><!-- /container -->
-</div> <!-- /wrapper -->
+                            <!-- <div class="form-group">
+                                        <p class="text-center"><a href="index.html">Create New Account</a></p>
+                                        <p class="text-center"><a href="" class="text-danger">Forgot Password</a></p>
+                                      </div> -->
 
-<!-- Country flags plugin js  -->
-	<script src="flags/build/js/intlTelInput.js"></script>
-	<script>
-		var input = document.querySelector("#phone");
-		window.intlTelInput(input, {
-			// allowDropdown: false,
-			// autoHideDialCode: false,
-			// autoPlaceholder: "off",
-			// dropdownContainer: document.body,
-			// excludeCountries: ["us"],
-			// formatOnDisplay: false,
-			// geoIpLookup: function(callback) {
-			//   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
-			//     var countryCode = (resp && resp.country) ? resp.country : "";
-			//     callback(countryCode);
-			//   });
-			// },
-			// hiddenInput: "full_number",
-			// initialCountry: "auto",
-			// localizedCountries: { 'de': 'Deutschland' },
-			// nationalMode: false,
-			// onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
-			// placeholderNumberType: "MOBILE",
-			// preferredCountries: ['cn', 'jp'],
-			// separateDialCode: true,
-			utilsScript: "flags/build/js/utils.js",
-		});
-	</script>
-	<script src="js/classie.js"></script>
-	<script src="js/gnmenu.js"></script>
-	<script>
-		new gnMenu(document.getElementById('gn-menu'));
-	</script>
-
-    <script src="js/general-friend-request.js"></script>
-    <script src="js/sports-social/statistics.js"></script>
-    <script src="js/main.js"></script>
-    <script>
-
-    function login(){
-
-        var parameters = '';
-        var data       = $('#login-form').serialize();
-        var url        = app_url+'login?'+data;
-
-        var method     = 'POST';
-        var param      = CallMethod(method, url, onSuccessLogin, parameters);
-        function onSuccessLogin(param){
-
-            if(param.data.message_status == false){
+                        </div>
 
 
 
+  
+            </div><!-- /container -->
+        </div> <!-- /wrapper -->
 
-                var errorHTML = '<div class="alert alert-danger alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><ul>';
+        <!-- Country flags plugin js  -->
+        <script src="flags/build/js/intlTelInput.js"></script>
+        <script>
+            var input = document.querySelector("#phone");
+            window.intlTelInput(input, {
+                // allowDropdown: false,
+                // autoHideDialCode: false,
+                // autoPlaceholder: "off",
+                // dropdownContainer: document.body,
+                // excludeCountries: ["us"],
+                // formatOnDisplay: false,
+                // geoIpLookup: function(callback) {
+                //   $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+                //     var countryCode = (resp && resp.country) ? resp.country : "";
+                //     callback(countryCode);
+                //   });
+                // },
+                // hiddenInput: "full_number",
+                // initialCountry: "auto",
+                // localizedCountries: { 'de': 'Deutschland' },
+                // nationalMode: false,
+                // onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+                // placeholderNumberType: "MOBILE",
+                // preferredCountries: ['cn', 'jp'],
+                // separateDialCode: true,
+                utilsScript: "flags/build/js/utils.js",
+            });
+        </script>
+        <script src="js/classie.js"></script>
+        <script src="js/gnmenu.js"></script>
+        <script>
+            new gnMenu(document.getElementById('gn-menu'));
+        </script>
+
+        <script src="js/general-friend-request.js"></script>
+        <script src="js/sports-social/statistics.js"></script>
+        <script src="js/main.js"></script>
+        <script>
+
+            function login() {
+
+                var parameters = '';
+                var data = $('#login-form').serialize();
+                var url = app_url + 'login?' + data;
+
+                var method = 'POST';
+                var param = CallMethod(method, url, onSuccessLogin, parameters);
+                function onSuccessLogin(param) {
+
+                    if (param.data.message_status == false) {
 
 
-                $.each(param.data.errors, function(key, value){
-
-                    errorHTML += '<li>'+ value +'</li>';
-
-                });
-                errorHTML +=   '</ul></div>';
 
 
-                $('#message').html(errorHTML);
+                        var errorHTML = '<div class="alert alert-danger alert-dismissible"> <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a><ul>';
 
-            }else if(param.data.message_status == true){
 
-                var name  = 'Login';
-                var data  = param.data;
-                handleData(name, data);
+                        $.each(param.data.errors, function (key, value) {
+
+                            errorHTML += '<li>' + value + '</li>';
+
+                        });
+                        errorHTML += '</ul></div>';
+
+
+                        $('#message').html(errorHTML);
+
+                    } else if (param.data.message_status == true) {
+
+                        var name = 'Login';
+                        var data = param.data;
+                        handleData(name, data);
+                    }
+                }
+
+
+
             }
-        }
-
-
-
-    }
-    </script>
+        </script>
 </body>
 
 </html>
