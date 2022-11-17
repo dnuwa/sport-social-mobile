@@ -71,110 +71,10 @@
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
                             <div class="page-heading">
-                            <h3 class="text-success x-bold-text"> Sign up </h3>
-                        </div>
-                        <div class="bg-white rounded block-area mt-60" id="generalSection">
-                            <div class="text-center">
-                                <h4>
-                                    <strong>What’s your number? </strong>
-                                </h4>
-                                <p>
-                                    We protect our community by making sure everyone on Sport Social is real.
-                                </p>
+                                <h3 class="text-success x-bold-text"> Sign up </h3>
                             </div>
-                            <form id="general_information" action="javascript:void(0);">
-                                <div class="panel-body">
-                                    <div class="form-row w-100 p-1">
-                                        <div style="display: none">
-                                            <div class="d-flex w-100">
-                                                <div class="form-group w-50">
-                                                    <input type="text" class="form-control" id="firstname" placeholder="First Name"
-                                                           name="firstname">
-                                                </div>
-                                                <div class="form-group w-50">
-                                                    <input type="text" name="lastname" id="lastname" class="form-control"
-                                                           placeholder="Last Name">
-                                                </div>
-                                            </div>
-                                            <div class="form-group w-100">
-                                                <input type="email" name="email" id="email" class="form-control"
-                                                       placeholder="Enter Email Address" value="">
-                                            </div>
-                                            <div class="form-group text-center w-100 m-0">
-                                                <a href="#"
-                                                   class="btn btn-default fs-17 bold-text rounded-btn-nb">Verify</a>
-                                            </div>
-                                        </div>
-                                        
-                                        <p class="m-0 pl-1">Add Phone Number</p>
-                                        <div class="form-group w-100 p-1 m-0">
-                                            <input class="form-control" id="phone" name="phone"
-                                                   placeholder="" type="tel" value="">
-                                        </div>
 
-                                        <div class="d-flex text-center mt-3">
-                                            <div class="d-fex p-2 bg-warning rounded warning-txt">
-                                                <i class="fa fa-lock"></i>
-                                            </div>
-                                            <p class="tiny-font mt-auto mb-auto pl-2">
-                                               We never share this number with anyone 
-                                            </p> 
-                                        </div>
-
-                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                            <a href="sign-up-step-1.html"
-                                               class="btn btn-default fs-17 bold-text rounded-btn-nb"  onclick="signUpStep2GeneralInformationBack();">Back</a>
-                                            <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="signUpStep2GeneralInformation();" >SAVE</button>
-                                            <a href="#number-verification"
-                                               class="btn btn-success fs-17 bold-text rounded-btn-nb general-information-continue" onclick=signUpStep2GeneralInformation(); >Continue</a>
-                                            <a href="#number-verification"
-                                               class="btn btn-default fs-17 bold-text rounded-btn-nb"  onclick="signUpStep2GeneralInformation();">Skip</a>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-
-                            <div class="bg-white rounded block-area mt-60" id="verificationSection" style="display: none">
-                            <div class="d-flex">
-                                <strong class="m-auto pt-4">Verify your number </strong>
-                            </div>
-                            <div class="d-flex">
-                                <p class="text-center">Enter code we've sent you by text to (phone number) <span><a href="#">Change</a></span></p>
-                            </div>
-                            <div class="d-flex">
-                                <div class="col-sm">
-                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
-                                </div>
-                                <div class="col-sm">
-                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
-                                </div>
-                                <div class="col-sm">
-                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
-                                </div>
-                                <div class="col-sm">
-                                    <input type="text" class="w-100 pt-4 pb-4 rounded">
-                                </div>
-                            </div>
-                            <div class="d-flex p-4 mt-5">
-                                <a href="#">
-                                    Didn't get text?
-                                </a>
-                            </div>  
-                            <div class="d-flex justify-content-around px-5 py-2 w-100">
-                                <a href="#phone-number"
-                                   class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="BackVerification();">Back</a>
-                                <button class="btn btn-danger fs-17 bold-text rounded-btn" onclick="VerifiedNumber();">Save</button>
-                                <a href="#profile01"
-                                   class="btn btn-success fs-17 bold-text rounded-btn-nb" onclick="VerifiedNumber();">Continue</a>
-                                <a href="#profile01"
-                                   class="btn btn-default fs-17 bold-text rounded-btn-nb" onclick="VerifiedNumber();">Skip</a>
-                            </div>                      
-                        </div>
-
-
-                            <div class="bg-white rounded block-area mt-90" id="profilePhotoSection" style="display: none">
+                            <div class="bg-white rounded block-area mt-90" id="profilePhotoSection">
                                 <div class="panel">
                                     <form id="sign-up-step2-language" action="javascript:void(0);">
                                         <div class="compose-checkin w-100">
@@ -1803,7 +1703,7 @@
         function signUpStep2GeneralInformation() {
 
             $('#verificationSection').show();
-                    $('#generalSection').hide();
+            $('#generalSection').hide();
 
             // var parameters = '';
             // var data_language = $('#sign-up-step2-language').serialize();
@@ -1869,7 +1769,7 @@
         }
 
         function signUpStep3AboutMe() {
-            $('#aboutSection03').show();
+            $('#myLocation').show();
             $('#aboutSection').hide();
 
             // var parameters = '';
@@ -1948,57 +1848,61 @@
         }
 
         function aboutAction03Back() {
-            $('#aboutSection').show();
+            $('#myLocation').show();
             $('#aboutSection03').hide();
         }
 
         function signUpStep4AboutMe() {
-            var parameters = '';
-            var data_language = $('#sign-up-step2-language').serialize();
-            var data_general_information = $('#general_information').serialize();
-            var data = $('#about-me-form').serialize();
-            var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
-            function onSuccessLogin(param) {
+            $('#aboutSection03').show();
+            $('#myLocation').hide();
+            // var parameters = '';
+            // var data_language = $('#sign-up-step2-language').serialize();
+            // var data_general_information = $('#general_information').serialize();
+            // var data = $('#about-me-form').serialize();
+            // var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
+            // function onSuccessLogin(param) {
 
-                if (param.data.message_status == false) {
+            //     if (param.data.message_status == false) {
 
-                    showAlertMessage(type = 'error', "Server error!");
-
-
-                } else if (param.data.message_status == true) {
-
-                    $('#aboutSection').show();
-                    $('#myLocation').hide();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
+            //         showAlertMessage(type = 'error', "Server error!");
 
 
-                }
-            }
+            //     } else if (param.data.message_status == true) {
+
+            //         $('#aboutSection').show();
+            //         $('#myLocation').hide();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
+
+
+            //     }
+            // }
 
         }
 
         function signUp5AboutMe() {
-            var parameters = '';
-            var data_language = $('#sign-up-step2-language').serialize();
-            var data_general_information = $('#general_information').serialize();
-            var data = $('#about-me-form').serialize();
-            var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
-            var method = 'POST';
-            var param = CallMethod(method, url, onSuccessLogin, parameters);
+            $('#socials').show();
+            $('#addgyms').hide();
+            // var parameters = '';
+            // var data_language = $('#sign-up-step2-language').serialize();
+            // var data_general_information = $('#general_information').serialize();
+            // var data = $('#about-me-form').serialize();
+            // var url = app_url + 'profilesetting?' + data + '&' + data_general_information + '&' + data_language + '&loginuser=' + window.localStorage.getItem("loginuser");
+            // var method = 'POST';
+            // var param = CallMethod(method, url, onSuccessLogin, parameters);
 
-            function onSuccessLogin(param) {
-                if (param.data.message_status == false) {
-                    showAlertMessage(type = 'error', "Server error!");
+            // function onSuccessLogin(param) {
+            //     if (param.data.message_status == false) {
+            //         showAlertMessage(type = 'error', "Server error!");
 
-                } else if (param.data.message_status == true) {
+            //     } else if (param.data.message_status == true) {
 
-                    $('#socials').show();
-                    $('#addgyms').hide();
-                    showAlertMessage(type = 'success', "Profile update successfully!");
-                }
-            }
+            //         $('#socials').show();
+            //         $('#addgyms').hide();
+            //         showAlertMessage(type = 'success', "Profile update successfully!");
+            //     }
+            // }
         }
 
         function profilePhotoSectionNext() {
@@ -2026,7 +1930,7 @@
         }
 
         function profilePhotoSectionBack() {
-            $('#generalSection').show();
+            // $('#generalSection').show();
             // $('#profilePhotoSection').hide();
             window.location.href = 'sign-up-step-2-a.html';
         }
@@ -2233,7 +2137,7 @@
 
         function signUpStep2Video() {
             $('#videoSection').hide();
-            $('#socials').show();
+            $('#addgyms').show();
             // var formData = new FormData();
             // formData.append('video', $('#video')[0].files[0]);
             // formData.append('video1', $('#video1')[0].files[0]);
@@ -2400,7 +2304,7 @@
         }
 
         function signUpStep4AboutMeBack() {
-            $('#previewSection').show();
+            $('#aboutSection').show();
             $('#myLocation').hide();
         }
 
@@ -2420,12 +2324,12 @@
         }
 
         function signUpStep2LanguageBack() {
-            $('#covidTestPreview').show();
+            $('#addgyms').show();
             $('#socials').hide();
         }
 
         function signUp5AboutMeBack() {
-            $('#covidTestPreview').show();
+            $('#videoSection').show();
             $('#addgyms').hide();
         }
 
