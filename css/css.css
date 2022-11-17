@@ -2876,6 +2876,10 @@ legend {
     width: 100%;
 }
 
+.mobi{
+    display: none;
+}
+
 /*  Media Queries  */
 @media screen and (max-width: 2500px) {
     .popover.bottom .arrow-xx {
@@ -2918,6 +2922,17 @@ legend {
     }
     .popover.bottom .arrow-xx {
         left: 50px !important;
+    }
+
+    .sport-icon{
+        width: 125%;
+    }
+
+    .desk{
+        display: none;
+    }
+    .mobi{
+        display: block;
     }
 }
 @media screen and (max-width: 620px) {

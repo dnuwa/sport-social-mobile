@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sport Social App </title>
+    <link rel="shortcut icon" href="../favicon.ico">
+
+    <!--   CSS  -->
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
+    <link rel="stylesheet" href="flags/build/css/demo.css">
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" /> -->
+
+    <!--   JS   -->
+    <script src="./jquery/3.5.1/jquery.min.js"></script>
+    <script src="./popper/popper.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <!-- //changer -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script> -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+    <script src="js/modernizr.custom.js"></script>
+    <link rel="stylesheet" href="css/alertify.min.css" />
+    <script src="js/alertify.min.js"></script>
+</head>
+
+<body>
+    <div class="wrapper gray-wrapper">
+        <div class="container full-container index-page">
+            <div class="header">
+                <div id="gn-menu" class="gn-menu-main">
+                    <div class="row ss-nav pad-0 mx-0">
+                        <div class="nav-logo text-success w-100">
+                            <img src="./images/ss-logo.svg" />
+                        </div>
+                    </div>
+                    <!-- <div class="signup-progress-bar">
+                        <img src="./images/progress--06.svg" alt="">
+                    </div> -->
+                    <!-- <div class="w-100 d-flex prog-text">
+                        <div class="w-50">
+                            Complete your profile
+                        </div>
+                        <div class="w-50 d-flex">
+                            <div class="progress w-75">
+                                <div class="progress-bar progress-bar-success bg-success" role="progressbar"
+                                    aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:66%">
+                                </div>
+                            </div>
+                            <div class="w-25 px-3">
+                                66%
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+
+            <div class="content c-home">
+                <div class="intro">
+
+                    <div class="row nmarg mt-90">
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+                        <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
+                            <!-- <div class="page-heading">
+                                <h3 class="text-success x-bold-text"> Sign up </h3>
+                            </div> -->
+
+                            <!-- needed -->
+                            <div class="bg-white rounded" id="backgroundSection">
+                                <form id="about-me-form" action="javascript:void(0);">
+                                    <div class="panel">
+                                        <!-- <div class="panel-body"> -->
+                                        <div class="d-flex flex-column text-center pt-4">
+                                            <h4 class="mb-0"><strong>Add a little information about yourself</strong></h4>
+                                            <p><small>You can add this later in your profile</small></p>
+                                        </div>
+
+                                        <div class="px-3">
+                                            <h5 class="font-weight-bold mb-1 pt-4">About Me</h5>
+                                            <h6 class="m-0">
+                                                Add some brief info about yourself or your favorite sports (optional)
+                                            </h6>
+                                        </div>
+                                        <div class="form-group w-100 m-0 px-3">
+                                            <textarea class="form-control" name="about" id="about"
+                                                style="height:80px"></textarea>
+                                            <p class="tiny-font m-0">Max (xx) characters</p>
+                                        </div>
+                                        <div class="mt-2 px-3">
+                                            <h5 class="font-weight-bold mb-1">Motto</h5>
+                                            <h6 class="m-0">
+                                                Add your motto - sport related or otherwise
+                                            </h6>
+                                        </div>
+                                        <div class="form-group w-100 m-0 px-3">
+                                            <!-- <input class="p-5 w-100" type="text" name="moto" class="form-control" id="moto" value=""> -->
+                                            <textarea class="form-control" name="moto" id="moto" style="height:80px"
+                                                value=""></textarea>
+                                            <p class="tiny-font m-0">Max (xx) characters</p>
+                                        </div>
+                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                            <a href="#general-info"
+                                                class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                onclick="signUpStep2AboutMeBack();">Back</a>
+                                            <!-- <button class="btn btn-danger fs-17 bold-text rounded-btn"
+                                                onclick="backgroundSection();">Save</button> -->
+                                            <a href="#about" class="btn btn-success fs-17 bold-text rounded-btn-nb"
+                                                onClick="backgroundSection();">Continue</a>
+                                            <a href="#about" class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                onclick="backgroundSection();">Skip</a>
+                                        </div>
+
+                                        <!-- </div> -->
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div class="bg-white rounded mt-3" id="languageSection" style="display: none;">
+                                <div class="d-flex flex-column text-center pt-4">
+                                    <p><strong>Let people know what other languages you speak especially if you vacation/ travel internationally</strong></p>
+                                </div>
+                                <div class="px-4">
+                                    <h4>Language</h4>
+                                </div>
+                                <form id="sign-up-step2-language" action="javascript:void(0);">
+                                    <div class="panel-body px-4">
+
+                                        <div class="form-group">
+                                            <h6>Select Languages you can speak</h6>
+                                        </div>
+
+                                        <select class="form-control" name="plng" id="plng">
+                                            <option value="0">Select Primary Language </option>
+                                            <option value="1">English</option>
+                                            <option value="3">Spanish</option>
+                                            <option value="5">German</option>
+                                        </select>
+
+                                        <div class="mb-3"></div>
+
+                                        <select class="form-control" name="slng" id="slng">
+                                            <option value="">Select Secondary Language</option>
+                                            <option value="">English</option>
+                                            <option value="">Spanish</option>
+                                            <option value="">German</option>
+                                        </select>
+                                        <div class="mb-3"></div>
+                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                            <a href="#location" class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                onclick="window.history.back();">Back</a>
+                                            <!-- <button class="btn btn-danger fs-17 bold-text rounded-btn-nb"
+                                                onclick="signUpStep6Language();">Save</button> -->
+                                            <a href="#socials" class="btn btn-success fs-17 bold-text rounded-btn"
+                                                onclick="signUpStep6Language();">Continue</a>
+                                            <a href="#socials" class="btn btn-default fs-17 bold-text rounded-btn"
+                                                onclick="signUpStep6Language();">Skip</a>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
+        </div>
+
+    </div><!-- /intro -->
+    </div><!-- /content -->
+    </div><!-- /container -->
+    </div> <!-- /wrapper -->
+
+    <!-- Country flags plugin js  -->
+
+    <script src="flags/build/js/intlTelInput.js"></script>
+    <script>
+        var input = document.querySelector("#phone");
+        window.intlTelInput(input, {
+            utilsScript: "flags/build/js/utils.js",
+        });
+    </script>
+    <script>
+
+        // script to expand/collapse album
+        $('.panel-collapse').on('show.bs.collapse', function () {
+            $(this).siblings('.panel-heading').addClass('active');
+        });
+
+        $('.panel-collapse').on('hide.bs.collapse', function () {
+            $(this).siblings('.panel-heading').removeClass('active');
+        });
+    </script>
+    <script src="js/classie.js"></script>
+    <!-- <script src="js/smooth-scroll.js"></script> -->
+    <!-- <script src="js/gnmenu.js"></script> -->
+
+    <!-- <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script> -->
+
+    <script src="js/general-friend-request.js"></script>
+    <script src="js/sports-social/statistics.js"></script>
+    <script src="js/main.js"></script>
+    <!-- <script src="js/smooth-scroll.js"></script> -->
+    <!-- <script src="js/gnmenu.js"></script> -->
+
+    <script>
+        $('select').selectpicker();
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+    <script>
+        new gnMenu(document.getElementById('gn-menu'));
+    </script>
+
+
+
+
+
+
+
+
+    <script>
+
+
+
+
+        $('document').ready(function () {
+
+            if (window.localStorage.getItem("editProfilePhoto") === 'yes') {
+                $('#generalSection').hide();
+                $('#aboutSection').hide();
+                $('#previewSection').hide();
+                $('profilePhotoSection').hide();
+                $('#photosSection').show();
+                $('#videoSection').hide();
+                $('#languageSection').hide();
+
+
+
+                window.localStorage.removeItem("editProfilePhoto");
+
+
+            } else if (window.localStorage.getItem("editProfileVideo") === 'yes') {
+
+                $('#generalSection').hide();
+                $('#aboutSection').hide();
+                $('#photosSection').hide();
+                // $('#previewSection').hide();
+                $('#videoSection').show();
+                $('#languageSection').hide();
+                window.localStorage.removeItem("editProfileVideo");
+
+            }
+
+
+
+            var parameters = '';
+            var url = app_url + 'profilesetting?loginuser=' + window.localStorage.getItem("loginuser");
+            var method = 'GET';
+
+            var param = CallMethod(method, url, onSuccessLogin, parameters);
+            function onSuccessLogin(param) {
+                // console.log(param.data.profile_setting['0']);
+
+                $('#firstname').val(!isEmpty(param.data.profile_setting['0'].firstname) ? param.data.profile_setting['0'].firstname : '');
+                $('#lastname').val(!isEmpty(param.data.profile_setting['0'].lastname) ? param.data.profile_setting['0'].lastname : '');
+                $('#email').val(!isEmpty(param.data.profile_setting['0'].email) ? param.data.profile_setting['0'].email : '');
+                $('#phone').val(!isEmpty(param.data.profile_setting['0'].phone) ? param.data.profile_setting['0'].phone : '');
+                $('#about').val(!isEmpty(param.data.profile_setting['0'].about) ? param.data.profile_setting['0'].about : '');
+                $('#moto').val(!isEmpty(param.data.profile_setting['0'].moto) ? param.data.profile_setting['0'].moto : '');
+                $('#work').val(!isEmpty(param.data.profile_setting['0'].work) ? param.data.profile_setting['0'].work : '');
+                $('#university').val(!isEmpty(param.data.profile_setting['0'].university) ? param.data.profile_setting['0'].university : '');
+                $('#high_school').val(!isEmpty(param.data.profile_setting['0'].high_school) ? param.data.profile_setting['0'].high_school : '');
+                $('#sex').val(!isEmpty(param.data.profile_setting['0'].sex) ? param.data.profile_setting['0'].sex : '');
+
+
+
+                // var countryOption =  '<option value="'+(  !isEmpty(param.data.profile_setting['0'].location.current_location.country)? param.data.profile_setting['0'].location.current_location.country.id : ''   )+'">'+( !isEmpty(param.data.profile_setting['0'].location.current_location.country)? param.data.profile_setting['0'].location.current_location.country.name: '' )+'</option>';
+                // $('#country').html(countryOption);
+
+                var dobMonthOption = '';
+                var months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                $.each(months, function (key, value) {
+                    dobMonthOption += '<option value="' + value + '" ';
+                    if (param.data.profile_setting['0'].dob_month == value) {
+                        dobMonthOption += 'selected';
+                    }
+
+                    dobMonthOption += '>' + value + '</option>';
+                });
+                // console.log(parseInt(param.data.profile_setting['0'].dob_day));
+
+                $('#dob-month').html(dobMonthOption);
+                var days = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31];
+                var dobDayOption = '';
+                $.each(days, function (key, value) {
+                    dobDayOption += '<option value="' + value + '" ';
+                    if (parseInt(param.data.profile_setting['0'].dob_day) === value) {
+                        dobDayOption += 'selected';
+                    }
+                    dobDayOption += '>' + value + '</option>';
+                });
+                $('#dob-day').html(dobDayOption);
+
+                var dobYearOption = '';
+                // console.log(dobYearOption);
+                $.each(param.data.years, function (key, value) {
+                    dobYearOption += '<option value="' + value + '" ';
+                    if (parseInt(param.data.profile_setting['0'].dob_year) === value) {
+                        dobYearOption += 'selected';
+                    }
+                    dobYearOption += '>' + value + '</option>';
+                });
+                // console.log(dobYearOption);
+                $('#dob-year').html(dobYearOption);
+
+
+
+                var stateOption = '<option value="' + (!isEmpty(param.data.profile_setting['0'].location.current_location) && !isEmpty(param.data.profile_setting['0'].location.current_location.state) ? param.data.profile_setting['0'].location.current_location.state.id : '') + '">' + (!isEmpty(param.data.profile_setting['0'].location.current_location) && !isEmpty(param.data.profile_setting['0'].location.current_location.state) ? param.data.profile_setting['0'].location.current_location.state.name : '') + '</option>';
+                $('#state').html(stateOption);
+
+
+                var cityOption = '<option value="' + (!isEmpty(param.data.profile_setting['0'].location.current_location) && !isEmpty(param.data.profile_setting['0'].location.current_location.city) ? param.data.profile_setting['0'].location.current_location.city.id : '') + '">' + (!isEmpty(param.data.profile_setting['0'].location.current_location) && !isEmpty(param.data.profile_setting['0'].location.current_location.city) ? param.data.profile_setting['0'].location.current_location.city.name : '') + '</option>';
+                $('#city').html(cityOption);
+
+
+                // var  countryOption1 =  '<option value="'+( !isEmpty(param.data.profile_setting['0'].location.from_location.country)? param.data.profile_setting['0'].location.from_location.country.id : ''  )+'">'+(  !isEmpty(param.data.profile_setting['0'].location.from_location.country)? param.data.profile_setting['0'].location.from_location.country.name : '' )+'</option>';
+                // $('#country2').html(countryOption1);
+
+
+                var stateOption1 = '<option value="">Select State</option><option value="' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.state) ? param.data.profile_setting['0'].location.from_location.state.id : '') + '">' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.state) ? param.data.profile_setting['0'].location.from_location.state.name : '') + '</option>';
+                $('#state2').html(stateOption1);
+
+
+                var cityOption1 = '<option value="">Select City</option><option value="' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.city) ? param.data.profile_setting['0'].location.from_location.city.id : '') + '">' + (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.city) ? param.data.profile_setting['0'].location.from_location.city.name : '') + '</option>';
+                $('#city2').html(cityOption1);
+
+
+                var plng = '<option value="">Select Primary Language</option>';
+
+
+                $.each(param.data.plng, function (key, value) {
+                    plng += ' <option value="' + value.lang_id + '" ';
+                    if (value.lang_id === param.data.profile_setting['0'].plang) {
+                        plng += 'selected';
+                    }
+                    plng += '  ">' + value.lang + '</option>';
+                });
+
+                $('#plng').html(plng);
+
+                var slng = '';
+                slng += '<option value="">Select Secondary Language</option>;'
+                $.each(param.data.slng, function (key, value) {
+                    slng += ' <option value="' + value.lang_id + '" ';
+                    if (value.lang_id === param.data.profile_setting['0'].slang) {
+                        slng += 'selected';
+                    }
+                    slng += '  ">' + value.lang + '</option>';
+                });
+                $('#slng').html(slng);
+
+                var currentCountryOption = '<option value="" selected>country</option>';
+                $.each(param.data.countries, function (key, value) {
+                    currentCountryOption += '<option  value="' + value.id + '" ';
+                    if (!isEmpty(param.data.profile_setting['0'].location.current_location)) {
+                        if (!isEmpty(param.data.profile_setting['0']) && !isEmpty(param.data.profile_setting['0']).location && !isEmpty(param.data.profile_setting['0'].location.current_location) && !isEmpty(param.data.profile_setting['0'].location.current_location.country)) {
+                            if (value.id === param.data.profile_setting['0'].location.current_location.country.id) {
+                                currentCountryOption += 'selected';
+                            }
+                        }
+                    }
+                    currentCountryOption += ' >' + value.name + '</option>';
+                });
+                var fromCountryOption = '<option value="" selected>country</option>';
+                $.each(param.data.countries, function (key, value) {
+                    fromCountryOption += '<option  value="' + value.id + '" ';
+                    if (!isEmpty(param.data.profile_setting['0'].location.from_location) && !isEmpty(param.data.profile_setting['0'].location.from_location.country)) {
+                        if (value.id === param.data.profile_setting['0'].location.from_location.country.id) {
+                            fromCountryOption += 'selected';
+                        }
+                    }
+                    fromCountryOption += ' >' + value.name + '</option>';
+                });
+
+
+                $('#country').html(currentCountryOption);
+                $('#country2').html(fromCountryOption);
+
+
+
+            }
+            // getCountry();
+            // getLanguage();
+            $('select').selectpicker('refresh');
+
+        });
+
+        function signUpStep2GeneralInformation() {
+
+            $('#verificationSection').show();
+            $('#generalSection').hide();
+        }
+
+        function backgroundSection() {
+
+            // $('#aboutSection03').show();
+            $('#languageSection').show();
+            $('#backgroundSection').hide();
+
+        }
+
+
+
+
+        function aboutAction02Back() {
+            $('#aboutSection').show();
+            $('#aboutSection02').hide();
+        }
+
+
+        function aboutAction03() {
+            // $('#languageSection').show();
+            $('#addgyms').show()
+            $('#aboutSection03').hide();
+        }
+
+        function aboutAction03Back() {
+            $('#myLocation').show();
+            $('#aboutSection03').hide();
+        }
+
+        function signUpStep4AboutMe() {
+            $('#aboutSection03').show();
+            $('#myLocation').hide();
+        }
+
+        function signUpStep6Language() {
+            // $('#backgroundSection').show();
+            $('#languageSection').hide();
+            window.location.href = 'https://condescending-nobel.72-167-41-193.plesk.page/v2/play-sports.html';
+        }
+
+
+        function locationView() {
+            $('#locationName').show();
+            $('#viewgyms').hide();
+        }
+
+        function signUpStep6LanguageBack() {
+            $('#languageSection').hide();
+            $('#backgroundSection').show();
+        }
+    </script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB0ezRLqhjnsxR6JSkoovc2xhL-pK7oGhc&callback=initMap"></script>
+
+</body>
+
+</html>

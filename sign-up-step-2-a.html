@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="flags/build/css/intlTelInput.css">
-    <link rel="stylesheet" href="flags/build/css/demo.css">
+    <!-- <link rel="stylesheet" href="flags/build/css/demo.css"> -->
     <link rel="stylesheet" type="text/css" href="css/css.css">
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/css/bootstrap-select.css" /> -->
 
@@ -40,13 +40,13 @@
                 <div id="gn-menu" class="gn-menu-main">
                     <div class="row ss-nav pad-0 mx-0">
                         <div class="nav-logo text-success w-100">
-                            <img src="./images/ss-logo.svg"/>
+                            <img src="./images/ss-logo.svg" />
                         </div>
                     </div>
                     <div class="signup-progress-bar">
-                        <img src="./images/progress-2.svg" alt="">
+                        <img src="./images/progress--05.svg" alt="">
                     </div>
-                    <div class="w-100 d-flex prog-text">
+                    <!-- <div class="w-100 d-flex prog-text">
                         <div class="w-50">
                             Complete your profile
                         </div>
@@ -60,28 +60,297 @@
                                 66%
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
             </div>
+
+
 
             <div class="content c-home">
                 <div class="intro">
                     <div class="row nmarg mt-90">
                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12"></div>
                         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12 npad">
-                            <div class="bg-white rounded block-area mt-90" id="profilePhotoSection">
-                                <div class="panel">
+                            <div class="bg-white rounded block-area mt-5" id="profilePhotoSection">
+                                <div class="panel px-2">
                                     <form id="sign-up-step2-language" action="javascript:void(0);">
                                         <div class="compose-checkin w-100">
                                             <div class="d-flex flex-column text-center mt-2">
-                                                <h4 class="m-auto font-weight-bold">Add All the Sports You Play</h4>
+                                                <h4 class="m-auto font-weight-bold">Select all the sports you play!</h4>
                                             </div>
 
-                                            <input class="p-2 w-100 form-group mt-3" type="text"
-                                                placeholder="Enter sport name or scroll to select">
+                                            <div class="text-center">
+                                                <p class="w-75 mx-auto">Your selection(s) allow you to connect with
+                                                    other that play the sport.
+                                                    You can always update your selections later but you must select at
+                                                    least
+                                                    one.</p>
+                                            </div>
 
-                                            <div class="form-group d-flex flex-column w-100">
-                                                <!-- <label for="">Sports</label> -->
+                                            <input class="p-2 w-100 form-group mt-3" id="sel1" type="text"
+                                                placeholder="Enter sport name or select below">
+
+                                            <div class="d-flex flex-wrap">
+                                                <div class="col-sm-12 col-lg-4">
+                                                    <p class="text-success"><strong>Most Popular Sports</strong>
+                                                    </p>
+                                                    <div class="">
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    value="Golf" id="1">
+                                                            </span>
+                                                            <span class="text-success my-auto">Golf</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    value="Tennis" id="2">
+                                                            </span>
+                                                            <span class="text-success my-auto">Tennis</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="3" value="Pickleball">
+                                                            </span>
+                                                            <span class="text-success my-auto">Pickleball</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="4" value="Mountain Biking">
+                                                            </span>
+                                                            <span class="text-success my-auto">Mountain Biking</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="5" value="Road Biking">
+                                                            </span>
+                                                            <span class="text-success my-auto">Road Biking</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="6" value="Kiteboarding">
+                                                            </span>
+                                                            <span class="text-success my-auto">Kiteboarding</span>
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-lg-8">
+                                                    <p class=""><strong>All Sport (listed alphabetically)</strong>
+                                                    </p>
+                                                    <div class="d-flex flex-wrap w-100">
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </span>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </span>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </span>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </span>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </span>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </span>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </span>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </span>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </span>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </label>
+                                                        <label class="d-flex mr-3 my-2">
+                                                            <span class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </span>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </label>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                        <div class="d-flex mr-3 my-2">
+                                                            <div class="mr-2">
+                                                                <input type="checkbox" class="sport-checkbox" name=""
+                                                                    id="">
+                                                            </div>
+                                                            <span class="my-auto">(Sport)</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <!-- <div class="form-group d-flex flex-column w-100">
                                                 <select multiple id="sel1">
                                                     <option value="">Golf</option>
                                                     <option value="">Tennis</option>
@@ -92,15 +361,15 @@
                                                 </select>
                                                 <small
                                                     class="form-text text-light text-center light-green-bg p-2">Select
-                                                    at least
-                                                    one sport to continue</small>
-                                            </div>
+                                                    at least one sport to continue</small>
+                                            </div> -->
                                         </div>
+
                                         <div class="d-flex justify-content-around px-5 py-2 w-100">
                                             <a href="#profile01" class="btn btn-default fs-17 bold-text rounded-btn-nb"
                                                 onclick="back();">Back</a>
-                                            <button class="btn btn-danger fs-17 bold-text rounded-btn"
-                                                onclick="next();">Save</button>
+                                            <!-- <button class="btn btn-danger fs-17 bold-text rounded-btn"
+                                                onclick="next();">Save</button> -->
                                             <a href="#preview" class="btn btn-success fs-17 bold-text rounded-btn-nb"
                                                 onclick="next();">Continue</a>
                                             <a href="#preview" class="btn btn-default fs-17 bold-text rounded-btn-nb"
@@ -133,12 +402,32 @@
     <script src="js/multiselect-dropdown.js"></script>
 
     <script>
+        // jQuery script to handle checkbox changes
+        $(document).ready(function () {
+            // Add a change event listener to all checkboxes with the class 'sport-checkbox'
+            $('.sport-checkbox').change(function () {
+                // Initialize an empty array to store selected values
+                var selectedValues = [];
+
+                // Iterate over all checked checkboxes and add their values to the array
+                $('.sport-checkbox:checked').each(function () {
+                    selectedValues.push($(this).val());
+                });
+
+                // Update the input field with the selected values, separated by commas
+                $('#sel1').val(selectedValues.join(', '));
+            });
+        });
+    </script>
+
+
+    <script>
         function next() {
-            window.location.href = 'sign-up-step-2.html';
+            window.location.href = 'sign-up-step-2-verified.html';
         }
 
         function back() {
-            window.location.href = 'sign-up-step-1.html';
+            window.location.href = 'sign-up-step-2.html';
         }
     </script>
 
