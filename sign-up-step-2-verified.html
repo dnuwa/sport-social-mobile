@@ -156,19 +156,40 @@
                                                     <h5 class="font-weight-bold tiny-font">Great! How are these photos?
                                                     </h5>
                                                 </div>
-                                                <div class="d-flex flex-column border m-auto width-70">
-                                                    <div class="timelineImg">
-                                                        <img src="./images/image-placeholder.jpg" alt="timeline-Img">
+                                                <div class="w-100 d-flex flex-wrap">
+                                                    <div class="col-sm p-1 d-flex flex-column">
+                                                        <h4 class="mx-auto"><strong>Profile Photo</strong></h4>
+                                                        <input type="file" id="imgupload" style="display:none" />
+                                                        <div class="d-flex mx-auto">
+                                                            <i class="fa fa-plus fa-3x my-auto text-secondary mr-2"
+                                                                id="OpenImgUpload"></i>
+                                                            <img src="./images/userplaceholder.jpg" alt=""
+                                                                id="imgPreview" width="200" />
+                                                        </div>
+                                                        <!-- <div class="w-100 d-flex">
+                                                        <button class="btn btn-success mx-auto mt-1" id="OpenImgUploadBtn">Edit Profile Photo</button>
+                                                      </div> -->
                                                     </div>
-                                                    <div class="profileImg p-4">
-                                                        <img src="./images/default-user-image.png" alt="user-avata">
+
+                                                    <div class="col-sm d-flex flex-column">
+                                                        <h4 class="mx-auto"><strong>Cover Photo</strong></h4>
+                                                        <input type="file" id="coverimgupload" style="display:none" />
+                                                        <div class="d-flex mx-auto">
+                                                            <i class="fa fa-plus fa-3x my-auto text-secondary mr-2"
+                                                                id="OpenCoverUpload"></i>
+                                                            <img src="./images/imagetimelinePlaceholder.png" alt=""
+                                                                id="coverPreview" width="200" />
+                                                        </div>
+                                                        <!-- <button class="btn btn-success mx-auto mt-1" id="OpenCoverUploadBtn">Edit Cover Photo</button> -->
                                                     </div>
                                                 </div>
                                             </div>
                                         </div><br>
                                         <div class="d-flex flex-column w-75 m-auto">
-                                            <button class="btn btn-light mb-2">Add a profile picture</button>
-                                            <button class="btn btn-light mb-3">Add a banner</button>
+                                            <button class="btn btn-light mb-2" id="OpenImgUploadBtn">Add a profile
+                                                photo</button>
+                                            <button class="btn btn-light mb-3" id="OpenCoverUploadBtn">Add a cover
+                                                photo</button>
                                         </div>
                                         <div class="d-flex justify-content-around px-5 py-2 w-100">
                                             <a href="#profile01" class="btn btn-default fs-17 bold-text rounded-btn-nb"
@@ -217,28 +238,41 @@
                             <!-- location -->
                             <div class="bg-white rounded block-area mt-3" id="myLocation" style="display: none">
                                 <form id="about-me-form" action="javascript:void(0);">
-                                    <div class="panel-body">
-                                        <div class="mb-4 font-weight-bold">Confirm your current location? </div>
+                                    <div class="panel-body p-3">
+
+                                        <h5><strong> Confirm your current location? </strong> </h5>
+                                        <p>
+                                            <small>Enter your address or city. Only your city name will show on your
+                                                profile. If you add your complete
+                                                address, you will be able to
+                                                find other sport members that are closer in proximity to the added
+                                                address.</small>
+                                        </p>
+
                                         <!-- <p class="tiny-font">Confirm your current location to find sport players and
                                             sport places near you. Or<span class="text-info">
                                                 <a href="#ex1" rel="modal:open">manually add your current
                                                     location</a></span></p> -->
-                                        <div class="d-flex">
-                                            <div class="col-sm-10">
-                                                <div class="d-flex">
-                                                    <div class="bg-white p-2">
-                                                        <i class="fa fa-map-marker fa-2x my-auto"></i>
-                                                    </div>
-                                                    <input type="text" class="form-control mx-2"
-                                                        placeholder="Enter address">
-                                                </div>
-                                                <div id="map"></div>
-                                            </div>
-                                            <div class="d-flex flex-column">
-                                                <button class="btn btn-success px-4 mb-1">Confirm</button>
-                                                <button type="button" class="btn btn-primary px-4"><i
-                                                        class="fa fa-map-marker"></i> Edit</button>
-                                            </div>
+
+
+                                        <label for="" class="mb-0">
+                                            <strong>Address</strong>
+                                        </label>
+                                        <input placeholder="Enter your address or City" type="text"
+                                            autocomplete="randomCharacters" name="cities" id="citiesInput"
+                                            onKeyUp="autoCompleteShowResults(this, getCitiesListStatic)"
+                                            class="form-control" />
+                                        <!-- <div id="map"></div> -->
+                                        <div class="d-flex my-3">
+                                            <button class="btn btn-sm btn-success w-100 mr-2">Confirm Location</button>
+                                            <button type="button" class="btn btn-sm btn-success w-100">Edit
+                                                Location</button>
+                                        </div>
+                                        <div class="w-100">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d63836.10068192936!2d32.5992448!3d0.31948799999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sug!4v1555331880132!5m2!1sen!2sug"
+                                                class="w-100" height="250" frameborder="0" style="border: 0"
+                                                allowfullscreen=""></iframe>
                                         </div>
 
                                         <div id="ex1" class="modal age-modal">
@@ -1039,7 +1073,7 @@
                                     <i class="fa fa-map-marker fa-2x my-auto"></i>
                                     <input type="text" class="w-100" placeholder="Enter name">
                                 </div>
-                            
+
                                 <div class="mx-1 w-33">
                                     <select name="" id="" class="form-control" style="min-width: 100% !important;">
                                         <option value="">Select</option>
@@ -1134,6 +1168,43 @@
         var input = document.querySelector("#phone");
         window.intlTelInput(input, {
             utilsScript: "flags/build/js/utils.js",
+        });
+    </script>
+    <script>
+        $('#OpenImgUpload').click(function () { $('#imgupload').trigger('click'); console.log('clicked ---') });
+        $('#OpenImgUploadBtn').click(function () { $('#imgupload').trigger('click'); });
+
+        $('#OpenCoverUpload').click(function () { $('#coverimgupload').trigger('click'); });
+        $('#OpenCoverUploadBtn').click(function () { $('#coverimgupload').trigger('click'); });
+
+        $(document).ready(function () {
+            // Handle file input change event for Profile Photo
+            $('#imgupload').change(function () {
+                var file = this.files[0];
+                var reader = new FileReader();
+
+                // Load selected image file as Data URL
+                reader.onload = function (e) {
+                    $('#imgPreview').attr('src', e.target.result);
+                };
+
+                // Read the selected file
+                reader.readAsDataURL(file);
+            });
+
+            // Handle file input change event for Cover Photo
+            $('#coverimgupload').change(function () {
+                var file = this.files[0];
+                var reader = new FileReader();
+
+                // Load selected image file as Data URL
+                reader.onload = function (e) {
+                    $('#coverPreview').attr('src', e.target.result);
+                };
+
+                // Read the selected file
+                reader.readAsDataURL(file);
+            });
         });
     </script>
     <script>

@@ -79,16 +79,20 @@
                                                 <h4 class="m-auto font-weight-bold">Select all the sports you play!</h4>
                                             </div>
 
-                                            <div class="text-center">
-                                                <p class="w-75 mx-auto">Your selection(s) allow you to connect with
-                                                    other that play the sport.
-                                                    You can always update your selections later but you must select at
-                                                    least
-                                                    one.</p>
-                                            </div>
 
-                                            <input class="p-2 w-100 form-group mt-3" id="sel1" type="text"
-                                                placeholder="Enter sport name or select below">
+                                            <p class="mx-auto">Your selection(s) allow you to connect with
+                                                other that play the sport.
+                                                You can always update your selections later but you must select at
+                                                least
+                                                one.</p>
+
+
+                                            <div class="d-flex my-3 mx-auto">
+                                                <input class="w-100 form-control mr-2" id="sel1" type="text"
+                                                    placeholder="Enter sport name or select below">
+                                                <a href="#preview" class="btn btn-secondary text-white continue-btn"
+                                                    onclick="next();"><small>Continue</small></a>
+                                            </div>
 
                                             <div class="d-flex flex-wrap">
                                                 <div class="col-sm-12 col-lg-4">
@@ -349,31 +353,17 @@
                                                     </div>
                                                 </div>
                                             </div>
-
-                                            <!-- <div class="form-group d-flex flex-column w-100">
-                                                <select multiple id="sel1">
-                                                    <option value="">Golf</option>
-                                                    <option value="">Tennis</option>
-                                                    <option value="">Pickleball</option>
-                                                    <option value="">Mountain Biking</option>
-                                                    <option value="">Road Biking</option>
-                                                    <option value="">Kiteboarding</option>
-                                                </select>
-                                                <small
-                                                    class="form-text text-light text-center light-green-bg p-2">Select
-                                                    at least one sport to continue</small>
-                                            </div> -->
                                         </div>
 
-                                        <div class="d-flex justify-content-around px-5 py-2 w-100">
+                                        <div class="d-flex py-2 w-100">
                                             <a href="#profile01" class="btn btn-default fs-17 bold-text rounded-btn-nb"
                                                 onclick="back();">Back</a>
                                             <!-- <button class="btn btn-danger fs-17 bold-text rounded-btn"
                                                 onclick="next();">Save</button> -->
-                                            <a href="#preview" class="btn btn-success fs-17 bold-text rounded-btn-nb"
-                                                onclick="next();">Continue</a>
-                                            <a href="#preview" class="btn btn-default fs-17 bold-text rounded-btn-nb"
-                                                onclick="next();">Skip</a>
+                                            <!-- <a href="#preview" class="btn btn-success fs-17 bold-text rounded-btn-nb"
+                                                onclick="next();">Continue</a> -->
+                                            <!-- <a href="#preview" class="btn btn-default fs-17 bold-text rounded-btn-nb"
+                                                onclick="next();">Skip</a> -->
                                         </div>
                                     </form>
                                 </div>
@@ -401,6 +391,7 @@
     <script src="js/main.js"></script>
     <script src="js/multiselect-dropdown.js"></script>
 
+
     <script>
         // jQuery script to handle checkbox changes
         $(document).ready(function () {
@@ -416,6 +407,14 @@
 
                 // Update the input field with the selected values, separated by commas
                 $('#sel1').val(selectedValues.join(', '));
+
+                var link = $('.continue-btn');
+
+                if (selectedValues && selectedValues.length > 0) {
+                    link.removeClass('btn-secondary').addClass('btn-success');
+                } else {
+                    link.removeClass('btn-success').addClass('btn-light');
+                }
             });
         });
     </script>
