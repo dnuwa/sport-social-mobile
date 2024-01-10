@@ -90,11 +90,21 @@
                                             <div class="d-flex my-3 mx-auto">
                                                 <input class="w-100 form-control mr-2" id="sel1" type="text"
                                                     placeholder="Enter sport name or select below">
-                                                <a href="#preview" class="btn btn-secondary text-white continue-btn"
+                                                    <button class="btn btn-secondary text-white show-alert"
+                                                    onclick="selectSportAlert();"><small>Continue</small></button>
+                                                <a href="#preview" class="btn btn-secondary text-white continue-btn d-none"
                                                     onclick="next();"><small>Continue</small></a>
                                             </div>
+                                            <div class="border w-75 mx-auto br-5 p-4 text-center mb-3 d-none" id="alert-box">
+                                                <p>Please select atleast one sport.</p>
+                                                <p>You can update your selection once your account Is created.</p>
+                                                <div class="d-flex justify-content-between">
+                                                    <button class="btn-sm btn-sm border-0 btn-light" onclick="closeAlert()">Close</button>
+                                                    <button class="btn btn-sm px-2 btn-success" onclick="closeAlert()">Confirm</button>
+                                                </div>
+                                            </div>
 
-                                            <div class="d-flex flex-wrap">
+                                            <div class="d-flex flex-wrap" id="sports-view">
                                                 <div class="col-sm-12 col-lg-4">
                                                     <p class="text-success"><strong>Most Popular Sports</strong>
                                                     </p>
@@ -355,7 +365,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="d-flex py-2 w-100">
+                                        <div class="d-flex py-2 w-100" id="sports-view-back">
                                             <a href="#profile01" class="btn btn-default fs-17 bold-text rounded-btn-nb"
                                                 onclick="back();">Back</a>
                                             <!-- <button class="btn btn-danger fs-17 bold-text rounded-btn"
@@ -394,6 +404,18 @@
 
     <script>
         // jQuery script to handle checkbox changes
+        function selectSportAlert(){
+            $("#alert-box").removeClass('d-none').addClass('d-block')
+            $("#sports-view").addClass("d-none").removeClass('d-flex flex-wrap');
+            $("#sports-view-back").addClass("d-none").removeClass('d-flex flex-wrap');
+        }
+
+        function closeAlert(){
+            $("#sports-view").addClass("d-flex flex-wrap").removeClass('d-none');
+            $("#sports-view-back").addClass("d-flex flex-wrap").removeClass('d-none');
+            $("#alert-box").removeClass('d-block').addClass('d-none')
+        }
+
         $(document).ready(function () {
             // Add a change event listener to all checkboxes with the class 'sport-checkbox'
             $('.sport-checkbox').change(function () {
@@ -412,8 +434,11 @@
 
                 if (selectedValues && selectedValues.length > 0) {
                     link.removeClass('btn-secondary').addClass('btn-success');
+                    $('.continue-btn').removeClass('d-none').addClass('d-block')
+                    $('.show-alert').addClass('d-none')
                 } else {
-                    link.removeClass('btn-success').addClass('btn-light');
+                    // link.removeClass('btn-success').addClass('btn-light');
+                    selectSportAlert()
                 }
             });
         });
